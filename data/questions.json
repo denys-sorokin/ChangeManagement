@@ -4168,5 +4168,485 @@
     "correct_answer": "False",
     "explanation": "False. Standards protect safety, ethics and interoperability, while local teams adapt the 'how'. Emergence is not chaos.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 34"
+  },
+  {
+    "id": "CM-C6-033",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Teams of teams",
+    "question": "Why can't an AtlasOne pilot country solve its problems through its reporting line alone?",
+    "options": [
+      "Only the global owners are allowed to solve local problems",
+      "Learning and problem-solving need to travel horizontally, through a local cross-functional team linked to global owners and peer countries",
+      "Pilot countries are forbidden from contacting headquarters",
+      "Its reporting line is too short to escalate problems"
+    ],
+    "correct_answer": "Learning and problem-solving need to travel horizontally, through a local cross-functional team linked to global owners and peer countries",
+    "explanation": "The pilot country is a local cross-functional team (operations, IT, HR, legal, frontline) connected to global owners and to peer countries. A team of teams lets learning and problem-solving travel horizontally, not only up and down the hierarchy.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 56"
+  },
+  {
+    "id": "CM-C6-034",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Neither extreme",
+    "question": "Between a rigid single rollout and unrestricted local freedom, which of the following is one of the principles of the 'balanced zone'?",
+    "options": [
+      "Let each market define its own purpose",
+      "Centralise every workflow decision",
+      "Update global practice on local evidence",
+      "Launch the same process everywhere on the same date"
+    ],
+    "correct_answer": "Update global practice on local evidence",
+    "explanation": "The balanced zone means distinguishing the core from what is adaptable, empowering decisions near the work, protecting trust, connecting markets horizontally and updating global practice on local evidence.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 60"
+  },
+  {
+    "id": "CM-C6-035",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global alignment and local autonomy",
+    "question": "How does the course define agile change in the context of global alignment and local autonomy?",
+    "options": [
+      "Preserving a common direction while continuously improving the route through evidence",
+      "Letting each market choose its own outcomes",
+      "Implementing identical processes in every market",
+      "Changing the direction whenever a market requests it"
+    ],
+    "correct_answer": "Preserving a common direction while continuously improving the route through evidence",
+    "explanation": "Global alignment does not mean identical local implementation, and local autonomy does not mean fragmentation. Markets can take different routes towards a shared outcome, improving the route with evidence.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 58"
+  },
+  {
+    "id": "CM-C6-036",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Seven strategies for balance",
+    "question": "What lies at the centre of the seven strategies for balance that unlock change agility?",
+    "options": [
+      "A detailed global project plan that every market follows",
+      "A central committee that approves every local decision",
+      "Purpose-driven agility: why we change, and what stays clear while the how keeps moving",
+      "Speed of response to every change in the market"
+    ],
+    "correct_answer": "Purpose-driven agility: why we change, and what stays clear while the how keeps moving",
+    "explanation": "The six surrounding strategies are scenario planning, emotional resilience, autonomy, feedback loops, communication and continuous learning; purpose-driven agility sits at the centre, keeping the why clear while the how moves.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 61"
+  },
+  {
+    "id": "CM-C6-037",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Seven strategies for balance",
+    "question": "Leaders prepare several plausible futures and keep their plans flexible. Which of the strategies for balance is this?",
+    "options": [
+      "Emotional resilience",
+      "Scenario planning",
+      "Feedback loops",
+      "Continuous learning"
+    ],
+    "correct_answer": "Scenario planning",
+    "explanation": "Scenario planning means considering several plausible futures with flexible plans. Emotional resilience is psychological safety to cope with ambiguity, and feedback loops let retrospectives, customers and teams shape the next step.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 61"
+  },
+  {
+    "id": "CM-C6-038",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "The real design question",
+    "question": "According to the course, what is the real design question for a global change?",
+    "options": [
+      "How quickly the global plan can be rolled out",
+      "Which single country should design the global process",
+      "Whether to standardise everything or decentralise everything",
+      "Which elements need global consistency, which can vary locally, and how learning flows across markets"
+    ],
+    "correct_answer": "Which elements need global consistency, which can vary locally, and how learning flows across markets",
+    "explanation": "The real question is not whether to standardise or decentralise everything. It has three parts: what must be global, what can be local, and how learning flows between markets.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 62"
+  },
+  {
+    "id": "CM-C6-039",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Designing autonomy",
+    "question": "Besides a clear outcome, clear constraints and a duty to feed back results, what else does a team need for safe local autonomy?",
+    "options": [
+      "Time or budget, access to users and data, a named decision-maker, and a stop or escalation rule",
+      "Approval from every country before any experiment",
+      "Unlimited budget, no reporting and full independence",
+      "A detailed plan from headquarters for every step"
+    ],
+    "correct_answer": "Time or budget, access to users and data, a named decision-maker, and a stop or escalation rule",
+    "explanation": "The course says 'You may experiment' is not enough. Teams also need time or budget, access to users and data, a named decision-maker and an agreed point to stop or escalate; governance is what makes safe local autonomy possible.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 65"
+  },
+  {
+    "id": "CM-C6-040",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Adaptive Change Loop",
+    "question": "Which sequence correctly lists the steps of the Adaptive Change Loop?",
+    "options": [
+      "Anchor → Sense → Empower → Experiment → Learn → Adapt → Scale & embed",
+      "Sense → Anchor → Experiment → Empower → Adapt → Learn → Scale & embed",
+      "Anchor → Empower → Sense → Learn → Experiment → Adapt → Scale & embed",
+      "Experiment → Anchor → Sense → Empower → Learn → Scale & embed → Adapt"
+    ],
+    "correct_answer": "Anchor → Sense → Empower → Experiment → Learn → Adapt → Scale & embed",
+    "explanation": "The loop starts by anchoring purpose and safeguards, senses local conditions, empowers teams, experiments, learns from evidence, adapts, and then scales and embeds. It runs in every market and at group level simultaneously.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 66"
+  },
+  {
+    "id": "CM-C6-041",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Adaptive Change Loop",
+    "question": "In the Adaptive Change Loop, which step covers stakeholders, local readiness, process friction, informal influence and leading indicators?",
+    "options": [
+      "Anchor",
+      "Empower",
+      "Learn",
+      "Sense"
+    ],
+    "correct_answer": "Sense",
+    "explanation": "Sense reads the local situation. Anchor sets shared purpose, outcomes and non-negotiable safeguards; Empower gives decision rights, resources, coaching and escalation channels; Learn combines metrics and qualitative evidence.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 66"
+  },
+  {
+    "id": "CM-C6-042",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Adaptive Change Loop",
+    "question": "How does the Adaptive Change Loop describe the Experiment step?",
+    "options": [
+      "Open-ended trials without predefined hypotheses",
+      "Tests run only after the global standard is final",
+      "Small, reversible tests with explicit hypotheses and stop conditions",
+      "Large-scale launches across all markets at once"
+    ],
+    "correct_answer": "Small, reversible tests with explicit hypotheses and stop conditions",
+    "explanation": "Experiments should be small and reversible, with explicit hypotheses and stop conditions. The Learn step then exposes failures without blame, using operational metrics and qualitative evidence.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 66"
+  },
+  {
+    "id": "CM-C6-043",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Adaptive Change Loop",
+    "question": "Portugal discovers a better coaching method, tests and measures it, and shares the evidence; headquarters updates the playbook; Germany then tests the revised practice. What does this illustrate?",
+    "options": [
+      "Each country develops its own standard independently",
+      "Headquarters designs every practice and countries implement it unchanged",
+      "Local learning changes the global standard, and the standard changes the next local experiment",
+      "Global standards are fixed once and never revised"
+    ],
+    "correct_answer": "Local learning changes the global standard, and the standard changes the next local experiment",
+    "explanation": "The Adaptive Change Loop is a loop, not seven one-off stages or departments. This recursive relationship between local learning and global standards is described as the core of change in a complex organisation.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 68"
+  },
+  {
+    "id": "CM-C6-044",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Human in the loop",
+    "question": "In the 'human in the loop' model, frontline people flag situations that neither the plan nor the standard foresaw. Which role is this?",
+    "options": [
+      "Learning",
+      "Judgement",
+      "Escalation",
+      "Exceptions"
+    ],
+    "correct_answer": "Exceptions",
+    "explanation": "Every change loop runs through human judgement. Judgement is deciding when a process or tool is wrong, unsafe or unfair in context; Exceptions is flagging what neither the plan nor the standard foresaw; Learning is feedback updating the practice and standard.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 69"
+  },
+  {
+    "id": "CM-C6-045",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "AtlasOne explicit autonomy",
+    "question": "In the AtlasOne pilot, which change would a country team NOT be able to make on its own, and would need central review?",
+    "options": [
+      "Modifying training and communication materials",
+      "Pausing an experiment that is harming customers",
+      "Changing how personal data is processed",
+      "Approving a three-week experiment costing €15,000"
+    ],
+    "correct_answer": "Changing how personal data is processed",
+    "explanation": "Pilot teams can modify training, communication and non-core workflow, approve experiments up to €25,000 and 4 weeks, and pause experiments if employees or customers are harmed. Personal-data processing, core AI models, common interfaces and spending above the cap need central review.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 71"
+  },
+  {
+    "id": "CM-C6-046",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global–local decision rights",
+    "question": "Under AtlasOne's global–local decision rights, how is a new practice scaled?",
+    "options": [
+      "Local decides alone whether to adopt it; global is not involved",
+      "Global imposes the practice; local implements it without changes",
+      "Global and local vote, and the majority decides",
+      "Global compares evidence and updates the standard; local shares results and adopts or explains variance"
+    ],
+    "correct_answer": "Global compares evidence and updates the standard; local shares results and adopts or explains variance",
+    "explanation": "For scaling a new practice, the global level compares evidence and updates the standard, while local teams share results and either adopt the standard or explain their variance.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 74"
+  },
+  {
+    "id": "CM-C6-047",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Six moves",
+    "question": "In the course's 'six moves' summary, which statement describes the Embed move?",
+    "options": [
+      "Fix the core; free the route",
+      "People believe the system, not the slogan",
+      "Small, safe, fast, and comparable",
+      "The plan changes; the purpose doesn't"
+    ],
+    "correct_answer": "People believe the system, not the slogan",
+    "explanation": "The six moves are: Diagnose (the real change is who decides), Mobilize (a story people see themselves in), Design (fix the core, free the route), Experiment (small, safe, fast, comparable), Adapt (the plan changes, the purpose doesn't) and Embed (people believe the system, not the slogan).",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 75"
+  },
+  {
+    "id": "CM-C6-048",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Adaptive change architectures",
+    "question": "Which combination defines an 'adaptive change architecture' in the course?",
+    "options": [
+      "Global strategic alignment, local experimentation, distributed decision-making, continuous feedback and the ability to adjust while underway",
+      "Local autonomy only, no global standards, independent budgets and no feedback",
+      "Central planning, uniform rollout, strict approvals, quarterly reporting and fixed milestones",
+      "A single project plan, a PMO, a launch event, training and a go-live date"
+    ],
+    "correct_answer": "Global strategic alignment, local experimentation, distributed decision-making, continuous feedback and the ability to adjust while underway",
+    "explanation": "The emerging direction is organisational systems that combine global alignment with local experimentation, distributed decisions, continuous feedback and the ability to adjust while transformation is underway.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 76"
+  },
+  {
+    "id": "CM-C6-049",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global Change Management Programme",
+    "question": "In the Global Change Management Programme case, the five phases involve two kinds of work. Which phases form the 'anchor', set once and held steady?",
+    "options": [
+      "Why change? and Discover the purpose",
+      "Pilot & experiment and Scale & embed",
+      "Communicate & mobilise and Pilot & experiment",
+      "Discover the purpose and Scale & embed"
+    ],
+    "correct_answer": "Why change? and Discover the purpose",
+    "explanation": "Phases 1 and 2 (why change, discover the purpose) are the anchor, whose direction does not change every cycle. Phases 3 to 5 (communicate and mobilise, pilot and experiment, scale and embed) keep changing with evidence: the purpose stays fixed, the route keeps learning.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 79"
+  },
+  {
+    "id": "CM-C6-050",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global Change Management Programme",
+    "question": "How was the purpose defined in the Global Change Management Programme?",
+    "options": [
+      "Copied from a successful competitor",
+      "Discovered through a global listening process, rather than dictated by leaders",
+      "Written by the CEO and announced at a town hall",
+      "Defined by external consultants before any listening"
+    ],
+    "correct_answer": "Discovered through a global listening process, rather than dictated by leaders",
+    "explanation": "The purpose was discovered through leadership interviews, employee listening sessions, cross-regional workshops, organisational data analysis and collaborative design sessions, producing the co-created purpose 'One Global Team, Locally Empowered'.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 81"
+  },
+  {
+    "id": "CM-C6-051",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global Change Management Programme",
+    "question": "Which sequence describes the structured experimentation approach used in Phase 4 of the Global Change Management Programme?",
+    "options": [
+      "Measure → Decide → Hypothesise → Experiment",
+      "Decide → Experiment → Measure → Hypothesise",
+      "Experiment → Hypothesise → Decide → Measure",
+      "Hypothesise → Experiment → Measure → Decide (scale, adapt or stop)"
+    ],
+    "correct_answer": "Hypothesise → Experiment → Measure → Decide (scale, adapt or stop)",
+    "explanation": "Each 6–8-week cycle starts by defining the problem as a hypothesis, tests it with teams, measures with data and feedback, and then decides to scale, adapt or stop, repeating with new insights every cycle.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 84"
+  },
+  {
+    "id": "CM-C6-052",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Global Change Management Programme",
+    "question": "In Phase 5 of the Global Change Management Programme, where was the change embedded so that it would stick?",
+    "options": [
+      "In the project plan and the steering committee minutes",
+      "In leadership routines, operating processes, performance measures, learning programmes and team behaviours",
+      "In a single global launch event and a training day",
+      "Only in a new corporate values poster and intranet page"
+    ],
+    "correct_answer": "In leadership routines, operating processes, performance measures, learning programmes and team behaviours",
+    "explanation": "Scaling meant proven principles and practices adapted locally rather than identical solutions everywhere. They were embedded into how leaders meet and decide, how work flows, what is tracked and rewarded, how capability is built and what people do every day.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 85"
+  },
+  {
+    "id": "CM-C6-053",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Dynamic governance model",
+    "question": "In the Global Change Management Programme's dynamic governance model, which body is responsible for insights, measurement and knowledge sharing?",
+    "options": [
+      "The Global Learning Office",
+      "The Global Transformation Council",
+      "The Local Agile Change Teams",
+      "The Regional Change Hubs"
+    ],
+    "correct_answer": "The Global Learning Office",
+    "explanation": "The Global Transformation Council sets strategic direction, investment and priorities; Regional Change Hubs coordinate, coach and remove barriers; the Global Learning Office provides insights, measurement and knowledge sharing; Local Agile Change Teams experiment, implement and adapt locally.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 86"
+  },
+  {
+    "id": "CM-C6-054",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Measuring transformation",
+    "question": "How does the Global Change Management Programme recommend measuring transformation success?",
+    "options": [
+      "Measure milestones completed on time",
+      "Measure the number of training sessions delivered",
+      "Measure behaviour and value, not milestones",
+      "Measure the volume of communications sent"
+    ],
+    "correct_answer": "Measure behaviour and value, not milestones",
+    "explanation": "Success is tracked through business performance, behavioural adoption, engagement and organisational adaptability, e.g. adoption of new ways of working, decision-making time and cross-functional collaboration, rather than through milestones.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 89"
+  },
+  {
+    "id": "CM-C6-055",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Distributed change capability",
+    "question": "According to the course, what made the Global Change Management Programme model different?",
+    "options": [
+      "It removed leaders from the change process",
+      "It moved from a central programme to a distributed capability for continuous change",
+      "It relied on a single, fixed global rollout plan",
+      "It replaced local teams with a stronger central PMO"
+    ],
+    "correct_answer": "It moved from a central programme to a distributed capability for continuous change",
+    "explanation": "Leaders provided purpose and sponsorship, local teams became co-creators, champions connected change to daily work, dynamic governance enabled faster decisions, and the Global Learning Office turned local experiments into shared knowledge. Change stopped being something done to the organisation.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 90"
+  },
+  {
+    "id": "CM-C6-056",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Human in the loop",
+    "question": "The course describes 'human in the loop' not as a brake on change, but as how the organisation keeps learning and stays accountable.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. People judge, flag exceptions and feed back learning that updates practice and the global standard, which keeps the organisation learning and accountable.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 69"
+  },
+  {
+    "id": "CM-C6-057",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Adaptive Change Loop",
+    "question": "The Adaptive Change Loop is a sequence of seven one-off stages, each owned by a separate department.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course stresses that it is a loop, not seven departments or seven one-off stages. It runs in every market and at group level at the same time.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 67"
+  },
+  {
+    "id": "CM-C6-058",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "AtlasOne pilot design",
+    "question": "In AtlasOne's wave rollout, the readiness and diversity of pilot countries matter more than their size alone.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Wave 0 sets baselines and safeguards, Wave 1 tests in a few diverse countries with comparable indicators, Wave 2 improves the playbook and expands, and later cohorts rely on peer mentors and local ownership.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 73"
+  },
+  {
+    "id": "CM-C6-059",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Global–local decision rights",
+    "question": "In AtlasOne's global–local decision rights, local teams define and maintain the purpose and outcome measures.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The global level defines and maintains purpose and outcome measures; local teams translate them into local targets.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 74"
+  },
+  {
+    "id": "CM-C6-060",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Global Change Management Programme",
+    "question": "In the Global Change Management Programme, communication was treated as an ongoing conversation rather than a one-off campaign.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The CEO set out the challenge and purpose, regional leaders translated it into local realities, and champions and communities ran two-way feedback channels, with the message 'We don't have all the answers'.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 82"
+  },
+  {
+    "id": "CM-C6-061",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Global Change Management Programme",
+    "question": "In the Global Change Management Programme, scaling meant rolling out identical solutions in every country.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The slide explicitly rejects 'identical solutions everywhere' in favour of proven principles and practices adapted locally.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 85"
+  },
+  {
+    "id": "CM-C6-062",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "AtlasOne explicit autonomy",
+    "question": "In the AtlasOne pilot design, a country team may pause an experiment if employees or customers are harmed.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Pausing a harmful experiment is within the team's explicit authority, alongside modifying training and non-core workflow and approving experiments within the budget and time cap. Clear limits make fast local decisions safe.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 71"
+  },
+  {
+    "id": "CM-C6-063",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Six moves",
+    "question": "In the 'six moves' summary, the Adapt move means that both the plan and the purpose should change in response to evidence.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Adapt is summarised as 'The plan changes. The purpose doesn't.' The purpose anchors the change while the route adapts.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 75"
   }
 ]
