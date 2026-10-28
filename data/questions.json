@@ -3672,5 +3672,501 @@
     "correct_answer": "The patterns people learn from what repeatedly happens here",
     "explanation": "The course defines culture as 'the patterns people learn from what repeatedly happens here'. It notes that culture and resistance to change are the second-biggest barrier to transformation, after skills gaps.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 56"
+  },
+  {
+    "id": "CM-C6-001",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "AtlasOne: global vs. local",
+    "question": "In the AtlasOne case, Option A has all 32 markets launch the same process on the same date. What risk does the course associate with it?",
+    "options": [
+      "Incompatible local solutions and uncontrolled cost",
+      "Compliance on paper, but poor adoption",
+      "Slow launch because every market must approve",
+      "Too much experimentation and no common direction"
+    ],
+    "correct_answer": "Compliance on paper, but poor adoption",
+    "explanation": "Option A keeps a common direction but risks perfect-looking compliance reports with weak adoption. Incompatible solutions and rising cost are the risks of Option B, where markets test different ways of reaching common outcomes.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 9"
+  },
+  {
+    "id": "CM-C6-002",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "AtlasOne: global vs. local",
+    "question": "After comparing Options A and B for AtlasOne, what does the course define as the design task?",
+    "options": [
+      "Choose Option B, because local freedom always produces better results",
+      "Choose Option A, because a single launch is easier to control",
+      "Combine the common direction of A with the learning capacity of B, without the weaknesses of either",
+      "Run Option A first and switch to B only if it fails"
+    ],
+    "correct_answer": "Combine the common direction of A with the learning capacity of B, without the weaknesses of either",
+    "explanation": "Neither option eliminates risk. The design challenge is to preserve what must be shared while allowing the route to improve: the direction of A and the learning of B.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 10"
+  },
+  {
+    "id": "CM-C6-003",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Limits of waterfall change",
+    "question": "Why might AtlasOne's apparently perfect global plan fail?",
+    "options": [
+      "The technology chosen was not yet available",
+      "Country leaders were not informed of the launch date",
+      "Markets keep discovering information (data problems, better handovers, legal delays) that the plan could not fully contain",
+      "The plan had too few milestones and workstreams"
+    ],
+    "correct_answer": "Markets keep discovering information (data problems, better handovers, legal delays) that the plan could not fully contain",
+    "explanation": "One market discovers a data problem, another improves the handover, a third faces a legal delay. A fixed plan cannot fully contain information that only emerges during the change.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 12"
+  },
+  {
+    "id": "CM-C6-004",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Limits of waterfall change",
+    "question": "In the typical waterfall change sequence (Diagnose, Design, Plan, Announce, Train, Go live), what is the 'invisible final stage' the course identifies?",
+    "options": [
+      "Celebration: recognising the team after go-live",
+      "Hope: that the assumptions remain true and people behave as predicted",
+      "Review: a formal audit of the project budget",
+      "Handover: passing the project to operations"
+    ],
+    "correct_answer": "Hope: that the assumptions remain true and people behave as predicted",
+    "explanation": "The course notes that waterfall programmes end, implicitly, in hope. This linear sequence suits a world that is no longer linear poorly, because assumptions and behaviour rarely stay as predicted.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 14"
+  },
+  {
+    "id": "CM-C6-005",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE culture",
+    "question": "In the DEE culture lens, which dimension is associated with the tension between divergence and convergence?",
+    "options": [
+      "Experimental",
+      "Evolutionary",
+      "Developmental",
+      "Emergent"
+    ],
+    "correct_answer": "Emergent",
+    "explanation": "Developmental is linked to independence ↔ interdependence, Emergent to divergence ↔ convergence, and Evolutionary to self ↔ system. 'Experimental' is not one of the three DEE dimensions.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 18"
+  },
+  {
+    "id": "CM-C6-006",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE culture",
+    "question": "Which DEE dimension involves coaching, constructive challenge, psychological safety and accountability?",
+    "options": [
+      "Emergent",
+      "Directive",
+      "Evolutionary",
+      "Developmental"
+    ],
+    "correct_answer": "Developmental",
+    "explanation": "The Developmental dimension covers coaching, constructive challenge, psychological safety and accountability, and lives in the tension between independence and interdependence. A local team needs room to decide but must understand its impact on the wider system.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 19"
+  },
+  {
+    "id": "CM-C6-007",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE culture",
+    "question": "A country cuts its own costs in a way that breaks reporting for other markets. Which DEE tension does this illustrate?",
+    "options": [
+      "Independence ↔ interdependence",
+      "Self ↔ system",
+      "Divergence ↔ convergence",
+      "Freedom ↔ speed"
+    ],
+    "correct_answer": "Self ↔ system",
+    "explanation": "The Evolutionary dimension lives in the self ↔ system tension: a country cannot cut its own cost by breaking reporting elsewhere, and the centre cannot demand uniformity that destroys local outcomes.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 19"
+  },
+  {
+    "id": "CM-C6-008",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE culture",
+    "question": "How does the course recommend dealing with tensions such as freedom vs. accountability and experimentation vs. coherence?",
+    "options": [
+      "Work productively with the tension, so that it generates learning instead of paralysis",
+      "Avoid discussing the tension so that teams stay motivated",
+      "Escalate every tension to headquarters for a ruling",
+      "Remove the tension by choosing one side permanently"
+    ],
+    "correct_answer": "Work productively with the tension, so that it generates learning instead of paralysis",
+    "explanation": "The important word is tension: 'We do not remove it. We learn to work productively with it.' Each tension is a source of energy and learning.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 21"
+  },
+  {
+    "id": "CM-C6-009",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE culture",
+    "question": "If Portugal experiments with a new process, it must still protect shared reporting. Which DEE tension is this?",
+    "options": [
+      "Self ↔ system",
+      "Divergence ↔ convergence",
+      "Speed ↔ quality",
+      "Independence ↔ interdependence"
+    ],
+    "correct_answer": "Independence ↔ interdependence",
+    "explanation": "In the AtlasOne examples, Portugal experimenting while protecting shared reporting is independence ↔ interdependence; Germany finding a stronger practice that the group must learn from is divergence ↔ convergence; one country harming another market is self ↔ system.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 24"
+  },
+  {
+    "id": "CM-C6-010",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Four traps of agile change",
+    "question": "AtlasOne leaders demand innovation but require six approvals for every change. Which correction does the course propose for this trap?",
+    "options": [
+      "Decision boundaries",
+      "Visible learning from failure",
+      "Genuine authority",
+      "Anticipation"
+    ],
+    "correct_answer": "Decision boundaries",
+    "explanation": "This scene illustrates the trap of linear control used to create agility, corrected with explicit decision boundaries and short feedback cycles. Anticipation corrects the speed trap, genuine authority the 'doing agile' trap, and visible learning the denial of imperfection.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 54"
+  },
+  {
+    "id": "CM-C6-011",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Four traps of agile change",
+    "question": "Teams run retrospectives but have no authority to change a workflow. Which trap is this, and what corrects it?",
+    "options": [
+      "Linear control; corrected with more approvals",
+      "Speed confused with agility; corrected with anticipation",
+      "Denial of imperfection; corrected with visible learning",
+      "Doing agile rather than being agile; corrected with genuine authority"
+    ],
+    "correct_answer": "Doing agile rather than being agile; corrected with genuine authority",
+    "explanation": "Running agile rituals without the power to act on their findings is 'doing agile, not being agile'. The correction is genuine authority: decisions close to the work and leaders acting on uncomfortable feedback.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 54"
+  },
+  {
+    "id": "CM-C6-012",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Proactive agility",
+    "question": "What distinguishes proactive agility from simply reacting fast?",
+    "options": [
+      "Detecting weak signals, testing assumptions and creating options before the disruption",
+      "Resolving issues faster than competitors after they happen",
+      "Responding to events as soon as they occur",
+      "Repairing problems quickly after launch"
+    ],
+    "correct_answer": "Detecting weak signals, testing assumptions and creating options before the disruption",
+    "explanation": "Responding fast is not the same as being agile. Proactive agility (anticipation, adaptation, action) acts before the change occurs, while reacting means discovering the problem after launch and repairing it quickly.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 28"
+  },
+  {
+    "id": "CM-C6-013",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Doing vs. being agile",
+    "question": "Which of the following is a sign of 'being agile' rather than merely 'doing agile'?",
+    "options": [
+      "Sprint boards are displayed in every office",
+      "Teams adopt new agile vocabulary",
+      "Decisions are made close to the work",
+      "Every team holds daily stand-ups"
+    ],
+    "correct_answer": "Decisions are made close to the work",
+    "explanation": "Being agile is a mindset: decisions close to the work, learning from what fails and permission to change course. Stand-ups, sprints, boards and vocabulary can all exist inside a waterfall culture with the same approvals.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 29"
+  },
+  {
+    "id": "CM-C6-014",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Denial of imperfection",
+    "question": "Why does the course call 'denial of imperfection' a particularly dangerous trap?",
+    "options": [
+      "It looks like confidence: leaders want green dashboards, so people learn to hide defects",
+      "It makes teams experiment too much and lose coherence",
+      "It causes leaders to share too much negative feedback",
+      "It slows down every decision with too many approvals"
+    ],
+    "correct_answer": "It looks like confidence: leaders want green dashboards, so people learn to hide defects",
+    "explanation": "When leaders only want green dashboards, people learn to hide defects, and the centre may scale a false success. In AtlasOne, one concealed incident could repeat across 31 other countries.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 31"
+  },
+  {
+    "id": "CM-C6-015",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Denial of imperfection",
+    "question": "How does the course frame psychological safety in agile change?",
+    "options": [
+      "As a reason to avoid tracking what isn't working",
+      "As the opposite of control and governance",
+      "As error detection: speaking openly about what doesn't work is part of the control system",
+      "As a wellbeing benefit that is separate from performance"
+    ],
+    "correct_answer": "As error detection: speaking openly about what doesn't work is part of the control system",
+    "explanation": "The correction for denial of imperfection is to track what isn't working, because psychological safety is error detection. Speaking openly about problems is part of the control system, not the opposite of control.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 32"
+  },
+  {
+    "id": "CM-C6-016",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Emergent culture",
+    "question": "According to the course, what can leaders do about an emergent culture?",
+    "options": [
+      "They cannot prescribe it, but they can shape the conditions in which better norms develop",
+      "They can replace it with detailed standard procedures",
+      "They can leave it entirely to chance and local teams",
+      "They can prescribe it through a central culture programme"
+    ],
+    "correct_answer": "They cannot prescribe it, but they can shape the conditions in which better norms develop",
+    "explanation": "Emergence is not chaos, but culture is not a programme prescribed from the centre. Leaders shape conditions: purpose, constraints, safety, connections, and mechanisms to select and spread what works.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 35"
+  },
+  {
+    "id": "CM-C6-017",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Coordination vs. cooperation",
+    "question": "Operations, IT, legal and HR work together to solve a real customer problem. According to the course, this is an example of:",
+    "options": [
+      "A steering committee",
+      "Coordination",
+      "Governance by reporting",
+      "Cooperation"
+    ],
+    "correct_answer": "Cooperation",
+    "explanation": "Coordination aligns activities and moves information or reports between silos without changing how people work together. Cooperation means people actually working together to solve problems; 'a committee moves reports, cooperation solves problems'.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 38"
+  },
+  {
+    "id": "CM-C6-018",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Change cadence",
+    "question": "In the illustrative cadence of five rhythms, on what basis do executives decide at each rollout gate whether to scale, adapt, delay or stop?",
+    "options": [
+      "On the original project timeline",
+      "On the number of approvals collected",
+      "On the seniority of the sponsor",
+      "On evidence, not on the colour of the presentation"
+    ],
+    "correct_answer": "On evidence, not on the colour of the presentation",
+    "explanation": "Frontline teams capture exceptions daily, market teams review weekly, a cross-market forum compares patterns fortnightly, global owners revise standards monthly, and executives decide at gates on evidence rather than presentation colour.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 37"
+  },
+  {
+    "id": "CM-C6-019",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "DEE organisations",
+    "question": "The course says DEE becomes visible in everyday features such as autonomy, openness, cross-functional work, experimentation and resilience. What role do these features play?",
+    "options": [
+      "They are decorative values to be displayed on posters",
+      "They replace the need for any global standards",
+      "They are the conditions to act under uncertainty without waiting for every answer from the centre",
+      "They are performance targets for individual employees"
+    ],
+    "correct_answer": "They are the conditions to act under uncertainty without waiting for every answer from the centre",
+    "explanation": "The slide states these are 'not decorative values' but the conditions to act under uncertainty without waiting for every answer from the centre.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 41"
+  },
+  {
+    "id": "CM-C6-020",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Teams of teams",
+    "question": "What does the course mean when it says AtlasOne needs 'teams of teams'?",
+    "options": [
+      "Merging all country teams into one global team",
+      "Adding lateral connections between local cross-functional groups, peers and global owners, without removing every hierarchy",
+      "Creating more layers of management to coordinate teams",
+      "Removing all hierarchy and letting teams self-organise"
+    ],
+    "correct_answer": "Adding lateral connections between local cross-functional groups, peers and global owners, without removing every hierarchy",
+    "explanation": "Teams of teams link local cross-functional groups to peers in other markets and to global owners. The point is not removing every hierarchy but adding the connections needed for rapid joint problem-solving.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 42"
+  },
+  {
+    "id": "CM-C6-021",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Garden metaphor",
+    "question": "In the course's garden metaphor, what does agility need?",
+    "options": [
+      "Deliberately designed space: enough freedom to act and enough structure to stay connected",
+      "Every local action carefully designed by the centre",
+      "As many initiatives as possible planted close together",
+      "The removal of every boundary so teams are fully free"
+    ],
+    "correct_answer": "Deliberately designed space: enough freedom to act and enough structure to stay connected",
+    "explanation": "Plant everything too tightly (overdesign) and nothing can grow; remove every boundary and the garden cannot be cared for. Agility needs freedom within boundaries.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 45"
+  },
+  {
+    "id": "CM-C6-022",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Architecture, capabilities, routines",
+    "question": "Teams follow a regular routine of reviews, but they have no authority to act on what they learn. What does the course call this?",
+    "options": [
+      "Risky",
+      "Fragmentation",
+      "Theatre",
+      "Isolated successes"
+    ],
+    "correct_answer": "Theatre",
+    "explanation": "'A routine without authority is theatre. Authority without capability is risky. Capability without routines produces isolated successes.' Architecture, capabilities and routines must work together.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 51"
+  },
+  {
+    "id": "CM-C6-023",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Strategies need partners",
+    "question": "According to the course, each strategy needs its partner. What does autonomy become without its partner?",
+    "options": [
+      "Theatre",
+      "Fragmentation",
+      "A slogan",
+      "Learning that stays local"
+    ],
+    "correct_answer": "Fragmentation",
+    "explanation": "Purpose without its partner becomes a slogan, autonomy becomes fragmentation, and learning stays local. Each strategy depends on another to work.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 52"
+  },
+  {
+    "id": "CM-C6-024",
+    "chapter": "Class 6",
+    "type": "mcq",
+    "topic": "Designing autonomy",
+    "question": "According to the course, what three elements does autonomy require?",
+    "options": [
+      "Senior approval, detailed procedures and a fixed plan",
+      "A clear outcome, clear constraints and a clear feedback obligation",
+      "A large budget, a long timeline and no reporting",
+      "Full freedom, no constraints and optional feedback"
+    ],
+    "correct_answer": "A clear outcome, clear constraints and a clear feedback obligation",
+    "explanation": "Autonomy is not the absence of governance. 'You may experiment' is not enough: teams need a clear outcome, clear constraints and an obligation to feed back results; it is governance that makes local decisions possible.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 53"
+  },
+  {
+    "id": "CM-C6-025",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "AtlasOne: global vs. local",
+    "question": "In the AtlasOne case, neither a single global launch nor fully local experimentation eliminates risk.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Option A risks compliance on paper with poor adoption, while Option B risks incompatible solutions and rising cost, so the design task is to combine their strengths.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 10"
+  },
+  {
+    "id": "CM-C6-026",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Limits of waterfall change",
+    "question": "The course recommends discarding planning entirely when operating under uncertainty.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The slide states 'We will not discard planning'. Instead it asks what planning can and cannot do when the environment keeps teaching us something new.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 15"
+  },
+  {
+    "id": "CM-C6-027",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "DEE culture",
+    "question": "The course presents DEE as a lens for the social conditions of change, not as a mechanical checklist.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. DEE (Developmental, Emergent, Evolutionary) is described as a lens for the social conditions of change: change happens in a social system where people interpret, negotiate, resist, experiment and learn.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 19"
+  },
+  {
+    "id": "CM-C6-028",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Doing vs. being agile",
+    "question": "Teams that run stand-ups and sprints are, by definition, being agile.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course warns that teams can run sprints inside a waterfall culture. Being agile means decisions close to the work, learning from failure and permission to change course.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 29"
+  },
+  {
+    "id": "CM-C6-029",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Denial of imperfection",
+    "question": "In AtlasOne, one concealed incident in a single market could repeat across many other countries.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Because leaders want green dashboards, people may hide defects; in a 32-country rollout, one concealed incident can repeat across 31 other countries.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 31"
+  },
+  {
+    "id": "CM-C6-030",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Coordination vs. cooperation",
+    "question": "The course recommends adding more committees as the main way to make an organisation more agile.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course states that more committees will not make an organisation more agile. Coordination moves information between silos, whereas cooperation, which agility needs, means people working together.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 36"
+  },
+  {
+    "id": "CM-C6-031",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Architecture, capabilities, routines",
+    "question": "According to the course, giving people authority without the capability to use it well is risky.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Architecture determines who can decide, capabilities determine whether people can use that authority well, and routines determine whether learning happens repeatedly. Authority without capability is risky.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 51"
+  },
+  {
+    "id": "CM-C6-032",
+    "chapter": "Class 6",
+    "type": "tf",
+    "topic": "Emergent culture",
+    "question": "In an emergent culture, standards should be removed so that local teams can adapt everything, including safety and ethics.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Standards protect safety, ethics and interoperability, while local teams adapt the 'how'. Emergence is not chaos.",
+    "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 34"
   }
 ]
