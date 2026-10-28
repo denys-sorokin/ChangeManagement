@@ -2882,5 +2882,795 @@
     "correct_answer": "True",
     "explanation": "True. The closing slide states that HR management must be integral to the change process, alongside the points that strategic change is linked to operational change and that change differs by organisation and market.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 28"
+  },
+  {
+    "id": "CM-C5-001",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "When change begins",
+    "question": "In the AI-first case, the programme already has a name, a governance structure, a roadmap and executive sponsorship. What does the course suggest about whether change has begun?",
+    "options": [
+      "Change begins as soon as the Board approves the investment",
+      "Change begins only when people start behaving differently",
+      "Change begins when the CEO announces the transformation",
+      "Change begins when the programme has a governance structure"
+    ],
+    "correct_answer": "Change begins only when people start behaving differently",
+    "explanation": "From the outside it looks as if change has begun, but the course asks whether it has. The test is behaviour: change actually begins only when people start behaving differently.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 4"
+  },
+  {
+    "id": "CM-C5-002",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Change and identity",
+    "question": "What does the course call 'the first mistake' in transformation?",
+    "options": [
+      "Explaining the future of the organisation while underestimating what it means for the identity of the people inside it",
+      "Involving too many employees in the design of the change",
+      "Announcing the transformation before the technology is ready",
+      "Investing in technology before hiring a change team"
+    ],
+    "correct_answer": "Explaining the future of the organisation while underestimating what it means for the identity of the people inside it",
+    "explanation": "On paper, change is a journey from current to future state; in reality it is deeply personal. It can alter expertise, status, belonging, autonomy, relationships and meaning.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 6"
+  },
+  {
+    "id": "CM-C5-003",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Change and identity",
+    "question": "A middle manager asks: 'If my team can do this without me checking every step, what exactly is my role?' What is the manager mainly struggling with?",
+    "options": [
+      "A disagreement with the company's strategy",
+      "An objection to the AI technology itself",
+      "A lack of training on the new tools",
+      "What the transformation means for their own identity and role"
+    ],
+    "correct_answer": "What the transformation means for their own identity and role",
+    "explanation": "The course notes that nobody is resisting AI; people are trying to understand who they will be if the transformation succeeds. A real transformation changes something people care about, such as status and autonomy.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 5"
+  },
+  {
+    "id": "CM-C5-004",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Hidden resistance",
+    "question": "In the case, nobody says 'I oppose the transformation'. Instead, conditions appear, such as 'AI, but every output should still be validated by a human.' What does the course want you to notice?",
+    "options": [
+      "These conditions are purely technical and unrelated to change",
+      "Resistance can sound like common sense: reasonable, defensible conditions that slow the change",
+      "These conditions should be ignored because they come from experts",
+      "These conditions show that everyone fully supports the change"
+    ],
+    "correct_answer": "Resistance can sound like common sense: reasonable, defensible conditions that slow the change",
+    "explanation": "Every sentence is reasonable and every condition can be defended, yet together they can stall the transformation. The course asks: what if resistance sounds like common sense?",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 7"
+  },
+  {
+    "id": "CM-C5-005",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "According to the course, if teams start deciding without escalation, which kind of power changes?",
+    "options": [
+      "Network power",
+      "Expert power",
+      "Information power",
+      "Hierarchical power"
+    ],
+    "correct_answer": "Hierarchical power",
+    "explanation": "The slide links each change to a shift in power: wider access to expertise changes expert power, deciding without escalation changes hierarchical power, transparent data changes information power, and new dependencies change network power.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 10"
+  },
+  {
+    "id": "CM-C5-006",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "Instead of asking only 'Who supports the change?', which question does the course recommend?",
+    "options": [
+      "'Who attended the launch event?'",
+      "'Who has completed the training?'",
+      "'If this change succeeds, whose power changes?'",
+      "'Who has the most senior job title?'"
+    ],
+    "correct_answer": "'If this change succeeds, whose power changes?'",
+    "explanation": "Power is broader than hierarchy, and change moves it. Asking whose power changes if the change succeeds reveals who has a stake in supporting or resisting it.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 10"
+  },
+  {
+    "id": "CM-C5-007",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Two maps of the organisation",
+    "question": "How does the course describe the relationship between the org chart and the real network?",
+    "options": [
+      "The real network is just a less formal copy of the org chart",
+      "Transformations are designed and lived entirely on the org chart",
+      "The org chart shows influence, while the real network shows authority",
+      "Transformations are designed on the org chart but lived in the real network of influence"
+    ],
+    "correct_answer": "Transformations are designed on the org chart but lived in the real network of influence",
+    "explanation": "Map 1, the org chart, shows formal authority; Map 2, the real network, shows influence: whom people call, trust, and listen to. Transformations are designed on the first map and lived on the second.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 11"
+  },
+  {
+    "id": "CM-C5-008",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "Of the seven sources of power discussed in the course, which one appears on the org chart?",
+    "options": [
+      "Formal authority",
+      "Network",
+      "Reputation",
+      "Agenda"
+    ],
+    "correct_answer": "Formal authority",
+    "explanation": "Only one of the seven (formal authority, resource, expert, information, network, reputation and agenda) appears on the org chart: formal authority, which secures legitimacy and approval.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 12"
+  },
+  {
+    "id": "CM-C5-009",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "A director decides which topics make it onto the steering committee's agenda and which are quietly left off. Which source of power is this?",
+    "options": [
+      "Expert power",
+      "Reputation power",
+      "Resource power",
+      "Agenda power"
+    ],
+    "correct_answer": "Agenda power",
+    "explanation": "Agenda power is deciding what is discussed or ignored, which decides which problems get attention. Resource power concerns budgets, people and technology.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 12"
+  },
+  {
+    "id": "CM-C5-010",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "An analyst controls access to the data and context that frame how a problem is understood. Which source of power do they hold?",
+    "options": [
+      "Network power",
+      "Formal authority",
+      "Information power",
+      "Agenda power"
+    ],
+    "correct_answer": "Information power",
+    "explanation": "Information power comes from access to data and context, and it shapes how problems are understood. Network power comes from relationships across boundaries.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 12"
+  },
+  {
+    "id": "CM-C5-011",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Sources of power",
+    "question": "An employee with no formal authority can mobilise support across departments through relationships built over years. Which source of power is this?",
+    "options": [
+      "Resource power",
+      "Network power",
+      "Formal authority",
+      "Expert power"
+    ],
+    "correct_answer": "Network power",
+    "explanation": "Network power comes from relationships across boundaries and mobilises support beyond reporting lines. Expert power rests on knowledge others depend on.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 12"
+  },
+  {
+    "id": "CM-C5-012",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Activity vs. adoption",
+    "question": "A steering committee measures adoption by counting log-ins and completed training sessions. What does the course say is the real measure of transformation?",
+    "options": [
+      "Whether the programme dashboard is green",
+      "Whether work, decisions and behaviour actually change in ways that deliver the promised outcomes",
+      "The percentage of employees who completed the training",
+      "The number of people who logged in to the new tool"
+    ],
+    "correct_answer": "Whether work, decisions and behaviour actually change in ways that deliver the promised outcomes",
+    "explanation": "Activity is not adoption, attendance is not belief, and usage is not transformation. The real measure is whether work gets done, decisions get made and people behave differently, delivering the promised outcomes.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 16"
+  },
+  {
+    "id": "CM-C5-013",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Above and below the water",
+    "question": "In the iceberg metaphor, which elements lie below the water, where organisations discover problems too late?",
+    "options": [
+      "Power, identity, trust and unwritten rules",
+      "Strategy, technology, processes and KPIs",
+      "Structure, governance, project plan and technology",
+      "KPIs, governance, strategy and processes"
+    ],
+    "correct_answer": "Power, identity, trust and unwritten rules",
+    "explanation": "Above the water are things programmes know how to manage: strategy, technology, processes, structure, KPIs, governance and the project plan. Below the water are power, politics, identity, trust, fear, relationships, status, networks, history and unwritten rules.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 17"
+  },
+  {
+    "id": "CM-C5-014",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Above and below the water",
+    "question": "Beneath the visible goal of 'empowerment', which invisible transformation does the course highlight?",
+    "options": [
+      "Buying new collaboration software",
+      "Publishing a new set of corporate values",
+      "Managers giving up decisions they spent years earning the right to make",
+      "Creating a new organisational chart"
+    ],
+    "correct_answer": "Managers giving up decisions they spent years earning the right to make",
+    "explanation": "Every transformation contains another one underneath: empowerment requires managers to give up hard-earned decision rights, and senior leaders to learn not to intervene. The other options are visible, above-the-water changes.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 18"
+  },
+  {
+    "id": "CM-C5-015",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Power, politics and culture",
+    "question": "In the 'three forces, one system' model, what does politics refer to?",
+    "options": [
+      "The formal reporting lines in the organisation",
+      "What makes behaviour feel normal or legitimate",
+      "Who can influence the change",
+      "The interests, coalitions and trade-offs around the change"
+    ],
+    "correct_answer": "The interests, coalitions and trade-offs around the change",
+    "explanation": "Power is who can influence the change, politics is the interests, coalitions and trade-offs around it, and culture is what makes behaviour feel normal or legitimate. Together they determine whether a change is adopted, adapted, resisted or quietly ignored.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 20"
+  },
+  {
+    "id": "CM-C5-016",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Purpose",
+    "question": "What common problem with purpose in transformations does the course describe?",
+    "options": [
+      "It is introduced at the start, then left to communications, instead of being used to make decisions",
+      "It is used too often as a decision-making principle",
+      "It is designed by employees instead of leaders",
+      "It is defined too late, after the programme has ended"
+    ],
+    "correct_answer": "It is introduced at the start, then left to communications, instead of being used to make decisions",
+    "explanation": "Purpose often becomes the opening paragraph of the story rather than the principle used to make decisions. A clear logic (productivity, growth, competitiveness) is not the same as meaning.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 21"
+  },
+  {
+    "id": "CM-C5-017",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Building a coalition",
+    "question": "In the course's view of who must carry the change, which group makes the change socially acceptable?",
+    "options": [
+      "Experts",
+      "Early adopters",
+      "The sponsor",
+      "Informal influencers"
+    ],
+    "correct_answer": "Informal influencers",
+    "explanation": "The sponsor provides authority, managers translate it into daily work, experts make it professionally legitimate, informal influencers make it socially acceptable, early adopters make it visible, and employees make it normal. No single group can do the work of the others.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 22"
+  },
+  {
+    "id": "CM-C5-018",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Building a coalition",
+    "question": "What distinction does the course draw between a stakeholder and a coalition member?",
+    "options": [
+      "A stakeholder is affected by the change; a coalition member helps to move it",
+      "A stakeholder is internal; a coalition member is external",
+      "A stakeholder is senior; a coalition member is junior",
+      "A stakeholder supports the change; a coalition member opposes it"
+    ],
+    "correct_answer": "A stakeholder is affected by the change; a coalition member helps to move it",
+    "explanation": "The turning point is 'stop managing stakeholders': instead of asking how to communicate better to stakeholders, ask who must carry the change. Being affected is not the same as helping to move it.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 22"
+  },
+  {
+    "id": "CM-C5-019",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Credible purpose",
+    "question": "How can you test whether the purpose statement 'We want empowerment' is credible?",
+    "options": [
+      "Ask which decisions leaders will genuinely stop making",
+      "Ask whether it appears on the company website",
+      "Ask whether the Board approved the wording",
+      "Ask how many employees have read the statement"
+    ],
+    "correct_answer": "Ask which decisions leaders will genuinely stop making",
+    "explanation": "A purpose becomes credible when it costs something. For empowerment, the test is which decisions leaders will actually give up; for experimentation, it is what happens to the first team that fails publicly.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 23"
+  },
+  {
+    "id": "CM-C5-020",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "The uncomfortable question",
+    "question": "If the same people make the same decisions, the same behaviours are rewarded and people can still succeed working the old way, what does the course conclude?",
+    "options": [
+      "The transformation succeeded but people need more time",
+      "The technology has not yet been deployed properly",
+      "The organisation may have failed to change the organisation around the people, not to communicate",
+      "Employees are resisting and need more communication"
+    ],
+    "correct_answer": "The organisation may have failed to change the organisation around the people, not to communicate",
+    "explanation": "The answer is uncomfortable because it moves responsibility away from 'resistant employees'. Perhaps the organisation has not failed to communicate the change, but has failed to change the organisation around the people.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 27"
+  },
+  {
+    "id": "CM-C5-021",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Coherent signals",
+    "question": "Which of the following is one of the coherent signals that, according to the course, make change move?",
+    "options": [
+      "The steering committee dashboard shows all milestones in green",
+      "People have enough influence over the parts they are expected to own",
+      "Every team completes the same training on the same day",
+      "Leaders send a weekly email about the programme"
+    ],
+    "correct_answer": "People have enough influence over the parts they are expected to own",
+    "explanation": "Change moves when people understand why the current reality cannot continue, can locate themselves in the future, see credible people behaving differently, have enough influence over what they own, build capability, and see systems stop rewarding the old behaviour.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 29"
+  },
+  {
+    "id": "CM-C5-022",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Purpose, power, politics, culture",
+    "question": "According to the course, what does culture decide?",
+    "options": [
+      "What will remain when the programme is gone",
+      "What must be negotiated",
+      "Why the organisation should move",
+      "What can move"
+    ],
+    "correct_answer": "What will remain when the programme is gone",
+    "explanation": "Purpose gives a reason to move, power determines what can move, politics reveals what must be negotiated, and culture decides what will remain when the programme is gone.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 31"
+  },
+  {
+    "id": "CM-C5-023",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Culture",
+    "question": "Which is the 'real test' of the declared value 'We value collaboration'?",
+    "options": [
+      "Are rewards individual or collective?",
+      "Do leaders mention collaboration in their speeches?",
+      "Is collaboration listed among the company's values?",
+      "Do employees attend team-building events?"
+    ],
+    "correct_answer": "Are rewards individual or collective?",
+    "explanation": "Culture is the assumptions, norms and behaviours an organisation rewards, tolerates and reproduces. Declared values are tested by what actually happens, here by whether rewards are individual or collective.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 32"
+  },
+  {
+    "id": "CM-C5-024",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Culture",
+    "question": "Leaders ask for empowerment but keep every important decision for themselves. According to the course, what do people believe?",
+    "options": [
+      "The new values statement",
+      "The training they received",
+      "The decision rights",
+      "The leaders' request for empowerment"
+    ],
+    "correct_answer": "The decision rights",
+    "explanation": "Culture is revealed under pressure. When words and actions conflict, people believe actions: here the decision rights that leaders actually keep.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 33"
+  },
+  {
+    "id": "CM-C5-025",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Power–Politics–Culture diagnostic",
+    "question": "Which question belongs to the Politics part of the nine-question Power–Politics–Culture diagnostic?",
+    "options": [
+      "What must people see leaders do differently?",
+      "Which coalitions may form?",
+      "Which unwritten rules may block it?",
+      "Who informally influences the change?"
+    ],
+    "correct_answer": "Which coalitions may form?",
+    "explanation": "Politics questions cover competing interests, possible coalitions and trade-offs to negotiate. Informal influence is a Power question, and unwritten rules and visible leader behaviour are Culture questions.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 34"
+  },
+  {
+    "id": "CM-C5-026",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Reading culture",
+    "question": "When reading culture 'like an anthropologist', observing rewards, failure and taboos ('What do we reward or punish?') reveals what?",
+    "options": [
+      "Power",
+      "Behavioural boundaries",
+      "Norms and assumptions",
+      "Identity and status"
+    ],
+    "correct_answer": "Behavioural boundaries",
+    "explanation": "Stories, heroes and symbols reveal identity and status; rituals, language and meetings reveal norms and assumptions; rewards, failure and taboos reveal behavioural boundaries; and decisions, influence and access reveal power.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 35"
+  },
+  {
+    "id": "CM-C5-027",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "From toolkit to real change",
+    "question": "The classic question for capability is 'Did people complete the training?' Which better question does the course propose?",
+    "options": [
+      "Were the training materials translated for every market?",
+      "How many training hours did each person receive?",
+      "Did people rate the training sessions highly?",
+      "Can people actually perform differently in the flow of work?"
+    ],
+    "correct_answer": "Can people actually perform differently in the flow of work?",
+    "explanation": "The course argues for moving from delivering change activities to changing the conditions for adoption. For capability, that means checking whether people can perform differently in their actual work, which builds confidence and ability.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 39"
+  },
+  {
+    "id": "CM-C5-028",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "From toolkit to real change",
+    "question": "For leadership and sponsorship, which question does the course prefer to 'Are leaders visibly supporting it?'",
+    "options": [
+      "Have leaders approved the change budget?",
+      "How often do leaders mention the change in town halls?",
+      "What are leaders doing differently that proves the change is real?",
+      "Do leaders appear in the change videos?"
+    ],
+    "correct_answer": "What are leaders doing differently that proves the change is real?",
+    "explanation": "Visible support is not enough; leaders must create credible signals by changing their own behaviour. This shifts signals, priorities and permission in the organisation.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 39"
+  },
+  {
+    "id": "CM-C5-029",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "From toolkit to real change",
+    "question": "According to the course, what does 'feedback and learning' create in a change?",
+    "options": [
+      "Credible signals",
+      "Adaptation",
+      "Confidence",
+      "Meaning"
+    ],
+    "correct_answer": "Adaptation",
+    "explanation": "Communication creates meaning, leadership creates credible signals, capability creates confidence, participation and coalitions create agency and social movement, and feedback and learning create adaptation.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 38"
+  },
+  {
+    "id": "CM-C5-030",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Purpose journey",
+    "question": "In the journey to an authentic and inclusive purpose, what does 'conduct a purpose audit' involve?",
+    "options": [
+      "An anthropological audit of the organisation's history and past initiatives",
+      "A financial audit of the costs of the change programme",
+      "An external audit of compliance with regulations",
+      "A survey of competitors' purpose statements"
+    ],
+    "correct_answer": "An anthropological audit of the organisation's history and past initiatives",
+    "explanation": "The six-step journey is: understand authenticity and inclusivity, conduct a purpose audit (an anthropological audit of history and past initiatives), gather diverse perspectives, secure leadership commitment, educate and involve employees, and measure and track progress.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 41"
+  },
+  {
+    "id": "CM-C5-031",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "One change, four purposes",
+    "question": "In 'One change, four purposes', what is the purpose of leadership?",
+    "options": [
+      "To create the conditions, interventions and learning that help the organisation move",
+      "To help each person translate the change into new behaviours",
+      "To create belief and momentum through visible choices, actions and role modelling",
+      "To align strategy, structures, priorities and culture with the change"
+    ],
+    "correct_answer": "To create belief and momentum through visible choices, actions and role modelling",
+    "explanation": "The organisation aligns the system, the change management team enables the transition, leadership creates belief and momentum, and the individual level enables adoption.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 42"
+  },
+  {
+    "id": "CM-C5-032",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Purpose, mission and values",
+    "question": "How does the course distinguish purpose, mission and values?",
+    "options": [
+      "Purpose answers how, mission answers why, values answer what",
+      "Purpose answers why, mission answers what we do and for whom, values answer how",
+      "Purpose answers for whom, mission answers why, values answer what",
+      "Purpose answers what, mission answers how, values answer why"
+    ],
+    "correct_answer": "Purpose answers why, mission answers what we do and for whom, values answer how",
+    "explanation": "Purpose is the why (and what impact), mission is what we do and for whom, and values are how we get there, described as the behavioural compass.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 43"
+  },
+  {
+    "id": "CM-C5-033",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Individual purpose",
+    "question": "According to the course, which three elements connect individuals to purpose?",
+    "options": [
+      "Salary, job security and promotion",
+      "Hierarchy, status and recognition",
+      "Personal growth and development, meaning and contribution, and inclusivity",
+      "Rules, procedures and controls"
+    ],
+    "correct_answer": "Personal growth and development, meaning and contribution, and inclusivity",
+    "explanation": "Individual purpose answers 'What makes this change worth it, for me?'. The course lists personal growth and development, meaning and contribution, and inclusivity as the connectors.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 46"
+  },
+  {
+    "id": "CM-C5-034",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Connecting individuals with change",
+    "question": "A leader asks employees: 'How would you like to be involved in shaping the transition?' Which of the six strategies for connecting individuals with change does this reflect?",
+    "options": [
+      "Align personal goals with organisational change",
+      "Create clear and personalised communication",
+      "Engage everyone early in the process",
+      "Create a sense of ownership and accountability"
+    ],
+    "correct_answer": "Engage everyone early in the process",
+    "explanation": "'Engage everyone early' involves employees in shaping the details of the change. Ownership and accountability focuses on which parts people would like to own or lead, and aligning personal goals focuses on career growth and skills.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 50"
+  },
+  {
+    "id": "CM-C5-035",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Connecting individuals with change",
+    "question": "A leader asks: 'How do you see this change affecting your career growth, and which new skills would you like to gain?' Which strategy is this?",
+    "options": [
+      "Create a sense of ownership and accountability",
+      "Create clear and personalised communication",
+      "Engage everyone early in the process",
+      "Align personal goals with organisational change"
+    ],
+    "correct_answer": "Align personal goals with organisational change",
+    "explanation": "Aligning personal goals with the change means linking it to skills, career growth, work-life balance and individual development plans.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 51"
+  },
+  {
+    "id": "CM-C5-036",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Purpose in practice",
+    "question": "Which set lists the four pillars of 'purpose in practice'?",
+    "options": [
+      "Anchor the strategy in the purpose, align the leadership, engage the team, integrate into the customer experience",
+      "Define values, cut costs, restructure teams, launch new products",
+      "Hire a purpose officer, run a campaign, measure log-ins, reward attendance",
+      "Write a purpose statement, print it, publish it online, repeat it in meetings"
+    ],
+    "correct_answer": "Anchor the strategy in the purpose, align the leadership, engage the team, integrate into the customer experience",
+    "explanation": "Purpose in practice rests on anchoring strategy in purpose, aligning leadership, engaging the team and integrating purpose into the customer experience. The course also stresses that talking about purpose without action reduces commitment.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 55"
+  },
+  {
+    "id": "CM-C5-037",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Leadership purpose",
+    "question": "According to the course, the purpose of leadership in change goes beyond managing the process. What does it mean?",
+    "options": [
+      "Focusing only on the technical delivery of the project",
+      "Controlling every decision until the change is complete",
+      "Delegating the whole change to the communications team",
+      "Moving the entire organisation to embrace change by inspiring, guiding and aligning"
+    ],
+    "correct_answer": "Moving the entire organisation to embrace change by inspiring, guiding and aligning",
+    "explanation": "Leadership purpose in change means moving the entire organisation to embrace change, through three roles: inspire, guide and align.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 44"
+  },
+  {
+    "id": "CM-C5-038",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Sources of power",
+    "question": "According to the course, power is broader than hierarchy, and change moves it.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Power includes formal authority, resources, expertise, information, relationships, reputation and control of the agenda, and a transformation can shift each of them.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 10"
+  },
+  {
+    "id": "CM-C5-039",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Activity vs. adoption",
+    "question": "The course treats the number of people who have logged in to a new tool as a reliable measure of adoption.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Activity is not adoption and usage is not transformation. In the case, showing log-in numbers when asked about adoption is an example of an organisation 'becoming very good at looking transformed'.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 16"
+  },
+  {
+    "id": "CM-C5-040",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Above and below the water",
+    "question": "A technically excellent solution can fail when the social system around it has not changed.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. This is the message of the iceberg slide: beneath every visible transformation lies an invisible one involving power, politics, identity, trust and unwritten rules.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 17"
+  },
+  {
+    "id": "CM-C5-041",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Above and below the water",
+    "question": "In the iceberg metaphor, KPIs and governance sit below the water, among the things organisations discover too late.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. KPIs and governance are above the water, among the things programmes know how to manage. Below the water are power, politics, identity, trust, fear, status, networks, history and unwritten rules.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 17"
+  },
+  {
+    "id": "CM-C5-042",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Credible purpose",
+    "question": "According to the course, a purpose becomes credible when it costs something.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. For example, 'People matter' is tested by what wins when a productivity target meets a learning need, and 'Experimentation matters' by what happens to the first team that fails publicly.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 23"
+  },
+  {
+    "id": "CM-C5-043",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Building a coalition",
+    "question": "According to the course, the sponsor alone can translate the change into the daily work of every team.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The sponsor provides authority but cannot translate the change into every team; managers translate it into daily work. No single group can do the work of the others.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 22"
+  },
+  {
+    "id": "CM-C5-044",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Purpose in practice",
+    "question": "People believe actions: every gap between leaders' words and actions is read as a signal of where power really sits.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Under 'Intention', the course says all thoughts, words and actions should uphold the purpose, because any gap is read as a signal of where power really sits.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 28"
+  },
+  {
+    "id": "CM-C5-045",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Reading culture",
+    "question": "To understand an organisation's culture, the course recommends mainly asking employees to describe it.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course says not to ask people to describe the culture, but to observe the clues (stories, rituals, rewards, decisions) that reveal how the organisation really works.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 35"
+  },
+  {
+    "id": "CM-C5-046",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Authority and influence",
+    "question": "According to the course, change does not fail in the strategy; it fails in the space between authority and influence.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Transformations are designed on the map of formal authority but lived in the network of influence, and the gap between the two is where change fails.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 37"
+  },
+  {
+    "id": "CM-C5-047",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Purpose in practice",
+    "question": "Studies cited in the course suggest that a team's commitment increases when leadership talks often about purpose, even without corresponding action.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course states that team commitment decreases when leadership only talks about purpose; action is required.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 54"
+  },
+  {
+    "id": "CM-C5-048",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "One change, four purposes",
+    "question": "In the 'one change, four purposes' model, the purpose of the change management team is to enable the transition.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The change management team creates the conditions, interventions and learning that help the organisation move, while leadership creates belief and the organisation aligns the system.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 42"
+  },
+  {
+    "id": "CM-C5-049",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Building change capability",
+    "question": "The course argues that the organisation of the future will be the one that changes fastest, once.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The closing quote says the organisation of the future will not be the one that changes fastest once, but the one that becomes better at changing.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 57"
+  },
+  {
+    "id": "CM-C5-050",
+    "chapter": "Class 5",
+    "type": "tf",
+    "topic": "Coherent signals",
+    "question": "Change moves when small pieces of the future become visible before the entire transformation is complete.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Alongside the other coherent signals, the course highlights that small pieces of the future should become visible before the whole transformation is complete.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 29"
+  },
+  {
+    "id": "CM-C5-051",
+    "chapter": "Class 5",
+    "type": "mcq",
+    "topic": "Culture as operating system",
+    "question": "As culture moves from 'values' to the operating system of transformation, how does the course define culture?",
+    "options": [
+      "The patterns people learn from what repeatedly happens here",
+      "The official policies in the employee handbook",
+      "The personal style of the current CEO",
+      "The list of values printed in the annual report"
+    ],
+    "correct_answer": "The patterns people learn from what repeatedly happens here",
+    "explanation": "The course defines culture as 'the patterns people learn from what repeatedly happens here'. It notes that culture and resistance to change are the second-biggest barrier to transformation, after skills gaps.",
+    "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 56"
   }
 ]
