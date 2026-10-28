@@ -1362,5 +1362,393 @@
     "correct_answer": "True",
     "explanation": "True. A strong diagnosis names a mechanism in this particular organisation rather than a general condition of the modern economy.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 30"
+  },
+  {
+    "id": "CM-C2-048",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Knowledge mapping",
+    "question": "According to the course definition, what makes a knowledge map valuable?",
+    "options": [
+      "It replaces the formal organisational chart",
+      "It records every document the company stores",
+      "The association of information items itself creates new, actionable information",
+      "It lists every employee together with their job title"
+    ],
+    "correct_answer": "The association of information items itself creates new, actionable information",
+    "explanation": "A knowledge map is an association of items of information, preferably visual, where the association itself creates new, actionable information. Knowledge is defined as 'actionable information', and we map to identify knowledge networks, hubs, flows and gaps.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 33"
+  },
+  {
+    "id": "CM-C2-049",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Organisational Network Analysis",
+    "question": "What does comparing an organisational chart with the network of actual advice-seeking typically reveal?",
+    "options": [
+      "A 'real' hierarchy that can differ from the formal lines of authority",
+      "That formal authority and informal influence are the same thing",
+      "That advice flows only from managers to their direct reports",
+      "That the org chart is always an accurate picture of influence"
+    ],
+    "correct_answer": "A 'real' hierarchy that can differ from the formal lines of authority",
+    "explanation": "The org chart shows how authority ties should look, while the graph of actual advice-seeking can be restructured to reveal the 'real' hierarchy. Informal influence often follows different paths from formal reporting lines.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 34"
+  },
+  {
+    "id": "CM-C2-050",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Organisational Network Analysis",
+    "question": "In a company network, one person is the only connection between the engineering group and the sales group. In network analysis terms, this person is:",
+    "options": [
+      "An isolate",
+      "A bottleneck",
+      "An ego-centric node",
+      "A clique"
+    ],
+    "correct_answer": "A bottleneck",
+    "explanation": "Bottlenecks are central nodes that provide the only connection between different parts of the network. Isolates are poorly integrated people, and cliques are subgroups that may develop their own subcultures.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 35"
+  },
+  {
+    "id": "CM-C2-051",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Organisational Network Analysis",
+    "question": "Why does network analysis pay special attention to isolated people?",
+    "options": [
+      "They are usually the most powerful decision-makers",
+      "They represent untapped skills and a high likelihood of turnover",
+      "They create subcultures hostile to other groups",
+      "They act as the main bridges between departments"
+    ],
+    "correct_answer": "They represent untapped skills and a high likelihood of turnover",
+    "explanation": "Isolated people are not well integrated into a group, so their skills are underused and they are more likely to leave. Bridging between departments describes bottlenecks, and hostile subcultures describe cliques.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 35"
+  },
+  {
+    "id": "CM-C2-052",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Organisational Network Analysis",
+    "question": "What does network analysis say about the effect of long average distances (many degrees of separation) between people?",
+    "options": [
+      "Information becomes more accurate as it is checked by more people",
+      "Information travels faster because fewer people are involved",
+      "Information travels slowly and can become distorted",
+      "Distance has no effect on how information flows"
+    ],
+    "correct_answer": "Information travels slowly and can become distorted",
+    "explanation": "Short distances transmit information accurately and in a timely way, while long distances transmit it slowly and can distort it. This is why average distance is one of the facts network analysis examines.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 35"
+  },
+  {
+    "id": "CM-C2-053",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Network terminology",
+    "question": "In sociology, what are the points and lines of a network usually called?",
+    "options": [
+      "Actors and ties",
+      "Sites and bonds",
+      "Vertices and edges",
+      "Nodes and links"
+    ],
+    "correct_answer": "Actors and ties",
+    "explanation": "The same structure has different names in different fields: vertices and edges in mathematics, nodes and links in computer science, sites and bonds in physics, and actors and ties (relations) in sociology.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 36"
+  },
+  {
+    "id": "CM-C2-054",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "A researcher asks one manager whom they turn to for advice and collects data only on that manager and their contacts. What type of network is this?",
+    "options": [
+      "A socio-centric network",
+      "An ego-centric network",
+      "A two-mode network",
+      "An explicit network"
+    ],
+    "correct_answer": "An ego-centric network",
+    "explanation": "An ego-centric network contains data on a focal actor (the ego) and the people they are connected to (the alters). A socio-centric network would capture the ties among all members of a defined population.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 37"
+  },
+  {
+    "id": "CM-C2-055",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "A study maps the connections among all members of a department, within a defined boundary, to measure density and subgroups. What type of network is this?",
+    "options": [
+      "A socio-centric (complete) network",
+      "A two-mode network",
+      "An implicit network",
+      "An ego-centric network"
+    ],
+    "correct_answer": "A socio-centric (complete) network",
+    "explanation": "Socio-centric networks capture connections among all members of a population within a set boundary and use measures such as density, subgroups and positions. Ego-centric networks focus on a single focal actor and their alters.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 37"
+  },
+  {
+    "id": "CM-C2-056",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "Classifying networks by whether they exist by default: an informal advice network that nobody designed, and that must be uncovered with surveys, is:",
+    "options": [
+      "An ego-centric network",
+      "An implicit network",
+      "An explicit network",
+      "A socio-centric network"
+    ],
+    "correct_answer": "An implicit network",
+    "explanation": "Implicit networks do not exist by default, or are hidden, and must be constructed with dedicated tools and techniques. Explicit networks are deliberately designed for people to be part of. Socio-centric and ego-centric refer to a different dimension (centricity).",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 37"
+  },
+  {
+    "id": "CM-C2-057",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "Which relationship would produce a directed network?",
+    "options": [
+      "'Attended a meeting with'",
+      "'Works in the same office as'",
+      "'Is friends with'",
+      "'Lent money to'"
+    ],
+    "correct_answer": "'Lent money to'",
+    "explanation": "In a directed network, links have a direction: A lending money to B is not the same as B lending to A. 'Attended a meeting with' and 'friends' are the course's examples of undirected relationships.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 38"
+  },
+  {
+    "id": "CM-C2-058",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "A network links employees to the projects they work on. Classified by mode, this is:",
+    "options": [
+      "An undirected one-mode network",
+      "A one-mode network",
+      "A two-mode (bipartite) network",
+      "An ego-centric network"
+    ],
+    "correct_answer": "A two-mode (bipartite) network",
+    "explanation": "Two-mode networks connect two sets of nodes of different classes, here people and projects. A one-mode network is formed among a single set of nodes of the same nature, such as persons only.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 38"
+  },
+  {
+    "id": "CM-C2-059",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Types of networks",
+    "question": "A network records how often each pair of colleagues communicates, so some links are stronger than others. This is:",
+    "options": [
+      "A two-mode network",
+      "An unweighted network",
+      "A weighted network",
+      "An explicit network"
+    ],
+    "correct_answer": "A weighted network",
+    "explanation": "In weighted networks, links carry weights that indicate the strength of association between nodes. In unweighted networks, links simply exist or do not.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 38"
+  },
+  {
+    "id": "CM-C2-060",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Ready, willing and able",
+    "question": "Stakeholders respond to a change by saying 'I can't'. Which of the three conditions is missing?",
+    "options": [
+      "Able: they lack the skills and knowledge",
+      "Ready: they lack the capacity",
+      "Willing: they lack commitment",
+      "Aware: they lack information"
+    ],
+    "correct_answer": "Able: they lack the skills and knowledge",
+    "explanation": "People must be ready (capacity), willing (commitment) and able (skills and knowledge). A missing 'ready' sounds like 'not now', a missing 'willing' sounds like 'I won't', and a missing 'able' sounds like 'I can't'.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 41"
+  },
+  {
+    "id": "CM-C2-061",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Ready, willing and able",
+    "question": "Why does the course say that a perceived threat to someone's status matters so much in change?",
+    "options": [
+      "It always leads people to leave the organisation",
+      "It improves focus by creating a sense of urgency",
+      "It only affects senior managers, not employees",
+      "It activates the same neural networks as a threat to safety, reducing capacity for planning and judgement"
+    ],
+    "correct_answer": "It activates the same neural networks as a threat to safety, reducing capacity for planning and judgement",
+    "explanation": "A threat to standing is processed like a threat to safety, and the resources available for planning and judgement drop sharply. This is part of why change is a people problem before it is a technical one.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 41"
+  },
+  {
+    "id": "CM-C2-062",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Stakeholder management",
+    "question": "Which sequence correctly lists the five steps to managing stakeholders?",
+    "options": [
+      "Identify → Prioritise → Analyse → Monitor → Engage",
+      "Identify → Analyse → Prioritise → Engage → Monitor",
+      "Identify → Engage → Analyse → Prioritise → Monitor",
+      "Analyse → Identify → Engage → Prioritise → Monitor"
+    ],
+    "correct_answer": "Identify → Analyse → Prioritise → Engage → Monitor",
+    "explanation": "First identify who is touched by the change, then analyse power, interest, attitude and influence, prioritise where scarce attention goes, engage each group with tailored actions, and monitor because positions move. The steps form a cycle, not a one-off exercise.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 42"
+  },
+  {
+    "id": "CM-C2-063",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Stakeholder management",
+    "question": "Why should a stakeholder map be re-run at every major milestone and whenever a key role changes hands?",
+    "options": [
+      "Regulators require stakeholder maps to be updated",
+      "The first map is usually drawn by the wrong team",
+      "Stakeholders expect to be consulted on a fixed schedule",
+      "Positions shift as the change becomes real, so an old map describes an organisation that no longer exists"
+    ],
+    "correct_answer": "Positions shift as the change becomes real, so an old map describes an organisation that no longer exists",
+    "explanation": "'Map early, map often': a map drawn at kick-off and never revisited describes an organisation that no longer exists. Stakeholder management is a cycle, not a one-off exercise.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 42"
+  },
+  {
+    "id": "CM-C2-064",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Power/interest grid (Mendelow)",
+    "question": "A board member has the power to stop the change but is paying little attention to it. Which approach does Mendelow's grid recommend?",
+    "options": [
+      "Keep satisfied: consult before decisions that affect them and never let them be surprised in public",
+      "Keep informed: explain the reasoning so they become advocates",
+      "Manage closely: bring them into the design as co-creators",
+      "Monitor: minimum effort, with periodic review"
+    ],
+    "correct_answer": "Keep satisfied: consult before decisions that affect them and never let them be surprised in public",
+    "explanation": "High power with low interest means 'keep satisfied': keep contact short and high-level, consult before relevant decisions and avoid public surprises. 'Manage closely' is for high power and high interest stakeholders.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
+  },
+  {
+    "id": "CM-C2-065",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Power/interest grid (Mendelow)",
+    "question": "Front-line staff will live with the change daily and have strong opinions, but little formal authority. How should they be managed according to Mendelow's grid?",
+    "options": [
+      "Monitor: minimum effort, reviewed periodically",
+      "Keep satisfied: keep contact short and high-level",
+      "Manage closely: report to them after each decision",
+      "Keep informed: explain the reasoning, not just the decision, so they become advocates"
+    ],
+    "correct_answer": "Keep informed: explain the reasoning, not just the decision, so they become advocates",
+    "explanation": "Low power and high interest means 'keep informed'. These people often have good information; explaining the reasoning behind decisions can turn them into advocates.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
+  },
+  {
+    "id": "CM-C2-066",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Power/interest grid (Mendelow)",
+    "question": "What approach does the course recommend for stakeholders with high power and high interest?",
+    "options": [
+      "Report progress to them after decisions have been made",
+      "Keep contact short and high-level",
+      "Bring them into the design, since co-creation converts authority into ownership",
+      "Review their position periodically with minimal effort"
+    ],
+    "correct_answer": "Bring them into the design, since co-creation converts authority into ownership",
+    "explanation": "Sponsors and the biggest risks sit in the 'manage closely' quadrant. The course advises partnering rather than informing: co-design with them, with regular two-way contact, instead of reporting after the fact.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
+  },
+  {
+    "id": "CM-C2-067",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Organisational Network Analysis",
+    "question": "Subgroups or cliques in an organisation's network can develop their own subcultures and negative attitudes toward other groups.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Network analysis looks for organisational subgroups or cliques for exactly this reason: they can develop their own subcultures and negative attitudes toward other groups.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 35"
+  },
+  {
+    "id": "CM-C2-068",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Types of networks",
+    "question": "In an undirected network, links have a direction, as in the relationship 'lent money to'.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. 'Lent money to' is an example of a directed network. In undirected networks, links have no direction, as in 'attended a meeting with' or 'friends'.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 38"
+  },
+  {
+    "id": "CM-C2-069",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Types of networks",
+    "question": "In a socio-centric network, data is collected only on one focal actor and the people that actor is connected to.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. That describes an ego-centric network. A socio-centric network captures the connections among all members of a population within a defined boundary.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 37"
+  },
+  {
+    "id": "CM-C2-070",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Ready, willing and able",
+    "question": "Even a well-designed solution can fail if people are not ready, willing and able at the same time.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The course states that great solutions fail when people are not ready, willing or able; all three conditions must hold at once, and change is a people problem before it is a technical one.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 41"
+  },
+  {
+    "id": "CM-C2-071",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Power/interest grid (Mendelow)",
+    "question": "A stakeholder's interest tends to rise as soon as the change touches their own work, so stakeholders can migrate between quadrants of the grid.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Position on the grid is not fixed: interest rises the moment the change touches someone's own work, so plans should expect stakeholders to move between quadrants.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 43"
+  },
+  {
+    "id": "CM-C2-072",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Power/interest grid (Mendelow)",
+    "question": "Stakeholders with low power and low interest can safely be ignored for the rest of the change programme.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The 'monitor' quadrant calls for minimum effort, but not zero. The group should be reviewed periodically, because a single event can move a whole segment into a quadrant that demands attention.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
   }
 ]
