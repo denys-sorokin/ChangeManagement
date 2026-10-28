@@ -102,9 +102,9 @@
     "topic": "Incremental vs. disruptive change",
     "question": "What risk does the course associate with disruptive change?",
     "options": [
-      "Improvement without any direction",
+      "Improvement without any clear direction, leading to change fatigue",
       "Arriving late, with the right product and the wrong organisation",
-      "Losing control of the plan's budget and milestones",
+      "Losing control of the change programme's budget and milestones",
       "Optimising a position the market is about to abandon"
     ],
     "correct_answer": "Arriving late, with the right product and the wrong organisation",
@@ -118,12 +118,12 @@
     "topic": "Kodak case",
     "question": "How does the course explain Kodak's position with respect to incremental and disruptive change?",
     "options": [
-      "It moved into digital too early, before the market was ready",
-      "It was poor at incrementally improving its film business",
-      "It stayed excellent at incremental change while the basis of competition had moved",
-      "It lacked the engineers needed to develop digital technology"
+      "It moved into digital too early, before the market was ready for it",
+      "It was poor at making incremental improvements to its film business",
+      "It stayed excellent at incremental change after competition had moved",
+      "It lacked the engineers it needed to develop digital technology"
     ],
-    "correct_answer": "It stayed excellent at incremental change while the basis of competition had moved",
+    "correct_answer": "It stayed excellent at incremental change after competition had moved",
     "explanation": "The material states that Kodak was excellent at incremental change and never stopped being excellent at it, which was precisely the problem once the environment became disruptive. Kodak had in fact invented and patented digital photography, so a lack of engineering capability was not the issue.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
   },
@@ -134,12 +134,12 @@
     "topic": "Kodak case",
     "question": "What is the central lesson the course draws from Kodak's decline?",
     "options": [
-      "Kodak lacked the resources and talent to compete in digital",
-      "Kodak never developed or patented digital imaging technology",
-      "Kodak had no internal awareness that digital could displace film",
-      "Kodak did not lack information; it lacked a way of acting on information that threatened its margin"
+      "Kodak lacked the resources and talent needed to compete in digital imaging",
+      "Kodak never developed or patented any digital imaging technology itself",
+      "Kodak had no internal awareness that digital could ever displace film",
+      "Kodak had the information but could not act on what threatened its margin"
     ],
-    "correct_answer": "Kodak did not lack information; it lacked a way of acting on information that threatened its margin",
+    "correct_answer": "Kodak had the information but could not act on what threatened its margin",
     "explanation": "Kodak built the first digital camera, patented it, and had an internal forecast that digital could displace film. The failure was not ignorance or lack of resources but an inability to act on information that threatened its own profitable film business.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 13"
   },
@@ -150,12 +150,12 @@
     "topic": "Kodak case",
     "question": "Why was Steven Sasson's 1975 digital camera prototype shelved by Kodak management?",
     "options": [
-      "Regulators prevented Kodak from selling digital devices",
-      "It sold no film, paper or processing, so the business case looked weak",
-      "The technology failed to produce any usable image",
-      "A competitor had already launched a superior product"
+      "Regulators prevented Kodak from selling it",
+      "It sold no film, paper or processing",
+      "The technology failed to produce any image",
+      "A competitor had already launched a better one"
     ],
-    "correct_answer": "It sold no film, paper or processing, so the business case looked weak",
+    "correct_answer": "It sold no film, paper or processing",
     "explanation": "Management found the technology interesting but the business case unconvincing because it did not feed Kodak's profitable film, paper and processing business. The prototype worked, and it came eight years before a competitor shipped a comparable device.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 10"
   },
@@ -198,12 +198,12 @@
     "topic": "Planned vs. emergent change",
     "question": "How does the course recommend viewing planned and emergent change?",
     "options": [
-      "As sequential phases, with planned change always coming first",
-      "As rival theories, from which a leader should pick the stronger one",
-      "As two things happening at once, with most transformations failing in the gap between them",
-      "As approaches suited to small and to large organisations respectively"
+      "As sequential phases, with planned change always first",
+      "As rival theories, from which leaders pick the stronger",
+      "As two things happening at once; failure lies in the gap",
+      "As approaches suited to small and large firms respectively"
     ],
-    "correct_answer": "As two things happening at once, with most transformations failing in the gap between them",
+    "correct_answer": "As two things happening at once; failure lies in the gap",
     "explanation": "The material states explicitly that planned and emergent change are not rival theories to choose between. Both happen simultaneously, and most transformations fail in the gap between the plan and the local adaptations.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
   },
@@ -342,12 +342,12 @@
     "topic": "Organisational inertia",
     "question": "How do the course materials characterise organisational inertia?",
     "options": [
-      "As the presence of something that is working, not the absence of effort",
-      "As laziness and complacency among senior managers",
+      "As the presence of something that is working, not a lack of effort",
+      "As laziness and complacency among the senior management team",
       "As a short phase that ends once a change plan is announced",
       "As a lack of information about the external environment"
     ],
-    "correct_answer": "As the presence of something that is working, not the absence of effort",
+    "correct_answer": "As the presence of something that is working, not a lack of effort",
     "explanation": "The material states that inertia is not the absence of effort but the presence of something that is working. This is why capable, hard-working organisations can still fail to redirect themselves.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
   },
@@ -375,11 +375,11 @@
     "question": "Why does the course say the first interpretation of a threatening signal (e.g. 'it's just a niche') is not dishonest?",
     "options": [
       "The data available at that moment is usually accurate",
-      "It is normally validated by external consultants",
-      "It is usually proved correct in the long run",
-      "It is the only interpretation the shared mental model can produce"
+      "It is normally validated by external consultants first",
+      "It is usually proved correct by events in the long run",
+      "It is the only reading the shared mental model can produce"
     ],
-    "correct_answer": "It is the only interpretation the shared mental model can produce",
+    "correct_answer": "It is the only reading the shared mental model can produce",
     "explanation": "Organisations interpret signals through the same structures that the signal threatens, so the shared paradigm can only produce interpretations that fit it. The problem is structural, not a matter of managers hiding the truth.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 24"
   },
@@ -472,10 +472,10 @@
     "options": [
       "It is driven by complacent and poorly informed managers",
       "It is imposed on organisations by external regulators",
-      "Every step is competent management, so nothing in it looks like a mistake",
+      "Every step is competent management, so nothing looks wrong",
       "It only becomes visible to outsiders, never to insiders"
     ],
-    "correct_answer": "Every step is competent management, so nothing in it looks like a mistake",
+    "correct_answer": "Every step is competent management, so nothing looks wrong",
     "explanation": "The material stresses that the loop is not a mistake: each step is competent management, and nothing requires anyone to be complacent, lazy or poorly informed. That is precisely why it is so difficult to break.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 27"
   },
@@ -692,10 +692,10 @@
     "options": [
       "To make the new way part of metrics and promotion criteria",
       "To test load-bearing assumptions cheaply before committing",
-      "To build a coalition with more standing than the defenders of the status quo",
-      "To understand the system before touching it"
+      "To build a coalition stronger than the status quo's defenders",
+      "To understand the whole system before touching anything"
     ],
-    "correct_answer": "To build a coalition with more standing than the defenders of the status quo",
+    "correct_answer": "To build a coalition stronger than the status quo's defenders",
     "explanation": "Mobilize corrects Machiavelli's asymmetry by building a coalition with more standing than the status quo's defenders and giving diffuse beneficiaries a voice. Testing assumptions is Experiment, understanding the system is Diagnose, and making it stick is Embed.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 5"
   },
@@ -739,11 +739,11 @@
     "question": "According to the course, what does a failed experiment usually mean?",
     "options": [
       "The idea was wrong and should be abandoned immediately",
-      "The organisation should move straight on to Embed",
-      "The team lacked commitment and should be replaced",
-      "The diagnosis was wrong rather than the idea, so returning to stage one is progress"
+      "The organisation should move straight on to the Embed stage",
+      "The team lacked commitment and its members should be replaced",
+      "The diagnosis was wrong, so returning to stage one is progress"
     ],
-    "correct_answer": "The diagnosis was wrong rather than the idea, so returning to stage one is progress",
+    "correct_answer": "The diagnosis was wrong, so returning to stage one is progress",
     "explanation": "The model is a loop, not a line: a test that fails usually means the diagnosis was wrong, not the idea. Going back to Diagnose is described as progress, not a setback.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
   },
@@ -754,12 +754,12 @@
     "topic": "Six-stage course model",
     "question": "Why does the course warn that successfully embedding a change creates a future problem?",
     "options": [
-      "Whatever is embedded becomes the next thing someone will have to unfreeze",
+      "What is embedded becomes the next thing to unfreeze",
       "Embedded changes always reverse within a year",
-      "Embedding removes accountability from the change team",
-      "Embedded changes are too expensive to maintain over time"
+      "Embedding removes accountability from the team",
+      "Embedded changes are too expensive to maintain"
     ],
-    "correct_answer": "Whatever is embedded becomes the next thing someone will have to unfreeze",
+    "correct_answer": "What is embedded becomes the next thing to unfreeze",
     "explanation": "Embedding creates the next inertia: you are installing the next paradigm's filter. This is the performance paradox applied to your own successful change programme.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
   },
@@ -787,9 +787,9 @@
     "question": "Which answer to 'What is changing?' best follows the course guidance to be specific?",
     "options": [
       "The cost of producing a first draft has fallen to almost zero",
-      "Markets are becoming more competitive",
-      "Digital transformation is accelerating",
-      "Technology is changing everything in our industry"
+      "Markets everywhere are becoming more and more competitive",
+      "Digital transformation is accelerating across all sectors",
+      "Technology is changing everything in our industry today"
     ],
     "correct_answer": "The cost of producing a first draft has fallen to almost zero",
     "explanation": "The course says 'AI' is not an answer, while 'the cost of a first draft went to zero' is. A good answer names the specific shift so precisely that a competitor could act on it.",
@@ -804,10 +804,10 @@
     "options": [
       "Ask whether a competitor could act on it tomorrow",
       "Ask whether it appears in the official strategy",
-      "Ask whether it has its own budget line",
-      "Ask who would have to agree if it had to change; if nobody, look again"
+      "Ask whether it has its own line in the budget",
+      "Ask who would have to agree if it had to change"
     ],
-    "correct_answer": "Ask who would have to agree if it had to change; if nobody, look again",
+    "correct_answer": "Ask who would have to agree if it had to change",
     "explanation": "For the 'not changing' column, the test is who would have to agree if this had to change; if nobody, you have not found a real commitment. 'Could a competitor act on this tomorrow?' is the test for the 'What is changing?' column.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 10"
   },
@@ -898,12 +898,12 @@
     "topic": "Resistance as data",
     "question": "According to the course, what is the single most common mobilisation error regarding resistance?",
     "options": [
-      "Compensating every loss that people report",
-      "Treating all resistance as the same thing: a communication problem",
-      "Ignoring resistance until after the launch",
+      "Compensating every single loss that people report",
+      "Treating all resistance as a communication problem",
+      "Ignoring resistance until after the change is launched",
       "Involving those who resist too early in the design"
     ],
-    "correct_answer": "Treating all resistance as the same thing: a communication problem",
+    "correct_answer": "Treating all resistance as a communication problem",
     "explanation": "Resistance can be about information, interests or identity, and each needs a different response. Treating all three as a communication problem is identified as the most common mobilisation error.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
   },
@@ -930,12 +930,12 @@
     "topic": "Machiavelli's asymmetry",
     "question": "Why do those who would lose from a change usually resist more effectively than potential winners support it?",
     "options": [
-      "They are usually more senior in the hierarchy than the winners",
-      "They have better access to information about the change",
-      "They usually outnumber the people who would gain",
-      "Their loss is concrete, certain and concentrated, while the gains are diffuse, uncertain and in the future"
+      "They are usually more senior in the hierarchy than those who would gain",
+      "They have better access to information about how the change will work",
+      "They usually outnumber the people who would benefit from the change",
+      "Their loss is concrete and certain, while the gains are diffuse and uncertain"
     ],
-    "correct_answer": "Their loss is concrete, certain and concentrated, while the gains are diffuse, uncertain and in the future",
+    "correct_answer": "Their loss is concrete and certain, while the gains are diffuse and uncertain",
     "explanation": "Machiavelli's asymmetry: losers know exactly what they lose, are already organised and have existing rules on their side, so a concentrated loss produces sustained effort. Winners face projected, uncertain benefits and produce only lukewarm support.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
   },
@@ -946,12 +946,12 @@
     "topic": "Machiavelli's asymmetry",
     "question": "Which characteristic does the course attribute to the potential beneficiaries of a change?",
     "options": [
-      "The existing rules and targets are on their side",
-      "They are scattered across functions and do not yet know they are a group",
+      "The existing rules and targets are already on their side",
+      "They are scattered and do not yet know they are a group",
       "They already have budgets and meetings to coordinate through",
       "They know exactly what they will gain, and roughly when"
     ],
-    "correct_answer": "They are scattered across functions and do not yet know they are a group",
+    "correct_answer": "They are scattered and do not yet know they are a group",
     "explanation": "Beneficiaries suffer from dispersion and have no standing: nothing in the current system represents them. Existing budgets, rules and certainty about the outcome are characteristics of those who would lose.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
   },
@@ -979,11 +979,11 @@
     "question": "How does the course say the Change Diagnosis Canvas should be worked?",
     "options": [
       "Right to left, starting from the critical assumptions",
-      "Left to right, then argue backwards to check the future state follows from the forces and assumptions",
-      "Fill in each block independently, in any order",
-      "Start from the desired future state and only work backwards"
+      "Left to right, then argue backwards to test the logic",
+      "Each block filled in independently, in any order",
+      "From the desired future state, working backwards only"
     ],
-    "correct_answer": "Left to right, then argue backwards to check the future state follows from the forces and assumptions",
+    "correct_answer": "Left to right, then argue backwards to test the logic",
     "explanation": "Teams work left to right and then argue backwards: if block 5 (desired future state) does not follow from blocks 2, 3 and 4, the diagnosis is wrong. The blocks are linked, not independent.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 22"
   },
@@ -994,12 +994,12 @@
     "topic": "Change Diagnosis Canvas",
     "question": "What is the common error when describing the current state on the canvas?",
     "options": [
-      "Writing the wish list there, so the gap disappears before it is examined",
+      "Writing the wish list there, so the gap disappears",
       "Using evidence such as where the budget goes",
       "Including what currently works in the description",
-      "Describing the situation rather than evaluating it"
+      "Describing the situation instead of evaluating it"
     ],
-    "correct_answer": "Writing the wish list there, so the gap disappears before it is examined",
+    "correct_answer": "Writing the wish list there, so the gap disappears",
     "explanation": "The current state should describe what is true now, with evidence, including what works. Writing aspirations into it hides the very gap the change must close; including what works and describing without evaluating are recommended, not errors.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 23"
   },
@@ -1026,12 +1026,12 @@
     "topic": "Lewin's force field",
     "question": "What is Lewin's key insight, as presented in the course?",
     "options": [
-      "Adding pressure for change is the most durable way to move a system",
-      "A stable situation means that no forces are acting on the organisation",
-      "Driving and restraining forces should be addressed only after launch",
-      "A stable situation is opposing forces in balance, and removing a restraining force is usually cheaper than adding pressure"
+      "Adding pressure for change is the most durable way to move any system",
+      "A stable situation means that no forces are acting on the organisation at all",
+      "Driving and restraining forces should only be addressed after the launch",
+      "Stability is opposing forces in balance; removing restraints is usually cheaper"
     ],
-    "correct_answer": "A stable situation is opposing forces in balance, and removing a restraining force is usually cheaper than adding pressure",
+    "correct_answer": "Stability is opposing forces in balance; removing restraints is usually cheaper",
     "explanation": "Stability is not the absence of force but a balance of opposing forces. The course adds that most programmes add pressure, whereas durable wins come from removing something from the forces against change.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 24"
   },
@@ -1042,12 +1042,12 @@
     "topic": "Lewin's force field",
     "question": "Under 'forces for change', what does the course advise looking for before designing anything?",
     "options": [
-      "The budget available for the programme",
-      "People already working around the system informally, where emergent change is running",
+      "The budget available to fund the change programme",
+      "People already working around the system informally",
       "The largest external competitor in the market",
-      "The senior managers who approved the plan"
+      "The senior managers who approved the change plan"
     ],
-    "correct_answer": "People already working around the system informally, where emergent change is running",
+    "correct_answer": "People already working around the system informally",
     "explanation": "'Look for the edge': emergent change is usually already running somewhere, with people working around the system at their own risk. Finding it first gives the design something real to build on.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 24"
   },
@@ -1058,12 +1058,12 @@
     "topic": "Critical assumptions",
     "question": "When is an assumption 'critical', according to the course?",
     "options": [
-      "When it is the easiest assumption to test",
-      "When everyone in the room agrees with it",
-      "When the whole diagnosis collapses if it turns out to be false",
-      "When it is supported by the most evidence"
+      "When it is the easiest of the assumptions to test",
+      "When everyone in the room already agrees with it",
+      "When the diagnosis collapses if it turns out to be false",
+      "When it is supported by the most available evidence"
     ],
-    "correct_answer": "When the whole diagnosis collapses if it turns out to be false",
+    "correct_answer": "When the diagnosis collapses if it turns out to be false",
     "explanation": "An assumption is critical when the diagnosis collapses if it is false. Assumptions that everyone agrees on are flagged as something to surface and question, not as the definition of critical.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
   },
@@ -1074,12 +1074,12 @@
     "topic": "Critical assumptions",
     "question": "Which assumptions should go forward to the Week 4 experiments?",
     "options": [
-      "Those that are cheapest and quickest to test",
-      "Those already supported by strong evidence",
-      "Those that would change the most if wrong and are the most uncertain on current evidence",
-      "Those that everyone in the team already agrees on"
+      "Those that are the cheapest and quickest for the team to test",
+      "Those already supported by strong evidence from the market",
+      "Those with the most impact if wrong and the most uncertainty",
+      "Those that everyone in the team already agrees are true"
     ],
-    "correct_answer": "Those that would change the most if wrong and are the most uncertain on current evidence",
+    "correct_answer": "Those with the most impact if wrong and the most uncertainty",
     "explanation": "Teams rank assumptions by impact if wrong and by uncertainty; the intersection of the two is where the experiments go. Well-evidenced or agreed assumptions are less valuable to test.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
   },
@@ -1155,9 +1155,9 @@
     "question": "Which of the four tests of a strong diagnosis does the course say separates a real diagnosis from a well-formatted one?",
     "options": [
       "It is uncomfortable: it implicates something the organisation is proud of",
-      "It is specific: it names a mechanism in this organisation",
-      "It is falsifiable: someone could bring evidence against it",
-      "It names the system rather than the people"
+      "It is specific: it names a mechanism in this particular organisation",
+      "It is falsifiable: someone could bring evidence that it is wrong",
+      "It names the system, not the people, as the source of the behaviour"
     ],
     "correct_answer": "It is uncomfortable: it implicates something the organisation is proud of",
     "explanation": "All four tests matter, but the material singles out the fourth: a good diagnosis is uncomfortable. If everyone nods immediately, you have probably found a symptom rather than the cause.",
@@ -1370,12 +1370,12 @@
     "topic": "Knowledge mapping",
     "question": "According to the course definition, what makes a knowledge map valuable?",
     "options": [
-      "It replaces the formal organisational chart",
-      "It records every document the company stores",
-      "The association of information items itself creates new, actionable information",
-      "It lists every employee together with their job title"
+      "It lists every employee together with their job title",
+      "It replaces the formal organisational chart entirely",
+      "The association itself creates new, actionable information",
+      "It records every document the company has stored"
     ],
-    "correct_answer": "The association of information items itself creates new, actionable information",
+    "correct_answer": "The association itself creates new, actionable information",
     "explanation": "A knowledge map is an association of items of information, preferably visual, where the association itself creates new, actionable information. Knowledge is defined as 'actionable information', and we map to identify knowledge networks, hubs, flows and gaps.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 33"
   },
@@ -1419,11 +1419,11 @@
     "question": "Why does network analysis pay special attention to isolated people?",
     "options": [
       "They are usually the most powerful decision-makers",
-      "They represent untapped skills and a high likelihood of turnover",
+      "They represent untapped skills and turnover risk",
       "They create subcultures hostile to other groups",
       "They act as the main bridges between departments"
     ],
-    "correct_answer": "They represent untapped skills and a high likelihood of turnover",
+    "correct_answer": "They represent untapped skills and turnover risk",
     "explanation": "Isolated people are not well integrated into a group, so their skills are underused and they are more likely to leave. Bridging between departments describes bottlenecks, and hostile subcultures describe cliques.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 35"
   },
@@ -1578,12 +1578,12 @@
     "topic": "Ready, willing and able",
     "question": "Why does the course say that a perceived threat to someone's status matters so much in change?",
     "options": [
-      "It always leads people to leave the organisation",
-      "It improves focus by creating a sense of urgency",
-      "It only affects senior managers, not employees",
-      "It activates the same neural networks as a threat to safety, reducing capacity for planning and judgement"
+      "It always leads people to leave the organisation within a short time",
+      "It improves people's focus by creating a useful sense of urgency",
+      "It only affects senior managers, whose status is most visible",
+      "It is processed like a threat to safety, reducing capacity for judgement"
     ],
-    "correct_answer": "It activates the same neural networks as a threat to safety, reducing capacity for planning and judgement",
+    "correct_answer": "It is processed like a threat to safety, reducing capacity for judgement",
     "explanation": "A threat to standing is processed like a threat to safety, and the resources available for planning and judgement drop sharply. This is part of why change is a people problem before it is a technical one.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 41"
   },
@@ -1610,12 +1610,12 @@
     "topic": "Stakeholder management",
     "question": "Why should a stakeholder map be re-run at every major milestone and whenever a key role changes hands?",
     "options": [
-      "Regulators require stakeholder maps to be updated",
-      "The first map is usually drawn by the wrong team",
-      "Stakeholders expect to be consulted on a fixed schedule",
-      "Positions shift as the change becomes real, so an old map describes an organisation that no longer exists"
+      "Regulators require stakeholder maps to be updated at every milestone",
+      "The first map is usually drawn by the wrong team and must be redone",
+      "Stakeholders expect to be consulted again on a fixed, regular schedule",
+      "Positions shift as the change becomes real, so old maps go out of date"
     ],
-    "correct_answer": "Positions shift as the change becomes real, so an old map describes an organisation that no longer exists",
+    "correct_answer": "Positions shift as the change becomes real, so old maps go out of date",
     "explanation": "'Map early, map often': a map drawn at kick-off and never revisited describes an organisation that no longer exists. Stakeholder management is a cycle, not a one-off exercise.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 42"
   },
@@ -1626,12 +1626,12 @@
     "topic": "Power/interest grid (Mendelow)",
     "question": "A board member has the power to stop the change but is paying little attention to it. Which approach does Mendelow's grid recommend?",
     "options": [
-      "Keep satisfied: consult before decisions that affect them and never let them be surprised in public",
+      "Keep satisfied: consult them and never surprise them in public",
       "Keep informed: explain the reasoning so they become advocates",
       "Manage closely: bring them into the design as co-creators",
-      "Monitor: minimum effort, with periodic review"
+      "Monitor: minimum effort, with a periodic review of position"
     ],
-    "correct_answer": "Keep satisfied: consult before decisions that affect them and never let them be surprised in public",
+    "correct_answer": "Keep satisfied: consult them and never surprise them in public",
     "explanation": "High power with low interest means 'keep satisfied': keep contact short and high-level, consult before relevant decisions and avoid public surprises. 'Manage closely' is for high power and high interest stakeholders.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
   },
@@ -1642,12 +1642,12 @@
     "topic": "Power/interest grid (Mendelow)",
     "question": "Front-line staff will live with the change daily and have strong opinions, but little formal authority. How should they be managed according to Mendelow's grid?",
     "options": [
-      "Monitor: minimum effort, reviewed periodically",
-      "Keep satisfied: keep contact short and high-level",
-      "Manage closely: report to them after each decision",
-      "Keep informed: explain the reasoning, not just the decision, so they become advocates"
+      "Monitor: minimum effort, with their position reviewed periodically",
+      "Keep satisfied: keep any contact with them short and high-level",
+      "Manage closely: report back to them after each decision is made",
+      "Keep informed: explain the reasoning so they become advocates"
     ],
-    "correct_answer": "Keep informed: explain the reasoning, not just the decision, so they become advocates",
+    "correct_answer": "Keep informed: explain the reasoning so they become advocates",
     "explanation": "Low power and high interest means 'keep informed'. These people often have good information; explaining the reasoning behind decisions can turn them into advocates.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
   },
@@ -1658,12 +1658,12 @@
     "topic": "Power/interest grid (Mendelow)",
     "question": "What approach does the course recommend for stakeholders with high power and high interest?",
     "options": [
-      "Report progress to them after decisions have been made",
-      "Keep contact short and high-level",
-      "Bring them into the design, since co-creation converts authority into ownership",
-      "Review their position periodically with minimal effort"
+      "Report progress to them after decisions are made",
+      "Keep contact with them short and high-level",
+      "Bring them into the design as co-creators",
+      "Review their position periodically, with little effort"
     ],
-    "correct_answer": "Bring them into the design, since co-creation converts authority into ownership",
+    "correct_answer": "Bring them into the design as co-creators",
     "explanation": "Sponsors and the biggest risks sit in the 'manage closely' quadrant. The course advises partnering rather than informing: co-design with them, with regular two-way contact, instead of reporting after the fact.",
     "source": "Class2_Anatomy_of_Change_2026.pdf, p. 44"
   },
@@ -1790,12 +1790,12 @@
     "topic": "Change vs. transition",
     "question": "Why does the course argue that one corporate communication cannot create organisational change?",
     "options": [
-      "Different stakeholders hear different change stories, depending on where they stand",
-      "Change announcements should come from HR rather than the CEO",
+      "Different stakeholders hear different stories about it",
+      "Change announcements should come from HR, not the CEO",
       "Corporate emails are rarely opened by employees",
-      "A message must be repeated at least three times to be effective"
+      "A message must be repeated three times to work"
     ],
-    "correct_answer": "Different stakeholders hear different change stories, depending on where they stand",
+    "correct_answer": "Different stakeholders hear different stories about it",
     "explanation": "In the 'four voices' exercise, each stakeholder thinks, feels and fears different things about the same change. A single message cannot speak to all of these experiences at once.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 10"
   },
@@ -1902,12 +1902,12 @@
     "topic": "Neuroscience of storytelling",
     "question": "Why is oxytocin release relevant when communicating change through stories?",
     "options": [
-      "It makes listeners more receptive to data slides",
-      "It fosters empathy and trust, the two things a change message needs most",
-      "It removes the need for a clear call to action",
+      "It makes listeners more receptive to slides full of data",
+      "It fosters empathy and trust, which change messages need most",
+      "It removes the need for a clear and specific call to action",
       "It improves short-term memory for figures and targets"
     ],
-    "correct_answer": "It fosters empathy and trust, the two things a change message needs most",
+    "correct_answer": "It fosters empathy and trust, which change messages need most",
     "explanation": "Stories trigger the release of oxytocin, the hormone that fosters empathy and trust. Along with brain activation and sustained attention, this is something a slide of data never triggers.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 19"
   },
@@ -1918,12 +1918,12 @@
     "topic": "Neuroscience of storytelling",
     "question": "How does the course characterise narrative?",
     "options": [
-      "As useful mainly for external marketing campaigns",
-      "As a stylistic choice that suits only creative leaders",
+      "As a tool useful mainly for external marketing",
+      "As a stylistic choice suited to creative leaders",
       "As a replacement for data when making decisions",
-      "As how the brain is built to process meaning, not merely a communication preference"
+      "As how the brain is built to process meaning"
     ],
-    "correct_answer": "As how the brain is built to process meaning, not merely a communication preference",
+    "correct_answer": "As how the brain is built to process meaning",
     "explanation": "The material states that narrative is not a communication preference; it is how the brain is built to process meaning. Stories activate emotion and memory, foster trust and hold attention.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 18"
   },
@@ -1984,10 +1984,10 @@
     "options": [
       "It includes measurable financial targets",
       "It names the specific technology to be used",
-      "It is shorter and therefore easier to remember",
-      "It creates a picture of the destination that people can see"
+      "It is shorter and easier to remember",
+      "It creates a picture of the destination"
     ],
-    "correct_answer": "It creates a picture of the destination that people can see",
+    "correct_answer": "It creates a picture of the destination",
     "explanation": "For the question 'What future are we trying to create?', people need to see the destination. The stronger version creates a picture, while the weaker one is an abstract aspiration.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 25"
   },
@@ -2030,10 +2030,10 @@
     "topic": "Anatomy of a change story",
     "question": "Which call to action best follows the course's guidance that specific action creates agency?",
     "options": [
-      "We count on everyone's full collaboration and commitment throughout this important journey",
+      "We count on everyone's full collaboration and commitment throughout this important and exciting journey ahead",
       "In the next four weeks, every team should identify the three activities that create the most unnecessary work",
-      "Please stay engaged and supportive as we continue to roll out this transformation together",
-      "We are confident that every one of you will embrace the exciting changes ahead of us"
+      "Please stay engaged and supportive as we continue to roll out this transformation together over the coming months",
+      "We are confident that every one of you will embrace the exciting changes that are ahead of us as an organisation"
     ],
     "correct_answer": "In the next four weeks, every team should identify the three activities that create the most unnecessary work",
     "explanation": "Every change story needs a call to action, and a specific one (who, what, by when) creates agency. General appeals such as 'we count on everyone's collaboration' are the course's example of what not to say.",
@@ -2078,12 +2078,12 @@
     "topic": "Employee as protagonist",
     "question": "Instead of presenting 'Here is our transformation programme', what does the course suggest asking employees?",
     "options": [
-      "'Do you agree with the transformation programme?'",
-      "'Which milestone of the programme do you prefer?'",
-      "'How many training sessions have you completed?'",
-      "'What will you be able to do tomorrow that is difficult today?'"
+      "'Do you agree with the goals of the transformation programme?'",
+      "'Which milestone of the programme do you personally prefer?'",
+      "'How many of the training sessions have you completed so far?'",
+      "'What will you be able to do tomorrow that is hard today?'"
     ],
-    "correct_answer": "'What will you be able to do tomorrow that is difficult today?'",
+    "correct_answer": "'What will you be able to do tomorrow that is hard today?'",
     "explanation": "Because the employee is the protagonist, communication should focus on what changes for them. The suggested question puts the employee's future capability at the centre.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 35"
   },
@@ -2110,12 +2110,12 @@
     "topic": "The messy middle",
     "question": "How should frameworks such as ADKAR, stakeholder analysis and sponsorship be used within a change story?",
     "options": [
-      "As technical content reserved for the project team only",
-      "As the opening of the story, before any narrative is told",
-      "As tools that help the protagonist move through the journey, explaining the story rather than interrupting it",
-      "As a replacement for the story once the launch is over"
+      "As technical content reserved for the project team and kept out of the story",
+      "As the opening of the story, presented before any narrative is told",
+      "As tools that help the protagonist through the journey, explaining the story",
+      "As a replacement for the story once the launch phase is over"
     ],
-    "correct_answer": "As tools that help the protagonist move through the journey, explaining the story rather than interrupting it",
+    "correct_answer": "As tools that help the protagonist through the journey, explaining the story",
     "explanation": "The course says to introduce frameworks in the messy middle as tools that help the protagonist through the journey. The framework should explain the story rather than interrupt it.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 38"
   },
@@ -2174,12 +2174,12 @@
     "topic": "Communicating uncertainty",
     "question": "Employees fear redundancies. According to the course, when should a leader address this?",
     "options": [
-      "Before presenting the strategy, by saying the unsayable first",
+      "First, before presenting the strategy",
       "Only once every decision has been finalised",
       "Only in private conversations with managers",
       "After the strategy has been fully explained"
     ],
-    "correct_answer": "Before presenting the strategy, by saying the unsayable first",
+    "correct_answer": "First, before presenting the strategy",
     "explanation": "'Say the unsayable first': if people fear redundancies, address that before your strategy slide. Until the feared question is addressed, people will not listen to the rest.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 42"
   },
@@ -2206,12 +2206,12 @@
     "topic": "Stakeholder chapters",
     "question": "How should a change story be adapted for different stakeholder groups?",
     "options": [
-      "Use the same message, word for word, for every group",
-      "Tell each group only the parts it wants to hear",
-      "Write separate, independent stories for each group",
-      "Keep one coherent core narrative while adapting each chapter to what that group finds relevant"
+      "Use exactly the same message, word for word, for every single group",
+      "Tell each group only the parts of the story that it wants to hear",
+      "Write separate, independent stories that each group receives on its own",
+      "Keep one coherent core narrative, adapting each chapter to the group"
     ],
-    "correct_answer": "Keep one coherent core narrative while adapting each chapter to what that group finds relevant",
+    "correct_answer": "Keep one coherent core narrative, adapting each chapter to the group",
     "explanation": "The course calls for one core narrative with different stakeholder stories. The central story must remain coherent, but relevance changes from group to group.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 43"
   },
@@ -2238,12 +2238,12 @@
     "topic": "Systems tell stories",
     "question": "How does the storytelling class define culture?",
     "options": [
-      "The set of values written in the company's mission statement",
-      "The story employees infer from what the organisation repeatedly rewards, tolerates and prioritises",
-      "The personality of the CEO and the executive team",
-      "The formal rules described in the employee handbook"
+      "The set of values written in the company's official mission statement",
+      "The story employees infer from what is repeatedly rewarded and tolerated",
+      "The personality and leadership style of the CEO and the executive team",
+      "The formal rules and procedures described in the employee handbook"
     ],
-    "correct_answer": "The story employees infer from what the organisation repeatedly rewards, tolerates and prioritises",
+    "correct_answer": "The story employees infer from what is repeatedly rewarded and tolerated",
     "explanation": "Culture is inferred from what the organisation repeatedly rewards, tolerates and prioritises, not from what it declares. This is why leaders' words lose to incentives and KPIs.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 47"
   },
@@ -2472,12 +2472,12 @@
     "topic": "Four Rooms of Change (Janssen)",
     "question": "Why does Janssen's model say that denial is not always bad?",
     "options": [
-      "It shows that the person fully supports the change",
-      "It removes the need to share information with them",
-      "It is a defence mechanism that keeps priorities in mind and stops less-pressing issues from interfering",
-      "It speeds up the move directly to the Renewal room"
+      "It shows that the person already fully supports the proposed change",
+      "It removes the need for leaders to share information with the person",
+      "It is a defence mechanism that keeps less-pressing issues from interfering",
+      "It lets the person skip Confusion and move directly to the Renewal room"
     ],
-    "correct_answer": "It is a defence mechanism that keeps priorities in mind and stops less-pressing issues from interfering",
+    "correct_answer": "It is a defence mechanism that keeps less-pressing issues from interfering",
     "explanation": "Denial is described as a vital defence mechanism: people and organisations always have plenty to do, so denial keeps less-pressing issues from interfering. However, if a truly important change is never acknowledged, the person becomes a passive recipient of it.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 4"
   },
@@ -2505,11 +2505,11 @@
     "question": "What is the main challenge of the Renewal room, and how should it be handled?",
     "options": [
       "Comfort and complacency; create a crisis to restart the cycle",
-      "Rumours and suspicion; stop sharing information until things settle",
-      "Great energy but little structure; balance structure (goals, timelines, memberships) with freedom",
+      "Rumours and suspicion; stop sharing information for a while",
+      "High energy but little structure; balance structure with freedom",
       "Low energy and resistance; push firmly until people comply"
     ],
-    "correct_answer": "Great energy but little structure; balance structure (goals, timelines, memberships) with freedom",
+    "correct_answer": "High energy but little structure; balance structure with freedom",
     "explanation": "Renewal is a time of great energy and possibility, but with a relative lack of structure. The key is offering the right balance of structure and freedom within that structure.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 6"
   },
@@ -2521,11 +2521,11 @@
     "question": "According to the model's guidance (translated from Portuguese), how should you support people who are in the Denial room?",
     "options": [
       "Bring people together and focus on short-term goals",
-      "Fit people into the new structure and accept their integration",
-      "Do nothing except maintain and adjust the current system",
-      "Share information calmly and avoid forcing advice on them, which only deepens resistance and denial"
+      "Fit people into the new structure and accept them",
+      "Do nothing except maintain and adjust the system",
+      "Share information calmly and don't force advice on them"
     ],
-    "correct_answer": "Share information calmly and avoid forcing advice on them, which only deepens resistance and denial",
+    "correct_answer": "Share information calmly and don't force advice on them",
     "explanation": "For Denial, the slide advises sharing information calmly without forcing advice, because forced advice only deepens resistance and denial. Bringing people together and focusing on short-term goals is the advice for Confusion; doing nothing is for Contentment.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 7"
   },
@@ -2632,12 +2632,12 @@
     "topic": "Step 3: Envisage",
     "question": "Which set of qualities describes a good vision, according to the Envisage step?",
     "options": [
-      "Abstract, inspiring, unlimited and permanent",
-      "Tangible, desirable, feasible and flexible, focused and simple",
-      "Quantified, technical, rigid and exhaustive",
-      "Detailed, confidential, fixed and comprehensive"
+      "Detailed, confidential, fixed, comprehensive and long-term",
+      "Tangible, desirable, feasible, flexible, focused and simple",
+      "Abstract, inspiring, unlimited, permanent and ambitious",
+      "Quantified, technical, rigid, exhaustive and detailed"
     ],
-    "correct_answer": "Tangible, desirable, feasible and flexible, focused and simple",
+    "correct_answer": "Tangible, desirable, feasible, flexible, focused and simple",
     "explanation": "The slide lists a good vision as tangible, desirable, feasible and flexible, and focused and simple. A vision that is rigid, confidential or overly detailed would not guide or engage people.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 14"
   },
@@ -2649,11 +2649,11 @@
     "question": "What is the main aim of the Motivate step, drawing on Kotter?",
     "options": [
       "To select a change agent and build a change team",
-      "To create dissatisfaction with the status quo by raising 'survival anxiety'",
+      "To create dissatisfaction with the status quo",
       "To reward people who already support the change",
-      "To consolidate gains by changing policies and structures"
+      "To consolidate gains by changing policies"
     ],
-    "correct_answer": "To create dissatisfaction with the status quo by raising 'survival anxiety'",
+    "correct_answer": "To create dissatisfaction with the status quo",
     "explanation": "Motivate creates dissatisfaction with the status quo by sharing information, setting clear expectations and stretch targets, identifying a crisis and communicating honestly about the implications of the status quo. Consolidating gains is step 7, and building the team is step 2.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 16"
   },
@@ -2680,12 +2680,12 @@
     "topic": "Step 5: Communicate",
     "question": "Which communication practice does the course recommend in the 'Communicate – How' slide?",
     "options": [
-      "Repeat the message through multiple methods, using metaphors and stories, and lead by example",
-      "Communicate once at launch to avoid change fatigue",
-      "Rely on one detailed email so the message is consistent",
-      "Limit communication to senior managers to avoid rumours"
+      "Repeat the message through multiple methods and lead by example",
+      "Communicate once at launch, to avoid causing change fatigue",
+      "Rely on one detailed email so that the message stays consistent",
+      "Limit communication to senior managers to prevent rumours"
     ],
-    "correct_answer": "Repeat the message through multiple methods, using metaphors and stories, and lead by example",
+    "correct_answer": "Repeat the message through multiple methods and lead by example",
     "explanation": "The course favours face-to-face over email, 'say it, say it, say it again', multiple methods, metaphors, analogies and stories, making it involving, and leadership by example.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 19"
   },
@@ -2728,12 +2728,12 @@
     "topic": "Organisational resistance",
     "question": "According to the slide on organisational resistance, what combination may result in organisational inertia?",
     "options": [
-      "Strong external pressure combined with a weak culture",
-      "A new leadership team combined with a crisis",
-      "A lack of strategy combined with high employee turnover",
-      "A strategic momentum reinforced by ongoing success, supported by the organisation's culture"
+      "Strong external pressure combined with a weak organisational culture",
+      "A new leadership team combined with a sudden financial crisis",
+      "A lack of clear strategy combined with high employee turnover",
+      "Strategic momentum reinforced by success and supported by culture"
     ],
-    "correct_answer": "A strategic momentum reinforced by ongoing success, supported by the organisation's culture",
+    "correct_answer": "Strategic momentum reinforced by success and supported by culture",
     "explanation": "The strategic direction builds up a momentum of its own, often reinforced by success, and the culture is likely to support that momentum. Linked together, these two factors can produce organisational inertia, alongside political resistance.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 22"
   },
@@ -2776,12 +2776,12 @@
     "topic": "Effective change organisations",
     "question": "Which view of change management does the course endorse in its closing slide?",
     "options": [
-      "It is mainly an operational matter, separate from strategy",
-      "It is a standard set of activities that works the same in every organisation",
-      "It differs by organisation and market, so treating it as a prescribed set of activities is dangerous",
-      "It should be led by HR alone, separately from the business"
+      "It is mainly an operational matter that is separate from strategy",
+      "It is a standard set of activities that works the same everywhere",
+      "It differs by organisation and market, so it can't be a fixed recipe",
+      "It should be led by HR alone, separately from the rest of the business"
     ],
-    "correct_answer": "It differs by organisation and market, so treating it as a prescribed set of activities is dangerous",
+    "correct_answer": "It differs by organisation and market, so it can't be a fixed recipe",
     "explanation": "The closing slide says organisations that manage change well are more like 'open learning systems', and that it is dangerous to treat change management as a prescribed set of activities. It also says strategic and operational change are deeply linked and HR must be integral.",
     "source": "Class4__Designing_the_Transformation_.pdf, p. 28"
   },
@@ -2906,12 +2906,12 @@
     "topic": "Change and identity",
     "question": "What does the course call 'the first mistake' in transformation?",
     "options": [
-      "Explaining the future of the organisation while underestimating what it means for the identity of the people inside it",
-      "Involving too many employees in the design of the change",
-      "Announcing the transformation before the technology is ready",
-      "Investing in technology before hiring a change team"
+      "Explaining the organisation's future while underestimating its impact on people's identity",
+      "Involving too many employees in the detailed design of the change programme",
+      "Announcing the transformation before the new technology is fully ready to use",
+      "Investing in new technology before hiring a dedicated change management team"
     ],
-    "correct_answer": "Explaining the future of the organisation while underestimating what it means for the identity of the people inside it",
+    "correct_answer": "Explaining the organisation's future while underestimating its impact on people's identity",
     "explanation": "On paper, change is a journey from current to future state; in reality it is deeply personal. It can alter expertise, status, belonging, autonomy, relationships and meaning.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 6"
   },
@@ -2922,12 +2922,12 @@
     "topic": "Change and identity",
     "question": "A middle manager asks: 'If my team can do this without me checking every step, what exactly is my role?' What is the manager mainly struggling with?",
     "options": [
-      "A disagreement with the company's strategy",
+      "A disagreement with the company's overall strategy",
       "An objection to the AI technology itself",
-      "A lack of training on the new tools",
-      "What the transformation means for their own identity and role"
+      "A lack of training on the new digital tools",
+      "What the change means for their identity and role"
     ],
-    "correct_answer": "What the transformation means for their own identity and role",
+    "correct_answer": "What the change means for their identity and role",
     "explanation": "The course notes that nobody is resisting AI; people are trying to understand who they will be if the transformation succeeds. A real transformation changes something people care about, such as status and autonomy.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 5"
   },
@@ -2938,12 +2938,12 @@
     "topic": "Hidden resistance",
     "question": "In the case, nobody says 'I oppose the transformation'. Instead, conditions appear, such as 'AI, but every output should still be validated by a human.' What does the course want you to notice?",
     "options": [
-      "These conditions are purely technical and unrelated to change",
-      "Resistance can sound like common sense: reasonable, defensible conditions that slow the change",
-      "These conditions should be ignored because they come from experts",
-      "These conditions show that everyone fully supports the change"
+      "These conditions are purely technical issues",
+      "Resistance can sound like common sense",
+      "These conditions show that everyone supports it",
+      "Conditions from experts should simply be ignored"
     ],
-    "correct_answer": "Resistance can sound like common sense: reasonable, defensible conditions that slow the change",
+    "correct_answer": "Resistance can sound like common sense",
     "explanation": "Every sentence is reasonable and every condition can be defended, yet together they can stall the transformation. The course asks: what if resistance sounds like common sense?",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 7"
   },
@@ -2970,10 +2970,10 @@
     "topic": "Sources of power",
     "question": "Instead of asking only 'Who supports the change?', which question does the course recommend?",
     "options": [
-      "'Who attended the launch event?'",
-      "'Who has completed the training?'",
+      "'Who has the most senior job title in the team?'",
+      "'Who attended the launch event last month?'",
       "'If this change succeeds, whose power changes?'",
-      "'Who has the most senior job title?'"
+      "'Who has already completed the training?'"
     ],
     "correct_answer": "'If this change succeeds, whose power changes?'",
     "explanation": "Power is broader than hierarchy, and change moves it. Asking whose power changes if the change succeeds reveals who has a stake in supporting or resisting it.",
@@ -2989,9 +2989,9 @@
       "The real network is just a less formal copy of the org chart",
       "Transformations are designed and lived entirely on the org chart",
       "The org chart shows influence, while the real network shows authority",
-      "Transformations are designed on the org chart but lived in the real network of influence"
+      "Change is designed on the org chart but lived in the real network"
     ],
-    "correct_answer": "Transformations are designed on the org chart but lived in the real network of influence",
+    "correct_answer": "Change is designed on the org chart but lived in the real network",
     "explanation": "Map 1, the org chart, shows formal authority; Map 2, the real network, shows influence: whom people call, trust, and listen to. Transformations are designed on the first map and lived on the second.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 11"
   },
@@ -3066,12 +3066,12 @@
     "topic": "Activity vs. adoption",
     "question": "A steering committee measures adoption by counting log-ins and completed training sessions. What does the course say is the real measure of transformation?",
     "options": [
-      "Whether the programme dashboard is green",
-      "Whether work, decisions and behaviour actually change in ways that deliver the promised outcomes",
+      "Whether the programme dashboard is green across all workstreams",
+      "Whether work, decisions and behaviour actually change",
       "The percentage of employees who completed the training",
-      "The number of people who logged in to the new tool"
+      "The number of people who logged in to the new tool each week"
     ],
-    "correct_answer": "Whether work, decisions and behaviour actually change in ways that deliver the promised outcomes",
+    "correct_answer": "Whether work, decisions and behaviour actually change",
     "explanation": "Activity is not adoption, attendance is not belief, and usage is not transformation. The real measure is whether work gets done, decisions get made and people behave differently, delivering the promised outcomes.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 16"
   },
@@ -3098,12 +3098,12 @@
     "topic": "Above and below the water",
     "question": "Beneath the visible goal of 'empowerment', which invisible transformation does the course highlight?",
     "options": [
-      "Buying new collaboration software",
-      "Publishing a new set of corporate values",
-      "Managers giving up decisions they spent years earning the right to make",
-      "Creating a new organisational chart"
+      "Buying new collaboration software for every team in the company",
+      "Publishing a new set of corporate values on the intranet",
+      "Managers giving up decisions they spent years earning",
+      "Creating a new organisational chart with fewer management layers"
     ],
-    "correct_answer": "Managers giving up decisions they spent years earning the right to make",
+    "correct_answer": "Managers giving up decisions they spent years earning",
     "explanation": "Every transformation contains another one underneath: empowerment requires managers to give up hard-earned decision rights, and senior leaders to learn not to intervene. The other options are visible, above-the-water changes.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 18"
   },
@@ -3130,12 +3130,12 @@
     "topic": "Purpose",
     "question": "What common problem with purpose in transformations does the course describe?",
     "options": [
-      "It is introduced at the start, then left to communications, instead of being used to make decisions",
-      "It is used too often as a decision-making principle",
-      "It is designed by employees instead of leaders",
-      "It is defined too late, after the programme has ended"
+      "It is announced at the start, then not used to make decisions",
+      "It is used too often as the main principle for decisions",
+      "It is designed by employees rather than by the leaders",
+      "It is defined too late, only after the programme has ended"
     ],
-    "correct_answer": "It is introduced at the start, then left to communications, instead of being used to make decisions",
+    "correct_answer": "It is announced at the start, then not used to make decisions",
     "explanation": "Purpose often becomes the opening paragraph of the story rather than the principle used to make decisions. A clear logic (productivity, growth, competitiveness) is not the same as meaning.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 21"
   },
@@ -3162,12 +3162,12 @@
     "topic": "Building a coalition",
     "question": "What distinction does the course draw between a stakeholder and a coalition member?",
     "options": [
-      "A stakeholder is affected by the change; a coalition member helps to move it",
-      "A stakeholder is internal; a coalition member is external",
-      "A stakeholder is senior; a coalition member is junior",
-      "A stakeholder supports the change; a coalition member opposes it"
+      "A stakeholder is affected by the change; a coalition member helps move it",
+      "A stakeholder is internal to the firm; a coalition member is external to it",
+      "A stakeholder is a senior leader; a coalition member is a junior employee",
+      "A stakeholder supports the change; a coalition member tends to oppose it"
     ],
-    "correct_answer": "A stakeholder is affected by the change; a coalition member helps to move it",
+    "correct_answer": "A stakeholder is affected by the change; a coalition member helps move it",
     "explanation": "The turning point is 'stop managing stakeholders': instead of asking how to communicate better to stakeholders, ask who must carry the change. Being affected is not the same as helping to move it.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 22"
   },
@@ -3179,9 +3179,9 @@
     "question": "How can you test whether the purpose statement 'We want empowerment' is credible?",
     "options": [
       "Ask which decisions leaders will genuinely stop making",
-      "Ask whether it appears on the company website",
-      "Ask whether the Board approved the wording",
-      "Ask how many employees have read the statement"
+      "Ask whether it appears prominently on the company website",
+      "Ask whether the Board formally approved the wording",
+      "Ask how many employees have read the purpose statement"
     ],
     "correct_answer": "Ask which decisions leaders will genuinely stop making",
     "explanation": "A purpose becomes credible when it costs something. For empowerment, the test is which decisions leaders will actually give up; for experimentation, it is what happens to the first team that fails publicly.",
@@ -3194,12 +3194,12 @@
     "topic": "The uncomfortable question",
     "question": "If the same people make the same decisions, the same behaviours are rewarded and people can still succeed working the old way, what does the course conclude?",
     "options": [
-      "The transformation succeeded but people need more time",
-      "The technology has not yet been deployed properly",
-      "The organisation may have failed to change the organisation around the people, not to communicate",
-      "Employees are resisting and need more communication"
+      "The transformation succeeded, but people simply need more time to adjust",
+      "The technology has not yet been deployed properly across the business",
+      "It may have failed to change the organisation around the people",
+      "Employees are resisting the change and need more communication from leaders"
     ],
-    "correct_answer": "The organisation may have failed to change the organisation around the people, not to communicate",
+    "correct_answer": "It may have failed to change the organisation around the people",
     "explanation": "The answer is uncomfortable because it moves responsibility away from 'resistant employees'. Perhaps the organisation has not failed to communicate the change, but has failed to change the organisation around the people.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 27"
   },
@@ -3322,10 +3322,10 @@
     "topic": "From toolkit to real change",
     "question": "For leadership and sponsorship, which question does the course prefer to 'Are leaders visibly supporting it?'",
     "options": [
-      "Have leaders approved the change budget?",
-      "How often do leaders mention the change in town halls?",
+      "Have leaders formally approved the budget for the change programme?",
+      "How often do leaders mention the change in their town hall meetings?",
       "What are leaders doing differently that proves the change is real?",
-      "Do leaders appear in the change videos?"
+      "Do senior leaders appear in the official change programme videos?"
     ],
     "correct_answer": "What are leaders doing differently that proves the change is real?",
     "explanation": "Visible support is not enough; leaders must create credible signals by changing their own behaviour. This shifts signals, priorities and permission in the organisation.",
@@ -3354,12 +3354,12 @@
     "topic": "Purpose journey",
     "question": "In the journey to an authentic and inclusive purpose, what does 'conduct a purpose audit' involve?",
     "options": [
-      "An anthropological audit of the organisation's history and past initiatives",
-      "A financial audit of the costs of the change programme",
+      "An anthropological audit of history and past initiatives",
+      "A financial audit of the change programme's costs",
       "An external audit of compliance with regulations",
-      "A survey of competitors' purpose statements"
+      "A survey of competitors' published purpose statements"
     ],
-    "correct_answer": "An anthropological audit of the organisation's history and past initiatives",
+    "correct_answer": "An anthropological audit of history and past initiatives",
     "explanation": "The six-step journey is: understand authenticity and inclusivity, conduct a purpose audit (an anthropological audit of history and past initiatives), gather diverse perspectives, secure leadership commitment, educate and involve employees, and measure and track progress.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 41"
   },
@@ -3402,12 +3402,12 @@
     "topic": "Individual purpose",
     "question": "According to the course, which three elements connect individuals to purpose?",
     "options": [
-      "Salary, job security and promotion",
-      "Hierarchy, status and recognition",
-      "Personal growth and development, meaning and contribution, and inclusivity",
-      "Rules, procedures and controls"
+      "Salary, job security and the prospect of promotion",
+      "Hierarchy, status and formal recognition from leaders",
+      "Personal growth, meaning and contribution, and inclusivity",
+      "Clear rules, detailed procedures and close supervision"
     ],
-    "correct_answer": "Personal growth and development, meaning and contribution, and inclusivity",
+    "correct_answer": "Personal growth, meaning and contribution, and inclusivity",
     "explanation": "Individual purpose answers 'What makes this change worth it, for me?'. The course lists personal growth and development, meaning and contribution, and inclusivity as the connectors.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 46"
   },
@@ -3450,12 +3450,12 @@
     "topic": "Purpose in practice",
     "question": "Which set lists the four pillars of 'purpose in practice'?",
     "options": [
-      "Anchor the strategy in the purpose, align the leadership, engage the team, integrate into the customer experience",
-      "Define values, cut costs, restructure teams, launch new products",
-      "Hire a purpose officer, run a campaign, measure log-ins, reward attendance",
-      "Write a purpose statement, print it, publish it online, repeat it in meetings"
+      "Anchor strategy, align leadership, engage the team, integrate into customer experience",
+      "Write a purpose statement, print it, publish it online and repeat it in meetings",
+      "Hire a purpose officer, run a campaign, measure log-ins and reward attendance",
+      "Define new values, cut costs, restructure the teams and launch a new product"
     ],
-    "correct_answer": "Anchor the strategy in the purpose, align the leadership, engage the team, integrate into the customer experience",
+    "correct_answer": "Anchor strategy, align leadership, engage the team, integrate into customer experience",
     "explanation": "Purpose in practice rests on anchoring strategy in purpose, aligning leadership, engaging the team and integrating purpose into the customer experience. The course also stresses that talking about purpose without action reduces commitment.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 55"
   },
@@ -3468,10 +3468,10 @@
     "options": [
       "Focusing only on the technical delivery of the project",
       "Controlling every decision until the change is complete",
-      "Delegating the whole change to the communications team",
-      "Moving the entire organisation to embrace change by inspiring, guiding and aligning"
+      "Delegating the change to the communications team",
+      "Moving the whole organisation to embrace change"
     ],
-    "correct_answer": "Moving the entire organisation to embrace change by inspiring, guiding and aligning",
+    "correct_answer": "Moving the whole organisation to embrace change",
     "explanation": "Leadership purpose in change means moving the entire organisation to embrace change, through three roles: inspire, guide and align.",
     "source": "Copy_of_Class_5_Purpose_and_cuLTURE_1.pdf, p. 44"
   },
@@ -3665,9 +3665,9 @@
     "question": "As culture moves from 'values' to the operating system of transformation, how does the course define culture?",
     "options": [
       "The patterns people learn from what repeatedly happens here",
-      "The official policies in the employee handbook",
-      "The personal style of the current CEO",
-      "The list of values printed in the annual report"
+      "The official policies set out in the employee handbook",
+      "The personal leadership style of the current CEO",
+      "The list of values printed in the company's annual report"
     ],
     "correct_answer": "The patterns people learn from what repeatedly happens here",
     "explanation": "The course defines culture as 'the patterns people learn from what repeatedly happens here'. It notes that culture and resistance to change are the second-biggest barrier to transformation, after skills gaps.",
@@ -3698,10 +3698,10 @@
     "options": [
       "Choose Option B, because local freedom always produces better results",
       "Choose Option A, because a single launch is easier to control",
-      "Combine the common direction of A with the learning capacity of B, without the weaknesses of either",
-      "Run Option A first and switch to B only if it fails"
+      "Combine A's common direction with B's learning, avoiding both weaknesses",
+      "Run Option A first and switch to Option B only if it clearly fails"
     ],
-    "correct_answer": "Combine the common direction of A with the learning capacity of B, without the weaknesses of either",
+    "correct_answer": "Combine A's common direction with B's learning, avoiding both weaknesses",
     "explanation": "Neither option eliminates risk. The design challenge is to preserve what must be shared while allowing the route to improve: the direction of A and the learning of B.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 10"
   },
@@ -3712,12 +3712,12 @@
     "topic": "Limits of waterfall change",
     "question": "Why might AtlasOne's apparently perfect global plan fail?",
     "options": [
-      "The technology chosen was not yet available",
-      "Country leaders were not informed of the launch date",
-      "Markets keep discovering information (data problems, better handovers, legal delays) that the plan could not fully contain",
-      "The plan had too few milestones and workstreams"
+      "The chosen technology was not yet available in several of the markets",
+      "Country leaders were never informed of the planned global launch date",
+      "Markets discover information during the change that no plan could contain",
+      "The plan contained too few milestones and workstreams to be tracked"
     ],
-    "correct_answer": "Markets keep discovering information (data problems, better handovers, legal delays) that the plan could not fully contain",
+    "correct_answer": "Markets discover information during the change that no plan could contain",
     "explanation": "One market discovers a data problem, another improves the handover, a third faces a legal delay. A fixed plan cannot fully contain information that only emerges during the change.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 12"
   },
@@ -3728,12 +3728,12 @@
     "topic": "Limits of waterfall change",
     "question": "In the typical waterfall change sequence (Diagnose, Design, Plan, Announce, Train, Go live), what is the 'invisible final stage' the course identifies?",
     "options": [
-      "Celebration: recognising the team after go-live",
-      "Hope: that the assumptions remain true and people behave as predicted",
-      "Review: a formal audit of the project budget",
-      "Handover: passing the project to operations"
+      "Celebration: recognising the project team after go-live",
+      "Hope: that assumptions hold and people behave as predicted",
+      "Review: a formal audit of the project's final budget",
+      "Handover: passing the finished project to operations"
     ],
-    "correct_answer": "Hope: that the assumptions remain true and people behave as predicted",
+    "correct_answer": "Hope: that assumptions hold and people behave as predicted",
     "explanation": "The course notes that waterfall programmes end, implicitly, in hope. This linear sequence suits a world that is no longer linear poorly, because assumptions and behaviour rarely stay as predicted.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 14"
   },
@@ -3792,12 +3792,12 @@
     "topic": "DEE culture",
     "question": "How does the course recommend dealing with tensions such as freedom vs. accountability and experimentation vs. coherence?",
     "options": [
-      "Work productively with the tension, so that it generates learning instead of paralysis",
-      "Avoid discussing the tension so that teams stay motivated",
+      "Work with it productively, so it generates learning",
+      "Avoid discussing it, so that teams stay motivated",
       "Escalate every tension to headquarters for a ruling",
-      "Remove the tension by choosing one side permanently"
+      "Remove it by choosing one side permanently"
     ],
-    "correct_answer": "Work productively with the tension, so that it generates learning instead of paralysis",
+    "correct_answer": "Work with it productively, so it generates learning",
     "explanation": "The important word is tension: 'We do not remove it. We learn to work productively with it.' Each tension is a source of energy and learning.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 21"
   },
@@ -3856,12 +3856,12 @@
     "topic": "Proactive agility",
     "question": "What distinguishes proactive agility from simply reacting fast?",
     "options": [
-      "Detecting weak signals, testing assumptions and creating options before the disruption",
+      "Detecting weak signals and creating options before disruption",
       "Resolving issues faster than competitors after they happen",
-      "Responding to events as soon as they occur",
-      "Repairing problems quickly after launch"
+      "Responding to every event as soon as it occurs",
+      "Repairing problems quickly once they appear after launch"
     ],
-    "correct_answer": "Detecting weak signals, testing assumptions and creating options before the disruption",
+    "correct_answer": "Detecting weak signals and creating options before disruption",
     "explanation": "Responding fast is not the same as being agile. Proactive agility (anticipation, adaptation, action) acts before the change occurs, while reacting means discovering the problem after launch and repairing it quickly.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 28"
   },
@@ -3888,12 +3888,12 @@
     "topic": "Denial of imperfection",
     "question": "Why does the course call 'denial of imperfection' a particularly dangerous trap?",
     "options": [
-      "It looks like confidence: leaders want green dashboards, so people learn to hide defects",
+      "It looks like confidence, so people learn to hide defects",
       "It makes teams experiment too much and lose coherence",
       "It causes leaders to share too much negative feedback",
       "It slows down every decision with too many approvals"
     ],
-    "correct_answer": "It looks like confidence: leaders want green dashboards, so people learn to hide defects",
+    "correct_answer": "It looks like confidence, so people learn to hide defects",
     "explanation": "When leaders only want green dashboards, people learn to hide defects, and the centre may scale a false success. In AtlasOne, one concealed incident could repeat across 31 other countries.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 31"
   },
@@ -3904,12 +3904,12 @@
     "topic": "Denial of imperfection",
     "question": "How does the course frame psychological safety in agile change?",
     "options": [
-      "As a reason to avoid tracking what isn't working",
+      "As a reason to stop tracking what isn't working",
       "As the opposite of control and governance",
-      "As error detection: speaking openly about what doesn't work is part of the control system",
-      "As a wellbeing benefit that is separate from performance"
+      "As error detection, part of the control system",
+      "As a wellbeing benefit separate from performance"
     ],
-    "correct_answer": "As error detection: speaking openly about what doesn't work is part of the control system",
+    "correct_answer": "As error detection, part of the control system",
     "explanation": "The correction for denial of imperfection is to track what isn't working, because psychological safety is error detection. Speaking openly about problems is part of the control system, not the opposite of control.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 32"
   },
@@ -3920,12 +3920,12 @@
     "topic": "Emergent culture",
     "question": "According to the course, what can leaders do about an emergent culture?",
     "options": [
-      "They cannot prescribe it, but they can shape the conditions in which better norms develop",
+      "They cannot prescribe it, but they can shape its conditions",
       "They can replace it with detailed standard procedures",
-      "They can leave it entirely to chance and local teams",
+      "They can leave it entirely to chance and to local teams",
       "They can prescribe it through a central culture programme"
     ],
-    "correct_answer": "They cannot prescribe it, but they can shape the conditions in which better norms develop",
+    "correct_answer": "They cannot prescribe it, but they can shape its conditions",
     "explanation": "Emergence is not chaos, but culture is not a programme prescribed from the centre. Leaders shape conditions: purpose, constraints, safety, connections, and mechanisms to select and spread what works.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 35"
   },
@@ -3955,9 +3955,9 @@
       "On the original project timeline",
       "On the number of approvals collected",
       "On the seniority of the sponsor",
-      "On evidence, not on the colour of the presentation"
+      "On evidence, not presentation colour"
     ],
-    "correct_answer": "On evidence, not on the colour of the presentation",
+    "correct_answer": "On evidence, not presentation colour",
     "explanation": "Frontline teams capture exceptions daily, market teams review weekly, a cross-market forum compares patterns fortnightly, global owners revise standards monthly, and executives decide at gates on evidence rather than presentation colour.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 37"
   },
@@ -3968,12 +3968,12 @@
     "topic": "DEE organisations",
     "question": "The course says DEE becomes visible in everyday features such as autonomy, openness, cross-functional work, experimentation and resilience. What role do these features play?",
     "options": [
-      "They are decorative values to be displayed on posters",
-      "They replace the need for any global standards",
-      "They are the conditions to act under uncertainty without waiting for every answer from the centre",
-      "They are performance targets for individual employees"
+      "They are decorative values to be displayed on posters and the company intranet",
+      "They replace the need for any global standards, guardrails or shared controls",
+      "They are the conditions to act under uncertainty without waiting for the centre",
+      "They are individual performance targets used in each employee's annual review"
     ],
-    "correct_answer": "They are the conditions to act under uncertainty without waiting for every answer from the centre",
+    "correct_answer": "They are the conditions to act under uncertainty without waiting for the centre",
     "explanation": "The slide states these are 'not decorative values' but the conditions to act under uncertainty without waiting for every answer from the centre.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 41"
   },
@@ -3984,12 +3984,12 @@
     "topic": "Teams of teams",
     "question": "What does the course mean when it says AtlasOne needs 'teams of teams'?",
     "options": [
-      "Merging all country teams into one global team",
-      "Adding lateral connections between local cross-functional groups, peers and global owners, without removing every hierarchy",
-      "Creating more layers of management to coordinate teams",
-      "Removing all hierarchy and letting teams self-organise"
+      "Merging all country teams into one single global team run from the centre",
+      "Adding lateral links between local teams, peers and global owners",
+      "Creating extra management layers to coordinate the work of every team",
+      "Removing all hierarchy so that teams organise themselves freely"
     ],
-    "correct_answer": "Adding lateral connections between local cross-functional groups, peers and global owners, without removing every hierarchy",
+    "correct_answer": "Adding lateral links between local teams, peers and global owners",
     "explanation": "Teams of teams link local cross-functional groups to peers in other markets and to global owners. The point is not removing every hierarchy but adding the connections needed for rapid joint problem-solving.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 42"
   },
@@ -4000,12 +4000,12 @@
     "topic": "Garden metaphor",
     "question": "In the course's garden metaphor, what does agility need?",
     "options": [
-      "Deliberately designed space: enough freedom to act and enough structure to stay connected",
-      "Every local action carefully designed by the centre",
-      "As many initiatives as possible planted close together",
-      "The removal of every boundary so teams are fully free"
+      "Designed space: enough freedom to act, enough structure to connect",
+      "Every local action carefully designed in advance by the centre",
+      "As many initiatives as possible, planted close together for speed",
+      "The removal of every boundary so that teams are completely free"
     ],
-    "correct_answer": "Deliberately designed space: enough freedom to act and enough structure to stay connected",
+    "correct_answer": "Designed space: enough freedom to act, enough structure to connect",
     "explanation": "Plant everything too tightly (overdesign) and nothing can grow; remove every boundary and the garden cannot be cared for. Agility needs freedom within boundaries.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 45"
   },
@@ -4048,12 +4048,12 @@
     "topic": "Designing autonomy",
     "question": "According to the course, what three elements does autonomy require?",
     "options": [
-      "Senior approval, detailed procedures and a fixed plan",
-      "A clear outcome, clear constraints and a clear feedback obligation",
-      "A large budget, a long timeline and no reporting",
-      "Full freedom, no constraints and optional feedback"
+      "Senior approval, detailed procedures and a fixed project plan",
+      "A clear outcome, clear constraints and a feedback obligation",
+      "A large budget, a long timeline and no reporting requirements",
+      "Full freedom, no constraints and feedback only when convenient"
     ],
-    "correct_answer": "A clear outcome, clear constraints and a clear feedback obligation",
+    "correct_answer": "A clear outcome, clear constraints and a feedback obligation",
     "explanation": "Autonomy is not the absence of governance. 'You may experiment' is not enough: teams need a clear outcome, clear constraints and an obligation to feed back results; it is governance that makes local decisions possible.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 53"
   },
@@ -4176,12 +4176,12 @@
     "topic": "Teams of teams",
     "question": "Why can't an AtlasOne pilot country solve its problems through its reporting line alone?",
     "options": [
-      "Only the global owners are allowed to solve local problems",
-      "Learning and problem-solving need to travel horizontally, through a local cross-functional team linked to global owners and peer countries",
-      "Pilot countries are forbidden from contacting headquarters",
-      "Its reporting line is too short to escalate problems"
+      "Only global owners are allowed to solve problems that arise in local markets",
+      "Learning must travel horizontally, across peer countries and global owners",
+      "Pilot countries are not permitted to contact headquarters directly about issues",
+      "Its reporting line is too short to escalate problems to the right level"
     ],
-    "correct_answer": "Learning and problem-solving need to travel horizontally, through a local cross-functional team linked to global owners and peer countries",
+    "correct_answer": "Learning must travel horizontally, across peer countries and global owners",
     "explanation": "The pilot country is a local cross-functional team (operations, IT, HR, legal, frontline) connected to global owners and to peer countries. A team of teams lets learning and problem-solving travel horizontally, not only up and down the hierarchy.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 56"
   },
@@ -4208,12 +4208,12 @@
     "topic": "Global alignment and local autonomy",
     "question": "How does the course define agile change in the context of global alignment and local autonomy?",
     "options": [
-      "Preserving a common direction while continuously improving the route through evidence",
-      "Letting each market choose its own outcomes",
-      "Implementing identical processes in every market",
-      "Changing the direction whenever a market requests it"
+      "Keeping a common direction while improving the route through evidence",
+      "Letting each market choose its own outcomes and its own direction",
+      "Implementing identical processes in every market at the same time",
+      "Changing the overall direction whenever a market requests it"
     ],
-    "correct_answer": "Preserving a common direction while continuously improving the route through evidence",
+    "correct_answer": "Keeping a common direction while improving the route through evidence",
     "explanation": "Global alignment does not mean identical local implementation, and local autonomy does not mean fragmentation. Markets can take different routes towards a shared outcome, improving the route with evidence.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 58"
   },
@@ -4224,12 +4224,12 @@
     "topic": "Seven strategies for balance",
     "question": "What lies at the centre of the seven strategies for balance that unlock change agility?",
     "options": [
-      "A detailed global project plan that every market follows",
-      "A central committee that approves every local decision",
-      "Purpose-driven agility: why we change, and what stays clear while the how keeps moving",
-      "Speed of response to every change in the market"
+      "A detailed global project plan that every market must follow",
+      "A central committee that approves every local decision made",
+      "Purpose-driven agility: a clear why while the how keeps moving",
+      "Speed of response to every change that happens in the market"
     ],
-    "correct_answer": "Purpose-driven agility: why we change, and what stays clear while the how keeps moving",
+    "correct_answer": "Purpose-driven agility: a clear why while the how keeps moving",
     "explanation": "The six surrounding strategies are scenario planning, emotional resilience, autonomy, feedback loops, communication and continuous learning; purpose-driven agility sits at the centre, keeping the why clear while the how moves.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 61"
   },
@@ -4256,12 +4256,12 @@
     "topic": "The real design question",
     "question": "According to the course, what is the real design question for a global change?",
     "options": [
-      "How quickly the global plan can be rolled out",
-      "Which single country should design the global process",
-      "Whether to standardise everything or decentralise everything",
-      "Which elements need global consistency, which can vary locally, and how learning flows across markets"
+      "How quickly the global plan can be rolled out across all markets",
+      "Which single country should design the global process for the rest",
+      "Whether to standardise everything or to decentralise everything",
+      "What must be global, what can vary locally, and how learning flows"
     ],
-    "correct_answer": "Which elements need global consistency, which can vary locally, and how learning flows across markets",
+    "correct_answer": "What must be global, what can vary locally, and how learning flows",
     "explanation": "The real question is not whether to standardise or decentralise everything. It has three parts: what must be global, what can be local, and how learning flows between markets.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 62"
   },
@@ -4272,12 +4272,12 @@
     "topic": "Designing autonomy",
     "question": "Besides a clear outcome, clear constraints and a duty to feed back results, what else does a team need for safe local autonomy?",
     "options": [
-      "Time or budget, access to users and data, a named decision-maker, and a stop or escalation rule",
-      "Approval from every country before any experiment",
-      "Unlimited budget, no reporting and full independence",
-      "A detailed plan from headquarters for every step"
+      "Time or budget, access to users and data, a decision-maker and a stop rule",
+      "Approval from every other country before any local experiment can start",
+      "Unlimited budget, no reporting obligations and full independence from HQ",
+      "A detailed plan from headquarters that specifies every step in advance"
     ],
-    "correct_answer": "Time or budget, access to users and data, a named decision-maker, and a stop or escalation rule",
+    "correct_answer": "Time or budget, access to users and data, a decision-maker and a stop rule",
     "explanation": "The course says 'You may experiment' is not enough. Teams also need time or budget, access to users and data, a named decision-maker and an agreed point to stop or escalate; governance is what makes safe local autonomy possible.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 65"
   },
@@ -4320,12 +4320,12 @@
     "topic": "Adaptive Change Loop",
     "question": "How does the Adaptive Change Loop describe the Experiment step?",
     "options": [
-      "Open-ended trials without predefined hypotheses",
-      "Tests run only after the global standard is final",
-      "Small, reversible tests with explicit hypotheses and stop conditions",
-      "Large-scale launches across all markets at once"
+      "Open-ended trials run without any predefined hypotheses",
+      "Tests that run only after the global standard is final",
+      "Small, reversible tests with hypotheses and stop conditions",
+      "Large-scale launches across all markets at the same time"
     ],
-    "correct_answer": "Small, reversible tests with explicit hypotheses and stop conditions",
+    "correct_answer": "Small, reversible tests with hypotheses and stop conditions",
     "explanation": "Experiments should be small and reversible, with explicit hypotheses and stop conditions. The Learn step then exposes failures without blame, using operational metrics and qualitative evidence.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 66"
   },
@@ -4337,11 +4337,11 @@
     "question": "Portugal discovers a better coaching method, tests and measures it, and shares the evidence; headquarters updates the playbook; Germany then tests the revised practice. What does this illustrate?",
     "options": [
       "Each country develops its own standard independently",
-      "Headquarters designs every practice and countries implement it unchanged",
-      "Local learning changes the global standard, and the standard changes the next local experiment",
+      "Headquarters designs every practice; countries comply",
+      "Local learning changes the global standard, and vice versa",
       "Global standards are fixed once and never revised"
     ],
-    "correct_answer": "Local learning changes the global standard, and the standard changes the next local experiment",
+    "correct_answer": "Local learning changes the global standard, and vice versa",
     "explanation": "The Adaptive Change Loop is a loop, not seven one-off stages or departments. This recursive relationship between local learning and global standards is described as the core of change in a complex organisation.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 68"
   },
@@ -4384,12 +4384,12 @@
     "topic": "Global–local decision rights",
     "question": "Under AtlasOne's global–local decision rights, how is a new practice scaled?",
     "options": [
-      "Local decides alone whether to adopt it; global is not involved",
-      "Global imposes the practice; local implements it without changes",
-      "Global and local vote, and the majority decides",
-      "Global compares evidence and updates the standard; local shares results and adopts or explains variance"
+      "Local decides alone whether to adopt the practice; the global level is not involved",
+      "Global imposes the practice; local teams implement it without any changes",
+      "Global and local representatives vote, and the majority decision applies",
+      "Global compares evidence and updates the standard; local adopts or explains variance"
     ],
-    "correct_answer": "Global compares evidence and updates the standard; local shares results and adopts or explains variance",
+    "correct_answer": "Global compares evidence and updates the standard; local adopts or explains variance",
     "explanation": "For scaling a new practice, the global level compares evidence and updates the standard, while local teams share results and either adopt the standard or explain their variance.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 74"
   },
@@ -4416,12 +4416,12 @@
     "topic": "Adaptive change architectures",
     "question": "Which combination defines an 'adaptive change architecture' in the course?",
     "options": [
-      "Global strategic alignment, local experimentation, distributed decision-making, continuous feedback and the ability to adjust while underway",
-      "Local autonomy only, no global standards, independent budgets and no feedback",
+      "Global alignment, local experiments, distributed decisions, feedback and adjusting en route",
+      "Local autonomy only, no global standards, independent budgets, no feedback, no shared targets",
       "Central planning, uniform rollout, strict approvals, quarterly reporting and fixed milestones",
-      "A single project plan, a PMO, a launch event, training and a go-live date"
+      "A single project plan, a PMO, a launch event, standard training and a go-live date"
     ],
-    "correct_answer": "Global strategic alignment, local experimentation, distributed decision-making, continuous feedback and the ability to adjust while underway",
+    "correct_answer": "Global alignment, local experiments, distributed decisions, feedback and adjusting en route",
     "explanation": "The emerging direction is organisational systems that combine global alignment with local experimentation, distributed decisions, continuous feedback and the ability to adjust while transformation is underway.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 76"
   },
@@ -4448,12 +4448,12 @@
     "topic": "Global Change Management Programme",
     "question": "How was the purpose defined in the Global Change Management Programme?",
     "options": [
-      "Copied from a successful competitor",
-      "Discovered through a global listening process, rather than dictated by leaders",
+      "Copied from a successful competitor's purpose",
+      "Discovered through a global listening process",
       "Written by the CEO and announced at a town hall",
-      "Defined by external consultants before any listening"
+      "Defined in advance by external consultants"
     ],
-    "correct_answer": "Discovered through a global listening process, rather than dictated by leaders",
+    "correct_answer": "Discovered through a global listening process",
     "explanation": "The purpose was discovered through leadership interviews, employee listening sessions, cross-regional workshops, organisational data analysis and collaborative design sessions, producing the co-created purpose 'One Global Team, Locally Empowered'.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 81"
   },
@@ -4464,12 +4464,12 @@
     "topic": "Global Change Management Programme",
     "question": "Which sequence describes the structured experimentation approach used in Phase 4 of the Global Change Management Programme?",
     "options": [
+      "Experiment → Hypothesise → Decide → Measure",
       "Measure → Decide → Hypothesise → Experiment",
       "Decide → Experiment → Measure → Hypothesise",
-      "Experiment → Hypothesise → Decide → Measure",
-      "Hypothesise → Experiment → Measure → Decide (scale, adapt or stop)"
+      "Hypothesise → Experiment → Measure → Decide"
     ],
-    "correct_answer": "Hypothesise → Experiment → Measure → Decide (scale, adapt or stop)",
+    "correct_answer": "Hypothesise → Experiment → Measure → Decide",
     "explanation": "Each 6–8-week cycle starts by defining the problem as a hypothesis, tests it with teams, measures with data and feedback, and then decides to scale, adapt or stop, repeating with new insights every cycle.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 84"
   },
@@ -4480,12 +4480,12 @@
     "topic": "Global Change Management Programme",
     "question": "In Phase 5 of the Global Change Management Programme, where was the change embedded so that it would stick?",
     "options": [
-      "In the project plan and the steering committee minutes",
-      "In leadership routines, operating processes, performance measures, learning programmes and team behaviours",
-      "In a single global launch event and a training day",
-      "Only in a new corporate values poster and intranet page"
+      "In the project plan, the risk register and the steering committee minutes",
+      "In leadership routines, processes, measures, learning programmes and daily behaviours",
+      "In a single global launch event followed by a one-day training programme",
+      "In a new corporate values poster, the intranet page and the annual report"
     ],
-    "correct_answer": "In leadership routines, operating processes, performance measures, learning programmes and team behaviours",
+    "correct_answer": "In leadership routines, processes, measures, learning programmes and daily behaviours",
     "explanation": "Scaling meant proven principles and practices adapted locally rather than identical solutions everywhere. They were embedded into how leaders meet and decide, how work flows, what is tracked and rewarded, how capability is built and what people do every day.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 85"
   },
@@ -4528,12 +4528,12 @@
     "topic": "Distributed change capability",
     "question": "According to the course, what made the Global Change Management Programme model different?",
     "options": [
-      "It removed leaders from the change process",
-      "It moved from a central programme to a distributed capability for continuous change",
+      "It removed leaders from the change process entirely",
+      "It became a distributed capability for continuous change",
       "It relied on a single, fixed global rollout plan",
       "It replaced local teams with a stronger central PMO"
     ],
-    "correct_answer": "It moved from a central programme to a distributed capability for continuous change",
+    "correct_answer": "It became a distributed capability for continuous change",
     "explanation": "Leaders provided purpose and sponsorship, local teams became co-creators, champions connected change to daily work, dynamic governance enabled faster decisions, and the Global Learning Office turned local experiments into shared knowledge. Change stopped being something done to the organisation.",
     "source": "Class_6_Leading_cHANGE_uNDER_UNCERTAINTY_1.pdf, p. 90"
   },
