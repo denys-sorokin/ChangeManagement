@@ -1,0 +1,638 @@
+[
+  {
+    "id": "CM-C1-001",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Change vs. transformation",
+    "question": "A bank redesigns its loan-approval process to cut processing time, while remaining the same kind of bank serving the same customers. How does the course classify this?",
+    "options": [
+      "Disruptive change, because the basis of competition has moved",
+      "Change, because it modifies what the organisation does within a stable identity",
+      "Transformation, because it alters the business model and the organisation's identity",
+      "Emergent reinvention, because a new business is growing at the edge"
+    ],
+    "correct_answer": "Change, because it modifies what the organisation does within a stable identity",
+    "explanation": "Change moves processes, structures, tools and behaviours within a stable identity, and success looks like the same business performing better. Transformation would mean changing the business model or the definition of who the organisation is, which is not happening here.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C1-002",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Change vs. transformation",
+    "question": "Which statement best captures the course's distinction between change and transformation?",
+    "options": [
+      "Change is small in scale; transformation is the same thing done at a larger scale",
+      "Change concerns technology; transformation concerns people and culture",
+      "Change is designed at the top; transformation emerges from local adaptations",
+      "Change modifies what an organisation does; transformation questions what the organisation is"
+    ],
+    "correct_answer": "Change modifies what an organisation does; transformation questions what the organisation is",
+    "explanation": "The material describes the difference as one of kind, not of size: change modifies what the organisation does, while transformation questions what it is. The planned/emergent distinction is a separate axis, so it does not define transformation.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C1-003",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Change vs. transformation",
+    "question": "According to the course, what is the typical failure of a transformation?",
+    "options": [
+      "Transformation is announced, but only change is delivered",
+      "Optimising a position the market is about to abandon",
+      "Drift: motion without a shared direction",
+      "Change fatigue: improvement without direction"
+    ],
+    "correct_answer": "Transformation is announced, but only change is delivered",
+    "explanation": "The typical failure of transformation is that it is announced as a transformation but delivers only change. Change fatigue is the typical failure of change, drift is the blind spot of emergent change, and optimising an abandoned position is the risk of incremental change.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C1-004",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Change vs. transformation",
+    "question": "What is the reference point for a transformation, as opposed to a change?",
+    "options": [
+      "The best-performing competitor in the industry",
+      "A future organisation that does not exist yet",
+      "The organisation as it currently defines itself",
+      "The original strategy set by the founders"
+    ],
+    "correct_answer": "A future organisation that does not exist yet",
+    "explanation": "Transformation is anchored in a future organisation that does not yet exist, and success looks like a different business, still standing. The organisation as it currently defines itself is the reference point for change.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C1-005",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Incremental vs. disruptive change",
+    "question": "In a disruptive environment, how do the course materials describe an organisation's existing routines?",
+    "options": [
+      "As an asset, because experience compounds",
+      "As a liability, because experience can mislead",
+      "As neutral, because only technology determines success",
+      "As the main source of new value, if scaled faster"
+    ],
+    "correct_answer": "As a liability, because experience can mislead",
+    "explanation": "When the basis of competition has moved, existing routines become a liability and experience misleads. Routines being an asset that compounds with experience describes the incremental context.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
+  },
+  {
+    "id": "CM-C1-006",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Incremental vs. disruptive change",
+    "question": "What is the main risk of pursuing incremental change when the environment is shifting?",
+    "options": [
+      "Drifting without a shared direction",
+      "Losing efficiency, quality and scale",
+      "Arriving late with the right product and the wrong organisation",
+      "Optimising a position the market is about to abandon"
+    ],
+    "correct_answer": "Optimising a position the market is about to abandon",
+    "explanation": "Incremental logic does more of what already works, better and cheaper, so its risk is perfecting a position that the market is leaving. Arriving late with the right product and the wrong organisation is the risk associated with disruptive change.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
+  },
+  {
+    "id": "CM-C1-007",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Incremental vs. disruptive change",
+    "question": "What risk does the course associate with disruptive change?",
+    "options": [
+      "Improvement without any direction",
+      "Arriving late, with the right product and the wrong organisation",
+      "Losing control of the plan's budget and milestones",
+      "Optimising a position the market is about to abandon"
+    ],
+    "correct_answer": "Arriving late, with the right product and the wrong organisation",
+    "explanation": "In disruption the basis of competition moves, and an organisation can have the right product yet still be organised for the old game. Optimising an abandoned position is the incremental risk, and improvement without direction is change fatigue.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
+  },
+  {
+    "id": "CM-C1-008",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Kodak case",
+    "question": "How does the course explain Kodak's position with respect to incremental and disruptive change?",
+    "options": [
+      "It moved into digital too early, before the market was ready",
+      "It was poor at incrementally improving its film business",
+      "It stayed excellent at incremental change while the basis of competition had moved",
+      "It lacked the engineers needed to develop digital technology"
+    ],
+    "correct_answer": "It stayed excellent at incremental change while the basis of competition had moved",
+    "explanation": "The material states that Kodak was excellent at incremental change and never stopped being excellent at it, which was precisely the problem once the environment became disruptive. Kodak had in fact invented and patented digital photography, so a lack of engineering capability was not the issue.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
+  },
+  {
+    "id": "CM-C1-009",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Kodak case",
+    "question": "What is the central lesson the course draws from Kodak's decline?",
+    "options": [
+      "Kodak lacked the resources and talent to compete in digital",
+      "Kodak never developed or patented digital imaging technology",
+      "Kodak had no internal awareness that digital could displace film",
+      "Kodak did not lack information; it lacked a way of acting on information that threatened its margin"
+    ],
+    "correct_answer": "Kodak did not lack information; it lacked a way of acting on information that threatened its margin",
+    "explanation": "Kodak built the first digital camera, patented it, and had an internal forecast that digital could displace film. The failure was not ignorance or lack of resources but an inability to act on information that threatened its own profitable film business.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 13"
+  },
+  {
+    "id": "CM-C1-010",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Kodak case",
+    "question": "Why was Steven Sasson's 1975 digital camera prototype shelved by Kodak management?",
+    "options": [
+      "Regulators prevented Kodak from selling digital devices",
+      "It sold no film, paper or processing, so the business case looked weak",
+      "The technology failed to produce any usable image",
+      "A competitor had already launched a superior product"
+    ],
+    "correct_answer": "It sold no film, paper or processing, so the business case looked weak",
+    "explanation": "Management found the technology interesting but the business case unconvincing because it did not feed Kodak's profitable film, paper and processing business. The prototype worked, and it came eight years before a competitor shipped a comparable device.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 10"
+  },
+  {
+    "id": "CM-C1-011",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Planned vs. emergent change",
+    "question": "What does planned change assume about the future?",
+    "options": [
+      "That the future is knowable enough to plan for",
+      "That local adaptations will converge on their own",
+      "That the organisation is already learning and the job is to amplify it",
+      "That resistance can be removed through communication"
+    ],
+    "correct_answer": "That the future is knowable enough to plan for",
+    "explanation": "Planned change is designed at the top, sequenced and resourced, which only makes sense if the future is knowable enough to plan for. The idea that the organisation is already learning and leaders should notice and amplify it is the assumption of emergent change.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
+  },
+  {
+    "id": "CM-C1-012",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Planned vs. emergent change",
+    "question": "What is the blind spot of emergent change?",
+    "options": [
+      "Excessive top-down control",
+      "Change fatigue from too many initiatives",
+      "Drift: motion without a shared direction",
+      "Everything the plan did not anticipate"
+    ],
+    "correct_answer": "Drift: motion without a shared direction",
+    "explanation": "Emergent change gains realism, ownership and speed at the edges, but it risks drift, with lots of motion and no shared direction. Missing what the plan did not anticipate is the blind spot of planned change.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
+  },
+  {
+    "id": "CM-C1-013",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Planned vs. emergent change",
+    "question": "How does the course recommend viewing planned and emergent change?",
+    "options": [
+      "As sequential phases, with planned change always coming first",
+      "As rival theories, from which a leader should pick the stronger one",
+      "As two things happening at once, with most transformations failing in the gap between them",
+      "As approaches suited to small and to large organisations respectively"
+    ],
+    "correct_answer": "As two things happening at once, with most transformations failing in the gap between them",
+    "explanation": "The material states explicitly that planned and emergent change are not rival theories to choose between. Both happen simultaneously, and most transformations fail in the gap between the plan and the local adaptations.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
+  },
+  {
+    "id": "CM-C1-014",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Scope × origin matrix",
+    "question": "A new business grows at the edge of a company until it redefines the centre, often staying invisible until it is irreversible. Where does this sit in the scope × origin matrix?",
+    "options": [
+      "Adaptation",
+      "Programmed transformation",
+      "Optimisation",
+      "Emergent reinvention"
+    ],
+    "correct_answer": "Emergent reinvention",
+    "explanation": "Emergent reinvention combines transformational scope with emergent origin: a new business grows at the edge until it redefines the centre. Programmed transformation is transformational but planned, while adaptation and optimisation are incremental.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C1-015",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Scope × origin matrix",
+    "question": "Local teams make small fixes that quietly improve the existing business model, without anyone formally deciding to do so. Which quadrant is this?",
+    "options": [
+      "Adaptation",
+      "Programmed transformation",
+      "Optimisation",
+      "Emergent reinvention"
+    ],
+    "correct_answer": "Adaptation",
+    "explanation": "Adaptation is incremental in scope and emergent in origin: local fixes improve the model without a central decision. Optimisation is also incremental but planned, and the two transformational quadrants redefine the business rather than improve it.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C1-016",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Scope × origin matrix",
+    "question": "A company launches a deliberate, top-down programme to become a fundamentally different organisation. In the scope × origin matrix, this is:",
+    "options": [
+      "Emergent reinvention",
+      "Adaptation",
+      "Programmed transformation",
+      "Optimisation"
+    ],
+    "correct_answer": "Programmed transformation",
+    "explanation": "Programmed transformation is a planned attempt to become a different organisation; the course notes it is rare, expensive and usually announced too loudly. Optimisation is planned but only improves the existing model.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C1-017",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Scope × origin matrix",
+    "question": "Using the scope × origin matrix, how does the course describe the gap in the Kodak case?",
+    "options": [
+      "Its stated strategy was programmed transformation, but its behaviour stayed in optimisation",
+      "Both its stated strategy and its behaviour were adaptation",
+      "Its stated strategy was optimisation, but its behaviour was emergent reinvention",
+      "Its stated strategy was emergent reinvention, but its behaviour was programmed transformation"
+    ],
+    "correct_answer": "Its stated strategy was programmed transformation, but its behaviour stayed in optimisation",
+    "explanation": "The material says Kodak's stated strategy sat in the top-right (programmed transformation) while its behaviour never left the top-left (optimisation). That gap between declared transformation and actual incremental behaviour is the whole case.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C1-018",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Organisational inertia",
+    "question": "Managers share a mental model of what business they are in, and that model decides which data counts as a signal. Which type of rigidity is this?",
+    "options": [
+      "Cognitive rigidity",
+      "Routine rigidity",
+      "Resource rigidity",
+      "Political rigidity"
+    ],
+    "correct_answer": "Cognitive rigidity",
+    "explanation": "Cognitive rigidity is the shared mental model that determines which data counts as a signal. Routine rigidity concerns practised routines, resource rigidity concerns committed budgets and capital, and political rigidity is not one of the three rigidities in the material.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-019",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Organisational inertia",
+    "question": "Budgets, headcount and capital are committed to the current model, and moving them means that someone powerful must lose. Which rigidity does this describe?",
+    "options": [
+      "Routine rigidity",
+      "Identity rigidity",
+      "Resource rigidity",
+      "Cognitive rigidity"
+    ],
+    "correct_answer": "Resource rigidity",
+    "explanation": "Resource rigidity arises because resources are committed to the current model and reallocating them creates losers. It also explains why the investment case for the new business looks weaker: it has no history.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-020",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Organisational inertia",
+    "question": "An expert team avoids a new working method because adopting it would mean performing badly in front of colleagues while they relearn. Which rigidity is at work?",
+    "options": [
+      "Routine rigidity",
+      "Resource rigidity",
+      "Structural rigidity",
+      "Cognitive rigidity"
+    ],
+    "correct_answer": "Routine rigidity",
+    "explanation": "Routine rigidity reflects the fact that an organisation is a bundle of practised routines; doing something genuinely new means being incompetent again, in public. Resource rigidity concerns budgets, and cognitive rigidity concerns shared mental models.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-021",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Organisational inertia",
+    "question": "Why does the course consider cognitive rigidity the hardest to change?",
+    "options": [
+      "It requires the largest capital investment to overcome",
+      "It is invisible to the people who hold it",
+      "It only affects front-line employees",
+      "It is protected by formal contracts and policies"
+    ],
+    "correct_answer": "It is invisible to the people who hold it",
+    "explanation": "A shared mental model is the lens through which managers see, so they cannot easily see the lens itself. Capital commitments relate to resource rigidity, not cognitive rigidity.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-022",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Organisational inertia",
+    "question": "How do the course materials characterise organisational inertia?",
+    "options": [
+      "As the presence of something that is working, not the absence of effort",
+      "As laziness and complacency among senior managers",
+      "As a short phase that ends once a change plan is announced",
+      "As a lack of information about the external environment"
+    ],
+    "correct_answer": "As the presence of something that is working, not the absence of effort",
+    "explanation": "The material states that inertia is not the absence of effort but the presence of something that is working. This is why capable, hard-working organisations can still fail to redirect themselves.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-023",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Sensemaking",
+    "question": "Which sequence correctly describes how an organisation absorbs a threatening signal, according to the sensemaking slide?",
+    "options": [
+      "Signal arrives → interpretation becomes the fact → read inside the existing paradigm → disconfirming evidence is absorbed",
+      "Signal arrives → disconfirming evidence is absorbed → read inside the existing paradigm → interpretation becomes the fact",
+      "Signal arrives → read inside the existing paradigm → interpretation becomes the fact → disconfirming evidence is absorbed",
+      "Signal arrives → read inside the existing paradigm → disconfirming evidence is absorbed → interpretation becomes the fact"
+    ],
+    "correct_answer": "Signal arrives → read inside the existing paradigm → interpretation becomes the fact → disconfirming evidence is absorbed",
+    "explanation": "The signal is first read inside the existing paradigm (e.g. 'a niche'), that reading is repeated until it becomes the agreed fact, and then each new signal is explained by the agreed story. The result is an organisation learning in the wrong direction, confidently.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C1-024",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Sensemaking",
+    "question": "Why does the course say the first interpretation of a threatening signal (e.g. 'it's just a niche') is not dishonest?",
+    "options": [
+      "The data available at that moment is usually accurate",
+      "It is normally validated by external consultants",
+      "It is usually proved correct in the long run",
+      "It is the only interpretation the shared mental model can produce"
+    ],
+    "correct_answer": "It is the only interpretation the shared mental model can produce",
+    "explanation": "Organisations interpret signals through the same structures that the signal threatens, so the shared paradigm can only produce interpretations that fit it. The problem is structural, not a matter of managers hiding the truth.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C1-025",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Sensemaking",
+    "question": "In the final stage of the sensemaking sequence, what happens to new evidence that contradicts the agreed story?",
+    "options": [
+      "It is escalated to the board for independent review",
+      "It is explained away by the story already agreed",
+      "It is never collected in the first place",
+      "It triggers an immediate change of strategy"
+    ],
+    "correct_answer": "It is explained away by the story already agreed",
+    "explanation": "Once the interpretation has become the fact, each new signal is explained by the agreed story, so the organisation keeps learning in the wrong direction with confidence. The evidence is collected, but it is absorbed rather than acted upon.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C1-026",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Johnson & Scholes – absorbing a threat",
+    "question": "In Johnson & Scholes's model of how organisations absorb a threat, in which stage do coalitions form around explanations rather than evidence?",
+    "options": [
+      "Experimentation",
+      "Anticipation",
+      "Unfreezing",
+      "Flux"
+    ],
+    "correct_answer": "Flux",
+    "explanation": "Flux is marked by competing views of causes and remedies, with coalitions forming around explanations rather than evidence. Anticipation brings political pressure not to rock the boat, and Experimentation brings political testing of support.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C1-027",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Johnson & Scholes – absorbing a threat",
+    "question": "Support is tested politically, and ideas that would reallocate power meet resistance. Which stage of Johnson & Scholes's model is this?",
+    "options": [
+      "Experimentation",
+      "Flux",
+      "Refreezing",
+      "Information building"
+    ],
+    "correct_answer": "Experimentation",
+    "explanation": "In the Experimentation stage, support is tested politically and ideas that reallocate power are resisted. In Information building, information collection accelerates but is still interpreted within the paradigm.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C1-028",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Performance paradox",
+    "question": "What does the performance paradox claim?",
+    "options": [
+      "Success protects an organisation against disruption",
+      "Success is a cause of rigidity rather than a protection against it",
+      "Poor performance is the main cause of organisational rigidity",
+      "Rigidity appears only when managers become complacent"
+    ],
+    "correct_answer": "Success is a cause of rigidity rather than a protection against it",
+    "explanation": "The central idea of Week 1 is that the better an organisation becomes at what it does, the less capable it becomes of doing anything else. Success manufactures rigidity, and this happens without anyone needing to be complacent.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 26"
+  },
+  {
+    "id": "CM-C1-029",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Performance paradox",
+    "question": "In the performance paradox loop, budgets, careers and identity become attached to the codified model. Which step is this?",
+    "options": [
+      "Codification",
+      "Filtering",
+      "Confidence",
+      "Commitment"
+    ],
+    "correct_answer": "Commitment",
+    "explanation": "The loop runs Success → Codification → Commitment → Filtering → Confidence. Commitment is when budget, careers and identity attach to the codified model; Filtering is when signals are judged by how well they fit it.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C1-030",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Performance paradox",
+    "question": "Why is the performance paradox loop so hard to interrupt?",
+    "options": [
+      "It is driven by complacent and poorly informed managers",
+      "It is imposed on organisations by external regulators",
+      "Every step is competent management, so nothing in it looks like a mistake",
+      "It only becomes visible to outsiders, never to insiders"
+    ],
+    "correct_answer": "Every step is competent management, so nothing in it looks like a mistake",
+    "explanation": "The material stresses that the loop is not a mistake: each step is competent management, and nothing requires anyone to be complacent, lazy or poorly informed. That is precisely why it is so difficult to break.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C1-031",
+    "chapter": "Class 1",
+    "type": "mcq",
+    "topic": "Performance paradox",
+    "question": "A company's continued strong results are taken as proof that its business model is right. Which step of the performance paradox loop does this illustrate?",
+    "options": [
+      "Codification",
+      "Commitment",
+      "Confidence",
+      "Success"
+    ],
+    "correct_answer": "Confidence",
+    "explanation": "In the Confidence step, continued performance is read as proof that the model is right, which closes the loop. Codification turns what worked into process, metrics and standards, and Commitment attaches budgets and careers to it.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C1-032",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Change vs. transformation",
+    "question": "The course describes the difference between change and transformation as a difference of kind, not of size.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The slide states explicitly that this is a difference of kind, not of size: change modifies what the organisation does, while transformation questions what the organisation is.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C1-033",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Incremental vs. disruptive change",
+    "question": "In an incremental change context, existing routines are a liability and experience misleads.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. In an incremental context, existing routines are an asset and experience compounds. Routines become a liability and experience misleads in a disruptive context, where the basis of competition has moved.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 20"
+  },
+  {
+    "id": "CM-C1-034",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Planned vs. emergent change",
+    "question": "The main blind spot of planned change is everything the plan did not anticipate.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Planned change brings direction, visibility, accountability and funding, but its blind spot is everything the plan did not anticipate, which the course notes is most of it.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
+  },
+  {
+    "id": "CM-C1-035",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Planned vs. emergent change",
+    "question": "Emergent change originates in programmes that are designed at the top, sequenced, resourced and announced.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. That describes planned change. Emergent change originates in accumulated local adaptations that become the new normal.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 21"
+  },
+  {
+    "id": "CM-C1-036",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Organisational inertia",
+    "question": "Resource rigidity helps explain why the investment case for a new business tends to look weaker than the case for the existing one.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Under resource rigidity, budgets and capital are committed to the current model, and the investment case for the new thing is always weaker because it has no history.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-037",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Organisational inertia",
+    "question": "Routine rigidity is described as the hardest rigidity to change because it is invisible to the people who hold it.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. It is cognitive rigidity, the shared mental model of what business the organisation is in, that is the hardest to change because it is invisible to those holding it.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C1-038",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Sensemaking",
+    "question": "In the sensemaking view, an organisation's interpretation of a threatening signal is produced by the same structures that the signal threatens.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Organisations do not simply react to their environment; they interpret it, and the interpretation is produced by the structures the signal threatens. This is why threatening signals are often explained away.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C1-039",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Performance paradox",
+    "question": "The performance paradox loop only operates when managers are complacent or poorly informed.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The material explicitly states that nothing in the sequence requires anyone to be complacent, lazy or poorly informed. Every step is competent management.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C1-040",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Johnson & Scholes – absorbing a threat",
+    "question": "In Johnson & Scholes's model, Unfreezing is the stage in which new ideas are tested and signalled as normal.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. New ideas being tested and signalled as normal is the Refreezing stage. Unfreezing is where rumours, signals and challenges appear but are still made sense of within the existing paradigm.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C1-041",
+    "chapter": "Class 1",
+    "type": "tf",
+    "topic": "Kodak case",
+    "question": "Kodak earned substantial income from licensing digital imaging patents, income from a future the company was not itself building.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Between 2003 and 2010, roughly $3bn in digital patent licensing supported Kodak's accounts. Kodak had hedged intellectually with patents while committing commercially to film.",
+    "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 13"
+  }
+]
