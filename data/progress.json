@@ -3,17 +3,20 @@
     "B1-Class1",
     "B2-Class2-pp1-31",
     "B3-Class2-pp32-47",
-    "B4-Class3"
+    "B4-Class3",
+    "B5-Class4"
   ],
   "files_done": [
     "Class1a_Anatomy_of_Change_2026.pdf",
     "Class2_Anatomy_of_Change_2026.pdf",
-    "Class3_Aula_Story_telling_.pptx"
+    "Class3_Aula_Story_telling_.pptx",
+    "Class4__Designing_the_Transformation_.pdf"
   ],
-  "question_count": 157,
+  "question_count": 186,
   "by_chapter": {
     "Class 1": 41,
     "Class 2": 72,
-    "Class 3": 44
+    "Class 3": 44,
+    "Class 4": 29
   }
 }

@@ -2432,5 +2432,455 @@
     "correct_answer": "True",
     "explanation": "True. This is the closing message of the slide on communicating uncertainty, and it is why leaders should be honest about what is still open rather than offering false certainty.",
     "source": "Class3_Aula_Story_telling_.pptx, slide 42"
+  },
+  {
+    "id": "CM-C4-001",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "In Claes Janssen's Four Room Apartment model of individual change, in which order do people move through the rooms?",
+    "options": [
+      "Denial → Contentment → Renewal → Confusion, then back to Denial",
+      "Contentment → Confusion → Denial → Renewal, then back to Contentment",
+      "Contentment → Denial → Confusion → Renewal, then back to Contentment",
+      "Contentment → Renewal → Confusion → Denial, then back to Contentment"
+    ],
+    "correct_answer": "Contentment → Denial → Confusion → Renewal, then back to Contentment",
+    "explanation": "The model starts in Contentment; a need for change moves people into Denial, then Confusion, then Renewal. Once the change is incorporated, they return to Contentment, at least for that change.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 2"
+  },
+  {
+    "id": "CM-C4-002",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "Which of the following is an example of an external trigger that moves someone out of the Contentment room?",
+    "options": [
+      "A personal goal to take one's work to a new level",
+      "An imposed budget cut",
+      "Feeling centred, focused and in control",
+      "A team's wish to automate a system to free up time"
+    ],
+    "correct_answer": "An imposed budget cut",
+    "explanation": "The model notes that the need for change can be internal (e.g. taking your work to a new level or automating a system) or external (e.g. an imposed budget cut or a new organisation-wide programme). Feeling centred and in control describes Contentment itself.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 3"
+  },
+  {
+    "id": "CM-C4-003",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "Why does Janssen's model say that denial is not always bad?",
+    "options": [
+      "It shows that the person fully supports the change",
+      "It removes the need to share information with them",
+      "It is a defence mechanism that keeps priorities in mind and stops less-pressing issues from interfering",
+      "It speeds up the move directly to the Renewal room"
+    ],
+    "correct_answer": "It is a defence mechanism that keeps priorities in mind and stops less-pressing issues from interfering",
+    "explanation": "Denial is described as a vital defence mechanism: people and organisations always have plenty to do, so denial keeps less-pressing issues from interfering. However, if a truly important change is never acknowledged, the person becomes a passive recipient of it.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 4"
+  },
+  {
+    "id": "CM-C4-004",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "After a new leadership team arrives, staff are unsure what to keep doing and what to change, and rumours fill the gaps in scattered information. Which room are they in?",
+    "options": [
+      "Denial",
+      "Confusion",
+      "Contentment",
+      "Renewal"
+    ],
+    "correct_answer": "Confusion",
+    "explanation": "In the Confusion room the old way has unravelled and the new way is unclear, so people live with uncertainty, ambiguity and suspicion, and rumours fill the gaps. As information trickles in and a new picture forms, they move on to Renewal.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 5"
+  },
+  {
+    "id": "CM-C4-005",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "What is the main challenge of the Renewal room, and how should it be handled?",
+    "options": [
+      "Comfort and complacency; create a crisis to restart the cycle",
+      "Rumours and suspicion; stop sharing information until things settle",
+      "Great energy but little structure; balance structure (goals, timelines, memberships) with freedom",
+      "Low energy and resistance; push firmly until people comply"
+    ],
+    "correct_answer": "Great energy but little structure; balance structure (goals, timelines, memberships) with freedom",
+    "explanation": "Renewal is a time of great energy and possibility, but with a relative lack of structure. The key is offering the right balance of structure and freedom within that structure.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 6"
+  },
+  {
+    "id": "CM-C4-006",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "According to the model's guidance (translated from Portuguese), how should you support people who are in the Denial room?",
+    "options": [
+      "Bring people together and focus on short-term goals",
+      "Fit people into the new structure and accept their integration",
+      "Do nothing except maintain and adjust the current system",
+      "Share information calmly and avoid forcing advice on them, which only deepens resistance and denial"
+    ],
+    "correct_answer": "Share information calmly and avoid forcing advice on them, which only deepens resistance and denial",
+    "explanation": "For Denial, the slide advises sharing information calmly without forcing advice, because forced advice only deepens resistance and denial. Bringing people together and focusing on short-term goals is the advice for Confusion; doing nothing is for Contentment.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 7"
+  },
+  {
+    "id": "CM-C4-007",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Two-phase, seven-step approach",
+    "question": "In the two-phase, seven-step approach to building commitment, which steps make up the Align phase?",
+    "options": [
+      "Understand, Enlist, Envisage",
+      "Motivate, Communicate, Act",
+      "Enlist, Envisage, Consolidate",
+      "Understand, Motivate, Communicate"
+    ],
+    "correct_answer": "Understand, Enlist, Envisage",
+    "explanation": "The Align phase (aligning key stakeholders) covers Understand, Enlist and Envisage. The Engage phase (engaging the organisation) covers Motivate, Communicate, Act and Consolidate.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 9"
+  },
+  {
+    "id": "CM-C4-008",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 1: Understand",
+    "question": "In the Understand step, how is alignment with key stakeholders created?",
+    "options": [
+      "By sharing an honest assessment of the current state",
+      "By celebrating early short-term wins",
+      "By setting ambitious stretch targets for each unit",
+      "By announcing the final solution to all employees"
+    ],
+    "correct_answer": "By sharing an honest assessment of the current state",
+    "explanation": "Understand involves gathering information, identifying root causes rather than symptoms, and creating alignment by sharing an honest assessment of the current state. Stretch targets belong to Motivate and short-term wins to Act.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 11"
+  },
+  {
+    "id": "CM-C4-009",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 1: Understand",
+    "question": "Which activity is part of gathering information in the Understand step?",
+    "options": [
+      "Hiring employees who can implement the vision",
+      "Announcing the new vision across the organisation",
+      "Generating and publicising short-term wins",
+      "Engaging with both customers and non-customers"
+    ],
+    "correct_answer": "Engaging with both customers and non-customers",
+    "explanation": "Gathering information includes interviews with leaders, managers and front-line employees, engaging customers and non-customers, and benchmarking competitors and other organisations. The other activities belong to later steps.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 11"
+  },
+  {
+    "id": "CM-C4-010",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 2: Enlist",
+    "question": "According to Kotter, as cited in the course, which characteristics should a change team combine?",
+    "options": [
+      "Technical skill, tenure, consensus, caution and control",
+      "Seniority, enthusiasm, availability, loyalty and budget",
+      "Charisma, creativity, speed, independence and experience",
+      "Leadership, position power, expertise, credibility and management"
+    ],
+    "correct_answer": "Leadership, position power, expertise, credibility and management",
+    "explanation": "In the Enlist step, the change team is built around leadership, position power, expertise, credibility and management. This mix lets the team both drive the change and be taken seriously by the organisation.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 12"
+  },
+  {
+    "id": "CM-C4-011",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 2: Enlist",
+    "question": "In the 'Assess resistance' snapshot, which group is the largest and has a neutral attitude towards change?",
+    "options": [
+      "Champions",
+      "Resisters",
+      "Helpers",
+      "Bystanders"
+    ],
+    "correct_answer": "Bystanders",
+    "explanation": "The snapshot shows roughly 20% resisters who disrupt change, 60% bystanders with a neutral attitude, 10% helpers who encourage change, and 10% champions who lead it. Bystanders are therefore the largest group.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 13"
+  },
+  {
+    "id": "CM-C4-012",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 3: Envisage",
+    "question": "In the Envisage step, what is the difference between a vision and a strategy?",
+    "options": [
+      "The vision describes where you want to go; the strategy describes how you will get there",
+      "The vision sets the budget; the strategy sets the vision's values",
+      "The vision describes how you will get there; the strategy describes where you want to go",
+      "The vision is for employees; the strategy is only for customers"
+    ],
+    "correct_answer": "The vision describes where you want to go; the strategy describes how you will get there",
+    "explanation": "A vision describes 'where you want to go', while a strategy describes 'how you'll get there' and provides a framework of operational decisions. The course adds that a good vision and strategy quickly turn into real work.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 14"
+  },
+  {
+    "id": "CM-C4-013",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 3: Envisage",
+    "question": "Which set of qualities describes a good vision, according to the Envisage step?",
+    "options": [
+      "Abstract, inspiring, unlimited and permanent",
+      "Tangible, desirable, feasible and flexible, focused and simple",
+      "Quantified, technical, rigid and exhaustive",
+      "Detailed, confidential, fixed and comprehensive"
+    ],
+    "correct_answer": "Tangible, desirable, feasible and flexible, focused and simple",
+    "explanation": "The slide lists a good vision as tangible, desirable, feasible and flexible, and focused and simple. A vision that is rigid, confidential or overly detailed would not guide or engage people.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 14"
+  },
+  {
+    "id": "CM-C4-014",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 4: Motivate",
+    "question": "What is the main aim of the Motivate step, drawing on Kotter?",
+    "options": [
+      "To select a change agent and build a change team",
+      "To create dissatisfaction with the status quo by raising 'survival anxiety'",
+      "To reward people who already support the change",
+      "To consolidate gains by changing policies and structures"
+    ],
+    "correct_answer": "To create dissatisfaction with the status quo by raising 'survival anxiety'",
+    "explanation": "Motivate creates dissatisfaction with the status quo by sharing information, setting clear expectations and stretch targets, identifying a crisis and communicating honestly about the implications of the status quo. Consolidating gains is step 7, and building the team is step 2.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 16"
+  },
+  {
+    "id": "CM-C4-015",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 5: Communicate",
+    "question": "According to the 'Communicate – When' sequence, what should be communicated first?",
+    "options": [
+      "That there will be challenges and it won't be perfect",
+      "The negative about today, to create a sense of urgency",
+      "Celebration of success in the current state",
+      "That the future can be better than the present"
+    ],
+    "correct_answer": "The negative about today, to create a sense of urgency",
+    "explanation": "The sequence starts with the negative about today to create urgency, then acknowledges that there will be challenges, celebrates current success as the organisation evolves, and finally conveys that the future can be better.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 18"
+  },
+  {
+    "id": "CM-C4-016",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 5: Communicate",
+    "question": "Which communication practice does the course recommend in the 'Communicate – How' slide?",
+    "options": [
+      "Repeat the message through multiple methods, using metaphors and stories, and lead by example",
+      "Communicate once at launch to avoid change fatigue",
+      "Rely on one detailed email so the message is consistent",
+      "Limit communication to senior managers to avoid rumours"
+    ],
+    "correct_answer": "Repeat the message through multiple methods, using metaphors and stories, and lead by example",
+    "explanation": "The course favours face-to-face over email, 'say it, say it, say it again', multiple methods, metaphors, analogies and stories, making it involving, and leadership by example.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 19"
+  },
+  {
+    "id": "CM-C4-017",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 6: Act",
+    "question": "A middle manager keeps undermining the change in team meetings. Which step of the seven-step approach explicitly includes dealing with this?",
+    "options": [
+      "Act",
+      "Envisage",
+      "Consolidate",
+      "Motivate"
+    ],
+    "correct_answer": "Act",
+    "explanation": "The Act step includes making structures compatible with the vision, providing training, aligning practices and systems, generating short-term wins and dealing with managers who undercut needed change.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 20"
+  },
+  {
+    "id": "CM-C4-018",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Step 7: Consolidate",
+    "question": "An organisation uses the credibility gained from early wins to change policies that don't support the vision and to promote people who can implement it. Which step is this?",
+    "options": [
+      "Act",
+      "Consolidate",
+      "Enlist",
+      "Communicate"
+    ],
+    "correct_answer": "Consolidate",
+    "explanation": "Consolidate uses increased credibility to change policies, structures and systems; hires, promotes and develops people who can implement the vision; and reinvigorates the process with new projects, themes and change agents.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 21"
+  },
+  {
+    "id": "CM-C4-019",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Organisational resistance",
+    "question": "According to the slide on organisational resistance, what combination may result in organisational inertia?",
+    "options": [
+      "Strong external pressure combined with a weak culture",
+      "A new leadership team combined with a crisis",
+      "A lack of strategy combined with high employee turnover",
+      "A strategic momentum reinforced by ongoing success, supported by the organisation's culture"
+    ],
+    "correct_answer": "A strategic momentum reinforced by ongoing success, supported by the organisation's culture",
+    "explanation": "The strategic direction builds up a momentum of its own, often reinforced by success, and the culture is likely to support that momentum. Linked together, these two factors can produce organisational inertia, alongside political resistance.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 22"
+  },
+  {
+    "id": "CM-C4-020",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Change agent competencies (Buchanan & Boddy)",
+    "question": "Which of Buchanan and Boddy's change competencies describes the ability to function comfortably, patiently and effectively in an uncertain environment?",
+    "options": [
+      "Tolerance of ambiguity",
+      "Flexibility",
+      "Sensitivity to change",
+      "Overall perspective"
+    ],
+    "correct_answer": "Tolerance of ambiguity",
+    "explanation": "Tolerance of ambiguity is the ability to function comfortably, patiently and effectively under uncertainty. Flexibility concerns responding to changes in goals and style, and overall perspective means standing back to take a broader view of priorities.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 24"
+  },
+  {
+    "id": "CM-C4-021",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Change agent competencies (Buchanan & Boddy)",
+    "question": "Which competency, in the 'Managing up' group, is about gaining commitment to plans and ideas from potential sceptics and resisters?",
+    "options": [
+      "Team-building abilities",
+      "Personal enthusiasm",
+      "Influencing skills",
+      "Networking skills"
+    ],
+    "correct_answer": "Influencing skills",
+    "explanation": "Influencing skills are about gaining commitment to project plans and ideas from potential sceptics and resisters. Networking and team-building concern establishing contacts, and personal enthusiasm concerns expressing plans and ideas.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 27"
+  },
+  {
+    "id": "CM-C4-022",
+    "chapter": "Class 4",
+    "type": "mcq",
+    "topic": "Effective change organisations",
+    "question": "Which view of change management does the course endorse in its closing slide?",
+    "options": [
+      "It is mainly an operational matter, separate from strategy",
+      "It is a standard set of activities that works the same in every organisation",
+      "It differs by organisation and market, so treating it as a prescribed set of activities is dangerous",
+      "It should be led by HR alone, separately from the business"
+    ],
+    "correct_answer": "It differs by organisation and market, so treating it as a prescribed set of activities is dangerous",
+    "explanation": "The closing slide says organisations that manage change well are more like 'open learning systems', and that it is dangerous to treat change management as a prescribed set of activities. It also says strategic and operational change are deeply linked and HR must be integral.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 28"
+  },
+  {
+    "id": "CM-C4-023",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "In Janssen's Four Room model, once a change has been incorporated, people return to the Contentment room.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Making it through Renewal brings you back where you started, in Contentment, at least with that change, until the next change comes along.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 6"
+  },
+  {
+    "id": "CM-C4-024",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Four Rooms of Change (Janssen)",
+    "question": "For people in the Denial room, the most effective approach is to push advice firmly so that they accept the change quickly.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The guidance (translated from Portuguese) is to share information calmly and not force advice, because forcing it only deepens resistance and denial.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 7"
+  },
+  {
+    "id": "CM-C4-025",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Building a solid foundation (Kotter)",
+    "question": "Kotter warns that skipping stages of the change process creates only the illusion of speed and never produces a satisfying result.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The quote from 'Leading Change' states that the change process goes through a series of stages that take considerable time, and skipping stages only creates the illusion of speed.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 10"
+  },
+  {
+    "id": "CM-C4-026",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Step 1: Understand",
+    "question": "In the Understand step, the focus is on identifying symptoms quickly rather than root causes.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The Understand step explicitly calls for determining root causes and not symptoms.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 11"
+  },
+  {
+    "id": "CM-C4-027",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Two-phase, seven-step approach",
+    "question": "In the two-phase, seven-step approach, Motivate is the first step of the Engage phase.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The Align phase covers Understand, Enlist and Envisage; the Engage phase then begins with Motivate (create a sense of urgency), followed by Communicate, Act and Consolidate.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 9"
+  },
+  {
+    "id": "CM-C4-028",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Step 7: Consolidate",
+    "question": "The Consolidate step is mainly about identifying a crisis to raise survival anxiety.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Identifying a crisis and raising survival anxiety belong to the Motivate step. Consolidate uses increased credibility to change policies, structures and systems, and reinvigorates the process.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 21"
+  },
+  {
+    "id": "CM-C4-029",
+    "chapter": "Class 4",
+    "type": "tf",
+    "topic": "Effective change organisations",
+    "question": "According to the course, human resource management must be an integral component of the change process.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The closing slide states that HR management must be integral to the change process, alongside the points that strategic change is linked to operational change and that change differs by organisation and market.",
+    "source": "Class4__Designing_the_Transformation_.pdf, p. 28"
   }
 ]
