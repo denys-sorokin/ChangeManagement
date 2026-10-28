@@ -34,6 +34,7 @@ python3 -m http.server 8000
 | `data/progress.json` | Log of the generation batches |
 | `scripts/append_batch.py` | Appends one authored batch, assigns IDs and spreads correct answers across A–D |
 | `scripts/validate.py` | Checks the bank and prints a summary by type, chapter and topic |
+| `fonts/` | Self-hosted Archivo, IBM Plex Sans and IBM Plex Mono (SIL Open Font License), so the site makes no external requests |
 
 ## Question bank
 

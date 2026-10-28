@@ -13,6 +13,7 @@
   };
 
   const $ = (id) => document.getElementById(id);
+  const LETTERS = ["A", "B", "C", "D"];
   const root = document.documentElement;
 
   // ---------- Storage (fails safely in private mode) ----------
@@ -87,16 +88,22 @@
   }
 
   function renderTheme() {
-    const dark = effectiveTheme() === "dark";
-    root.classList.toggle("is-dark", dark);
-    $("themeToggle").setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
-    $("themeToggle").title = dark ? "Light mode" : "Dark mode";
+    root.classList.toggle("is-dark", effectiveTheme() === "dark");
+    const choice = root.dataset.theme || "auto";
+    document.querySelectorAll("[data-theme-choice]").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.themeChoice === choice));
+    });
   }
 
-  function toggleTheme() {
-    const next = effectiveTheme() === "dark" ? "light" : "dark";
-    root.dataset.theme = next;
-    store.set(KEYS.theme, next);
+  // "auto" follows the device setting; "light" and "dark" are remembered choices.
+  function setTheme(choice) {
+    if (choice === "light" || choice === "dark") {
+      root.dataset.theme = choice;
+      store.set(KEYS.theme, choice);
+    } else {
+      delete root.dataset.theme;
+      store.remove(KEYS.theme);
+    }
     renderTheme();
   }
 
@@ -112,6 +119,15 @@
       b.setAttribute("aria-pressed", String(b.dataset.font === size));
     });
   }
+
+  const CHAPTER_TITLES = {
+    "Class 1": "The Anatomy of Change",
+    "Class 2": "The Human Side of Change",
+    "Class 3": "From Vision to Narrative",
+    "Class 4": "Designing the Transformation",
+    "Class 5": "Power, Politics, Culture & Purpose",
+    "Class 6": "Leading Change Under Uncertainty",
+  };
 
   // ---------- Question bank ----------
   let bank = [];
@@ -147,19 +163,23 @@
   // ---------- Setup ----------
   function renderSetup() {
     const saved = store.get(KEYS.setup, {});
-    const scopes = [{ value: "all", label: "All chapters", count: bank.length }].concat(
-      chapters.map((c) => ({ value: c, label: c, count: bank.filter((q) => q.chapter === c).length }))
+    const scopes = [{ value: "all", code: "All", title: "All chapters", count: bank.length }].concat(
+      chapters.map((c) => ({
+        value: c,
+        code: c,
+        title: CHAPTER_TITLES[c] || "",
+        count: bank.filter((q) => q.chapter === c).length,
+      }))
     );
     const savedScope = scopes.some((s) => s.value === saved.scope) ? saved.scope : "all";
     const box = $("scopeChoices");
     box.replaceChildren(
       ...scopes.map((s) =>
-        el("label", { class: "choice" }, [
+        el("label", { class: s.value === "all" ? "chap all" : "chap" }, [
           el("input", { type: "radio", name: "scope", value: s.value, checked: s.value === savedScope }),
-          el("span", { class: "choice-body" }, [
-            el("span", { class: "choice-title", text: s.label }),
-            el("span", { class: "choice-desc", text: plural(s.count, "question") }),
-          ]),
+          el("span", { class: "c", text: s.code }),
+          el("span", { class: "t", text: s.title }),
+          el("span", { class: "n", text: s.count, "aria-label": plural(s.count, "question") }),
         ])
       )
     );
@@ -207,6 +227,7 @@
       n === 0
         ? "No saved mistakes yet. Questions you answer wrongly are saved here automatically."
         : `${plural(n, "question")} saved from previous sessions.`;
+    $("mistakesCount").textContent = `${n} saved`;
     $("practiseMistakesBtn").disabled = n === 0;
     $("exportMistakesBtn").disabled = n === 0;
     $("clearMistakesBtn").disabled = n === 0;
@@ -267,7 +288,11 @@
 
   function renderFlagsPanel() {
     const n = Object.keys(getFlags()).length;
-    $("flagsSummary").textContent = n === 0 ? "No flagged questions." : `${plural(n, "question")} flagged.`;
+    $("flagsSummary").textContent =
+      n === 0
+        ? "None yet. Use “Flag this question” on any question to mark it as wrong or unclear, then export flags.json and send it to the site author."
+        : `${plural(n, "question")} flagged. Export flags.json and send it to the site author.`;
+    $("flagsCount").textContent = `${n} flagged`;
     $("exportFlagsBtn").disabled = n === 0;
     $("clearFlagsBtn").disabled = n === 0;
   }
@@ -337,7 +362,6 @@
   // ---------- Screens ----------
   function showScreen(name) {
     ["home", "quiz", "results"].forEach((s) => ($(`screen-${s}`).hidden = s !== name));
-    $("quizStatus").hidden = name !== "quiz";
     window.scrollTo(0, 0);
   }
 
@@ -368,7 +392,7 @@
     $("prevBtn").hidden = false;
     $("clearAnswerBtn").hidden = session.mode !== "exam";
     $("qGridWrap").hidden = session.mode !== "exam";
-    $("finishBtn").textContent = session.mode === "exam" ? "Finish exam" : "Finish now";
+    $("finishBtn").textContent = session.mode === "exam" ? "Finish exam" : "Finish";
     $("progressBar").setAttribute("aria-valuemax", String(questions.length));
     buildGrid();
     if (session.deadline) {
@@ -407,9 +431,9 @@
     $("progressText").textContent = `${session.index + 1} / ${n}`;
     $("progressFill").style.width = `${((session.index + 1) / n) * 100}%`;
     $("progressBar").setAttribute("aria-valuenow", String(session.index + 1));
-    $("answeredCount").textContent = `Answered ${answered} of ${n}`;
+    $("answeredCount").textContent = `${answered}/${n} answered`;
     [...$("qGrid").children].forEach((b, i) => {
-      b.classList.toggle("answered", session.answers[i] !== null);
+      b.classList.toggle("done", session.answers[i] !== null);
       b.setAttribute("aria-current", String(i === session.index));
     });
   }
@@ -419,25 +443,24 @@
     const answer = session.answers[session.index];
     const reveal = session.mode === "study" && answer !== null;
 
-    $("qChapter").textContent = q.chapter;
-    $("qTopic").textContent = q.topic;
-    $("qType").textContent = q.type === "tf" ? "True or false" : "Multiple choice";
+    $("qNumber").textContent = `Question ${session.index + 1} of ${session.questions.length}`;
+    $("qMeta").textContent = `${q.chapter} · ${q.topic} · ${q.type === "tf" ? "True / false" : "Multiple choice"}`;
     $("qText").textContent = q.question;
 
     $("qOptions").replaceChildren(
       ...q.options.map((opt, i) => {
         const isCorrect = opt === q.correct_answer;
         const isChosen = answer === i;
-        let cls = "option";
+        let cls = "opt";
         let tag = null;
         if (reveal && isCorrect) {
-          cls += " correct";
-          tag = isChosen ? "Your answer · Correct" : "Correct answer";
+          cls += " ok";
+          tag = isChosen ? "Your answer · correct" : "Correct answer";
         } else if (reveal && isChosen) {
-          cls += " incorrect";
-          tag = "Your answer · Incorrect";
+          cls += " no";
+          tag = "Your answer · incorrect";
         } else if (!reveal && isChosen) {
-          cls += " selected";
+          cls += " sel";
         }
         return el(
           "button",
@@ -450,22 +473,23 @@
             onclick: () => choose(i),
           },
           [
-            el("span", { class: "option-key", "aria-hidden": "true", text: i + 1 }),
-            el("span", { class: "option-text" }, [opt, tag ? el("span", { class: "option-tag", text: tag }) : null]),
+            el("span", { class: "l", "aria-hidden": "true", text: LETTERS[i] }),
+            el("span", { class: "tx" }, [opt, tag ? el("span", { class: "tag", text: tag }) : null]),
           ]
         );
       })
     );
 
     const fb = $("qFeedback");
-    fb.className = "feedback";
     if (reveal) {
       const right = q.options[answer] === q.correct_answer;
-      fb.classList.add(right ? "ok" : "bad");
       fb.replaceChildren(
-        el("p", { class: "feedback-title", text: right ? "Correct" : `Incorrect. The correct answer is: ${q.correct_answer}` }),
+        el("p", {
+          class: `verdict ${right ? "good" : "bad"}`,
+          text: right ? "Correct." : `Incorrect. The answer is ${LETTERS[q.options.indexOf(q.correct_answer)]}: ${q.correct_answer}`,
+        }),
         el("p", { text: q.explanation }),
-        el("p", { class: "source", text: `Source: ${q.source}` })
+        el("p", { class: "src", text: `Source: ${q.source}` })
       );
     } else {
       fb.replaceChildren();
@@ -473,20 +497,27 @@
 
     const last = session.index === session.questions.length - 1;
     const next = $("nextBtn");
-    if (session.mode === "study" && answer === null) next.textContent = last ? "Skip and finish" : "Skip";
-    else next.textContent = last ? (session.mode === "exam" ? "Finish exam" : "See results") : "Next";
+    if (session.mode === "study" && answer === null) next.textContent = last ? "Skip and finish" : "Skip →";
+    else next.textContent = last ? (session.mode === "exam" ? "Finish exam" : "See results") : "Next →";
+    next.classList.toggle("primary", session.mode === "study" && answer !== null);
     $("prevBtn").disabled = session.index === 0;
     $("clearAnswerBtn").disabled = answer === null;
     renderFlagButton();
     renderStatus();
-    if (moveFocus) $("qText").focus({ preventScroll: false });
+    if (moveFocus) {
+      const card = document.querySelector(".qcard");
+      card.classList.remove("enter");
+      void card.offsetWidth; // restart the entry animation
+      card.classList.add("enter");
+      $("qText").focus({ preventScroll: true });
+    }
   }
 
   function renderFlagButton() {
     const q = session.questions[session.index];
     const flagged = Boolean(getFlags()[q.id]);
     $("flagBtn").setAttribute("aria-pressed", String(flagged));
-    $("flagBtn").textContent = flagged ? "Flagged" : "Flag";
+    $("flagBtn").textContent = flagged ? "Flagged — edit" : "Flag this question";
   }
 
   function choose(i) {
@@ -511,6 +542,7 @@
     if (!session || i < 0 || i >= session.questions.length) return;
     session.index = i;
     renderQuestion(true);
+    window.scrollTo(0, 0);
   }
 
   function goNext() {
@@ -586,8 +618,9 @@
     $("statTime").textContent = formatClock(Math.min(s.endedAt - s.startedAt, s.deadline ? EXAM_MS : Infinity));
     $("statScoring").textContent = s.scoring === "penalty" ? "Penalty" : "No penalty";
     $("statMode").textContent = s.mode === "exam" ? "Exam" : "Study";
-    const scope = s.kind === "mistakes" ? "Review mistakes" : s.scope === "all" ? "All chapters" : s.scope;
-    $("statScope").textContent = `${scope} · ${plural(score.n, "question")} · ${(20 / score.n).toFixed(2).replace(/\.?0+$/, "")} points each`;
+    const scope = s.kind === "mistakes" ? "My mistakes" : s.scope === "all" ? "All chapters" : s.scope;
+    const each = (20 / score.n).toFixed(2).replace(/\.?0+$/, "");
+    $("statScope").textContent = `${scope} · ${s.mode === "exam" ? "Exam" : "Study"} · ${plural(score.n, "question")} · ${each} each`;
     $("timeUpNote").hidden = !s.timedOut;
     reviewFilter = "all";
     renderFilter();
@@ -618,30 +651,31 @@
       ...shown.map(({ q, i, a, status }) => {
         const flagBtn = el("button", {
           type: "button",
-          class: "btn btn-quiet",
+          class: "link",
           "aria-pressed": String(Boolean(getFlags()[q.id])),
-          text: getFlags()[q.id] ? "Flagged" : "Flag",
+          text: getFlags()[q.id] ? "Flagged — edit" : "Flag this question",
         });
         flagBtn.addEventListener("click", () =>
           openFlagDialog(q.id, () => {
             const on = Boolean(getFlags()[q.id]);
             flagBtn.setAttribute("aria-pressed", String(on));
-            flagBtn.textContent = on ? "Flagged" : "Flag";
+            flagBtn.textContent = on ? "Flagged — edit" : "Flag this question";
           })
         );
-        return el("li", { class: `card review-item is-${status}` }, [
-          el("div", { class: "review-head" }, [
-            el("span", { class: "status-tag", text: `${i + 1}. ${labels[status]}` }),
-            el("span", { class: "chip", text: q.chapter }),
-            el("span", { class: "q-topic", text: q.topic }),
+        return el("li", { class: `qcard review-item is-${status}` }, [
+          el("div", { class: "qmeta" }, [
+            el("span", { class: `eyebrow st-${status}`, text: `${i + 1} · ${labels[status]}` }),
+            el("span", { class: "eyebrow", text: `${q.chapter} · ${q.topic}` }),
           ]),
-          el("p", { class: "review-q", text: q.question }),
+          el("p", { class: "qtext", text: q.question }),
           el("dl", { class: "answer-lines" }, [
             el("div", {}, [el("dt", { text: "Your answer:" }), el("dd", { text: a === null ? "No answer" : q.options[a] })]),
             el("div", {}, [el("dt", { text: "Correct answer:" }), el("dd", { text: q.correct_answer })]),
           ]),
-          el("p", { text: q.explanation }),
-          el("p", { class: "source", text: `Source: ${q.source} · ${q.id}` }),
+          el("div", { class: "explain" }, [
+            el("p", { text: q.explanation }),
+            el("p", { class: "src", text: `Source: ${q.source} · ${q.id}` }),
+          ]),
           flagBtn,
         ]);
       })
@@ -662,8 +696,9 @@
     const t = e.target;
     if (t.closest && t.closest("input, textarea, select")) return;
 
-    if (/^[1-9]$/.test(e.key)) {
-      const i = Number(e.key) - 1;
+    const letter = LETTERS.indexOf(e.key.toUpperCase());
+    if (/^[1-9]$/.test(e.key) || (e.key.length === 1 && letter !== -1)) {
+      const i = /^[1-9]$/.test(e.key) ? Number(e.key) - 1 : letter;
       if (i < session.questions[session.index].options.length) {
         e.preventDefault();
         choose(i);
@@ -671,7 +706,7 @@
     } else if (e.key === "Enter") {
       // Enter moves on, unless focus is on another control that Enter should activate.
       const control = t.closest && t.closest("button, a, label");
-      if (control && !control.classList.contains("option")) return;
+      if (control && !control.classList.contains("opt")) return;
       e.preventDefault();
       goNext();
     } else if (e.key === "ArrowRight") {
@@ -696,13 +731,10 @@
       if (darkQuery.addEventListener) darkQuery.addEventListener("change", onChange);
       else if (darkQuery.addListener) darkQuery.addListener(onChange);
     }
-    $("themeToggle").addEventListener("click", toggleTheme);
+    document.querySelectorAll("[data-theme-choice]").forEach((b) =>
+      b.addEventListener("click", () => setTheme(b.dataset.themeChoice))
+    );
     document.querySelectorAll(".font-size button").forEach((b) => b.addEventListener("click", () => setFont(b.dataset.font)));
-
-    $("brandBtn").addEventListener("click", () => {
-      if (session && !session.finished) exitSession();
-      else goHome();
-    });
 
     $("setupForm").addEventListener("submit", (e) => {
       e.preventDefault();
