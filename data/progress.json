@@ -1,12 +1,14 @@
 {
   "batches_done": [
-    "B1-Class1"
+    "B1-Class1",
+    "B2-Class2-pp1-31"
   ],
   "files_done": [
     "Class1a_Anatomy_of_Change_2026.pdf"
   ],
-  "question_count": 41,
+  "question_count": 88,
   "by_chapter": {
-    "Class 1": 41
+    "Class 1": 41,
+    "Class 2": 47
   }
 }

@@ -634,5 +634,733 @@
     "correct_answer": "True",
     "explanation": "True. Between 2003 and 2010, roughly $3bn in digital patent licensing supported Kodak's accounts. Kodak had hedged intellectually with patents while committing commercially to film.",
     "source": "Class1a_Anatomy_of_Change_2026.pdf, p. 13"
+  },
+  {
+    "id": "CM-C2-001",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "Which sequence correctly lists the six stages of the course's change model?",
+    "options": [
+      "Mobilize → Diagnose → Design → Adapt → Experiment → Embed",
+      "Diagnose → Design → Mobilize → Experiment → Embed → Adapt",
+      "Diagnose → Mobilize → Experiment → Design → Adapt → Embed",
+      "Diagnose → Mobilize → Design → Experiment → Adapt → Embed"
+    ],
+    "correct_answer": "Diagnose → Mobilize → Design → Experiment → Adapt → Embed",
+    "explanation": "The model runs Diagnose, Mobilize, Design, Experiment, Adapt and Embed. Design deliberately comes only after the system has been understood and a coalition built, and Embed is last because it makes the change stick.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 4"
+  },
+  {
+    "id": "CM-C2-002",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "According to the course, what is the most common failure in practice when running a change?",
+    "options": [
+      "Starting at stage three, Design",
+      "Starting at stage two, Mobilize",
+      "Spending too long in the Diagnose stage",
+      "Skipping the Experiment stage entirely"
+    ],
+    "correct_answer": "Starting at stage three, Design",
+    "explanation": "The material states that the most common failure in practice is starting at stage three: designing the intervention before diagnosing the system and mobilising support. Design should be chosen because the diagnosis implies it.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 5"
+  },
+  {
+    "id": "CM-C2-003",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "Which stage does the course say organisations most often skip, which is why so much change quietly comes back?",
+    "options": [
+      "Adapt",
+      "Embed",
+      "Experiment",
+      "Diagnose"
+    ],
+    "correct_answer": "Embed",
+    "explanation": "Stage six, Embed, is the one organisations skip. Change that is not embedded in structures, metrics, promotion criteria and stories reverses over time.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 6"
+  },
+  {
+    "id": "CM-C2-004",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "What is the purpose of the Mobilize stage in the course model?",
+    "options": [
+      "To make the new way part of metrics and promotion criteria",
+      "To test load-bearing assumptions cheaply before committing",
+      "To build a coalition with more standing than the defenders of the status quo",
+      "To understand the system before touching it"
+    ],
+    "correct_answer": "To build a coalition with more standing than the defenders of the status quo",
+    "explanation": "Mobilize corrects Machiavelli's asymmetry by building a coalition with more standing than the status quo's defenders and giving diffuse beneficiaries a voice. Testing assumptions is Experiment, understanding the system is Diagnose, and making it stick is Embed.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 5"
+  },
+  {
+    "id": "CM-C2-005",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "A team reviews the results of its pilots, including findings it did not want to hear, and revises its approach. Which stage of the model is this?",
+    "options": [
+      "Diagnose",
+      "Experiment",
+      "Adapt",
+      "Embed"
+    ],
+    "correct_answer": "Adapt",
+    "explanation": "Adapt means reading what the experiments actually told you, including the unwelcome parts; the course calls it the point where planned change meets emergent change honestly. Experiment is running the tests, not interpreting them.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 6"
+  },
+  {
+    "id": "CM-C2-006",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "How should experiments be designed in the Experiment stage?",
+    "options": [
+      "Small, fast and real, and designed so that failure is informative",
+      "Run only once the whole organisation has committed",
+      "Large and fully resourced, to prove leadership commitment",
+      "Designed to confirm the solution leadership has chosen"
+    ],
+    "correct_answer": "Small, fast and real, and designed so that failure is informative",
+    "explanation": "Experiments test load-bearing assumptions cheaply before committing the organisation, so they must be small, fast, real and informative when they fail. Running them only after full commitment would defeat their purpose.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 6"
+  },
+  {
+    "id": "CM-C2-007",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "According to the course, what does a failed experiment usually mean?",
+    "options": [
+      "The idea was wrong and should be abandoned immediately",
+      "The organisation should move straight on to Embed",
+      "The team lacked commitment and should be replaced",
+      "The diagnosis was wrong rather than the idea, so returning to stage one is progress"
+    ],
+    "correct_answer": "The diagnosis was wrong rather than the idea, so returning to stage one is progress",
+    "explanation": "The model is a loop, not a line: a test that fails usually means the diagnosis was wrong, not the idea. Going back to Diagnose is described as progress, not a setback.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
+  },
+  {
+    "id": "CM-C2-008",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Six-stage course model",
+    "question": "Why does the course warn that successfully embedding a change creates a future problem?",
+    "options": [
+      "Whatever is embedded becomes the next thing someone will have to unfreeze",
+      "Embedded changes always reverse within a year",
+      "Embedding removes accountability from the change team",
+      "Embedded changes are too expensive to maintain over time"
+    ],
+    "correct_answer": "Whatever is embedded becomes the next thing someone will have to unfreeze",
+    "explanation": "Embedding creates the next inertia: you are installing the next paradigm's filter. This is the performance paradox applied to your own successful change programme.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
+  },
+  {
+    "id": "CM-C2-009",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Diagnosis: four questions",
+    "question": "When diagnosing a change, where does the course say the diagnosis 'actually lives'?",
+    "options": [
+      "In the summary of the strategy deck",
+      "In the list of what is not changing",
+      "In the list of who benefits from the change",
+      "In the list of what is changing"
+    ],
+    "correct_answer": "In the list of what is not changing",
+    "explanation": "The material says anyone can list what is changing; the second column, what is not changing, is where the diagnosis actually lives. It covers the unexamined, the protected and the invisible commitments.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 10"
+  },
+  {
+    "id": "CM-C2-010",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Diagnosis: four questions",
+    "question": "Which answer to 'What is changing?' best follows the course guidance to be specific?",
+    "options": [
+      "The cost of producing a first draft has fallen to almost zero",
+      "Markets are becoming more competitive",
+      "Digital transformation is accelerating",
+      "Technology is changing everything in our industry"
+    ],
+    "correct_answer": "The cost of producing a first draft has fallen to almost zero",
+    "explanation": "The course says 'AI' is not an answer, while 'the cost of a first draft went to zero' is. A good answer names the specific shift so precisely that a competitor could act on it.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 10"
+  },
+  {
+    "id": "CM-C2-011",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Diagnosis: four questions",
+    "question": "Which test does the course suggest for items on the 'What is not changing?' list?",
+    "options": [
+      "Ask whether a competitor could act on it tomorrow",
+      "Ask whether it appears in the official strategy",
+      "Ask whether it has its own budget line",
+      "Ask who would have to agree if it had to change; if nobody, look again"
+    ],
+    "correct_answer": "Ask who would have to agree if it had to change; if nobody, look again",
+    "explanation": "For the 'not changing' column, the test is who would have to agree if this had to change; if nobody, you have not found a real commitment. 'Could a competitor act on this tomorrow?' is the test for the 'What is changing?' column.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 10"
+  },
+  {
+    "id": "CM-C2-012",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Reasons for resistance",
+    "question": "An employee says: 'The change itself was fine, but the transition landed on my team with no extra resources.' Which reason for resistance does this reflect?",
+    "options": [
+      "Fatigue",
+      "Loss",
+      "Exclusion",
+      "Cost"
+    ],
+    "correct_answer": "Cost",
+    "explanation": "The 'Cost' cluster describes a change that is acceptable in itself, but whose transition lands on people unfunded. Fatigue is about repeated restructurings, Loss is about something concrete being taken, and Exclusion is about being left out of the decision.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 13"
+  },
+  {
+    "id": "CM-C2-013",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Reasons for resistance",
+    "question": "Staff accept that the change makes sense but resist because they do not trust the leaders announcing it. Which cluster of resistance is this?",
+    "options": [
+      "Identity",
+      "Exclusion",
+      "Distrust",
+      "Evidence"
+    ],
+    "correct_answer": "Distrust",
+    "explanation": "Distrust is defined as distrust not of the change but of the people announcing it. Evidence would mean they think the change itself is a bad idea, and Exclusion would mean it was decided without them.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 13"
+  },
+  {
+    "id": "CM-C2-014",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Resistance as data",
+    "question": "A front-line team objects to a new process because they know about a step the planners overlooked. In the course's framework, this resistance is data about:",
+    "options": [
+      "Information: respond by finding out what they know before you argue",
+      "Communication: respond by explaining the change more often",
+      "Identity: respond by separating the person's worth from the practice",
+      "Interests: respond by naming the loss and deciding on compensation"
+    ],
+    "correct_answer": "Information: respond by finding out what they know before you argue",
+    "explanation": "Information-based resistance comes from people who know something about the work that you do not, often the most operationally accurate people in the building. The right response is to learn what they know before arguing.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
+  },
+  {
+    "id": "CM-C2-015",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Resistance as data",
+    "question": "Which response does the course recommend when resistance is driven by interests, such as a real loss of budget or status?",
+    "options": [
+      "Repeat the message until it is accepted",
+      "Find out what they know before you argue",
+      "Name the loss out loud and decide whether to compensate it",
+      "Separate the person's worth from the practice's obsolescence"
+    ],
+    "correct_answer": "Name the loss out loud and decide whether to compensate it",
+    "explanation": "With interests, something real is being taken; the objection is rational, it is just not your objective. The recommended response is to name the loss openly and decide whether to compensate it.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
+  },
+  {
+    "id": "CM-C2-016",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Resistance as data",
+    "question": "Which type of resistance does the course describe as the hardest, and the least likely to be stated directly?",
+    "options": [
+      "Identity",
+      "Fatigue",
+      "Interests",
+      "Information"
+    ],
+    "correct_answer": "Identity",
+    "explanation": "Identity-based resistance arises when the change implies people were wrong or are no longer needed. It is the hardest to address and rarely voiced openly; the response is to separate the person's worth from the practice's obsolescence.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
+  },
+  {
+    "id": "CM-C2-017",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Resistance as data",
+    "question": "According to the course, what is the single most common mobilisation error regarding resistance?",
+    "options": [
+      "Compensating every loss that people report",
+      "Treating all resistance as the same thing: a communication problem",
+      "Ignoring resistance until after the launch",
+      "Involving those who resist too early in the design"
+    ],
+    "correct_answer": "Treating all resistance as the same thing: a communication problem",
+    "explanation": "Resistance can be about information, interests or identity, and each needs a different response. Treating all three as a communication problem is identified as the most common mobilisation error.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
+  },
+  {
+    "id": "CM-C2-018",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Who benefits from the status quo",
+    "question": "Leaders announce a customer-focus strategy but continue to reward staff on sales volume. According to the course, what will behaviour follow?",
+    "options": [
+      "The strategy deck",
+      "The organisational chart",
+      "The measurement and incentives",
+      "The CEO's announcements"
+    ],
+    "correct_answer": "The measurement and incentives",
+    "explanation": "The material states that behaviour follows the measurement, not the strategy deck. What people are paid, promoted and praised for reveals who benefits from the status quo.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 16"
+  },
+  {
+    "id": "CM-C2-019",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Machiavelli's asymmetry",
+    "question": "Why do those who would lose from a change usually resist more effectively than potential winners support it?",
+    "options": [
+      "They are usually more senior in the hierarchy than the winners",
+      "They have better access to information about the change",
+      "They usually outnumber the people who would gain",
+      "Their loss is concrete, certain and concentrated, while the gains are diffuse, uncertain and in the future"
+    ],
+    "correct_answer": "Their loss is concrete, certain and concentrated, while the gains are diffuse, uncertain and in the future",
+    "explanation": "Machiavelli's asymmetry: losers know exactly what they lose, are already organised and have existing rules on their side, so a concentrated loss produces sustained effort. Winners face projected, uncertain benefits and produce only lukewarm support.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
+  },
+  {
+    "id": "CM-C2-020",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Machiavelli's asymmetry",
+    "question": "Which characteristic does the course attribute to the potential beneficiaries of a change?",
+    "options": [
+      "The existing rules and targets are on their side",
+      "They are scattered across functions and do not yet know they are a group",
+      "They already have budgets and meetings to coordinate through",
+      "They know exactly what they will gain, and roughly when"
+    ],
+    "correct_answer": "They are scattered across functions and do not yet know they are a group",
+    "explanation": "Beneficiaries suffer from dispersion and have no standing: nothing in the current system represents them. Existing budgets, rules and certainty about the outcome are characteristics of those who would lose.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
+  },
+  {
+    "id": "CM-C2-021",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Expiring assumptions",
+    "question": "Why was Kodak's assumption that 'digital is a niche adjacent to the core business' not re-examined?",
+    "options": [
+      "Digital sales figures were never reported internally",
+      "Film revenue kept growing, which was read as confirmation",
+      "Customer surveys showed a clear preference for film",
+      "Regulators classified digital as a separate market"
+    ],
+    "correct_answer": "Film revenue kept growing, which was read as confirmation",
+    "explanation": "The material explains that continued growth in film revenue was interpreted as confirming the assumption. Strategies rest on unwritten beliefs, so they are rarely reviewed when the world moves.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 19"
+  },
+  {
+    "id": "CM-C2-022",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Change Diagnosis Canvas",
+    "question": "How does the course say the Change Diagnosis Canvas should be worked?",
+    "options": [
+      "Right to left, starting from the critical assumptions",
+      "Left to right, then argue backwards to check the future state follows from the forces and assumptions",
+      "Fill in each block independently, in any order",
+      "Start from the desired future state and only work backwards"
+    ],
+    "correct_answer": "Left to right, then argue backwards to check the future state follows from the forces and assumptions",
+    "explanation": "Teams work left to right and then argue backwards: if block 5 (desired future state) does not follow from blocks 2, 3 and 4, the diagnosis is wrong. The blocks are linked, not independent.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C2-023",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Change Diagnosis Canvas",
+    "question": "What is the common error when describing the current state on the canvas?",
+    "options": [
+      "Writing the wish list there, so the gap disappears before it is examined",
+      "Using evidence such as where the budget goes",
+      "Including what currently works in the description",
+      "Describing the situation rather than evaluating it"
+    ],
+    "correct_answer": "Writing the wish list there, so the gap disappears before it is examined",
+    "explanation": "The current state should describe what is true now, with evidence, including what works. Writing aspirations into it hides the very gap the change must close; including what works and describing without evaluating are recommended, not errors.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C2-024",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Change Diagnosis Canvas",
+    "question": "Which guidance does the course give for describing the desired future state?",
+    "options": [
+      "Express it as a target metric rather than an organisation",
+      "Avoid mentioning trade-offs so as not to trigger resistance",
+      "Keep it aspirational so that every team can relate to it",
+      "Name what is given up, and make it concrete enough to fail"
+    ],
+    "correct_answer": "Name what is given up, and make it concrete enough to fail",
+    "explanation": "The desired future state should describe an organisation, be concrete enough that someone can tell in two years whether you got there, and name what is given up. A future state that costs nothing is 'a slide, not a strategy'.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 23"
+  },
+  {
+    "id": "CM-C2-025",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Lewin's force field",
+    "question": "What is Lewin's key insight, as presented in the course?",
+    "options": [
+      "Adding pressure for change is the most durable way to move a system",
+      "A stable situation means that no forces are acting on the organisation",
+      "Driving and restraining forces should be addressed only after launch",
+      "A stable situation is opposing forces in balance, and removing a restraining force is usually cheaper than adding pressure"
+    ],
+    "correct_answer": "A stable situation is opposing forces in balance, and removing a restraining force is usually cheaper than adding pressure",
+    "explanation": "Stability is not the absence of force but a balance of opposing forces. The course adds that most programmes add pressure, whereas durable wins come from removing something from the forces against change.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C2-026",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Lewin's force field",
+    "question": "Under 'forces for change', what does the course advise looking for before designing anything?",
+    "options": [
+      "The budget available for the programme",
+      "People already working around the system informally, where emergent change is running",
+      "The largest external competitor in the market",
+      "The senior managers who approved the plan"
+    ],
+    "correct_answer": "People already working around the system informally, where emergent change is running",
+    "explanation": "'Look for the edge': emergent change is usually already running somewhere, with people working around the system at their own risk. Finding it first gives the design something real to build on.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C2-027",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Critical assumptions",
+    "question": "When is an assumption 'critical', according to the course?",
+    "options": [
+      "When it is the easiest assumption to test",
+      "When everyone in the room agrees with it",
+      "When the whole diagnosis collapses if it turns out to be false",
+      "When it is supported by the most evidence"
+    ],
+    "correct_answer": "When the whole diagnosis collapses if it turns out to be false",
+    "explanation": "An assumption is critical when the diagnosis collapses if it is false. Assumptions that everyone agrees on are flagged as something to surface and question, not as the definition of critical.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C2-028",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Critical assumptions",
+    "question": "Which assumptions should go forward to the Week 4 experiments?",
+    "options": [
+      "Those that are cheapest and quickest to test",
+      "Those already supported by strong evidence",
+      "Those that would change the most if wrong and are the most uncertain on current evidence",
+      "Those that everyone in the team already agrees on"
+    ],
+    "correct_answer": "Those that would change the most if wrong and are the most uncertain on current evidence",
+    "explanation": "Teams rank assumptions by impact if wrong and by uncertainty; the intersection of the two is where the experiments go. Well-evidenced or agreed assumptions are less valuable to test.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C2-029",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Critical assumptions",
+    "question": "If an assumption cannot be rewritten as a testable claim, what does the course say it is?",
+    "options": [
+      "A critical assumption",
+      "A force against change",
+      "A validated finding",
+      "A preference, not an assumption"
+    ],
+    "correct_answer": "A preference, not an assumption",
+    "explanation": "Assumptions must be made testable, e.g. 'customers value X' becomes 'if we removed X, churn would rise'. Something that cannot be tested is a preference, not an assumption.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C2-030",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Knoster's model",
+    "question": "Using Knoster's model, an organisation shows public agreement but private non-compliance (sabotage). What is missing?",
+    "options": [
+      "Incentives",
+      "Consensus",
+      "Vision",
+      "Action plan"
+    ],
+    "correct_answer": "Consensus",
+    "explanation": "Knoster's model runs backwards from symptoms: missing consensus produces sabotage, i.e. public agreement and private non-compliance. Missing vision produces confusion, missing incentives produce resistance, and a missing action plan produces false starts.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C2-031",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Knoster's model",
+    "question": "Employees say, 'Why would I? I'm still measured on the old thing.' According to Knoster's model, which element is missing?",
+    "options": [
+      "Incentives",
+      "Skills",
+      "Vision",
+      "Resources"
+    ],
+    "correct_answer": "Incentives",
+    "explanation": "Missing incentives show up as resistance. Missing skills show up as anxiety, missing resources as frustration, and a missing vision as confusion.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C2-032",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Knoster's model",
+    "question": "An organisation keeps relaunching a change initiative with no visible progress. What does Knoster's model suggest is missing?",
+    "options": [
+      "Consensus",
+      "An action plan",
+      "Resources",
+      "Skills"
+    ],
+    "correct_answer": "An action plan",
+    "explanation": "Without an action plan, the organisation shows false starts: repeated launches and no visible progress. Missing resources would produce frustration, missing consensus sabotage, and missing skills anxiety.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C2-033",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Testing a diagnosis",
+    "question": "Which of the four tests of a strong diagnosis does the course say separates a real diagnosis from a well-formatted one?",
+    "options": [
+      "It is uncomfortable: it implicates something the organisation is proud of",
+      "It is specific: it names a mechanism in this organisation",
+      "It is falsifiable: someone could bring evidence against it",
+      "It names the system rather than the people"
+    ],
+    "correct_answer": "It is uncomfortable: it implicates something the organisation is proud of",
+    "explanation": "All four tests matter, but the material singles out the fourth: a good diagnosis is uncomfortable. If everyone nods immediately, you have probably found a symptom rather than the cause.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 30"
+  },
+  {
+    "id": "CM-C2-034",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Testing a diagnosis",
+    "question": "A team's diagnosis concludes that 'middle managers are simply not trying hard enough'. Which test of a strong diagnosis does it clearly fail?",
+    "options": [
+      "It should be shorter than one sentence",
+      "It should be falsifiable",
+      "It should name the system, not the people",
+      "It should be uncomfortable"
+    ],
+    "correct_answer": "It should name the system, not the people",
+    "explanation": "A strong diagnosis asks what arrangement produces this behaviour from reasonable people, not who is failing to try hard enough. Blaming a group of people fails the 'names the system' test.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 30"
+  },
+  {
+    "id": "CM-C2-035",
+    "chapter": "Class 2",
+    "type": "mcq",
+    "topic": "Challenging a diagnosis",
+    "question": "A reviewer asks a team: 'If your diagnosis holds, whose position becomes indefensible?' Which challenge move is this?",
+    "options": [
+      "What must be true?",
+      "Is it specific?",
+      "Who loses if true?",
+      "Cause or symptom?"
+    ],
+    "correct_answer": "Who loses if true?",
+    "explanation": "'Who loses if true?' tests whether the diagnosis is load-bearing; if nobody loses, it probably is not the operative truth. 'Cause or symptom?' keeps asking why, and 'What must be true?' surfaces unchecked assumptions.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 31"
+  },
+  {
+    "id": "CM-C2-036",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Six-stage course model",
+    "question": "According to the course, the six stages of the change model should be followed strictly as a linear sequence in real transformations.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The six stages are a sequence for teaching, not for reality: it is a loop, not a line. Every stage can send you back to an earlier one.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
+  },
+  {
+    "id": "CM-C2-037",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Six-stage course model",
+    "question": "Returning to the Diagnose stage after a failed experiment is described as progress, not a setback.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. A failed test usually means the diagnosis was wrong rather than the idea, so going back to stage one is progress.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 7"
+  },
+  {
+    "id": "CM-C2-038",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Diagnosis: four questions",
+    "question": "When asking 'Who benefits from the status quo?', the course advises treating the beneficiaries as villains who must be overcome.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The course notes that beneficiaries are rarely villains, and that you should include yourself if you are part of the system. The aim is to follow budget, headcount and career paths, not to assign blame.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 9"
+  },
+  {
+    "id": "CM-C2-039",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Resistance as data",
+    "question": "The course frames resistance as data about the conditions a change must survive, rather than as an obstacle to the change.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. 'Resistance is data' is the frame for the session: resistance tells you about information, interests and identity issues the change must deal with.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 14"
+  },
+  {
+    "id": "CM-C2-040",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Resistance as data",
+    "question": "For resistance rooted in interests, the recommended response is to separate the person's worth from the practice's obsolescence.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Separating the person's worth from the practice's obsolescence is the response to identity-based resistance. For interests, the response is to name the loss out loud and decide whether to compensate it.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 15"
+  },
+  {
+    "id": "CM-C2-041",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Machiavelli's asymmetry",
+    "question": "In Machiavelli's asymmetry, a diffuse and uncertain gain produces only lukewarm support for a change.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Those who would gain face a projected, probabilistic benefit and are dispersed, so their support is lukewarm, while a concentrated personal loss produces sustained resistance.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
+  },
+  {
+    "id": "CM-C2-042",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Machiavelli's asymmetry",
+    "question": "The course argues that Machiavelli's asymmetry tends to correct itself once the benefits of a change become clear.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. The material states that the asymmetry does not correct itself; mobilisation is the work of correcting it deliberately.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 18"
+  },
+  {
+    "id": "CM-C2-043",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Change Diagnosis Canvas",
+    "question": "On the Change Diagnosis Canvas, every claim should be something the team could be wrong about.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. Statements that nobody could dispute are not findings. A useful diagnosis makes claims that evidence could prove wrong.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 22"
+  },
+  {
+    "id": "CM-C2-044",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Lewin's force field",
+    "question": "In Lewin's force field model, a stable situation indicates that no forces are acting on the organisation.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. Lewin's insight is that a stable situation is not the absence of force but opposing forces in balance.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 24"
+  },
+  {
+    "id": "CM-C2-045",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Critical assumptions",
+    "question": "Teams typically list several beliefs as assumptions, but usually only one of them is load-bearing.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. The material notes that most teams write down four beliefs and usually one of them is load-bearing, which is why assumptions must be surfaced and ranked.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 25"
+  },
+  {
+    "id": "CM-C2-046",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Knoster's model",
+    "question": "In Knoster's model, a lack of skills shows up in the organisation as frustration.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "False",
+    "explanation": "False. A lack of skills shows up as anxiety ('I am not sure I can do this any more'). Frustration is the symptom of missing resources.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 27"
+  },
+  {
+    "id": "CM-C2-047",
+    "chapter": "Class 2",
+    "type": "tf",
+    "topic": "Testing a diagnosis",
+    "question": "According to the 'specific' test, a diagnosis that would fit any company explains none of them.",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct_answer": "True",
+    "explanation": "True. A strong diagnosis names a mechanism in this particular organisation rather than a general condition of the modern economy.",
+    "source": "Class2_Anatomy_of_Change_2026.pdf, p. 30"
   }
 ]
