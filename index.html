@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Change Management Study Quiz</title>
+  <meta name="description" content="A study quiz for the Change Management course: 300 questions across six classes, with exam and study modes.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Apply saved theme and text size before first paint to avoid a flash.
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = JSON.parse(localStorage.getItem("cmq.theme"));
+        if (theme === "light" || theme === "dark") root.dataset.theme = theme;
+        var font = JSON.parse(localStorage.getItem("cmq.font"));
+        root.dataset.font = font === "s" || font === "l" ? font : "m";
+      } catch (e) {
+        root.dataset.font = "m";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-bar">
+      <button type="button" class="brand" id="brandBtn" aria-label="Change Management Study Quiz, go to home">
+        <span class="brand-mark" aria-hidden="true">CM</span>
+        <span class="brand-text">Study Quiz</span>
+      </button>
+      <div class="prefs">
+        <div class="font-size" role="group" aria-label="Text size">
+          <button type="button" data-font="s" aria-label="Small text" aria-pressed="false"><span class="fs-s">A</span></button>
+          <button type="button" data-font="m" aria-label="Medium text" aria-pressed="true"><span class="fs-m">A</span></button>
+          <button type="button" data-font="l" aria-label="Large text" aria-pressed="false"><span class="fs-l">A</span></button>
+        </div>
+        <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+        </button>
+      </div>
+    </div>
+    <div class="quiz-status" id="quizStatus" hidden>
+      <div class="container quiz-status-inner">
+        <span class="progress-text" id="progressText" aria-live="polite">1 / 25</span>
+        <div class="progress" role="progressbar" aria-label="Session progress" aria-valuemin="0" aria-valuemax="25" aria-valuenow="1" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="timer" id="timer" role="timer" aria-label="Time remaining" hidden>50:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <!-- Home and setup -->
+    <section id="screen-home" class="screen" aria-labelledby="homeTitle">
+      <h1 id="homeTitle">Change Management Study Quiz</h1>
+      <p class="lead">Practise with 300 questions drawn from the six classes of the course. Each session has 25 questions in random order, graded out of 20.</p>
+
+      <aside class="notice" aria-label="Disclaimer">
+        <p class="disclaimer-text">This website was created for study purposes only, to help students prepare for the Change Management course. The course materials used to create these questions belong to their original authors and instructors. This site is not affiliated with the university and is not an official exam resource.</p>
+      </aside>
+
+      <p class="status-msg" id="loadStatus" role="status">Loading questions…</p>
+
+      <form id="setupForm" class="card setup" hidden>
+        <h2>Start a session</h2>
+
+        <fieldset>
+          <legend>Scope</legend>
+          <div class="choices" id="scopeChoices"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Scoring</legend>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="scoring" value="none" checked>
+              <span class="choice-body"><span class="choice-title">No penalty</span>
+                <span class="choice-desc">Correct answer = +0.8. Wrong answers and blanks = 0.</span></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="scoring" value="penalty">
+              <span class="choice-body"><span class="choice-title">Penalty</span>
+                <span class="choice-desc">Correct = +0.8, wrong = −0.8, blank = 0. The total never goes below 0.</span></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mode</legend>
+          <div class="choices">
+            <label class="choice">
+              <input type="radio" name="mode" value="exam" checked>
+              <span class="choice-body"><span class="choice-title">Exam</span>
+                <span class="choice-desc">50-minute countdown. No feedback until the end; the session closes automatically when time runs out.</span></span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="mode" value="study">
+              <span class="choice-body"><span class="choice-title">Study</span>
+                <span class="choice-desc">No timer. Immediate feedback with the correct answer and an explanation after each question.</span></span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary btn-block">Start session</button>
+      </form>
+
+      <section class="card" id="mistakesPanel" aria-labelledby="mistakesTitle" hidden>
+        <h2 id="mistakesTitle">Review mistakes</h2>
+        <p id="mistakesSummary" class="muted"></p>
+        <p class="small muted">Practice uses the scoring and mode selected above. Answering a saved question correctly removes it from the list.</p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="practiseMistakesBtn">Practise mistakes</button>
+          <button type="button" class="btn" id="exportMistakesBtn">Export</button>
+          <label class="btn" for="importMistakesInput">Import</label>
+          <input type="file" id="importMistakesInput" accept="application/json,.json" class="visually-hidden">
+          <button type="button" class="btn btn-quiet" id="clearMistakesBtn">Clear list</button>
+        </div>
+        <p class="status-msg" id="mistakesStatus" role="status"></p>
+      </section>
+
+      <section class="card" id="flagsPanel" aria-labelledby="flagsTitle" hidden>
+        <h2 id="flagsTitle">Flagged questions</h2>
+        <p id="flagsSummary" class="muted"></p>
+        <p class="small muted">Use the Flag button on any question to mark it as wrong or unclear. Export the list as flags.json and send it to the site author.</p>
+        <div class="btn-row">
+          <button type="button" class="btn" id="exportFlagsBtn">Export flags.json</button>
+          <button type="button" class="btn btn-quiet" id="clearFlagsBtn">Clear flags</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Quiz -->
+    <section id="screen-quiz" class="screen" aria-label="Question" hidden>
+      <article class="card question-card">
+        <div class="q-meta">
+          <span class="chip" id="qChapter">Class 1</span>
+          <span class="q-topic" id="qTopic"></span>
+          <span class="q-type" id="qType"></span>
+        </div>
+        <h2 class="q-text" id="qText" tabindex="-1"></h2>
+        <div class="options" id="qOptions" role="group" aria-labelledby="qText"></div>
+        <div class="feedback" id="qFeedback" aria-live="polite"></div>
+      </article>
+
+      <div class="quiz-actions">
+        <div class="quiz-actions-left">
+          <button type="button" class="btn" id="prevBtn">Previous</button>
+          <button type="button" class="btn btn-quiet" id="clearAnswerBtn">Clear answer</button>
+        </div>
+        <div class="quiz-actions-right">
+          <button type="button" class="btn" id="flagBtn" aria-pressed="false">Flag</button>
+          <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+        </div>
+      </div>
+
+      <nav class="q-grid-wrap" id="qGridWrap" aria-label="Jump to question">
+        <p class="small muted" id="answeredCount"></p>
+        <div class="q-grid" id="qGrid"></div>
+      </nav>
+
+      <div class="quiz-footer-actions">
+        <button type="button" class="btn btn-quiet" id="exitBtn">Exit session</button>
+        <button type="button" class="btn" id="finishBtn">Finish now</button>
+      </div>
+      <p class="small muted kbd-hint">Keyboard: <kbd>1</kbd>–<kbd>4</kbd> choose an option, <kbd>Enter</kbd> next, <kbd>←</kbd> <kbd>→</kbd> move between questions.</p>
+    </section>
+
+    <!-- Results -->
+    <section id="screen-results" class="screen" aria-labelledby="resultsTitle" hidden>
+      <h1 id="resultsTitle" tabindex="-1">Results</h1>
+      <p class="notice notice-warn" id="timeUpNote" hidden>Time ran out. Unanswered questions were counted as blank.</p>
+      <div class="card score-card">
+        <p class="grade"><span id="gradeValue">0.0</span><span class="grade-max"> / 20</span></p>
+        <dl class="stats">
+          <div><dt>Correct</dt><dd id="statCorrect">0</dd></div>
+          <div><dt>Wrong</dt><dd id="statWrong">0</dd></div>
+          <div><dt>Blank</dt><dd id="statBlank">0</dd></div>
+          <div><dt>Time used</dt><dd id="statTime">0:00</dd></div>
+          <div><dt>Scoring</dt><dd id="statScoring">No penalty</dd></div>
+          <div><dt>Mode</dt><dd id="statMode">Exam</dd></div>
+        </dl>
+        <p class="small muted" id="statScope"></p>
+        <div class="btn-row">
+          <button type="button" class="btn btn-primary" id="againBtn">New session, same settings</button>
+          <button type="button" class="btn" id="homeBtn">Back to home</button>
+        </div>
+      </div>
+
+      <h2>Review</h2>
+      <div class="filter" role="group" aria-label="Filter review">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="wrong" aria-pressed="false">Wrong</button>
+        <button type="button" data-filter="blank" aria-pressed="false">Blank</button>
+        <button type="button" data-filter="correct" aria-pressed="false">Correct</button>
+      </div>
+      <ol class="review-list" id="reviewList"></ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclaimer-text">This website was created for study purposes only, to help students prepare for the Change Management course. The course materials used to create these questions belong to their original authors and instructors. This site is not affiliated with the university and is not an official exam resource.</p>
+    </div>
+  </footer>
+
+  <dialog id="flagDialog" aria-labelledby="flagDialogTitle">
+    <form method="dialog" id="flagForm">
+      <h2 id="flagDialogTitle">Flag this question</h2>
+      <p class="small muted" id="flagDialogQuestion"></p>
+      <fieldset>
+        <legend>What is the problem?</legend>
+        <div class="choices">
+          <label class="choice compact"><input type="radio" name="reason" value="wrong" checked><span class="choice-body"><span class="choice-title">The answer looks wrong</span></span></label>
+          <label class="choice compact"><input type="radio" name="reason" value="unclear"><span class="choice-body"><span class="choice-title">The question is unclear</span></span></label>
+        </div>
+      </fieldset>
+      <label class="field-label" for="flagNote">Note (optional)</label>
+      <textarea id="flagNote" rows="3" maxlength="500"></textarea>
+      <div class="btn-row dialog-actions">
+        <button type="submit" class="btn btn-primary" value="save">Save flag</button>
+        <button type="submit" class="btn" value="remove" id="removeFlagBtn">Remove flag</button>
+        <button type="submit" class="btn btn-quiet" value="cancel" formnovalidate>Cancel</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
