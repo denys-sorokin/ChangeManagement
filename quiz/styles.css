@@ -1,13 +1,13 @@
 /* Change Management Study Quiz.
    Layout: one centred working column, a sticky exam bar, and cards only for the question and the score.
-   Fonts are self-hosted (SIL Open Font License, see fonts/), so the site makes no external requests.
+   Fonts are self-hosted (SIL Open Font License, see ../fonts/), so the site makes no external requests.
    All sizes are in rem so the layout scales with the chosen text size. */
 
-@font-face { font-family: "Archivo"; src: url("fonts/Archivo-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
-@font-face { font-family: "IBM Plex Sans"; src: url("fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
-@font-face { font-family: "IBM Plex Mono"; src: url("fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("../fonts/Archivo-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
 
 :root {
   --bg: #eef1f5;
@@ -195,6 +195,8 @@ kbd {
   gap: 0.5rem;
   padding-block: 0.75rem 0;
 }
+.home-link { margin-right: auto; align-self: center; display: inline-flex; align-items: center; min-height: var(--tap); color: var(--accent); font-weight: 500; text-decoration: none; }
+@media (hover: hover) { .home-link:hover { text-decoration: underline; text-underline-offset: 3px; } }
 
 main { flex: 1; padding-block: 1.5rem 3rem; }
 .screen { display: grid; gap: 1.5rem; }

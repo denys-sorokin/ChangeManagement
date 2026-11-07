@@ -136,7 +136,7 @@
 
   async function loadBank() {
     try {
-      const res = await fetch("data/questions.json", { cache: "no-cache" });
+      const res = await fetch("../data/questions.json", { cache: "no-cache" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       bank = await res.json();
     } catch (err) {

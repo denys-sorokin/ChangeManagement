@@ -160,6 +160,8 @@
     .fs-s { font-size: 12px; } .fs-m { font-size: 15px; } .fs-l { font-size: 19px; }
 
     .prefs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; padding-block: 0.75rem 0; }
+    .home-link { margin-right: auto; align-self: center; display: inline-flex; align-items: center; min-height: var(--tap); color: var(--accent); font-weight: 500; text-decoration: none; }
+    @media (hover: hover) { .home-link:hover { text-decoration: underline; text-underline-offset: 3px; } }
 
     /* Header */
     .hero { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.25rem; align-items: center; padding-block: 1.25rem 2rem; }
@@ -376,6 +378,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="prefs wrap">
+    <a class="home-link" href="../">&larr; All tools</a>
     <div class="seg" role="group" aria-label="Theme">
       <button type="button" data-theme-choice="auto" aria-pressed="true">Auto</button>
       <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>

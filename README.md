@@ -1,22 +1,35 @@
-# Change Management Study Quiz
+# Change Toolkit
 
-A small static quiz site for practising the Change Management course. It has 300 questions across six classes, exam and study modes, and grades out of 20.
+A small static site with browser tools for studying change management and digital transformation. The home page (`index.html`) lists the tools:
 
-> This website was created for study purposes only, to help students prepare for the Change Management course. The course materials used to create these questions belong to their original authors and instructors. This site is not affiliated with the university and is not an official exam resource.
+| Tool | Folder | Address on GitHub Pages |
+| --- | --- | --- |
+| Change Management Study Quiz | `quiz/` | `/quiz/` |
+| Matrix of Change | `matrix-of-change/` | `/matrix-of-change/` |
 
-## Using the site
+> These pages were created for study purposes only. The course materials used to create the quiz questions belong to their original authors and instructors. This site is not affiliated with the university and is not an official resource.
+
+### Adding a tool
+
+1. Put the tool in its own folder, for example `new-tool/index.html`. Keep it self-contained (no backend, no external requests) so it works on any host.
+2. Add an `← All tools` link to `../` at the top, and reuse the theme and text-size keys (`cmq.theme`, `cmq.font`) so preferences carry across pages.
+3. Copy one `<li class="tool">` card in `index.html` and change the link, icon, text and tags.
+
+## Study quiz
+
+The quiz has 300 questions across six classes, exam and study modes, and grades out of 20.
 
 - **Setup:** choose the scope (all chapters or one class), the scoring (no penalty, or penalty: −0.8 per wrong answer, never below 0), and the mode (Exam with a 50-minute timer, or Study with immediate feedback).
 - **Sessions** have 25 random questions with no repeats. Each question is worth 20 / N points.
 - **Review mistakes:** wrong answers are saved in the browser. Practise them, export or import them as JSON, or clear the list.
-- **Flag:** mark a question as wrong or unclear, then export `flags.json` from the home page and send it to the author.
+- **Flag:** mark a question as wrong or unclear, then export `flags.json` from the quiz start page and send it to the author.
 - Light/dark theme and three text sizes are remembered on each device. Keyboard: `1`–`4` choose an option, `Enter` goes to the next question, `←` `→` move between questions.
 
 Everything runs in the browser. No account, no backend, and no external services are used at runtime.
 
 ## Matrix of Change tool
 
-`matrix-of-change/index.html` is a separate page that helps students build a Matrix of Change (Brynjolfsson, Renshaw & Van Alstyne, 1997). On GitHub Pages it is served at `/matrix-of-change/`.
+`matrix-of-change/index.html` helps students build a Matrix of Change (Brynjolfsson, Renshaw & Van Alstyne, 1997).
 
 - **Set up:** name the change initiative and choose how many existing and target practices to compare (1–20 each).
 - **Practices:** name and group each practice, reorder or remove them, and optionally rate how stakeholders see each one (−2 to +2).
@@ -33,7 +46,7 @@ The page is one self-contained HTML file with no external requests. To publish i
 
 In the repository, go to **Settings → Pages**, choose **Deploy from a branch**, select the branch and the `/ (root)` folder, and save. The `.nojekyll` file makes Pages serve the files as they are.
 
-To run it locally, serve the folder (opening `index.html` directly won't load the questions because of browser file restrictions):
+To run the site locally, serve the folder (opening `quiz/index.html` directly won't load the questions because of browser file restrictions):
 
 ```sh
 python3 -m http.server 8000
@@ -44,7 +57,8 @@ python3 -m http.server 8000
 
 | Path | Purpose |
 | --- | --- |
-| `index.html`, `styles.css`, `app.js` | The quiz (plain HTML, CSS and JavaScript, no build step) |
+| `index.html` | The home page that lists the tools |
+| `quiz/index.html`, `quiz/styles.css`, `quiz/app.js` | The quiz (plain HTML, CSS and JavaScript, no build step) |
 | `data/questions.json` | The question bank |
 | `data/progress.json` | Log of the generation batches |
 | `scripts/append_batch.py` | Appends one authored batch, assigns IDs and spreads correct answers across A–D |
