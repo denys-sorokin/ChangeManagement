@@ -6,6 +6,7 @@ A small static site with browser tools for studying change management and digita
 | --- | --- | --- |
 | Change Management Study Quiz | `quiz/` | `/quiz/` |
 | Matrix of Change | `matrix-of-change/` | `/matrix-of-change/` |
+| Business Model Canvas | `business-model-canvas/` | `/business-model-canvas/` |
 
 > These pages were created for study purposes only. The course materials used to create the quiz questions belong to their original authors and instructors. This site is not affiliated with the university and is not an official resource.
 
@@ -42,6 +43,18 @@ Everything runs in the browser. No account, no backend, and no external services
 
 The page is one self-contained HTML file with no external requests. To publish it on another site, copy the file. If the `fonts/` folder is not one level up, it falls back to system fonts.
 
+## Business Model Canvas tool
+
+`business-model-canvas/index.html` is an editable Business Model Canvas (Osterwalder & Pigneur, 2010), the canvas the Type A workgroup report asks for.
+
+- **Write on the canvas itself:** each of the nine blocks is editable in place, with a hint question while it is empty. Designed for, Designed by, Date and Version sit in the canvas header.
+- **Formatting:** the first line is a main idea in bigger text, and `Enter` after it starts a description in smaller text. The toolbar adds bold, italic, bullets, Clear, and **Mark as new**, which highlights items that are new or change with the transformation. The meaning of the highlight can be edited under the canvas.
+- **Download or copy:** the image is drawn on a 2D canvas at 3200 px wide, on white, as a 16:9 slide or A4 landscape. Long text is shrunk to fit, with a warning when it is cut or very small. Copy image puts it on the clipboard for pasting into slides. The .zip holds both image shapes, a printable page (image plus a text outline, A4 landscape), a Markdown outline and a JSON project file. The JSON file or the printable page can be opened again to keep editing.
+- Pasted text arrives as plain text, and files that are opened are cleaned, so only the canvas formatting is kept.
+- The Uber example is adapted from the Class 4 slides. The work is saved in the browser as you type.
+
+Like the other tools, it is one self-contained file with no external requests.
+
 ## Publishing on GitHub Pages
 
 In the repository, go to **Settings → Pages**, choose **Deploy from a branch**, select the branch and the `/ (root)` folder, and save. The `.nojekyll` file makes Pages serve the files as they are.
@@ -64,6 +77,7 @@ python3 -m http.server 8000
 | `scripts/append_batch.py` | Appends one authored batch, assigns IDs and spreads correct answers across A–D |
 | `scripts/validate.py` | Checks the bank and prints a summary by type, chapter and topic |
 | `matrix-of-change/index.html` | The Matrix of Change tool (one self-contained file) |
+| `business-model-canvas/index.html` | The Business Model Canvas tool (one self-contained file) |
 | `fonts/` | Self-hosted Archivo, IBM Plex Sans and IBM Plex Mono (SIL Open Font License), so the site makes no external requests |
 
 ## Question bank
