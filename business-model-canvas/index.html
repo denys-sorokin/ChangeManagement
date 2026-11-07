@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Business Model Canvas</title>
+  <meta name="description" content="Write directly on a Business Model Canvas, format main ideas and descriptions, mark what is new with the transformation, and download it for slides or reports.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Apply the saved theme and text size before first paint (shared by every page on this site).
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = JSON.parse(localStorage.getItem("cmq.theme"));
+        if (theme === "light" || theme === "dark") root.dataset.theme = theme;
+        var font = JSON.parse(localStorage.getItem("cmq.font"));
+        root.dataset.font = font === "s" || font === "l" ? font : "m";
+      } catch (e) {
+        root.dataset.font = "m";
+      }
+    })();
+  </script>
+  <style>
+    /* Fonts are optional: if ../fonts/ is not next to this page, system fonts are used. */
+    @font-face { font-family: "Archivo"; src: url("../fonts/Archivo-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+    @font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+    :root {
+      --bg: #eef1f5;
+      --surface: #ffffff;
+      --ink: #121b26;
+      --muted: #535f6e;
+      --line: #d3d9e1;
+      --accent: #1f5fbf;
+      --accent-soft: #e2eafa;
+      --on-accent: #ffffff;
+      --bad: #ab2117;
+      --bad-soft: #fbe6e4;
+      --frame: #121b26;
+      --new-bg: #d7f0df;
+      --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --tap: max(44px, 2.75rem);
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0e141c; --surface: #161f2a; --ink: #e7ecf2; --muted: #9eaab9; --line: #2a3646;
+        --accent: #84aaff; --accent-soft: #1b2847; --on-accent: #0b1322;
+        --bad: #f4847a; --bad-soft: #3a1714; --frame: #5d6e86; --new-bg: #1c4630;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e141c; --surface: #161f2a; --ink: #e7ecf2; --muted: #9eaab9; --line: #2a3646;
+      --accent: #84aaff; --accent-soft: #1b2847; --on-accent: #0b1322;
+      --bad: #f4847a; --bad-soft: #3a1714; --frame: #5d6e86; --new-bg: #1c4630;
+      color-scheme: dark;
+    }
+
+    /* Text size: Small 14px, Medium 16px, Large 19px. */
+    html { font-size: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    html[data-font="s"] { font-size: 87.5%; }
+    html[data-font="l"] { font-size: 118.75%; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--ink); font: 400 1rem/1.55 var(--body); overflow-wrap: break-word; }
+    h1, h2, h3 { margin: 0; text-wrap: balance; }
+    h1, h2 { font-family: var(--display); font-weight: 800; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1; }
+    h2 { font-size: 1.4rem; line-height: 1.2; }
+    h3 { font-size: 1rem; font-weight: 600; }
+    p { margin: 0; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    kbd { font: 500 0.8em var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 0.3em; background: var(--surface); }
+
+    .wrap { width: 100%; max-width: 78rem; margin-inline: auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+    .skip-link { position: absolute; left: 0.5rem; top: -4rem; background: var(--accent); color: var(--on-accent); padding: 0.5rem 0.75rem; border-radius: 8px; z-index: 20; }
+    .skip-link:focus { top: 0.5rem; }
+    .eyebrow { font: 500 0.75rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .small { font-size: 0.875rem; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+      min-height: var(--tap); padding: 0.5rem 1rem; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--surface); color: var(--ink); font-weight: 500; cursor: pointer;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .btn svg { flex: none; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+    .btn.big { min-height: 3.25rem; padding-inline: 1.5rem; font-size: 1.05rem; }
+    .btn.quiet { border-color: transparent; background: transparent; color: var(--accent); padding-inline: 0.6rem; }
+    .btn.danger { color: var(--bad); }
+    .btn:disabled { opacity: 0.45; cursor: default; }
+    @media (hover: hover) {
+      .btn:not(:disabled):hover { border-color: var(--accent); }
+      .btn.primary:not(:disabled):hover { filter: brightness(1.08); }
+      .btn.quiet:not(:disabled):hover { background: var(--accent-soft); border-color: transparent; }
+    }
+
+    .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+    .seg button { min-height: var(--tap); min-width: var(--tap); padding: 0 0.75rem; border: 0; background: transparent; color: var(--muted); font-size: 0.85rem; cursor: pointer; }
+    .seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+    @media (hover: hover) { .seg button:not([aria-pressed="true"]):hover { color: var(--ink); background: var(--bg); } }
+    .font-size button { padding: 0; line-height: 1; }
+    .fs-s { font-size: 12px; } .fs-m { font-size: 15px; } .fs-l { font-size: 19px; }
+
+    .prefs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; padding-block: 0.75rem 0; }
+    .home-link { margin-right: auto; align-self: center; display: inline-flex; align-items: center; min-height: var(--tap); color: var(--accent); font-weight: 500; text-decoration: none; }
+    @media (hover: hover) { .home-link:hover { text-decoration: underline; text-underline-offset: 3px; } }
+
+    /* Header */
+    .hero { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.25rem; align-items: center; padding-block: 1.25rem 1.75rem; }
+    .hero .mark { grid-row: 1 / span 2; width: clamp(3.25rem, 9vw, 4.5rem); height: auto; color: var(--accent); }
+    .hero .lead { grid-column: 1 / -1; color: var(--muted); max-width: 66ch; font-size: 1.05rem; margin-top: 0.6rem; }
+    .how { grid-column: 1 / -1; margin-top: 0.9rem; }
+    .how summary { display: inline-flex; align-items: center; gap: 0.5rem; min-height: var(--tap); cursor: pointer; color: var(--accent); font-weight: 600; list-style: none; }
+    .how summary::-webkit-details-marker { display: none; }
+    .how summary::before { content: ""; width: 0.5rem; height: 0.5rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform 0.15s ease; }
+    .how[open] summary::before { transform: rotate(45deg); }
+    .how-body { display: grid; gap: 1.25rem 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); padding: 1.1rem 1.25rem; margin-top: 0.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .how-body ol, .how-body ul { margin: 0.4rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.4rem; font-size: 0.94rem; }
+    .how-body p { color: var(--muted); font-size: 0.92rem; margin-top: 0.6rem; }
+    .how-body a { color: var(--accent); }
+
+    main { padding-bottom: 2rem; }
+    .step { display: grid; gap: 1rem; padding-block: 1.75rem; border-top: 1px solid var(--line); min-width: 0; }
+    .step-head { display: grid; gap: 0.35rem; }
+    .step-head .num { font: 500 0.78rem/1 var(--mono); color: var(--accent); letter-spacing: 0.06em; }
+    .step-head .sub { color: var(--muted); max-width: 72ch; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.15rem; min-width: 0; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .actions .sep { flex: 1 1 auto; }
+
+    /* Formatting toolbar: sticks to the top of the screen while you write */
+    .toolbar {
+      position: sticky; top: 0; z-index: 5;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 0.75rem;
+      padding: 0.55rem 0; background: var(--bg); border-bottom: 1px solid var(--line);
+    }
+    .tgroup { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+    .tbtn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+      min-height: var(--tap); min-width: var(--tap); padding: 0 0.7rem; border: 0; border-right: 1px solid var(--line);
+      background: transparent; color: var(--ink); font-size: 0.86rem; cursor: pointer;
+    }
+    .tgroup .tbtn:last-child { border-right: 0; }
+    .tbtn[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 -2px 0 var(--accent); }
+    @media (hover: hover) { .tbtn:not([aria-pressed="true"]):hover { background: var(--bg); } }
+    .tbtn .g { font-family: Georgia, "Times New Roman", serif; line-height: 1; }
+    .tbtn .g-big { font-size: 1.15rem; font-weight: 700; }
+    .tbtn .g-small { font-size: 0.8rem; }
+    .tbtn .g-b { font: 800 1rem/1 var(--body); }
+    .tbtn .g-i { font: italic 500 1.05rem/1 Georgia, serif; }
+    .tbtn .sw-new { width: 1rem; height: 0.85rem; border-radius: 3px; background: var(--new-bg); box-shadow: inset 0 0 0 1px rgb(23 105 63 / 0.35); }
+    .tbtn .lbl { white-space: nowrap; }
+    @media (max-width: 52rem) { .tbtn .lbl { display: none; } }
+    .tool-hint { font-size: 0.8rem; color: var(--muted); }
+    .kbd-hint { display: none; }
+    @media (hover: hover) and (pointer: fine) { .kbd-hint { display: inline; } }
+
+    /* Canvas */
+    .cv-wrap { display: grid; gap: 0.75rem; }
+    .cv-head { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.6rem 0.75rem; }
+    .cv-title { font: 800 1.45rem/1.1 var(--display); margin-right: auto; padding-bottom: 0.35rem; }
+    .meta { display: grid; gap: 0.1rem; min-width: 0; flex: 1 1 9rem; max-width: 17rem; padding: 0.3rem 0.6rem 0.35rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+    .meta.short { flex: 0 1 8.5rem; }
+    .meta span { font: 500 0.66rem/1.2 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+    .meta input { width: 100%; border: 0; padding: 0; background: transparent; font-size: 0.92rem; min-height: 1.6rem; }
+    .meta input:focus { outline: none; }
+    .meta:focus-within { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+
+    .cv {
+      display: grid; gap: 1.5px; background: var(--frame);
+      border: 2.5px solid var(--frame); border-radius: 10px; overflow: hidden;
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+      grid-template-rows: minmax(15rem, auto) minmax(15rem, auto) minmax(10rem, auto);
+      grid-template-areas:
+        "kp kp ka ka vp vp cr cr cs cs"
+        "kp kp kr kr vp vp ch ch cs cs"
+        "co co co co co rv rv rv rv rv";
+    }
+    .blk { display: flex; flex-direction: column; min-width: 0; background: var(--surface); padding: 0.75rem 0.8rem 0.9rem; cursor: text; }
+    .blk:focus-within { box-shadow: inset 0 0 0 2px var(--accent); }
+    .blk-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.45rem; }
+    .blk-head h3 { font-size: 0.9rem; font-weight: 600; line-height: 1.25; }
+    .blk-ico { flex: none; width: 1.15rem; height: 1.15rem; color: var(--muted); margin-top: 0.05rem; }
+    .blk-body { position: relative; flex: 1; display: flex; min-height: 0; }
+    .hint { position: absolute; inset: 0 0 auto 0; font-size: 0.78rem; line-height: 1.4; color: var(--muted); opacity: 0.8; font-style: italic; pointer-events: none; }
+    .blk:not(.is-empty) .hint { display: none; }
+    .ed { flex: 1; min-height: 5rem; outline: none; font-size: 0.86rem; line-height: 1.38; color: var(--ink); overflow-wrap: anywhere; }
+    .ed p { margin: 0; }
+    .ed p.idea { font-size: 1rem; font-weight: 500; line-height: 1.3; color: var(--ink); }
+    .ed p.desc { font-size: 0.82rem; color: var(--muted); }
+    .ed p.idea:not(:first-child) { margin-top: 0.65rem; }
+    .ed p.desc + p.desc { margin-top: 0.15rem; }
+    .ed p.idea + p.desc { margin-top: 0.1rem; }
+    .ed p.bullet { position: relative; padding-left: 0.95rem; }
+    .ed p.bullet::before { content: ""; position: absolute; left: 0.25rem; top: 0.62em; width: 0.32em; height: 0.32em; border-radius: 50%; background: currentColor; }
+    .ed p.new { background: var(--new-bg); border-radius: 3px; box-shadow: 0 0 0 0.22rem var(--new-bg); }
+    .ed p.new.desc { color: var(--ink); }
+    .ed b, .ed strong { font-weight: 700; }
+    @media (max-width: 60rem) {
+      .cv { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "kp" "ka" "kr" "vp" "cr" "ch" "cs" "co" "rv"; }
+      .blk { min-height: 9.5rem; }
+      .meta, .meta.short { flex: 1 1 calc(50% - 0.4rem); max-width: none; }
+      .cv-title { flex-basis: 100%; }
+    }
+    .cv-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; font-size: 0.85rem; color: var(--muted); }
+    .cv-foot .sw-new { width: 1.4rem; height: 1rem; border-radius: 3px; background: var(--new-bg); flex: none; }
+    .cv-foot input { flex: 1 1 16rem; max-width: 30rem; min-height: 2.25rem; padding: 0.3rem 0.6rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+    .cv-foot input:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; }
+
+    /* Download */
+    .dl { display: grid; gap: 1.1rem; }
+    .dl-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+    .dl-row p { color: var(--muted); font-size: 0.9rem; max-width: 50ch; }
+    .fmt { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.75rem; font-size: 0.9rem; }
+    .saved { font-size: 0.82rem; color: var(--muted); }
+
+    .site-footer { border-top: 1px solid var(--line); padding-block: 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px)); color: var(--muted); font-size: 0.8rem; display: grid; gap: 0.5rem; }
+    .site-footer p { max-width: 95ch; }
+
+    .toast {
+      position: fixed; left: 50%; bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%) translateY(1rem);
+      max-width: calc(100vw - 32px); padding: 0.65rem 1rem; border-radius: 10px; background: var(--ink); color: var(--bg);
+      font-size: 0.9rem; box-shadow: 0 6px 24px rgb(0 0 0 / 0.2); opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease; z-index: 30;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    @media print {
+      .prefs, .toolbar, .actions, .dl, .how, .toast, .skip-link, .tool-hint { display: none !important; }
+      body { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#canvas">Skip to the canvas</a>
+
+  <div class="prefs wrap">
+    <a class="home-link" href="../">&larr; All tools</a>
+    <div class="seg" role="group" aria-label="Theme">
+      <button type="button" data-theme-choice="auto" aria-pressed="true">Auto</button>
+      <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="seg font-size" role="group" aria-label="Text size">
+      <button type="button" data-font="s" aria-label="Small text" aria-pressed="false"><span class="fs-s">A</span></button>
+      <button type="button" data-font="m" aria-label="Medium text" aria-pressed="true"><span class="fs-m">A</span></button>
+      <button type="button" data-font="l" aria-label="Large text" aria-pressed="false"><span class="fs-l">A</span></button>
+    </div>
+  </div>
+
+  <header class="wrap hero">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <rect x="5" y="9" width="54" height="46" rx="3" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M15.8 9v31M26.6 9v31M37.4 9v31M48.2 9v31M5 40h54M32 40v15M15.8 24.5h10.8M37.4 24.5h10.8" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="28.6" y="15" width="6.8" height="5" rx="1" fill="currentColor" opacity="0.45"/>
+      <rect x="40" y="44.5" width="11" height="5" rx="1" fill="currentColor" opacity="0.45"/>
+    </svg>
+    <p class="eyebrow">Digital transformation · Study tool</p>
+    <h1>Business Model Canvas</h1>
+    <p class="lead">Write straight onto the nine blocks of the canvas. Give each idea a short title, add a smaller description below, mark what is new with the transformation, and download the result for your slides or report.</p>
+
+    <details class="how">
+      <summary>How to use this canvas</summary>
+      <div class="how-body">
+        <div>
+          <h3>Writing</h3>
+          <ul>
+            <li>Click any block and type. The first line is a <strong>main idea</strong> in bigger text.</li>
+            <li>Press <kbd>Enter</kbd> at the end of a main idea to write its <strong>description</strong> in smaller text. Use the toolbar to switch a line back to a main idea.</li>
+            <li>Use <strong>bold</strong>, <em>italic</em> and bullets for detail.</li>
+            <li><strong>Mark as new</strong> highlights items that are new or change with the transformation. The workgroup asks you to show the impact of the new practices on the canvas, and this makes it visible.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>A good order to fill it in</h3>
+          <ol>
+            <li>Customer Segments and Value Propositions</li>
+            <li>Channels and Customer Relationships</li>
+            <li>Revenue Streams</li>
+            <li>Key Resources, Key Activities and Key Partners</li>
+            <li>Cost Structure</li>
+          </ol>
+          <p>Planning a transformation? Map the practices first with the <a href="../matrix-of-change/">Matrix of Change</a>, then bring the new practices into this canvas.</p>
+        </div>
+      </div>
+    </details>
+  </header>
+
+  <main id="main" class="wrap">
+    <noscript><p class="card">This tool needs JavaScript to run.</p></noscript>
+
+    <section class="step" aria-labelledby="h-canvas">
+      <div class="step-head">
+        <span class="num">01</span>
+        <h2 id="h-canvas">Write on the canvas</h2>
+        <p class="sub">Everything is saved in this browser as you type. Load the Uber example from class to see a finished canvas.</p>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn" id="btnExample">Load the Uber example</button>
+        <button type="button" class="btn" id="btnOpen">
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 10.5v-8M4.5 6 8 2.5 11.5 6M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Open a saved canvas
+        </button>
+        <input type="file" id="fileOpen" accept=".json,.html,application/json,text/html" hidden>
+        <span class="sep"></span>
+        <button type="button" class="btn quiet danger" id="btnReset">Clear the canvas</button>
+      </div>
+
+      <div class="toolbar" role="toolbar" aria-label="Text formatting" aria-controls="canvas">
+        <div class="tgroup">
+          <button type="button" class="tbtn" data-cmd="idea" aria-pressed="false" title="Main idea (Ctrl+Alt+1)"><span class="g g-big" aria-hidden="true">T</span><span class="lbl">Main idea</span></button>
+          <button type="button" class="tbtn" data-cmd="desc" aria-pressed="false" title="Description (Ctrl+Alt+2)"><span class="g g-small" aria-hidden="true">T</span><span class="lbl">Description</span></button>
+        </div>
+        <div class="tgroup">
+          <button type="button" class="tbtn" data-cmd="bold" aria-pressed="false" aria-label="Bold" title="Bold (Ctrl+B)"><span class="g-b" aria-hidden="true">B</span></button>
+          <button type="button" class="tbtn" data-cmd="italic" aria-pressed="false" aria-label="Italic" title="Italic (Ctrl+I)"><span class="g-i" aria-hidden="true">I</span></button>
+        </div>
+        <div class="tgroup">
+          <button type="button" class="tbtn" data-cmd="bullet" aria-pressed="false" title="Bullet (Ctrl+Shift+8)">
+            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><circle cx="4" cy="5" r="1.5" fill="currentColor"/><circle cx="4" cy="12.5" r="1.5" fill="currentColor"/><path d="M8 5h7M8 12.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="lbl">Bullet</span>
+          </button>
+          <button type="button" class="tbtn" data-cmd="new" aria-pressed="false" title="Mark as new (Ctrl+Shift+H)"><span class="sw-new" aria-hidden="true"></span><span class="lbl">Mark as new</span></button>
+        </div>
+        <div class="tgroup">
+          <button type="button" class="tbtn" data-cmd="clear" title="Clear formatting">
+            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4h9M8.5 4l-2.5 10M11 11l4 4M15 11l-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="lbl">Clear</span>
+          </button>
+        </div>
+        <span class="tool-hint"><span class="kbd-hint"><kbd>Enter</kbd> after a main idea starts its description.</span></span>
+      </div>
+
+      <div class="cv-wrap">
+        <div class="cv-head">
+          <p class="cv-title">The Business Model Canvas</p>
+          <label class="meta"><span>Designed for</span><input id="mFor" type="text" maxlength="120" autocomplete="off" placeholder="Business or organisation"></label>
+          <label class="meta"><span>Designed by</span><input id="mBy" type="text" maxlength="120" autocomplete="off" placeholder="Names or group"></label>
+          <label class="meta short"><span>Date</span><input id="mDate" type="date"></label>
+          <label class="meta short"><span>Version</span><input id="mVer" type="text" maxlength="30" autocomplete="off" placeholder="1.0"></label>
+        </div>
+        <div class="cv" id="canvas" aria-label="Business Model Canvas"></div>
+        <div class="cv-foot">
+          <span class="sw-new" aria-hidden="true"></span>
+          <label for="mNew">Highlighted items mean</label>
+          <input id="mNew" type="text" maxlength="80" autocomplete="off">
+        </div>
+      </div>
+    </section>
+
+    <section class="step" aria-labelledby="h-dl">
+      <div class="step-head">
+        <span class="num">02</span>
+        <h2 id="h-dl">Download or copy</h2>
+        <p class="sub">The image is drawn at high resolution and always on a white background, ready for slides and reports. Long text is shrunk to fit each block.</p>
+      </div>
+      <div class="card dl">
+        <div class="fmt" role="group" aria-labelledby="fmtLbl">
+          <span id="fmtLbl">Image shape</span>
+          <div class="seg">
+            <button type="button" data-fmt="slide" aria-pressed="true">Slide 16:9</button>
+            <button type="button" data-fmt="a4" aria-pressed="false">A4 landscape</button>
+          </div>
+        </div>
+        <div class="dl-row">
+          <button type="button" class="btn primary big" id="btnZip">
+            <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download everything (.zip)
+          </button>
+          <p>Images in both shapes (PNG), a printable page, a text outline and a project file you can open here again.</p>
+        </div>
+        <div class="actions">
+          <button type="button" class="btn" data-dl="png">Image (PNG)</button>
+          <button type="button" class="btn" data-dl="copy">Copy image</button>
+          <button type="button" class="btn" data-dl="print">Print or save as PDF</button>
+          <button type="button" class="btn" data-dl="md">Text outline (.md)</button>
+          <button type="button" class="btn" data-dl="json">Project file (JSON)</button>
+        </div>
+        <p class="saved" id="savedAt" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p><strong>Disclaimer.</strong> This page is a study aid for courses on digital transformation and change management at NOVA IMS. It is not an official university resource. Everything you enter stays in your browser.</p>
+    <p>The Business Model Canvas was created by Alexander Osterwalder (Osterwalder &amp; Pigneur, 2010, <em>Business Model Generation</em>). Template by Strategyzer AG, licensed under CC BY-SA 3.0. The Uber example is adapted from the Class 4 slides.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (function () {
+    "use strict";
+
+    const $ = (s, el) => (el || document).querySelector(s);
+    const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
+    const root = document.documentElement;
+    const KEYS = { project: "bmc.project.v1", fmt: "bmc.fmt", theme: "cmq.theme", font: "cmq.font" };
+    const store = {
+      get(k) { try { const v = localStorage.getItem(k); return v == null ? null : JSON.parse(v); } catch (e) { return null; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+      remove(k) { try { localStorage.removeItem(k); } catch (e) { /* storage unavailable */ } },
+    };
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const DEFAULT_NEW_LABEL = "New or changed with the transformation";
+
+    // Nine blocks. Icons are 24x24 stroke paths, drawn both on the page and in the exported image.
+    const BLOCKS = [
+      { id: "kp", title: "Key Partners", hint: "Who are the key partners and suppliers? Which resources or activities do they provide?",
+        icon: "M9.5 14.5a4 4 0 0 0 5.7 0l3.3-3.3a4 4 0 0 0-5.7-5.7l-1.2 1.2M14.5 9.5a4 4 0 0 0-5.7 0l-3.3 3.3a4 4 0 0 0 5.7 5.7l1.2-1.2" },
+      { id: "ka", title: "Key Activities", hint: "What must the business do well to deliver its value proposition, reach customers and earn revenue?",
+        icon: "M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18ZM8 12.3l2.8 2.8L16.3 9.5" },
+      { id: "kr", title: "Key Resources", hint: "Which assets are essential? Physical, intellectual, human, financial, data.",
+        icon: "M12 3l8 4.5v9L12 21l-8-4.5v-9ZM4 7.5l8 4.5 8-4.5M12 12v9" },
+      { id: "vp", title: "Value Propositions", hint: "What value do we deliver? Which problem do we solve, or which need do we meet, for each segment?",
+        icon: "M4 11h16v9H4ZM3 7.5h18V11H3ZM12 7.5V20M12 7.5c-1.5-3.5-6-4-6-1.5 0 1.5 3.5 1.5 6 1.5M12 7.5c1.5-3.5 6-4 6-1.5 0 1.5-3.5 1.5-6 1.5" },
+      { id: "cr", title: "Customer Relationships", hint: "What relationship does each segment expect? Personal help, self-service, community, co-creation.",
+        icon: "M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.4a4.2 4.2 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20Z" },
+      { id: "ch", title: "Channels", hint: "How do we reach customers to raise awareness, sell, deliver and support?",
+        icon: "M2.5 6.5h11.5v9.5H2.5ZM14 9.5h4l3.5 3.5v3H14M7 19.3a1.8 1.8 0 1 0 0-3.6a1.8 1.8 0 1 0 0 3.6ZM17.5 19.3a1.8 1.8 0 1 0 0-3.6a1.8 1.8 0 1 0 0 3.6Z" },
+      { id: "cs", title: "Customer Segments", hint: "For whom are we creating value? Who are the most important customers?",
+        icon: "M9 11.5a3.5 3.5 0 1 0 0-7a3.5 3.5 0 1 0 0 7ZM2.5 20.5a6.5 6.5 0 0 1 13 0M15.5 4.7a3.5 3.5 0 0 1 0 6.6M18 14.2a6.5 6.5 0 0 1 3.5 6.3" },
+      { id: "co", title: "Cost Structure", hint: "What are the most important costs? Which resources and activities cost the most?",
+        icon: "M3 12.5V4h8.5L21 13.5 13.5 21ZM8 6.8a1.6 1.6 0 1 0 0 3.2a1.6 1.6 0 1 0 0-3.2Z" },
+      { id: "rv", title: "Revenue Streams", hint: "What are customers willing to pay for, and how? Sales, subscriptions, fees, licensing, advertising.",
+        icon: "M12 3.5c4.4 0 8 1.3 8 3s-3.6 3-8 3-8-1.3-8-3 3.6-3 8-3ZM4 6.5v5c0 1.7 3.6 3 8 3s8-1.3 8-3v-5M4 11.5v5c0 1.7 3.6 3 8 3s8-1.3 8-3v-5" },
+    ];
+    const BY_ID = Object.fromEntries(BLOCKS.map((b) => [b.id, b]));
+
+    // ---------- Rich text model ----------
+    // Stored HTML is always clean: <p class="idea|desc [bullet] [new]"> with <b>, <i> and <br> inside.
+    const ALLOWED_INLINE = new Set(["B", "STRONG", "I", "EM", "SPAN", "U", "FONT", "A", "SMALL", "BIG", "SUB", "SUP", "CODE", "MARK"]);
+    const BLOCK_TAGS = new Set(["P", "DIV", "LI", "H1", "H2", "H3", "H4", "H5", "H6", "BLOCKQUOTE", "UL", "OL", "SECTION", "ARTICLE", "PRE"]);
+    function parseHTML(html) {
+      const t = document.createElement("template");
+      t.innerHTML = String(html || "");
+      const paras = [];
+      let cur = null;
+      const start = (opts) => { cur = { kind: opts.kind, bullet: !!opts.bullet, isNew: !!opts.isNew, runs: [] }; paras.push(cur); return cur; };
+      const isBold = (el) => el.tagName === "B" || el.tagName === "STRONG" || /^(bold|bolder|[6-9]00)$/.test(el.style ? el.style.fontWeight : "");
+      const isItalic = (el) => el.tagName === "I" || el.tagName === "EM" || (el.style && el.style.fontStyle === "italic");
+      function walk(node, fmt, ctx) {
+        node.childNodes.forEach((ch) => {
+          if (ch.nodeType === 3) {
+            const text = ch.nodeValue.replace(/[\r\n\t]+/g, " ");
+            if (!text || (!cur && !text.trim())) return;
+            if (!cur) start({ kind: paras.length ? "desc" : "idea" });
+            cur.runs.push({ t: text, b: fmt.b, i: fmt.i });
+          } else if (ch.nodeType === 1) {
+            const tag = ch.tagName;
+            if (tag === "BR") { if (!cur) start({ kind: paras.length ? "desc" : "idea" }); cur.runs.push({ br: true }); }
+            else if (tag === "SCRIPT" || tag === "STYLE" || tag === "TEMPLATE") { /* drop */ }
+            else if (BLOCK_TAGS.has(tag)) {
+              const cls = ch.classList;
+              const inList = ctx.list || tag === "UL" || tag === "OL";
+              if (tag === "UL" || tag === "OL") { walk(ch, fmt, { list: true }); cur = null; return; }
+              start({
+                kind: cls.contains("idea") || /^H[1-6]$/.test(tag) ? "idea" : "desc",
+                bullet: cls.contains("bullet") || (tag === "LI" && inList),
+                isNew: cls.contains("new"),
+              });
+              walk(ch, fmt, ctx);
+              cur = null;
+            } else {
+              walk(ch, { b: fmt.b || isBold(ch), i: fmt.i || isItalic(ch) }, ctx);
+            }
+          }
+        });
+      }
+      walk(t.content, { b: false, i: false }, {});
+      paras.forEach((p) => {
+        // A single trailing <br> is only the browser's placeholder for an empty line.
+        if (p.runs.length && p.runs[p.runs.length - 1].br) p.runs.pop();
+        const merged = [];
+        p.runs.forEach((r) => {
+          const last = merged[merged.length - 1];
+          if (last && !r.br && !last.br && last.b === r.b && last.i === r.i) last.t += r.t; else merged.push(Object.assign({}, r));
+        });
+        p.runs = merged;
+      });
+      // Drop empty lines at the start and end of the block.
+      const hasText = (p) => p.runs.some((r) => r.t && r.t.trim());
+      while (paras.length && !hasText(paras[0])) paras.shift();
+      while (paras.length && !hasText(paras[paras.length - 1])) paras.pop();
+      return paras;
+    }
+    function toHTML(paras) {
+      return paras.map((p) => {
+        const cls = [p.kind, p.bullet && "bullet", p.isNew && "new"].filter(Boolean).join(" ");
+        let inner = p.runs.map((r) => {
+          if (r.br) return "<br>";
+          let s = esc(r.t);
+          if (r.i) s = "<i>" + s + "</i>";
+          if (r.b) s = "<b>" + s + "</b>";
+          return s;
+        }).join("");
+        if (!inner) inner = "<br>";
+        else if (p.runs.length && p.runs[p.runs.length - 1].br) inner += "<br>";
+        return `<p class="${cls}">${inner}</p>`;
+      }).join("");
+    }
+    const cleanHTML = (html) => toHTML(parseHTML(html));
+    const plainText = (runs) => runs.map((r) => (r.br ? " " : r.t)).join("").replace(/\s+/g, " ").trim();
+
+    // ---------- State ----------
+    function blankProject() {
+      return { app: "business-model-canvas", version: 1, designedFor: "", designedBy: "", date: "", versionLabel: "", newLabel: DEFAULT_NEW_LABEL, blocks: Object.fromEntries(BLOCKS.map((b) => [b.id, ""])), updated: null };
+    }
+    const str = (v, max) => (typeof v === "string" ? v.slice(0, max) : "");
+    function normalize(raw) {
+      if (!raw || typeof raw !== "object" || !raw.blocks || typeof raw.blocks !== "object") throw new Error("This file is not a Business Model Canvas project.");
+      const p = blankProject();
+      p.designedFor = str(raw.designedFor, 120);
+      p.designedBy = str(raw.designedBy, 120);
+      p.date = /^\d{4}-\d{2}-\d{2}$/.test(raw.date || "") ? raw.date : "";
+      p.versionLabel = str(raw.versionLabel, 30);
+      p.newLabel = str(raw.newLabel, 80) || DEFAULT_NEW_LABEL;
+      p.updated = typeof raw.updated === "string" ? raw.updated.slice(0, 40) : null;
+      BLOCKS.forEach((b) => { p.blocks[b.id] = cleanHTML(str(raw.blocks[b.id], 50000)); });
+      return p;
+    }
+    function hasContent() {
+      return !!(state.designedFor.trim() || state.designedBy.trim() || BLOCKS.some((b) => state.blocks[b.id]));
+    }
+    let state;
+    try { const saved = store.get(KEYS.project); state = saved ? normalize(saved) : blankProject(); }
+    catch (e) { state = blankProject(); }
+
+    // ---------- Example (adapted from the Uber canvas in the Class 4 slides) ----------
+    function exampleUber() {
+      const p = blankProject();
+      const idea = (t, extra) => `<p class="idea${extra || ""}">${esc(t)}</p>`;
+      const desc = (t, extra) => `<p class="desc${extra || ""}">${esc(t)}</p>`;
+      const bullet = (t, extra) => `<p class="desc bullet${extra || ""}">${esc(t)}</p>`;
+      p.designedFor = "Uber";
+      p.designedBy = "Class 4 example";
+      p.versionLabel = "1.0";
+      p.newLabel = "Driver side of the platform";
+      p.blocks.kp = idea("Payment processors") + desc("Handle card payments inside the app") + idea("Map technology companies") + desc("Navigation, routes and pricing by distance") + idea("Investors");
+      p.blocks.ka = idea("Platform development and maintenance") + idea("Marketing and ads") + idea("Hiring drivers", " new") + idea("Operations");
+      p.blocks.kr = idea("Tech platform") + idea("Driver network", " new") + idea("Talented employees") + idea("Brand");
+      p.blocks.vp = idea("A platform that connects riders with drivers") +
+        bullet("Easiest way around") + bullet("Anywhere, anytime") + bullet("Low-cost luxury") + bullet("Various levels of service") +
+        idea("Earn money when you want", " new") + desc("Flexible income for drivers", " new");
+      p.blocks.cr = idea("Rating system") + desc("Riders and drivers rate each other after every trip");
+      p.blocks.ch = idea("Uber app") + desc("Booking, payment and support in one place");
+      p.blocks.cs = idea("Riders") + desc("People who need a ride") + idea("Drivers", " new") + desc("People who want to earn money driving", " new");
+      p.blocks.co = idea("Driver payouts", " new") + idea("Employee payroll") + idea("Tech platform costs") + idea("Marketing and ads") + idea("Legal fees");
+      p.blocks.rv = idea("Fare per km or mile") + desc("Paid by riders through the app") + idea("Surge pricing") + desc("Higher fares when demand is high");
+      BLOCKS.forEach((b) => { p.blocks[b.id] = cleanHTML(p.blocks[b.id]); });
+      return p;
+    }
+
+    // ---------- Canvas on the page ----------
+    const canvasEl = $("#canvas");
+    const iconSVG = (d, cls) => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${d}" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    canvasEl.innerHTML = BLOCKS.map((b) => `
+      <section class="blk is-empty" data-id="${b.id}" style="grid-area:${b.id}">
+        <div class="blk-head"><h3 id="bh-${b.id}">${b.title}</h3>${iconSVG(b.icon, "blk-ico")}</div>
+        <div class="blk-body">
+          <p class="hint" id="hint-${b.id}">${esc(b.hint)}</p>
+          <div class="ed" contenteditable="true" role="textbox" aria-multiline="true" spellcheck="true" data-id="${b.id}" aria-labelledby="bh-${b.id}" aria-describedby="hint-${b.id}"></div>
+        </div>
+      </section>`).join("");
+    try { document.execCommand("defaultParagraphSeparator", false, "p"); document.execCommand("styleWithCSS", false, false); } catch (e) { /* older browsers */ }
+
+    const edOf = (id) => $('.ed[data-id="' + id + '"]', canvasEl);
+    const isEd = (n) => n && n.nodeType === 1 && n.classList.contains("ed");
+    function editorOf(node) {
+      while (node && node !== document.body) { if (isEd(node)) return node; node = node.parentNode; }
+      return null;
+    }
+    function paraOf(node, ed) {
+      while (node && node.parentNode !== ed) { if (node === ed || !node.parentNode) return null; node = node.parentNode; }
+      return node && node.nodeType === 1 ? node : null;
+    }
+    const textOf = (el) => (el.textContent || "").replace(/​/g, "");
+    const isEmptyPara = (p) => !textOf(p).length;
+    function updateEmpty(ed) { ed.closest(".blk").classList.toggle("is-empty", !textOf(ed).trim()); }
+    function placeCaret(node, atEnd) {
+      const r = document.createRange();
+      r.selectNodeContents(node);
+      r.collapse(!atEnd);
+      const sel = getSelection();
+      sel.removeAllRanges();
+      sel.addRange(r);
+    }
+    function caretTextOffset(ed) {
+      const sel = getSelection();
+      if (!sel.rangeCount) return -1;
+      const r = document.createRange();
+      r.setStart(ed, 0);
+      r.setEnd(sel.getRangeAt(0).startContainer, sel.getRangeAt(0).startOffset);
+      return r.toString().length;
+    }
+    function setCaretTextOffset(ed, off) {
+      const walker = document.createTreeWalker(ed, NodeFilter.SHOW_TEXT);
+      let n, left = off;
+      while ((n = walker.nextNode())) {
+        if (left <= n.nodeValue.length) { const r = document.createRange(); r.setStart(n, left); r.collapse(true); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); return; }
+        left -= n.nodeValue.length;
+      }
+      placeCaret(ed.lastElementChild || ed, true);
+    }
+    // Make sure there is a paragraph to type into.
+    function ensureStructure(ed) {
+      if (!ed.querySelector("p")) {
+        ed.innerHTML = '<p class="idea"><br></p>';
+        placeCaret(ed.firstChild, false);
+      }
+    }
+    // Keep the live editor tidy without moving the caret: wrap stray top-level text, drop pasted styling.
+    function tidy(ed) {
+      const stray = Array.from(ed.childNodes).filter((n) => (n.nodeType === 1 && n.tagName !== "P") || (n.nodeType === 3 && n.nodeValue.trim()));
+      if (stray.length) {
+        const off = caretTextOffset(ed);
+        ed.innerHTML = cleanHTML(ed.innerHTML) || '<p class="idea"><br></p>';
+        if (off >= 0) setCaretTextOffset(ed, off);
+      }
+      $$("[style]", ed).forEach((n) => {
+        ["font-size", "line-height", "color", "background-color", "background", "font-family", "letter-spacing", "word-spacing", "text-indent", "margin", "padding"].forEach((pr) => n.style.removeProperty(pr));
+        if (n.style.fontWeight && !/^(bold|bolder|[6-9]00)$/.test(n.style.fontWeight)) n.style.removeProperty("font-weight");
+        if (n.style.fontStyle && n.style.fontStyle !== "italic") n.style.removeProperty("font-style");
+        if (!n.getAttribute("style")) n.removeAttribute("style");
+      });
+      $$("p", ed).forEach((p) => { if (!p.classList.contains("idea") && !p.classList.contains("desc")) p.classList.add("desc"); });
+    }
+    function needsCleanup(ed) {
+      for (const n of ed.childNodes) if ((n.nodeType === 1 && n.tagName !== "P") || n.nodeType === 3) return true;
+      return $$("*", ed).some((n) => {
+        if (n.tagName === "P") return n.parentNode !== ed || Array.from(n.classList).some((c) => !["idea", "desc", "bullet", "new"].includes(c)) || n.hasAttribute("style");
+        return !["B", "I", "BR"].includes(n.tagName) || n.attributes.length > 0;
+      });
+    }
+    function saveEditor(ed) {
+      state.blocks[ed.dataset.id] = cleanHTML(ed.innerHTML);
+      scheduleSave();
+    }
+    function loadEditors() {
+      BLOCKS.forEach((b) => { const ed = edOf(b.id); ed.innerHTML = state.blocks[b.id] || ""; updateEmpty(ed); });
+    }
+
+    let lastEditor = null, lastRange = null;
+    canvasEl.addEventListener("focusin", (e) => {
+      const ed = editorOf(e.target);
+      if (!ed) return;
+      lastEditor = ed;
+      if (!textOf(ed).trim()) ensureStructure(ed);
+      updateToolbar();
+    });
+    canvasEl.addEventListener("focusout", (e) => {
+      const ed = editorOf(e.target);
+      if (!ed) return;
+      // Leaving for the toolbar keeps the editor as it is, so the selection survives.
+      if (e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(".toolbar")) return;
+      if (!textOf(ed).trim()) ed.innerHTML = "";
+      else if (needsCleanup(ed)) ed.innerHTML = cleanHTML(ed.innerHTML);
+      updateEmpty(ed);
+      saveEditor(ed);
+    });
+    canvasEl.addEventListener("input", (e) => {
+      const ed = editorOf(e.target);
+      if (!ed) return;
+      tidy(ed);
+      if (e.inputType === "insertParagraph") {
+        // After a main idea, a new empty line becomes its description.
+        const sel = getSelection();
+        const p = sel.rangeCount ? paraOf(sel.getRangeAt(0).startContainer, ed) : null;
+        if (p && isEmptyPara(p) && p.previousElementSibling && p.previousElementSibling.classList.contains("idea")) {
+          p.classList.remove("idea");
+          p.classList.add("desc");
+        }
+      }
+      updateEmpty(ed);
+      saveEditor(ed);
+      updateToolbar();
+    });
+    canvasEl.addEventListener("paste", (e) => {
+      const ed = editorOf(e.target);
+      if (!ed) return;
+      e.preventDefault();
+      const text = (e.clipboardData || window.clipboardData).getData("text/plain") || "";
+      const lines = text.replace(/\r\n?/g, "\n").split("\n");
+      lines.forEach((line, k) => {
+        if (k > 0) document.execCommand("insertParagraph");
+        if (line) document.execCommand("insertText", false, line);
+      });
+      tidy(ed);
+      updateEmpty(ed);
+      saveEditor(ed);
+    });
+    canvasEl.addEventListener("drop", (e) => { if (editorOf(e.target)) e.preventDefault(); });
+    // Clicking the empty part of a block puts the caret at the end of its text.
+    canvasEl.addEventListener("mousedown", (e) => {
+      const blk = e.target.closest(".blk");
+      if (!blk || editorOf(e.target)) return;
+      e.preventDefault();
+      const ed = $(".ed", blk);
+      ed.focus();
+      if (ed.lastElementChild) placeCaret(ed.lastElementChild, true);
+    });
+
+    function afterManualEdit(ed) { tidy(ed); updateEmpty(ed); saveEditor(ed); updateToolbar(); }
+    canvasEl.addEventListener("keydown", (e) => {
+      const ed = editorOf(e.target);
+      if (!ed) return;
+      const mod = e.ctrlKey || e.metaKey;
+      if (mod && e.altKey && (e.key === "1" || e.code === "Digit1")) { e.preventDefault(); runCommand("idea"); return; }
+      if (mod && e.altKey && (e.key === "2" || e.code === "Digit2")) { e.preventDefault(); runCommand("desc"); return; }
+      if (mod && e.shiftKey && (e.key === "*" || e.key === "8" || e.code === "Digit8")) { e.preventDefault(); runCommand("bullet"); return; }
+      if (mod && e.shiftKey && (e.key === "H" || e.key === "h")) { e.preventDefault(); runCommand("new"); return; }
+      if (mod && !e.altKey && !e.shiftKey && (e.key === "u" || e.key === "U")) { e.preventDefault(); return; } // no underline: it reads like a link
+      // Backspace at the start of a bullet removes the bullet first, as in most editors.
+      // Joining lines is left to the browser so undo keeps working; tidy() then drops the styles it copies.
+      if (e.key !== "Backspace") return;
+      const sel = getSelection();
+      if (!sel.rangeCount || !sel.isCollapsed) return;
+      const range = sel.getRangeAt(0);
+      const p = paraOf(range.startContainer, ed);
+      if (!p || !p.classList.contains("bullet")) return;
+      const before = document.createRange();
+      before.setStart(p, 0);
+      before.setEnd(range.startContainer, range.startOffset);
+      if (before.toString().length || before.cloneContents().querySelector("br")) return;
+      e.preventDefault();
+      p.classList.remove("bullet");
+      afterManualEdit(ed);
+    });
+
+    // ---------- Toolbar ----------
+    const toolbar = $(".toolbar");
+    function activeEditor() { return editorOf(document.activeElement); }
+    function selectedParas(ed) {
+      const sel = getSelection();
+      if (!sel.rangeCount) return [];
+      const r = sel.getRangeAt(0);
+      if (!ed.contains(r.commonAncestorContainer) && r.commonAncestorContainer !== ed) return [];
+      if (r.collapsed) { const p = paraOf(r.startContainer, ed); return p ? [p] : []; }
+      return Array.from(ed.children).filter((p) => r.intersectsNode(p));
+    }
+    function runCommand(cmd) {
+      let ed = activeEditor();
+      if (!ed && lastEditor && document.contains(lastEditor)) {
+        lastEditor.focus({ preventScroll: true });
+        if (lastRange && lastEditor.contains(lastRange.startContainer)) { const sel = getSelection(); sel.removeAllRanges(); sel.addRange(lastRange); }
+        else if (lastEditor.lastElementChild) placeCaret(lastEditor.lastElementChild, true);
+        ed = lastEditor;
+      }
+      if (!ed) { toast("Click inside a block of the canvas first."); return; }
+      ensureStructure(ed);
+      const paras = selectedParas(ed);
+      if (cmd === "bold" || cmd === "italic") document.execCommand(cmd);
+      else if (cmd === "idea" || cmd === "desc") paras.forEach((p) => { p.classList.remove("idea", "desc"); p.classList.add(cmd); });
+      else if (cmd === "bullet" || cmd === "new") {
+        const on = !paras.every((p) => p.classList.contains(cmd));
+        paras.forEach((p) => p.classList.toggle(cmd, on));
+      } else if (cmd === "clear") {
+        const sel = getSelection();
+        if (sel.isCollapsed && paras.length) {
+          // With no selection, clear the whole line the caret is on.
+          const off = caretTextOffset(ed);
+          const r = document.createRange();
+          r.selectNodeContents(paras[0]);
+          sel.removeAllRanges();
+          sel.addRange(r);
+          document.execCommand("removeFormat");
+          setCaretTextOffset(ed, off);
+        } else document.execCommand("removeFormat");
+        paras.forEach((p) => p.classList.remove("bullet", "new"));
+      }
+      afterManualEdit(ed);
+    }
+    function updateToolbar() {
+      const ed = activeEditor();
+      const sel = getSelection();
+      const p = ed && sel.rangeCount ? paraOf(sel.getRangeAt(0).startContainer, ed) : null;
+      const on = {
+        idea: !!(p && p.classList.contains("idea")),
+        desc: !!(p && p.classList.contains("desc")),
+        bullet: !!(p && p.classList.contains("bullet")),
+        new: !!(p && p.classList.contains("new")),
+        bold: !!(ed && document.queryCommandState("bold")),
+        italic: !!(ed && document.queryCommandState("italic")),
+      };
+      $$(".tbtn[data-cmd]", toolbar).forEach((b) => { if (b.dataset.cmd in on) b.setAttribute("aria-pressed", String(on[b.dataset.cmd])); });
+    }
+    // Keep the caret in the canvas when a toolbar button is pressed with the mouse or a finger.
+    toolbar.addEventListener("mousedown", (e) => { if (e.target.closest(".tbtn")) e.preventDefault(); });
+    toolbar.addEventListener("click", (e) => { const b = e.target.closest(".tbtn"); if (b) runCommand(b.dataset.cmd); });
+    document.addEventListener("selectionchange", () => {
+      const sel = getSelection();
+      if (sel.rangeCount) {
+        const ed = editorOf(sel.anchorNode);
+        if (ed) { lastEditor = ed; lastRange = sel.getRangeAt(0).cloneRange(); }
+      }
+      updateToolbar();
+    });
+
+    // ---------- Header fields ----------
+    const META = [["#mFor", "designedFor"], ["#mBy", "designedBy"], ["#mDate", "date"], ["#mVer", "versionLabel"], ["#mNew", "newLabel"]];
+    function renderMeta() { META.forEach(([sel, key]) => { $(sel).value = state[key] || ""; }); }
+    META.forEach(([sel, key]) => $(sel).addEventListener("input", (e) => { state[key] = e.target.value; scheduleSave(); }));
+    $("#mNew").addEventListener("change", (e) => { if (!e.target.value.trim()) { state.newLabel = DEFAULT_NEW_LABEL; e.target.value = DEFAULT_NEW_LABEL; scheduleSave(); } });
+
+    function renderAll() { renderMeta(); loadEditors(); }
+
+    $("#btnExample").addEventListener("click", () => {
+      if (hasContent() && !confirm("Replace your canvas with the Uber example? Download a copy first if you want to keep it.")) return;
+      state = exampleUber();
+      renderAll();
+      save();
+      toast("Example loaded: Uber, adapted from the Class 4 slides.");
+    });
+    $("#btnReset").addEventListener("click", () => {
+      if (hasContent() && !confirm("Clear the whole canvas? Everything you wrote will be deleted from this browser.")) return;
+      state = blankProject();
+      renderAll();
+      save();
+      toast("The canvas is empty.");
+    });
+    $("#btnOpen").addEventListener("click", () => $("#fileOpen").click());
+    $("#fileOpen").addEventListener("change", async (e) => {
+      const file = e.target.files && e.target.files[0];
+      e.target.value = "";
+      if (!file) return;
+      try {
+        const text = await file.text();
+        let data;
+        if (/^\s*</.test(text)) {
+          const node = new DOMParser().parseFromString(text, "text/html").getElementById("bmc-data");
+          if (!node) throw new Error("This page does not contain canvas data.");
+          data = JSON.parse(node.textContent);
+        } else data = JSON.parse(text);
+        const next = normalize(data);
+        if (hasContent() && !confirm("Replace your canvas with “" + file.name + "”?")) return;
+        state = next;
+        renderAll();
+        save();
+        toast("Opened " + file.name + ".");
+      } catch (err) {
+        toast(err instanceof SyntaxError ? "That file could not be read as a canvas." : err.message);
+      }
+    });
+
+    // ---------- Saving ----------
+    let saveTimer = null, dirty = false;
+    function scheduleSave() { dirty = true; clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
+    // Save straight away when the tab is closed or hidden, so the last few keystrokes are not lost.
+    // Only when something changed here: an idle tab must not overwrite work saved by another tab.
+    function saveNow() {
+      if (!dirty) return;
+      const ed = activeEditor();
+      if (ed) state.blocks[ed.dataset.id] = cleanHTML(ed.innerHTML);
+      clearTimeout(saveTimer);
+      save();
+    }
+    window.addEventListener("pagehide", saveNow);
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") saveNow(); });
+    // Another tab saved the canvas: show its version here unless this tab has unsaved changes.
+    window.addEventListener("storage", (e) => {
+      if (e.key !== KEYS.project || !e.newValue || dirty || activeEditor()) return;
+      try { state = normalize(JSON.parse(e.newValue)); renderAll(); } catch (err) { /* ignore a bad value */ }
+    });
+    function save() {
+      dirty = false;
+      state.updated = new Date().toISOString();
+      const ok = store.set(KEYS.project, state);
+      $("#savedAt").textContent = ok
+        ? "Saved in this browser at " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) + "."
+        : "This browser is not saving your work (private mode or storage blocked). Download a copy before you leave.";
+    }
+    let toastTimer = null;
+    function toast(msg) {
+      const t = $("#toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove("show"), 3600);
+    }
+
+    // ---------- Image export (drawn on a 2D canvas, so it looks the same in every browser) ----------
+    const EXPORT_FONT = '"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif';
+    const C = { ink: "#121b26", muted: "#535f6e", desc: "#3a4552", line: "#121b26", soft: "#c5cdd8", newBg: "#d7f0df", hint: "#8a96a6" };
+    let fmt = store.get(KEYS.fmt) === "a4" ? "a4" : "slide";
+    function renderFmt() { $$("[data-fmt]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.fmt === fmt))); }
+    $$("[data-fmt]").forEach((b) => b.addEventListener("click", () => { fmt = b.dataset.fmt; store.set(KEYS.fmt, fmt); renderFmt(); }));
+
+    async function ensureFonts() {
+      if (!document.fonts || !document.fonts.load) return;
+      try {
+        await Promise.all(['400 16px "IBM Plex Sans"', '500 16px "IBM Plex Sans"', '700 16px "IBM Plex Sans"', '800 28px "Archivo"'].map((f) => document.fonts.load(f)));
+      } catch (e) { /* system fonts are fine */ }
+    }
+    function fontFor(kind, run, fs) {
+      const weight = run.b ? 700 : kind === "idea" ? 500 : 400;
+      return (run.i ? "italic " : "") + weight + " " + fs.toFixed(2) + "px " + EXPORT_FONT;
+    }
+    function wrapRuns(ctx, runs, maxW, fs, kind) {
+      const lines = [[]];
+      let x = 0;
+      const newLine = () => { lines.push([]); x = 0; };
+      runs.forEach((r) => {
+        if (r.br) { newLine(); return; }
+        const font = fontFor(kind, r, fs);
+        ctx.font = font;
+        const space = ctx.measureText(" ").width;
+        r.t.split(/(\s+)/).forEach((part) => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { if (x > 0) x += space; return; }
+          let w = ctx.measureText(part).width;
+          if (x > 0 && x + w > maxW) newLine();
+          while (w > maxW && part.length > 1) {
+            let k = part.length - 1;
+            while (k > 1 && ctx.measureText(part.slice(0, k)).width > maxW - x) k--;
+            lines[lines.length - 1].push({ t: part.slice(0, k), font, x });
+            newLine();
+            part = part.slice(k);
+            w = ctx.measureText(part).width;
+          }
+          lines[lines.length - 1].push({ t: part, font, x });
+          x += w;
+        });
+      });
+      return lines;
+    }
+    function layoutBlock(ctx, paras, width, s) {
+      const items = [];
+      let y = 0, prev = null;
+      paras.forEach((p, k) => {
+        const fs = (p.kind === "idea" ? 17 : 14) * s;
+        const lh = fs * (p.kind === "idea" ? 1.25 : 1.32);
+        if (k > 0) y += p.kind === "idea" ? 11 * s : prev === "idea" ? 2 * s : 4 * s;
+        const indent = p.bullet ? 15 * s : 0;
+        const lines = wrapRuns(ctx, p.runs, width - indent - (p.isNew ? 6 * s : 0), fs, p.kind);
+        const top = y;
+        lines.forEach((ln) => { items.push({ type: "text", y: y + fs * 0.92, x: indent, ln, kind: p.kind, isNew: p.isNew }); y += lh; });
+        if (p.bullet) items.push({ type: "bullet", x: 6 * s, y: top + lh / 2, r: Math.max(1.6, fs * 0.13), kind: p.kind, isNew: p.isNew });
+        if (p.isNew) items.unshift({ type: "bg", y: top - 3 * s, h: y - top + 3 * s });
+        prev = p.kind;
+      });
+      return { items, height: y };
+    }
+    function canvasRects(W, H, M, top, bottom) {
+      const cw = (W - 2 * M) / 5, ch = bottom - top, lowH = Math.round(ch * 0.29), upH = ch - lowH, half = upH / 2, hw = (W - 2 * M) / 2;
+      return {
+        kp: [M, top, cw, upH], ka: [M + cw, top, cw, half], kr: [M + cw, top + half, cw, half],
+        vp: [M + 2 * cw, top, cw, upH], cr: [M + 3 * cw, top, cw, half], ch: [M + 3 * cw, top + half, cw, half],
+        cs: [M + 4 * cw, top, cw, upH], co: [M, top + upH, hw, lowH], rv: [M + hw, top + upH, hw, lowH],
+      };
+    }
+    function fitText(ctx, text, maxW) {
+      if (ctx.measureText(text).width <= maxW) return text;
+      let t = text;
+      while (t.length > 1 && ctx.measureText(t + "…").width > maxW) t = t.slice(0, -1);
+      return t + "…";
+    }
+    function formatDate(iso) {
+      if (!iso) return "";
+      const d = new Date(iso + "T12:00:00");
+      return isNaN(d) ? iso : d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
+    }
+    async function renderImage(shape, scale) {
+      await ensureFonts();
+      const W = 1600, H = shape === "a4" ? 1131 : 900, M = 36;
+      const c = document.createElement("canvas");
+      c.width = Math.round(W * scale);
+      c.height = Math.round(H * scale);
+      const ctx = c.getContext("2d");
+      ctx.scale(scale, scale);
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, W, H);
+      ctx.textBaseline = "alphabetic";
+
+      // Header: title and the four details boxes
+      ctx.fillStyle = C.ink;
+      ctx.font = '800 30px "Archivo", ' + EXPORT_FONT;
+      ctx.fillText("The Business Model Canvas", M, M + 36);
+      const metaX = M + 500, metaW = W - M - metaX, gap = 10;
+      const fields = [["Designed for", state.designedFor.trim(), 0.34], ["Designed by", state.designedBy.trim(), 0.32], ["Date", formatDate(state.date), 0.18], ["Version", state.versionLabel.trim(), 0.16]];
+      let fx = metaX;
+      fields.forEach(([label, value, frac]) => {
+        const fw = (metaW - gap * 3) * frac;
+        ctx.strokeStyle = C.soft;
+        ctx.lineWidth = 1;
+        roundRect(ctx, fx + 0.5, M + 0.5, fw - 1, 48, 6);
+        ctx.stroke();
+        ctx.fillStyle = C.muted;
+        ctx.font = "500 11px " + EXPORT_FONT;
+        ctx.fillText(label.toUpperCase(), fx + 10, M + 17);
+        ctx.fillStyle = C.ink;
+        ctx.font = "500 16px " + EXPORT_FONT;
+        ctx.fillText(fitText(ctx, value, fw - 20), fx + 10, M + 39);
+        fx += fw + gap;
+      });
+
+      // Layout of the nine blocks
+      const anyNew = BLOCKS.some((b) => parseHTML(state.blocks[b.id]).some((p) => p.isNew));
+      const footH = 30;
+      const top = M + 66, bottom = H - M - footH;
+      const rects = canvasRects(W, H, M, top, bottom);
+      const pad = 14, titleH = 30;
+      const models = {}, fits = {};
+      BLOCKS.forEach((b) => {
+        const paras = parseHTML(state.blocks[b.id]);
+        models[b.id] = paras;
+        const [, , w, h] = rects[b.id];
+        const areaW = w - 2 * pad, areaH = h - 2 * pad - titleH;
+        let s = 1;
+        while (s > 0.45 && layoutBlock(ctx, paras, areaW, s).height > areaH) s -= 0.05;
+        fits[b.id] = s;
+      });
+      // One text size for the whole canvas where possible, so blocks look consistent.
+      const common = Math.max(0.75, Math.min.apply(null, BLOCKS.map((b) => fits[b.id])));
+      const overflow = [], small = [];
+      BLOCKS.forEach((b) => {
+        const [x, y, w, h] = rects[b.id];
+        ctx.fillStyle = C.ink;
+        ctx.font = "600 15px " + EXPORT_FONT;
+        ctx.fillText(b.title, x + pad, y + pad + 13);
+        drawIcon(ctx, b.icon, x + w - pad - 20, y + pad - 3, 20, C.muted);
+        const s = Math.min(common, fits[b.id]);
+        const areaX = x + pad, areaY = y + pad + titleH, areaW = w - 2 * pad, areaH = h - 2 * pad - titleH;
+        const lay = layoutBlock(ctx, models[b.id], areaW, s);
+        if (lay.height > areaH + 0.5) overflow.push(b.title);
+        else if (s < 0.62) small.push(b.title);
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(x + 2, areaY - 6, w - 4, h - (areaY - y) + 4);
+        ctx.clip();
+        lay.items.forEach((it) => {
+          if (it.type === "bg") { ctx.fillStyle = C.newBg; roundRect(ctx, areaX - 5 * s, areaY + it.y, areaW + 10 * s - (0), it.h + 2 * s, 4 * s); ctx.fill(); }
+          else if (it.type === "bullet") { ctx.fillStyle = it.kind === "idea" || it.isNew ? C.ink : C.desc; ctx.beginPath(); ctx.arc(areaX + it.x, areaY + it.y, it.r, 0, Math.PI * 2); ctx.fill(); }
+          else {
+            ctx.fillStyle = it.kind === "idea" || it.isNew ? C.ink : C.desc;
+            it.ln.forEach((seg) => { ctx.font = seg.font; ctx.fillText(seg.t, areaX + it.x + seg.x, areaY + it.y); });
+          }
+        });
+        ctx.restore();
+      });
+      // Grid lines on top of the content
+      ctx.strokeStyle = C.line;
+      ctx.lineWidth = 1.5;
+      BLOCKS.forEach((b) => { const [x, y, w, h] = rects[b.id]; ctx.strokeRect(x, y, w, h); });
+      ctx.lineWidth = 3;
+      ctx.strokeRect(M, top, W - 2 * M, bottom - top);
+
+      // Footer: legend and credit
+      const fy = H - M + 2;
+      if (anyNew) {
+        ctx.fillStyle = C.newBg;
+        roundRect(ctx, M, fy - 13, 26, 16, 3);
+        ctx.fill();
+        ctx.fillStyle = C.muted;
+        ctx.font = "400 14px " + EXPORT_FONT;
+        ctx.fillText(fitText(ctx, state.newLabel || DEFAULT_NEW_LABEL, W / 2 - M - 40), M + 36, fy);
+      }
+      ctx.fillStyle = C.hint;
+      ctx.font = "400 12px " + EXPORT_FONT;
+      ctx.textAlign = "right";
+      ctx.fillText("Template: The Business Model Canvas, Strategyzer AG (CC BY-SA 3.0)", W - M, fy);
+      ctx.textAlign = "left";
+      return { canvas: c, overflow, small };
+    }
+    function roundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      if (ctx.roundRect) { ctx.roundRect(x, y, w, h, r); return; }
+      ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+    }
+    function drawIcon(ctx, d, x, y, size, color) {
+      if (typeof Path2D === "undefined") return;
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.scale(size / 24, size / 24);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.7;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.stroke(new Path2D(d));
+      ctx.restore();
+    }
+    const canvasToBlob = (c) => new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error("The image could not be created."))), "image/png"));
+    async function pngBlob(shape, scale) {
+      const out = await renderImage(shape, scale || 2);
+      lastOverflow = out.overflow;
+      lastSmall = out.small;
+      return canvasToBlob(out.canvas);
+    }
+    let lastOverflow = [], lastSmall = [];
+    function overflowNote() {
+      if (lastOverflow.length) return " Some text did not fit and was cut in " + lastOverflow.join(", ") + ". Shorten it or choose A4.";
+      if (lastSmall.length) return " " + lastSmall.join(", ") + (lastSmall.length > 1 ? " have" : " has") + " a lot of text, so it is printed small. Shorten it or choose A4.";
+      return "";
+    }
+
+    // ---------- Text outline and printable page ----------
+    function runsMD(runs) {
+      return runs.map((r) => {
+        if (r.br) return " ";
+        let t = r.t.replace(/([*_`\\])/g, "\\$1");
+        if (!t.trim()) return t;
+        const lead = t.match(/^\s*/)[0], trail = t.match(/\s*$/)[0], core = t.trim();
+        let s = core;
+        if (r.i) s = "_" + s + "_";
+        if (r.b) s = "**" + s + "**";
+        return lead + s + trail;
+      }).join("").replace(/\s+/g, " ").trim();
+    }
+    function buildMD() {
+      const out = ["# Business Model Canvas" + (state.designedFor.trim() ? ": " + state.designedFor.trim() : ""), ""];
+      const meta = [state.designedBy.trim() && "Designed by " + state.designedBy.trim(), formatDate(state.date), state.versionLabel.trim() && "Version " + state.versionLabel.trim()].filter(Boolean);
+      if (meta.length) out.push(meta.join(" · "), "");
+      let anyNew = false;
+      BLOCKS.forEach((b) => {
+        out.push("## " + b.title, "");
+        const paras = parseHTML(state.blocks[b.id]);
+        if (!paras.length) out.push("_(empty)_");
+        let underIdea = false;
+        paras.forEach((p) => {
+          const tag = p.isNew ? " *(new)*" : "";
+          if (p.isNew) anyNew = true;
+          if (p.kind === "idea") { out.push("- **" + plainText(p.runs).replace(/([*_`\\])/g, "\\$1") + "**" + tag); underIdea = true; }
+          else out.push((underIdea ? "  " : "") + (p.bullet || !underIdea ? "- " : "") + runsMD(p.runs) + tag);
+        });
+        out.push("");
+      });
+      if (anyNew) out.push("*(new)* = " + (state.newLabel || DEFAULT_NEW_LABEL), "");
+      return out.join("\n");
+    }
+    const blobToDataURL = (blob) => new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(r.result); r.onerror = () => rej(r.error); r.readAsDataURL(blob); });
+    async function buildPrintable() {
+      const img = await blobToDataURL(await pngBlob("a4", 2.2));
+      const title = state.designedFor.trim() || "Untitled";
+      const meta = [state.designedBy.trim() && "Designed by " + esc(state.designedBy.trim()), esc(formatDate(state.date)), state.versionLabel.trim() && "Version " + esc(state.versionLabel.trim())].filter(Boolean).join(" · ");
+      const anyNew = BLOCKS.some((b) => parseHTML(state.blocks[b.id]).some((p) => p.isNew));
+      const data = JSON.stringify(Object.assign({}, state, { updated: new Date().toISOString() })).replace(/</g, "\\u003c");
+      return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)} · Business Model Canvas</title>
+<style>
+  :root{color-scheme:light}
+  body{margin:0;background:#fff;color:#121b26;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  main{max-width:64rem;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+  .sheet{display:block;width:100%;height:auto;border:1px solid #d3d9e1}
+  h1{font-size:1.6rem;margin:2rem 0 .25rem}
+  .meta{color:#535f6e;margin:0 0 1rem}
+  h2{font-size:1rem;margin:1.25rem 0 .35rem;padding-top:.75rem;border-top:1px solid #d3d9e1}
+  .blk p{margin:0}
+  .blk p.idea{font-weight:600;margin-top:.45rem}
+  .blk p.idea:first-child{margin-top:0}
+  .blk p.desc{color:#3a4552;font-size:.92rem}
+  .blk p.bullet{padding-left:1rem;position:relative}
+  .blk p.bullet::before{content:"\\2022";position:absolute;left:.2rem}
+  .blk p.new{background:#d7f0df;border-radius:3px;padding:0 .3rem}
+  .empty,.legend,footer{color:#535f6e;font-size:.85rem}
+  footer{margin-top:2rem;padding-top:.75rem;border-top:1px solid #d3d9e1}
+  @page{size:A4 landscape;margin:10mm}
+  @media print{main{max-width:none;padding:0}.sheet{border:0;max-height:185mm;width:auto;max-width:100%;margin:0 auto}.outline{break-before:page}h2{break-after:avoid}.blk{break-inside:avoid}}
+</style>
+</head>
+<body>
+<main>
+<img class="sheet" src="${img}" alt="Business Model Canvas: ${esc(title)}">
+<section class="outline">
+<h1>${esc(title)}</h1>
+${meta ? `<p class="meta">${meta}</p>` : ""}
+${BLOCKS.map((b) => `<h2>${b.title}</h2><div class="blk">${state.blocks[b.id] || '<p class="empty">Empty</p>'}</div>`).join("\n")}
+${anyNew ? `<p class="legend"><span style="background:#d7f0df;padding:0 .4rem;border-radius:3px">Highlighted</span> = ${esc(state.newLabel || DEFAULT_NEW_LABEL)}</p>` : ""}
+</section>
+<footer>
+<p>Made with the Business Model Canvas study tool, a study aid for courses on digital transformation and change management at NOVA IMS. Not an official university resource.</p>
+<p>Template: The Business Model Canvas, Strategyzer AG (CC BY-SA 3.0). Open this file with the tool again to keep editing.</p>
+</footer>
+</main>
+<script type="application/json" id="bmc-data">${data}<\/script>
+</body>
+</html>`;
+    }
+
+    // ---------- Downloads ----------
+    function baseName() {
+      const sl = state.designedFor.trim().toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
+      return sl ? "business-model-canvas-" + sl : "business-model-canvas";
+    }
+    function download(blob, name) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }
+    const projectJSON = () => JSON.stringify(Object.assign({}, state, { updated: new Date().toISOString() }), null, 2);
+
+    const CRC_TABLE = (() => {
+      const t = new Uint32Array(256);
+      for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; }
+      return t;
+    })();
+    function crc32(bytes) { let c = 0xffffffff; for (let i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; }
+    // Minimal ZIP writer (stored entries, no compression).
+    function makeZip(files) {
+      const enc = new TextEncoder(), parts = [], central = [];
+      const d = new Date();
+      const dosTime = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+      const dosDate = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+      let offset = 0;
+      files.forEach((f) => {
+        const name = enc.encode(f.name), data = f.data, crc = crc32(data);
+        const lh = new DataView(new ArrayBuffer(30));
+        lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+        lh.setUint16(10, dosTime, true); lh.setUint16(12, dosDate, true); lh.setUint32(14, crc, true);
+        lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+        parts.push(new Uint8Array(lh.buffer), name, data);
+        const ch = new DataView(new ArrayBuffer(46));
+        ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+        ch.setUint16(12, dosTime, true); ch.setUint16(14, dosDate, true); ch.setUint32(16, crc, true);
+        ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, name.length, true);
+        ch.setUint16(30, 0, true); ch.setUint16(32, 0, true); ch.setUint16(34, 0, true); ch.setUint16(36, 0, true);
+        ch.setUint32(38, 0, true); ch.setUint32(42, offset, true);
+        central.push(new Uint8Array(ch.buffer), name);
+        offset += 30 + name.length + data.length;
+      });
+      const size = central.reduce((s, p) => s + p.length, 0);
+      const end = new DataView(new ArrayBuffer(22));
+      end.setUint32(0, 0x06054b50, true); end.setUint16(4, 0, true); end.setUint16(6, 0, true);
+      end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+      end.setUint32(12, size, true); end.setUint32(16, offset, true); end.setUint16(20, 0, true);
+      return new Blob(parts.concat(central, [new Uint8Array(end.buffer)]), { type: "application/zip" });
+    }
+
+    let printFrame = null;
+    function printPage(html) {
+      if (printFrame) printFrame.remove();
+      printFrame = document.createElement("iframe");
+      printFrame.setAttribute("aria-hidden", "true");
+      printFrame.tabIndex = -1;
+      printFrame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden";
+      printFrame.onload = () => { try { printFrame.contentWindow.focus(); printFrame.contentWindow.print(); } catch (e) { toast("Printing is blocked here. Download the printable page and print it instead."); } };
+      printFrame.srcdoc = html;
+      document.body.appendChild(printFrame);
+    }
+    async function copyImage() {
+      if (!navigator.clipboard || !window.ClipboardItem) { toast("This browser can't copy images. Use Image (PNG) instead."); return; }
+      try {
+        await navigator.clipboard.write([new ClipboardItem({ "image/png": pngBlob(fmt, 2) })]);
+        toast("Image copied. Paste it into your slides." + overflowNote());
+      } catch (e) {
+        try {
+          const blob = await pngBlob(fmt, 2);
+          await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+          toast("Image copied. Paste it into your slides." + overflowNote());
+        } catch (e2) {
+          toast("The browser blocked copying the image. Use Image (PNG) instead.");
+        }
+      }
+    }
+    // The editor being typed in may hold unsaved changes; save it before any export.
+    function flushActive() { const ed = activeEditor(); if (ed) saveEditor(ed); }
+    async function runExport(kind, btn) {
+      flushActive();
+      if (kind === "copy") { await copyImage(); return; }
+      if (btn) btn.disabled = true;
+      try {
+        const base = baseName(), enc = new TextEncoder();
+        if (kind === "png") { download(await pngBlob(fmt, 2), base + (fmt === "a4" ? "-a4" : "") + ".png"); if (overflowNote()) toast(overflowNote().trim()); }
+        else if (kind === "md") download(new Blob([buildMD()], { type: "text/markdown;charset=utf-8" }), base + ".md");
+        else if (kind === "json") download(new Blob([projectJSON()], { type: "application/json" }), base + ".json");
+        else if (kind === "print") printPage(await buildPrintable());
+        else if (kind === "zip") {
+          const slide = new Uint8Array(await (await pngBlob("slide", 2)).arrayBuffer());
+          const slideOverflow = lastOverflow.slice(), slideSmall = lastSmall.slice();
+          const a4 = new Uint8Array(await (await pngBlob("a4", 2)).arrayBuffer());
+          const files = [
+            { name: base + ".png", data: slide },
+            { name: base + "-a4.png", data: a4 },
+            { name: base + ".html", data: enc.encode(await buildPrintable()) },
+            { name: base + ".md", data: enc.encode(buildMD()) },
+            { name: base + ".json", data: enc.encode(projectJSON()) },
+          ];
+          download(makeZip(files), base + ".zip");
+          lastOverflow = slideOverflow;
+          lastSmall = slideSmall;
+          toast("Downloaded " + base + ".zip." + overflowNote());
+        }
+      } catch (err) {
+        toast(err && err.message ? err.message : "The download failed.");
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+    $("#btnZip").addEventListener("click", (e) => runExport("zip", e.currentTarget));
+    $$("[data-dl]").forEach((b) => b.addEventListener("click", () => runExport(b.dataset.dl, b)));
+
+    // ---------- Theme and text size ----------
+    function renderPrefs() {
+      const theme = root.dataset.theme || "auto", font = root.dataset.font || "m";
+      $$("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeChoice === theme)));
+      $$(".font-size button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.font === font)));
+    }
+    $$("[data-theme-choice]").forEach((b) => b.addEventListener("click", () => {
+      const c = b.dataset.themeChoice;
+      if (c === "light" || c === "dark") { root.dataset.theme = c; store.set(KEYS.theme, c); } else { delete root.dataset.theme; store.remove(KEYS.theme); }
+      renderPrefs();
+    }));
+    $$(".font-size button").forEach((b) => b.addEventListener("click", () => { root.dataset.font = b.dataset.font; store.set(KEYS.font, b.dataset.font); renderPrefs(); }));
+
+    // ---------- Start ----------
+    renderPrefs();
+    renderFmt();
+    renderAll();
+    if (state.updated) $("#savedAt").textContent = "Restored your last canvas from this browser.";
+  })();
+  </script>
+</body>
+</html>
