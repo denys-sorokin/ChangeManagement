@@ -14,6 +14,21 @@ A small static quiz site for practising the Change Management course. It has 300
 
 Everything runs in the browser. No account, no backend, and no external services are used at runtime.
 
+## Matrix of Change tool
+
+`matrix-of-change/index.html` is a separate page that helps students build a Matrix of Change (Brynjolfsson, Renshaw & Van Alstyne, 1997). On GitHub Pages it is served at `/matrix-of-change/`.
+
+- **Set up:** name the change initiative and choose how many existing and target practices to compare (1–20 each).
+- **Practices:** name and group each practice, reorder or remove them, and optionally rate how stakeholders see each one (−2 to +2).
+- **Matrix:** click or tap the diamonds of the two triangles and the squares of the transition matrix to mark `++`, `+`, `−` or `−−`. The layout follows the figures in Lizeo (2018).
+- **Results:** coherence of each system, transition difficulty, where to start, greenfield or brownfield, pace of change and stakeholder resistance.
+- **Plan:** decide for each existing practice whether to keep it, transform it into a target practice, or phase it out.
+- **Download:** one button saves a .zip with the matrix as PNG and SVG, a printable HTML report, a CSV spreadsheet and a JSON project file. A saved JSON file or report can be opened again to keep editing.
+- Two worked examples from the paper (UPS e-Logistics and GM direct sales) can be loaded from step 01.
+- Light, dark and automatic themes, and three text sizes, shared with the quiz.
+
+The page is one self-contained HTML file with no external requests. To publish it on another site, copy the file. If the `fonts/` folder is not one level up, it falls back to system fonts.
+
 ## Publishing on GitHub Pages
 
 In the repository, go to **Settings → Pages**, choose **Deploy from a branch**, select the branch and the `/ (root)` folder, and save. The `.nojekyll` file makes Pages serve the files as they are.
@@ -34,6 +49,7 @@ python3 -m http.server 8000
 | `data/progress.json` | Log of the generation batches |
 | `scripts/append_batch.py` | Appends one authored batch, assigns IDs and spreads correct answers across A–D |
 | `scripts/validate.py` | Checks the bank and prints a summary by type, chapter and topic |
+| `matrix-of-change/index.html` | The Matrix of Change tool (one self-contained file) |
 | `fonts/` | Self-hosted Archivo, IBM Plex Sans and IBM Plex Mono (SIL Open Font License), so the site makes no external requests |
 
 ## Question bank
