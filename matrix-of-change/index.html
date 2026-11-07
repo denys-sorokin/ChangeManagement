@@ -1,0 +1,1971 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Matrix of Change</title>
+  <meta name="description" content="Build a Matrix of Change: map how existing and target practices reinforce or compete with each other, read the transition, plan the change and download your work.">
+  <meta name="color-scheme" content="light dark">
+  <script>
+    // Apply the saved theme and text size before first paint (shared with the study quiz on the same site).
+    (function () {
+      var root = document.documentElement;
+      try {
+        var theme = JSON.parse(localStorage.getItem("cmq.theme"));
+        if (theme === "light" || theme === "dark") root.dataset.theme = theme;
+        var font = JSON.parse(localStorage.getItem("cmq.font"));
+        root.dataset.font = font === "s" || font === "l" ? font : "m";
+      } catch (e) {
+        root.dataset.font = "m";
+      }
+    })();
+  </script>
+  <style>
+    /* Fonts are optional: if ../fonts/ is not next to this page, system fonts are used. */
+    @font-face { font-family: "Archivo"; src: url("../fonts/Archivo-ExtraBold.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+    @font-face { font-family: "IBM Plex Sans"; src: url("../fonts/IBMPlexSans-SemiBold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+    @font-face { font-family: "IBM Plex Mono"; src: url("../fonts/IBMPlexMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+    :root {
+      --bg: #eef1f5;
+      --surface: #ffffff;
+      --ink: #121b26;
+      --muted: #535f6e;
+      --line: #d3d9e1;
+      --accent: #1f5fbf;
+      --accent-soft: #e2eafa;
+      --on-accent: #ffffff;
+      --good: #17693f;
+      --good-soft: #e0f2e7;
+      --bad: #ab2117;
+      --bad-soft: #fbe6e4;
+      --amber: #8a5a00;
+      --amber-soft: #fdf3dc;
+      --bar-p1: #86c7a1;
+      --bar-n1: #e79a92;
+      /* Matrix palette */
+      --m-surface: #ffffff;
+      --m-ink: #121b26;
+      --m-muted: #535f6e;
+      --m-grid: #c5cdd8;
+      --m-gridStrong: #8a96a6;
+      --m-label: #f3f5f8;
+      --m-group: #e7ebf1;
+      --m-pos1: #e1f2e7;
+      --m-pos2: #c4e7d1;
+      --m-neg1: #fbe5e2;
+      --m-neg2: #f2c2bb;
+      --m-posInk: #17693f;
+      --m-negInk: #ab2117;
+      --m-accent: #1f5fbf;
+      --m-hl: #e2eafa;
+      --display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --tap: max(44px, 2.75rem);
+      color-scheme: light;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0e141c; --surface: #161f2a; --ink: #e7ecf2; --muted: #9eaab9; --line: #2a3646;
+        --accent: #84aaff; --accent-soft: #1b2847; --on-accent: #0b1322;
+        --good: #5ccf96; --good-soft: #13301f; --bad: #f4847a; --bad-soft: #3a1714;
+        --amber: #f2c230; --amber-soft: #2f260c; --bar-p1: #2f7a52; --bar-n1: #8a3a33;
+        --m-surface: #161f2a; --m-ink: #e7ecf2; --m-muted: #9eaab9; --m-grid: #34445a; --m-gridStrong: #61738c;
+        --m-label: #1c2735; --m-group: #222f40; --m-pos1: #173524; --m-pos2: #1f5a3a; --m-neg1: #3b1a17; --m-neg2: #632620;
+        --m-posInk: #72dea8; --m-negInk: #ff9a90; --m-accent: #84aaff; --m-hl: #1b2847;
+        color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e141c; --surface: #161f2a; --ink: #e7ecf2; --muted: #9eaab9; --line: #2a3646;
+      --accent: #84aaff; --accent-soft: #1b2847; --on-accent: #0b1322;
+      --good: #5ccf96; --good-soft: #13301f; --bad: #f4847a; --bad-soft: #3a1714;
+      --amber: #f2c230; --amber-soft: #2f260c; --bar-p1: #2f7a52; --bar-n1: #8a3a33;
+      --m-surface: #161f2a; --m-ink: #e7ecf2; --m-muted: #9eaab9; --m-grid: #34445a; --m-gridStrong: #61738c;
+      --m-label: #1c2735; --m-group: #222f40; --m-pos1: #173524; --m-pos2: #1f5a3a; --m-neg1: #3b1a17; --m-neg2: #632620;
+      --m-posInk: #72dea8; --m-negInk: #ff9a90; --m-accent: #84aaff; --m-hl: #1b2847;
+      color-scheme: dark;
+    }
+
+    /* Text size: Small 14px, Medium 16px, Large 19px. Everything is sized in rem, the matrix included. */
+    html { font-size: 100%; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    html[data-font="s"] { font-size: 87.5%; }
+    html[data-font="l"] { font-size: 118.75%; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 1rem/1.55 var(--body);
+      overflow-wrap: break-word;
+      min-height: 100vh;
+    }
+    h1, h2, h3 { margin: 0; text-wrap: balance; }
+    h1, h2 { font-family: var(--display); font-weight: 800; letter-spacing: -0.01em; }
+    h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1; }
+    h2 { font-size: 1.4rem; line-height: 1.2; }
+    h3 { font-size: 1rem; font-weight: 600; }
+    p { margin: 0; }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    kbd { font: 500 0.8em var(--mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 0.3em; background: var(--surface); }
+
+    .wrap {
+      width: 100%;
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+    }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    .skip-link { position: absolute; left: 0.5rem; top: -4rem; background: var(--accent); color: var(--on-accent); padding: 0.5rem 0.75rem; border-radius: 8px; z-index: 20; }
+    .skip-link:focus { top: 0.5rem; }
+    .eyebrow { font: 500 0.75rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .muted { color: var(--muted); }
+    .small { font-size: 0.875rem; }
+    .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+      min-height: var(--tap); padding: 0.5rem 1rem;
+      border: 1px solid var(--line); border-radius: 8px;
+      background: var(--surface); color: var(--ink);
+      font-weight: 500; text-align: center; cursor: pointer;
+      transition: border-color 0.15s ease, background-color 0.15s ease;
+    }
+    .btn svg { flex: none; }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+    .btn.big { min-height: 3.25rem; padding-inline: 1.5rem; font-size: 1.05rem; }
+    .btn.quiet { border-color: transparent; background: transparent; color: var(--accent); padding-inline: 0.6rem; }
+    .btn.danger { color: var(--bad); }
+    .btn:disabled { opacity: 0.45; cursor: default; }
+    @media (hover: hover) {
+      .btn:not(:disabled):hover { border-color: var(--accent); }
+      .btn.primary:not(:disabled):hover { filter: brightness(1.08); }
+      .btn.quiet:not(:disabled):hover { background: var(--accent-soft); border-color: transparent; }
+    }
+
+    /* Segmented controls (theme, text size) */
+    .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+    .seg button { min-height: var(--tap); min-width: var(--tap); padding: 0 0.75rem; border: 0; background: transparent; color: var(--muted); font-size: 0.85rem; cursor: pointer; }
+    .seg button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+    @media (hover: hover) { .seg button:not([aria-pressed="true"]):hover { color: var(--ink); background: var(--bg); } }
+    .font-size button { padding: 0; line-height: 1; }
+    .fs-s { font-size: 12px; } .fs-m { font-size: 15px; } .fs-l { font-size: 19px; }
+
+    .prefs { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; padding-block: 0.75rem 0; }
+    .home-link { margin-right: auto; align-self: center; display: inline-flex; align-items: center; min-height: var(--tap); color: var(--accent); font-weight: 500; text-decoration: none; }
+    @media (hover: hover) { .home-link:hover { text-decoration: underline; text-underline-offset: 3px; } }
+
+    /* Header */
+    .hero { display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.25rem; align-items: center; padding-block: 1.25rem 2rem; }
+    .hero .mark { grid-row: 1 / span 2; width: clamp(3.25rem, 9vw, 4.5rem); height: auto; color: var(--accent); }
+    .hero .lead { grid-column: 1 / -1; color: var(--muted); max-width: 64ch; font-size: 1.05rem; margin-top: 0.6rem; }
+    .how { grid-column: 1 / -1; margin-top: 0.9rem; max-width: 64rem; }
+    .how summary {
+      display: inline-flex; align-items: center; gap: 0.5rem; min-height: var(--tap);
+      cursor: pointer; color: var(--accent); font-weight: 600; list-style: none;
+    }
+    .how summary::-webkit-details-marker { display: none; }
+    .how summary::before { content: ""; width: 0.5rem; height: 0.5rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform 0.15s ease; }
+    .how[open] summary::before { transform: rotate(45deg); }
+    .how-body { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); padding: 1.1rem 1.25rem; margin-top: 0.4rem; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+    .how-body ol { margin: 0; padding-left: 1.2rem; display: grid; gap: 0.5rem; }
+    .how-body p { color: var(--muted); font-size: 0.92rem; }
+    .how-body .sym-list { list-style: none; padding: 0; margin: 0.25rem 0 0.75rem; display: grid; gap: 0.45rem; }
+    .how-body .sym-list li { display: grid; grid-template-columns: 2.2rem 1fr; gap: 0.6rem; align-items: start; font-size: 0.92rem; }
+
+    /* Steps */
+    main { padding-bottom: 2rem; }
+    .step { display: grid; gap: 1.1rem; padding-block: 2rem; border-top: 1px solid var(--line); min-width: 0; }
+    .step-head { display: grid; gap: 0.35rem; }
+    .step-head .num { font: 500 0.78rem/1 var(--mono); color: var(--accent); letter-spacing: 0.06em; }
+    .step-head .sub { color: var(--muted); max-width: 70ch; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.15rem; min-width: 0; }
+
+    /* Fields */
+    .field { display: grid; gap: 0.35rem; min-width: 0; align-content: start; }
+    .field .lbl { font-weight: 600; font-size: 0.9rem; }
+    .field .hint { font-size: 0.82rem; color: var(--muted); }
+    .in {
+      width: 100%; min-height: var(--tap); padding: 0.5rem 0.7rem;
+      border: 1px solid var(--line); border-radius: 8px;
+      background: var(--surface); color: var(--ink);
+    }
+    .in::placeholder { color: var(--muted); opacity: 0.75; }
+    .in:focus-visible { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+    textarea.in { resize: vertical; min-height: 5.5rem; line-height: 1.45; }
+    select.in { padding-right: 0.4rem; cursor: pointer; }
+
+    .setup { display: grid; gap: 1.25rem; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+    @media (max-width: 52rem) { .setup { grid-template-columns: 1fr; } }
+    .setup-col { display: grid; gap: 1rem; align-content: start; }
+    .counts { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr)); }
+    .stepper { display: inline-flex; align-items: stretch; width: max-content; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--surface); }
+    .stepper button { width: var(--tap); min-height: var(--tap); border: 0; background: transparent; color: var(--ink); font-size: 1.25rem; line-height: 1; cursor: pointer; }
+    .stepper button:disabled { color: var(--muted); opacity: 0.4; cursor: default; }
+    @media (hover: hover) { .stepper button:not(:disabled):hover { background: var(--accent-soft); color: var(--accent); } }
+    .stepper input { width: 3.6rem; border: 0; border-inline: 1px solid var(--line); background: transparent; text-align: center; font: 600 1.05rem var(--mono); -moz-appearance: textfield; appearance: textfield; }
+    .stepper input::-webkit-outer-spin-button, .stepper input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+    .stepper input:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+    .switch { display: grid; grid-template-columns: auto 1fr; gap: 0.15rem 0.8rem; align-items: center; cursor: pointer; }
+    .switch input {
+      appearance: none; -webkit-appearance: none; margin: 0; flex: none;
+      width: 2.75rem; height: 1.6rem; border-radius: 999px; background: var(--line);
+      position: relative; cursor: pointer; transition: background-color 0.15s ease;
+    }
+    .switch input::after { content: ""; position: absolute; top: 0.2rem; left: 0.2rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 0.25); transition: transform 0.15s ease; }
+    .switch input:checked { background: var(--accent); }
+    .switch input:checked::after { transform: translateX(1.15rem); }
+    .switch .hint { grid-column: 2; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .actions .sep { flex: 1 1 auto; }
+
+    /* Practice lists */
+    .lists { display: grid; gap: 1rem; }
+    .list-card { display: grid; gap: 0.85rem; align-content: start; }
+    .list-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; }
+    .list-head p { font-size: 0.85rem; color: var(--muted); }
+    .prac-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+    .prac {
+      display: grid; gap: 0.4rem; align-items: center;
+      grid-template-columns: 2.1rem minmax(0, 1fr) minmax(8rem, 17rem) 5rem auto;
+      grid-template-areas: "code name group rate act";
+    }
+    .prac .code { grid-area: code; font: 500 0.78rem var(--mono); color: var(--muted); }
+    .prac .pname { grid-area: name; }
+    .prac .pgroup { grid-area: group; }
+    .prac .prate { grid-area: rate; }
+    .prac .pact { grid-area: act; display: flex; }
+    .no-ratings .prac { grid-template-columns: 2.1rem minmax(0, 1fr) minmax(8rem, 17rem) auto; grid-template-areas: "code name group act"; }
+    .no-ratings .prate, .no-ratings .rate-col { display: none; }
+    @media (max-width: 36rem) {
+      .prac { grid-template-columns: 2rem minmax(0, 1fr) 4.75rem auto; grid-template-areas: "code name name name" ". group rate act"; row-gap: 0.35rem; padding-bottom: 0.6rem; border-bottom: 1px dashed var(--line); }
+      .no-ratings .prac { grid-template-columns: 2rem minmax(0, 1fr) auto; grid-template-areas: "code name name" ". group act"; }
+      .prac:last-child { border-bottom: 0; padding-bottom: 0; }
+    }
+    .ico {
+      display: inline-grid; place-items: center; width: 2.1rem; height: 2.1rem; padding: 0;
+      border: 0; border-radius: 6px; background: transparent; color: var(--muted); cursor: pointer;
+    }
+    .ico:disabled { opacity: 0.3; cursor: default; }
+    @media (hover: hover) { .ico:not(:disabled):hover { background: var(--accent-soft); color: var(--accent); } .ico.del:not(:disabled):hover { background: var(--bad-soft); color: var(--bad); } }
+    @media (pointer: coarse) { .ico { width: var(--tap); height: var(--tap); } }
+
+    /* Brush toolbar */
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1rem; }
+    .brushes { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .brush {
+      display: inline-flex; align-items: center; gap: 0.5rem; min-height: var(--tap);
+      padding: 0.3rem 0.85rem 0.3rem 0.35rem; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--surface); color: var(--ink); font-size: 0.88rem; cursor: pointer;
+    }
+    .brush[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); box-shadow: inset 0 0 0 1px var(--accent); }
+    @media (hover: hover) { .brush:not([aria-pressed="true"]):hover { border-color: var(--accent); } }
+    .sw { display: inline-grid; place-items: center; min-width: 2rem; height: 2rem; padding-inline: 0.3rem; border-radius: 999px; font: 700 0.95rem/1 Arial, sans-serif; border: 1px solid var(--m-grid); background: var(--m-surface); color: var(--m-muted); }
+    .sw.p2 { background: var(--m-pos2); color: var(--m-posInk); border-color: transparent; }
+    .sw.p1 { background: var(--m-pos1); color: var(--m-posInk); border-color: transparent; }
+    .sw.n1 { background: var(--m-neg1); color: var(--m-negInk); border-color: transparent; }
+    .sw.n2 { background: var(--m-neg2); color: var(--m-negInk); border-color: transparent; }
+    .hint-line { font-size: 0.85rem; color: var(--muted); }
+    .kbd-hint { display: none; }
+    @media (hover: hover) and (pointer: fine) { .kbd-hint { display: inline; } }
+
+    .matrix-scroll {
+      overflow: auto; background: var(--m-surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 0.5rem; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    }
+    .matrix-scroll svg { display: block; margin-inline: auto; max-width: none; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+    .inspect { min-height: 1.6em; font-size: 0.92rem; color: var(--muted); }
+    .inspect b { color: var(--ink); font-weight: 600; }
+    .inspect .pos { color: var(--good); font-weight: 600; }
+    .inspect .neg { color: var(--bad); font-weight: 600; }
+    .legend { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.82rem; color: var(--muted); }
+    .legend span b { font-family: Arial, sans-serif; }
+    .g-keep { color: var(--good); } .g-transform { color: var(--accent); } .g-phaseout { color: var(--bad); }
+
+    /* Analysis */
+    .summary { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+    .sum-card { display: grid; gap: 0.55rem; align-content: start; }
+    .verdict { font: 800 1.35rem/1.15 var(--display); }
+    .verdict.good { color: var(--good); } .verdict.mid { color: var(--amber); } .verdict.bad { color: var(--bad); } .verdict.none { color: var(--muted); }
+    .bar { display: flex; height: 0.55rem; border-radius: 999px; overflow: hidden; background: var(--line); }
+    .bar span { display: block; height: 100%; }
+    .b-p2 { background: var(--good); } .b-p1 { background: var(--bar-p1); } .b-0 { background: var(--line); } .b-n1 { background: var(--bar-n1); } .b-n2 { background: var(--bad); }
+    .tally { font: 500 0.82rem var(--mono); color: var(--muted); }
+    .tally .pos { color: var(--good); } .tally .neg { color: var(--bad); }
+    .guide { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .guide li { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 0.35rem 1.5rem; padding-block: 0.95rem; border-bottom: 1px solid var(--line); }
+    .guide h3 { font-size: 0.95rem; }
+    .guide p { max-width: 75ch; }
+    .guide p strong { font-weight: 600; }
+    @media (max-width: 42rem) { .guide li { grid-template-columns: 1fr; } }
+    .empty { padding: 1rem 1.1rem; border: 1px dashed var(--line); border-radius: 10px; color: var(--muted); }
+    .note { border-left: 3px solid var(--line); padding: 0.15rem 0 0.15rem 0.85rem; color: var(--muted); font-size: 0.85rem; max-width: 75ch; }
+
+    /* Plan */
+    .plan { display: grid; }
+    .plan-head, .prow {
+      display: grid; gap: 0.5rem 1rem; align-items: start;
+      grid-template-columns: minmax(0, 1.25fr) 4.5rem minmax(0, 1.6fr) minmax(0, 1.3fr) minmax(0, 1.2fr);
+      padding-block: 0.8rem; border-bottom: 1px solid var(--line);
+    }
+    .plan-head { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding-block: 0.4rem; }
+    .prow .nm { font-weight: 500; }
+    .prow .code, .ttable .code { font: 500 0.78rem var(--mono); color: var(--muted); margin-right: 0.35rem; }
+    .fit { display: flex; gap: 0.6rem; font: 500 0.9rem var(--mono); padding-top: 0.15rem; }
+    .fit .pos { color: var(--good); } .fit .neg { color: var(--bad); } .fit .zero { color: var(--muted); }
+    .why { display: block; font-size: 0.85rem; color: var(--muted); margin-top: 0.3rem; }
+    .dec { display: grid; gap: 0.4rem; }
+    .cell-lbl { display: none; font: 500 0.7rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 0.2rem; }
+    @media (max-width: 58rem) {
+      .plan-head { display: none; }
+      .prow { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "name fit" "sug sug" "dec dec" "note note"; }
+      .prow > .c-name { grid-area: name; } .prow > .c-fit { grid-area: fit; } .prow > .c-sug { grid-area: sug; } .prow > .c-dec { grid-area: dec; } .prow > .c-note { grid-area: note; }
+      .cell-lbl { display: block; }
+      .c-name .cell-lbl, .c-fit .cell-lbl { display: none; }
+    }
+    .tag { display: inline-block; font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.05em; padding: 0.18rem 0.45rem; border-radius: 4px; }
+    .tag.leverage { background: var(--good-soft); color: var(--good); }
+    .tag.phaseout { background: var(--bad-soft); color: var(--bad); }
+    .tag.redesign { background: var(--amber-soft); color: var(--amber); }
+    .tag.neutral { background: var(--bg); color: var(--muted); box-shadow: inset 0 0 0 1px var(--line); }
+    .sub-h { margin-top: 1.25rem; }
+    .ttable { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    .ttable th { text-align: left; font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding: 0.4rem 0.75rem 0.4rem 0; border-bottom: 1px solid var(--line); }
+    .ttable td { padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .ttable td.num { font: 500 0.9rem var(--mono); white-space: nowrap; }
+    .table-scroll { overflow-x: auto; }
+    @media (max-width: 40rem) { .ttable .why { display: none; } }
+
+    /* Download */
+    .dl { display: grid; gap: 1.1rem; }
+    .dl-main { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+    .dl-main p { color: var(--muted); font-size: 0.9rem; max-width: 46ch; }
+    .dl-more { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .saved { font-size: 0.82rem; color: var(--muted); }
+
+    .site-footer { border-top: 1px solid var(--line); padding-block: 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px)); color: var(--muted); font-size: 0.8rem; display: grid; gap: 0.5rem; }
+    .site-footer p { max-width: 90ch; }
+
+    .toast {
+      position: fixed; left: 50%; bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%) translateY(1rem);
+      max-width: calc(100vw - 32px); padding: 0.65rem 1rem; border-radius: 10px;
+      background: var(--ink); color: var(--bg); font-size: 0.9rem; box-shadow: 0 6px 24px rgb(0 0 0 / 0.2);
+      opacity: 0; pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; z-index: 30;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Matrix SVG styles live in a <style> element generated by the script, so the downloaded image uses the same rules. */
+
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+    @media print {
+      .prefs, .toolbar, .hint-line, .actions, .dl, .how summary, .ico, .skip-link, .toast { display: none !important; }
+      body { background: #fff; }
+      .step { break-inside: avoid-page; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="prefs wrap">
+    <a class="home-link" href="../">&larr; All tools</a>
+    <div class="seg" role="group" aria-label="Theme">
+      <button type="button" data-theme-choice="auto" aria-pressed="true">Auto</button>
+      <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+    </div>
+    <div class="seg font-size" role="group" aria-label="Text size">
+      <button type="button" data-font="s" aria-label="Small text" aria-pressed="false"><span class="fs-s">A</span></button>
+      <button type="button" data-font="m" aria-label="Medium text" aria-pressed="true"><span class="fs-m">A</span></button>
+      <button type="button" data-font="l" aria-label="Large text" aria-pressed="false"><span class="fs-l">A</span></button>
+    </div>
+  </div>
+
+  <header class="wrap hero">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+      <path d="M30 22 L45 7 L60 22 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M22 30 L7 45 L22 60 Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+      <rect x="30" y="30" width="30" height="30" rx="2" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M40 30v30M50 30v30M30 40h30M30 50h30" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+      <path d="M35.5 35h4M37.5 33v4M45.5 45h4M47.5 43v4M55.5 55h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <p class="eyebrow">Change management · Study tool</p>
+    <h1>Matrix of Change</h1>
+    <p class="lead">Map how today's practices and the practices you want to introduce reinforce or compete with each other, read how hard the transition will be, and plan what each practice turns into.</p>
+
+    <details class="how">
+      <summary>How the Matrix of Change works</summary>
+      <div class="how-body">
+        <div>
+          <h3>Four steps</h3>
+          <ol>
+            <li><strong>List the practices.</strong> Existing practices describe how the organisation works today. Target practices describe how it should work after the change. Group related ones, for example Information systems, Services, Organisation.</li>
+            <li><strong>Compare each system with itself.</strong> In the left triangle, mark how existing practices interact with each other. In the top triangle, do the same for target practices. Each diamond is where the diagonals of two practices meet.</li>
+            <li><strong>Compare the two systems.</strong> In the square transition matrix, mark how each existing practice (row) interacts with each target practice (column).</li>
+            <li><strong>Read the result.</strong> Check coherence, where to start, greenfield or brownfield, and the pace of change. Then decide what to keep, transform or phase out.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Signs</h3>
+          <ul class="sym-list">
+            <li><span class="sw p1">+</span><span><strong>Complementary.</strong> Doing more of one practice makes the other more valuable.</span></li>
+            <li><span class="sw n1">&minus;</span><span><strong>Competing.</strong> The two practices work against each other.</span></li>
+            <li><span class="sw p2">++</span><span><strong>Strong</strong> versions of either sign, when you want to show intensity.</span></li>
+            <li><span class="sw"></span><span><strong>Blank.</strong> No clear evidence either way.</span></li>
+          </ul>
+          <p>A plus sign does not mean an interaction is “good”, only that it is reinforcing. Try the UPS or GM example in step 01 to see a finished matrix.</p>
+        </div>
+      </div>
+    </details>
+  </header>
+
+  <main id="main" class="wrap">
+    <noscript><p class="empty">This tool needs JavaScript to run.</p></noscript>
+
+    <!-- 01 Set up -->
+    <section class="step" aria-labelledby="h-setup">
+      <div class="step-head">
+        <span class="num">01</span>
+        <h2 id="h-setup">Set up</h2>
+        <p class="sub">Name the change and choose how many practices you want to compare. You can add or remove practices at any time.</p>
+      </div>
+      <div class="card setup">
+        <div class="setup-col">
+          <label class="field">
+            <span class="lbl">Change initiative</span>
+            <input class="in" id="fTitle" type="text" maxlength="200" autocomplete="off" placeholder="e.g. Launching an online sales channel">
+          </label>
+          <label class="field">
+            <span class="lbl">Prepared by <span class="muted">(optional)</span></span>
+            <input class="in" id="fAuthor" type="text" maxlength="200" autocomplete="off" placeholder="Names or group number">
+          </label>
+          <label class="field">
+            <span class="lbl">Context <span class="muted">(optional)</span></span>
+            <textarea class="in" id="fDesc" maxlength="4000" rows="3" placeholder="What is changing, and why?"></textarea>
+          </label>
+        </div>
+        <div class="setup-col">
+          <div class="counts">
+            <div class="field">
+              <span class="lbl" id="lblCountEx">Existing practices</span>
+              <div class="stepper">
+                <button type="button" data-step="-1" data-kind="existing" aria-label="Fewer existing practices">&minus;</button>
+                <input type="number" id="countEx" data-kind="existing" min="1" max="20" inputmode="numeric" aria-labelledby="lblCountEx">
+                <button type="button" data-step="1" data-kind="existing" aria-label="More existing practices">+</button>
+              </div>
+              <span class="hint">Current processes or practices the change will affect.</span>
+            </div>
+            <div class="field">
+              <span class="lbl" id="lblCountTg">Target practices</span>
+              <div class="stepper">
+                <button type="button" data-step="-1" data-kind="target" aria-label="Fewer target practices">&minus;</button>
+                <input type="number" id="countTg" data-kind="target" min="1" max="20" inputmode="numeric" aria-labelledby="lblCountTg">
+                <button type="button" data-step="1" data-kind="target" aria-label="More target practices">+</button>
+              </div>
+              <span class="hint">New processes or practices you want to introduce.</span>
+            </div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="fRatings">
+            <span class="lbl">Stakeholder ratings</span>
+            <span class="hint">Rate how much stakeholders value each practice, from −2 to +2, to see where resistance is likely.</span>
+          </label>
+          <div class="field">
+            <span class="lbl">Start from an example</span>
+            <div class="actions">
+              <button type="button" class="btn" data-example="ups">UPS e-Logistics <span class="muted small">mostly +</span></button>
+              <button type="button" class="btn" data-example="gm">GM direct sales <span class="muted small">many &minus;</span></button>
+            </div>
+            <span class="hint">Both cases come from Lizeo (2018), the paper used in class.</span>
+          </div>
+        </div>
+        <div class="actions" style="grid-column: 1 / -1">
+          <button type="button" class="btn" id="btnOpen">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 10.5v-8M4.5 6 8 2.5 11.5 6M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Open a saved project
+          </button>
+          <input type="file" id="fileOpen" accept=".json,.html,application/json,text/html" hidden>
+          <span class="sep"></span>
+          <button type="button" class="btn quiet danger" id="btnReset">Start over</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 Practices -->
+    <section class="step" aria-labelledby="h-prac">
+      <div class="step-head">
+        <span class="num">02</span>
+        <h2 id="h-prac">List the practices</h2>
+        <p class="sub">Write short names. Practices with the same group are shown together in the matrix, so keep each group in one block.</p>
+      </div>
+      <div class="lists" id="lists">
+        <div class="card list-card">
+          <div class="list-head">
+            <h3>Existing practices</h3>
+            <p>How the organisation works today</p>
+          </div>
+          <ul class="prac-list" id="listEx" aria-label="Existing practices"></ul>
+          <div><button type="button" class="btn quiet" data-add="existing">+ Add existing practice</button></div>
+          <datalist id="dl-existing"></datalist>
+        </div>
+        <div class="card list-card">
+          <div class="list-head">
+            <h3>Target practices</h3>
+            <p>How it should work after the change</p>
+          </div>
+          <ul class="prac-list" id="listTg" aria-label="Target practices"></ul>
+          <div><button type="button" class="btn quiet" data-add="target">+ Add target practice</button></div>
+          <datalist id="dl-target"></datalist>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Matrix -->
+    <section class="step" aria-labelledby="h-matrix">
+      <div class="step-head">
+        <span class="num">03</span>
+        <h2 id="h-matrix">Mark the interactions</h2>
+        <p class="sub">Pick a sign, then click or tap cells. Click a cell again to clear it. The left triangle compares existing practices, the top triangle compares target practices, and the square compares the two.</p>
+      </div>
+      <div class="toolbar">
+        <div class="brushes" role="group" aria-label="Sign to apply">
+          <button type="button" class="brush" data-brush="2" aria-pressed="false"><span class="sw p2">++</span>Strongly complementary</button>
+          <button type="button" class="brush" data-brush="1" aria-pressed="true"><span class="sw p1">+</span>Complementary</button>
+          <button type="button" class="brush" data-brush="-1" aria-pressed="false"><span class="sw n1">&minus;</span>Competing</button>
+          <button type="button" class="brush" data-brush="-2" aria-pressed="false"><span class="sw n2">&minus;&minus;</span>Strongly competing</button>
+          <button type="button" class="brush" data-brush="0" aria-pressed="false"><span class="sw">&nbsp;</span>Erase</button>
+        </div>
+        <button type="button" class="btn quiet danger" id="btnClearSigns">Clear all signs</button>
+      </div>
+      <div class="matrix-scroll" id="matrixWrap"></div>
+      <p class="inspect" id="inspect" aria-live="polite"></p>
+      <p class="hint-line"><span class="kbd-hint">Drag with the mouse to paint several cells. Keyboard: <kbd>Tab</kbd> to reach a part of the matrix, arrows to move, <kbd>+</kbd> <kbd>&minus;</kbd> to change a sign, <kbd>0</kbd> to clear. </span>Click a practice name in the matrix to edit it. On a small screen, scroll the matrix sideways.</p>
+      <p class="legend" id="planLegend"><span><b class="g-keep">✓</b> keep</span><span><b class="g-transform">→</b> transform into the target in the dashed cell</span><span><b class="g-phaseout">✕</b> phase out</span><span>Set these in step 05.</span></p>
+    </section>
+
+    <!-- 04 Analysis -->
+    <section class="step" aria-labelledby="h-analysis">
+      <div class="step-head">
+        <span class="num">04</span>
+        <h2 id="h-analysis">Read the results</h2>
+        <p class="sub">The readings update as you mark the matrix. They follow the questions the Matrix of Change was designed to answer: feasibility, sequence, location, pace and stakeholders.</p>
+      </div>
+      <div class="summary" id="summary"></div>
+      <ol class="guide" id="guide"></ol>
+      <p class="note">These readings apply simple rules of thumb to your signs. Use them as prompts for your own argument, not as answers.</p>
+    </section>
+
+    <!-- 05 Plan -->
+    <section class="step" aria-labelledby="h-plan">
+      <div class="step-head">
+        <span class="num">05</span>
+        <h2 id="h-plan">Plan the transformation</h2>
+        <p class="sub">Decide what happens to each existing practice: keep it, transform it into a target practice, or phase it out. The suggestion comes from its row in the transition matrix.</p>
+      </div>
+      <div class="card plan" id="plan"></div>
+      <h3 class="sub-h">Target practices at a glance</h3>
+      <div class="card table-scroll" id="targets"></div>
+      <label class="field sub-h">
+        <span class="lbl">Notes and conclusions</span>
+        <textarea class="in" id="fNotes" rows="5" maxlength="20000" placeholder="Your interpretation, assumptions and recommendations."></textarea>
+      </label>
+    </section>
+
+    <!-- 06 Download -->
+    <section class="step" aria-labelledby="h-dl">
+      <div class="step-head">
+        <span class="num">06</span>
+        <h2 id="h-dl">Download your work</h2>
+        <p class="sub">Your work is saved automatically in this browser only. Download a copy to hand it in, keep it safe or continue on another device.</p>
+      </div>
+      <div class="card dl">
+        <div class="dl-main">
+          <button type="button" class="btn primary big" id="btnZip">
+            <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download everything (.zip)
+          </button>
+          <p>The matrix as an image (PNG and SVG), a printable report, the data as a spreadsheet (CSV) and a project file you can open here again.</p>
+        </div>
+        <div class="dl-more" aria-label="Download one file">
+          <button type="button" class="btn" data-dl="png">Image (PNG)</button>
+          <button type="button" class="btn" data-dl="report">Report (HTML)</button>
+          <button type="button" class="btn" data-dl="csv">Spreadsheet (CSV)</button>
+          <button type="button" class="btn" data-dl="json">Project file (JSON)</button>
+          <button type="button" class="btn" data-dl="print">Print or save as PDF</button>
+        </div>
+        <p class="saved" id="savedAt" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p><strong>Disclaimer.</strong> This page is a study aid for courses on digital transformation and change management at NOVA IMS. It is not an official university resource. Everything you enter stays in your browser.</p>
+    <p>Method: Brynjolfsson, E., Renshaw, A. A. &amp; Van Alstyne, M. (1997). The Matrix of Change: A Tool for Business Process Reengineering. <em>Sloan Management Review</em>, Winter 1997, 37–54. Examples: Lizeo, E. (2018). Applications of the Matrix of Change: Evaluating and Managing Business Transformation.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (function () {
+    "use strict";
+
+    // ---------- Helpers ----------
+    const $ = (s, el) => (el || document).querySelector(s);
+    const $$ = (s, el) => Array.from((el || document).querySelectorAll(s));
+    const root = document.documentElement;
+    const MAX = 20;
+    const KEYS = { project: "moc.project.v1", brush: "moc.brush", theme: "cmq.theme", font: "cmq.font" };
+    const store = {
+      get(k) { try { const v = localStorage.getItem(k); return v == null ? null : JSON.parse(v); } catch (e) { return null; } },
+      set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+      remove(k) { try { localStorage.removeItem(k); } catch (e) { /* storage unavailable */ } },
+    };
+    const MINUS = "−";
+    const SYM = { "2": "++", "1": "+", "-1": MINUS, "-2": MINUS + MINUS };
+    const MEANING = { "2": "strongly complementary", "1": "complementary", "0": "no clear interaction", "-1": "competing", "-2": "strongly competing" };
+    const ACTIONS = { keep: "Keep", transform: "Transform into…", phaseout: "Phase out" };
+    const ACTION_SHORT = { keep: "Keep", transform: "Transform", phaseout: "Phase out" };
+    const GLYPH = { keep: "✓", transform: "→", phaseout: "✕" };
+    const FONT = 'Arial, "Liberation Sans", "Helvetica Neue", Helvetica, sans-serif';
+    const REGION = { ex: "Existing system", tg: "Target system", tr: "Transition" };
+
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const f1 = (x) => Math.round(x * 10) / 10;
+    const uid = (p) => p + Math.random().toString(36).slice(2, 9);
+    const clampV = (v) => Math.max(-2, Math.min(2, v));
+    const plural = (k, one, many) => k + " " + (k === 1 ? one : (many || one + "s"));
+    const q = (s) => "“" + s + "”";
+    const fmtRating = (r) => (r == null ? "" : r > 0 ? "+" + r : r < 0 ? MINUS + Math.abs(r) : "0");
+    function listQ(names, max) {
+      max = max || 3;
+      const shown = names.slice(0, max).map(q);
+      const rest = names.length - shown.length;
+      if (rest > 0) shown.push(plural(rest, "other"));
+      if (shown.length <= 1) return shown.join("");
+      return shown.slice(0, -1).join(", ") + " and " + shown[shown.length - 1];
+    }
+    function listRaw(items) {
+      if (items.length <= 1) return items.join("");
+      return items.slice(0, -1).join(", ") + " and " + items[items.length - 1];
+    }
+    const remPx = () => parseFloat(getComputedStyle(root).fontSize) || 16;
+
+    let measureCtx = null;
+    function textW(str, font) {
+      if (!measureCtx) measureCtx = document.createElement("canvas").getContext("2d");
+      measureCtx.font = font;
+      return measureCtx.measureText(str).width;
+    }
+    // Words, with a break opportunity after each hyphen ("e-Dealerships" can wrap as "e-" / "Dealerships").
+    function tokenize(text) {
+      const out = [];
+      String(text).split(/\s+/).filter(Boolean).forEach((w) => {
+        w.replace(/-(?=[^-])/g, "-\u0000").split("\u0000").forEach((t, k) => out.push({ t, sp: k === 0 }));
+      });
+      return out;
+    }
+    // Word-wrap into at most maxLines lines of maxW pixels; the last line gets an ellipsis when cut.
+    // In strict mode, return null rather than split a word or cut the text.
+    function wrapText(text, maxW, maxLines, font, strict) {
+      const lines = [];
+      let cur = "";
+      for (const tok of tokenize(text)) {
+        let w = tok.t;
+        const test = cur ? cur + (tok.sp ? " " : "") + w : w;
+        if (textW(test, font) <= maxW) { cur = test; continue; }
+        if (cur) { lines.push(cur); cur = ""; }
+        if (strict && textW(w, font) > maxW) return null;
+        while (w.length > 1 && textW(w, font) > maxW) {
+          let k = w.length - 1;
+          while (k > 1 && textW(w.slice(0, k), font) > maxW) k--;
+          lines.push(w.slice(0, k));
+          w = w.slice(k);
+        }
+        cur = w;
+      }
+      if (cur) lines.push(cur);
+      if (lines.length <= maxLines) return { lines, cut: false };
+      if (strict) return null;
+      const kept = lines.slice(0, maxLines);
+      let last = kept[maxLines - 1] + "…";
+      while (last.length > 1 && textW(last, font) > maxW) last = last.slice(0, -2) + "…";
+      kept[maxLines - 1] = last;
+      return { lines: kept, cut: true };
+    }
+    // Fit short bold text (group names) into up to maxLines lines, shrinking the font a little if needed.
+    function fitText(text, maxW, maxLines, fs) {
+      for (let f = fs; f >= fs * 0.78 - 0.01; f -= 0.5) {
+        for (let k = 1; k <= maxLines; k++) {
+          const r = wrapText(text, maxW, k, "700 " + f1(f) + "px " + FONT, true);
+          if (r) return { lines: r.lines, fs: f1(f), k };
+        }
+      }
+      const f = f1(fs * 0.78);
+      return { lines: wrapText(text, maxW, maxLines, "700 " + f + "px " + FONT).lines, fs: f, k: maxLines };
+    }
+
+    // ---------- Project state ----------
+    function newPractice(prefix) { return { id: uid(prefix), name: "", group: "", rating: null }; }
+    function blankProject(n, m) {
+      return {
+        app: "matrix-of-change", version: 1,
+        title: "", author: "", description: "", notes: "",
+        showRatings: false,
+        existing: Array.from({ length: n }, () => newPractice("e")),
+        target: Array.from({ length: m }, () => newPractice("t")),
+        ex: {}, tg: {}, tr: {}, plan: {},
+        updated: null,
+      };
+    }
+    const pairKey = (a, b) => (a < b ? a + "|" + b : b + "|" + a);
+    const keyOf = (r, a, b) => (r === "tr" ? a + "|" + b : pairKey(a, b));
+    const getV = (r, a, b) => state[r][keyOf(r, a, b)] || 0;
+    function setV(r, a, b, v) { const k = keyOf(r, a, b); if (v) state[r][k] = v; else delete state[r][k]; }
+    const idxOf = (kind, id) => state[kind].findIndex((p) => p.id === id);
+    function nameOf(kind, i) {
+      const p = state[kind][i];
+      return (p && p.name.trim()) || (kind === "existing" ? "Existing practice " : "Target practice ") + (i + 1);
+    }
+    const nameById = (kind, id) => nameOf(kind, idxOf(kind, id));
+    const codeOf = (kind, i) => (kind === "existing" ? "E" : "T") + (i + 1);
+
+    function hasInteractions(id) {
+      return ["ex", "tg", "tr"].some((r) => Object.keys(state[r]).some((k) => k.split("|").indexOf(id) !== -1));
+    }
+    function practiceHasContent(p) { return !!(p.name.trim() || p.group.trim() || p.rating != null || hasInteractions(p.id)); }
+    function projectHasContent() {
+      return !!(state.title.trim() || state.description.trim() || state.notes.trim() ||
+        state.existing.some(practiceHasContent) || state.target.some(practiceHasContent) ||
+        Object.values(state.plan).some((p) => p.action || p.note));
+    }
+
+    function str(v, max) { return typeof v === "string" ? v.slice(0, max) : ""; }
+    // Validate anything loaded from storage or a file.
+    function normalize(raw) {
+      if (!raw || typeof raw !== "object" || !Array.isArray(raw.existing) || !Array.isArray(raw.target)) {
+        throw new Error("This file is not a Matrix of Change project.");
+      }
+      const p = blankProject(0, 0);
+      p.title = str(raw.title, 200); p.author = str(raw.author, 200);
+      p.description = str(raw.description, 4000); p.notes = str(raw.notes, 20000);
+      p.showRatings = !!raw.showRatings;
+      p.updated = typeof raw.updated === "string" ? raw.updated.slice(0, 40) : null;
+      const seen = new Set();
+      const prac = (arr, pre) => arr.slice(0, MAX).map((x) => {
+        x = x && typeof x === "object" ? x : {};
+        let id = typeof x.id === "string" && /^[a-z0-9]{2,24}$/i.test(x.id) && !seen.has(x.id) ? x.id : uid(pre);
+        seen.add(id);
+        const rt = Number.isInteger(x.rating) && x.rating >= -2 && x.rating <= 2 ? x.rating : null;
+        return { id, name: str(x.name, 120), group: str(x.group, 60), rating: rt };
+      });
+      p.existing = prac(raw.existing, "e");
+      p.target = prac(raw.target, "t");
+      if (!p.existing.length) p.existing.push(newPractice("e"));
+      if (!p.target.length) p.target.push(newPractice("t"));
+      const E = new Set(p.existing.map((x) => x.id)), T = new Set(p.target.map((x) => x.id));
+      const okV = (v) => Number.isInteger(v) && v >= -2 && v <= 2 && v !== 0;
+      const copy = (src, dst, inA, inB, pair) => {
+        if (!src || typeof src !== "object") return;
+        Object.keys(src).forEach((k) => {
+          const [a, b] = k.split("|");
+          if (inA.has(a) && inB.has(b) && a !== b && okV(src[k])) dst[pair ? pairKey(a, b) : a + "|" + b] = src[k];
+        });
+      };
+      copy(raw.ex, p.ex, E, E, true);
+      copy(raw.tg, p.tg, T, T, true);
+      copy(raw.tr, p.tr, E, T, false);
+      if (raw.plan && typeof raw.plan === "object") {
+        p.existing.forEach((x) => {
+          const pl = raw.plan[x.id];
+          if (!pl || typeof pl !== "object") return;
+          const action = ACTIONS[pl.action] ? pl.action : "";
+          const into = typeof pl.into === "string" && T.has(pl.into) ? pl.into : "";
+          const note = str(pl.note, 500);
+          if (action || into || note) p.plan[x.id] = { action, into, note };
+        });
+      }
+      return p;
+    }
+
+    // ---------- Examples (Lizeo, 2018, Figures 2 and 3) ----------
+    function buildExample(title, desc, ex, tg, exPairs, tgPairs, trRows) {
+      const p = blankProject(0, 0);
+      p.title = title; p.description = desc;
+      p.existing = ex.map(([name, group]) => Object.assign(newPractice("e"), { name, group }));
+      p.target = tg.map(([name, group]) => Object.assign(newPractice("t"), { name, group }));
+      exPairs.forEach(([i, j, v]) => { p.ex[pairKey(p.existing[i - 1].id, p.existing[j - 1].id)] = v; });
+      tgPairs.forEach(([i, j, v]) => { p.tg[pairKey(p.target[i - 1].id, p.target[j - 1].id)] = v; });
+      trRows.forEach((row, i) => Array.from(row).forEach((ch, j) => {
+        const v = ch === "+" ? 1 : ch === "-" ? -1 : 0;
+        if (v) p.tr[p.existing[i].id + "|" + p.target[j].id] = v;
+      }));
+      return p;
+    }
+    const EXAMPLES = {
+      ups: () => buildExample(
+        "UPS e-Logistics",
+        "Assessing UPS's new e-Logistics venture (Lizeo, 2018, Figure 2). The venture builds on UPS's existing systems, services and culture.",
+        [["Tracking system", "Information systems"], ["Relational database", "Information systems"], ["Fleet connectivity", "Information systems"],
+         ["Customer call center services", "Services"], ["Logistics support (business customers)", "Services"], ["Order status and package information", "Services"],
+         ["Operations excellence", "Organization"], ["Employee ownership", "Organization"], ["Brand strength", "Organization"]],
+        [["Electronic tracking", "Information systems"], ["Database connectivity (systems integration)", "Information systems"],
+         ["Fulfillment and returns management", "Customer services"], ["Call center support and configuration to order", "Customer services"],
+         ["E-procurement", "E-services"], ["E-supply chain services (demand and inventory management)", "E-services"]],
+        [[1, 2], [1, 3], [1, 4], [1, 5], [1, 6], [1, 7], [2, 3], [2, 4], [2, 5], [2, 6], [2, 7], [3, 6], [3, 7], [3, 8],
+         [4, 5], [4, 6], [4, 7], [4, 8], [4, 9], [5, 7], [5, 8], [5, 9], [7, 8], [7, 9], [8, 9]].map((x) => x.concat(1)),
+        [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [1, 3], [2, 4], [3, 5], [1, 4], [3, 6], [1, 5]].map((x) => x.concat(1)),
+        ["+++...", "++++++", "+..+..", ".+++..", ".++.++", "++++..", "..++..", "..++..", "..++++"]
+      ),
+      gm: () => buildExample(
+        "GM direct sales channel",
+        "Evaluating an Internet direct sales channel for General Motors (Lizeo, 2018, Figure 3). The direct model clashes with the dealer-based sales system.",
+        [["Pamphlets / sales people", "Dealerships"], ["Localized comparison", "Dealerships"], ["Price negotiation", "Purchasing"],
+         ["Salesmanship", "Purchasing"], ["Limited options", "Manufacturing and distribution"], ["Dealership inventory", "Manufacturing and distribution"]],
+        [["Electronic information", "e-Dealerships"], ["Global comparison", "e-Dealerships"], ["New pricing model", "Purchasing"],
+         ["Online purchasing", "Purchasing"], ["Customer orders", "Manufacturing and distribution"], ["Direct from factory or dealership", "Manufacturing and distribution"]],
+        [[1, 2, 1], [1, 3, 1], [2, 4, 1], [2, 5, -1], [3, 5, 1], [3, 6, -1], [4, 5, 1], [5, 6, -1]],
+        [[1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [3, 5], [4, 6]].map((x) => x.concat(1)),
+        ["+.--..", "---.--", "----+-", ".---+-", "..+.-.", "...+++"]
+      ),
+    };
+
+    let state;
+    try { const saved = store.get(KEYS.project); state = saved ? normalize(saved) : blankProject(4, 4); }
+    catch (e) { state = blankProject(4, 4); }
+
+    // ---------- Analysis ----------
+    function stat(vals, total) {
+      const s = { p1: 0, p2: 0, n1: 0, n2: 0 };
+      vals.forEach((v) => { if (v === 1) s.p1++; else if (v === 2) s.p2++; else if (v === -1) s.n1++; else if (v === -2) s.n2++; });
+      const posW = s.p1 + 2 * s.p2, negW = s.n1 + 2 * s.n2;
+      s.pos = s.p1 + s.p2; s.neg = s.n1 + s.n2; s.filled = s.pos + s.neg; s.total = total; s.blank = total - s.filled;
+      s.balance = s.filled ? (posW - negW) / (posW + negW) : null;
+      return s;
+    }
+    function suggestRow(r) {
+      if (!r.posW && !r.negW) return { key: "neutral", label: "No clear link", why: "Not linked to any target practice, so it neither helps nor blocks the change." };
+      if (!r.negW) return { key: "leverage", label: "Leverage", why: "Supports " + listQ(r.supports) + ". Keep it and build on it." };
+      const ripple = r.exPos >= 2 ? " Tied to " + plural(r.exPos, "other current practice") + ", so expect knock-on effects." : "";
+      if (!r.posW) return { key: "phaseout", label: "Phase out or redesign", why: "Competes with " + listQ(r.conflicts) + "." + ripple };
+      return { key: "redesign", label: "Redesign", why: "Supports " + listQ(r.supports, 2) + " but competes with " + listQ(r.conflicts, 2) + ". Adapt it." + ripple };
+    }
+    function suggestCol(c) {
+      if (!c.posW && !c.negW) return { key: "neutral", label: "Unlinked", why: "No link to current practices yet." };
+      if (!c.negW) return { key: "leverage", label: "Quick win", why: "Builds on " + listQ(c.supportedBy) + "." };
+      if (!c.posW) return { key: "phaseout", label: "Needs groundwork", why: "Competes with " + listQ(c.conflictsWith) + "." };
+      return { key: "redesign", label: "Mixed support", why: "Helped by " + listQ(c.supportedBy, 2) + ", blocked by " + listQ(c.conflictsWith, 2) + "." };
+    }
+    function analyse() {
+      const E = state.existing, T = state.target, n = E.length, m = T.length;
+      const exV = [], tgV = [], trV = [], exPairs = [], tgPairs = [];
+      for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) { const v = getV("ex", E[i].id, E[j].id); exV.push(v); if (v) exPairs.push({ i, j, v }); }
+      for (let i = 0; i < m; i++) for (let j = i + 1; j < m; j++) { const v = getV("tg", T[i].id, T[j].id); tgV.push(v); if (v) tgPairs.push({ i, j, v }); }
+      const rows = E.map((p, i) => ({ i, id: p.id, name: nameOf("existing", i), rating: p.rating, posW: 0, negW: 0, supports: [], conflicts: [], exPos: 0, exNeg: 0 }));
+      const cols = T.map((p, j) => ({ j, id: p.id, name: nameOf("target", j), rating: p.rating, posW: 0, negW: 0, supportedBy: [], conflictsWith: [], tgPos: 0, tgNeg: 0 }));
+      for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) {
+        const v = getV("tr", E[i].id, T[j].id);
+        trV.push(v);
+        if (v > 0) { rows[i].posW += v; rows[i].supports.push(cols[j].name); cols[j].posW += v; cols[j].supportedBy.push(rows[i].name); }
+        else if (v < 0) { rows[i].negW -= v; rows[i].conflicts.push(cols[j].name); cols[j].negW -= v; cols[j].conflictsWith.push(rows[i].name); }
+      }
+      exPairs.forEach(({ i, j, v }) => { const k = v > 0 ? "exPos" : "exNeg"; rows[i][k]++; rows[j][k]++; });
+      tgPairs.forEach(({ i, j, v }) => { const k = v > 0 ? "tgPos" : "tgNeg"; cols[i][k]++; cols[j][k]++; });
+      rows.forEach((r) => { r.sug = suggestRow(r); });
+      cols.forEach((c) => { c.score = c.posW - c.negW + 0.5 * (c.tgPos - c.tgNeg); c.sug = suggestCol(c); });
+      return { n, m, ex: stat(exV, n * (n - 1) / 2), tg: stat(tgV, m * (m - 1) / 2), tr: stat(trV, n * m), exPairs, tgPairs, rows, cols };
+    }
+    function verdict(b, kind) {
+      if (b == null) return { text: "Not mapped yet", tone: "none" };
+      const W = kind === "tr" ? ["Smooth", "Mostly smooth", "Mixed", "Difficult", "Very difficult"] : ["Highly coherent", "Mostly coherent", "Mixed", "Weak coherence", "Incoherent"];
+      if (b >= 0.5) return { text: W[0], tone: "good" };
+      if (b >= 0.15) return { text: W[1], tone: "good" };
+      if (b > -0.15) return { text: W[2], tone: "mid" };
+      if (b > -0.5) return { text: W[3], tone: "bad" };
+      return { text: W[4], tone: "bad" };
+    }
+    const band = (b) => (b == null ? "none" : b >= 0.15 ? "pos" : b > -0.15 ? "mixed" : "neg");
+
+    function guidance(a) {
+      const out = [];
+      if (a.ex.filled + a.tg.filled + a.tr.filled === 0) return out;
+      const pairTxt = (p, kind) => q(nameOf(kind, p.i)) + " vs " + q(nameOf(kind, p.j));
+      const notMapped = { lead: "Map the transition first.", text: "This reading comes from the square transition matrix." };
+
+      // Feasibility: target system
+      {
+        const conflicts = a.tgPairs.filter((p) => p.v < 0).map((p) => pairTxt(p, "target"));
+        const b = band(a.tg.balance);
+        let lead, text;
+        if (b === "none") { lead = "Not mapped yet."; text = "Fill in the top triangle to check whether the target practices support each other."; }
+        else if (b === "pos" && !conflicts.length) { lead = "Yes."; text = "The target practices reinforce each other (" + plural(a.tg.pos, "complementary link") + ", no conflicts), so the new system should be stable once it is in place."; }
+        else if (b === "pos") { lead = "Mostly."; text = "The target practices largely reinforce each other, but check " + listRaw(conflicts.slice(0, 3)) + ". Consider redesigning one practice in each competing pair."; }
+        else { lead = b === "mixed" ? "Partly." : "Not yet."; text = "The target system has " + a.tg.pos + " complementary and " + a.tg.neg + " competing links. An incoherent target is unstable: rethink or drop one practice in each competing pair" + (conflicts.length ? ", starting with " + listRaw(conflicts.slice(0, 3)) : "") + "."; }
+        out.push({ title: "Will the new system hold together?", lead, text });
+      }
+      // Feasibility: existing system
+      {
+        const b = band(a.ex.balance);
+        let lead, text;
+        if (b === "none") { lead = "Not mapped yet."; text = "Fill in the left triangle to see how tightly the current practices depend on each other."; }
+        else if (a.ex.balance >= 0.5 && a.ex.pos >= Math.max(2, a.n - 1)) { lead = "Tightly linked."; text = plural(a.ex.pos, "complementary link") + " hold the current practices together. That coherence is a strength today, but it makes piecemeal change hard: weakening one practice lowers the value of the others."; }
+        else if (b === "pos") { lead = "Fairly coherent."; text = "The current practices mostly support each other (" + a.ex.pos + " complementary, " + a.ex.neg + " competing). Expect pushback where practices are tied together."; }
+        else { lead = "Loosely linked."; text = "The current practices are loosely linked or already in tension (" + a.ex.pos + " complementary, " + a.ex.neg + " competing). Fewer practices will defend each other, which can make change easier."; }
+        out.push({ title: "How hard is the current system to change?", lead, text });
+      }
+      // Transition
+      const hot = a.rows.filter((r) => r.negW > 0).sort((x, y) => y.negW - x.negW || y.conflicts.length - x.conflicts.length).slice(0, 3);
+      const bridges = a.rows.filter((r) => r.posW > 0 && !r.negW).sort((x, y) => y.posW - x.posW).slice(0, 3);
+      const hotTxt = hot.map((r) => q(r.name) + " (" + plural(r.conflicts.length, "conflict") + ")");
+      const tb = band(a.tr.balance);
+      {
+        let lead, text;
+        const br = bridges.length ? " Strongest bridges: " + listQ(bridges.map((r) => r.name)) + "." : "";
+        const fr = hot.length ? " Friction points: " + listRaw(hotTxt) + "." : "";
+        if (tb === "none") { lead = "Not mapped yet."; text = "Fill in the square matrix to compare each current practice with each target practice."; }
+        else if (tb === "pos") { lead = a.tr.balance >= 0.5 ? "Smooth." : "Mostly smooth."; text = "Most links between current and target practices are complementary (" + a.tr.pos + " complementary, " + a.tr.neg + " competing)." + br + fr; }
+        else if (tb === "mixed") { lead = "Mixed."; text = "Some current practices help the change and others block it (" + a.tr.pos + " complementary, " + a.tr.neg + " competing)." + fr + br; }
+        else { lead = "Difficult."; text = "Conflicts outweigh complements (" + a.tr.neg + " competing, " + a.tr.pos + " complementary)." + fr + br; }
+        out.push({ title: "How difficult is the transition?", lead, text });
+      }
+      // Sequence
+      if (tb === "none") out.push(Object.assign({ title: "Where should the change start?" }, notMapped));
+      else {
+        const start = a.cols.filter((c) => !c.negW && c.score > 0).sort((x, y) => y.score - x.score).slice(0, 3);
+        const prep = a.cols.filter((c) => c.negW > 0).sort((x, y) => y.negW - x.negW).slice(0, 3);
+        let lead = start.length ? "Start with " + listQ(start.map((c) => c.name)) + "." : "No easy starting point.";
+        let text = start.length ? (start.length > 1 ? "They build" : "It builds") + " on current practices without competing with them." : "Every linked target practice competes with at least one current practice, so plan the groundwork first.";
+        if (prep.length) text += " Prepare the ground before introducing " + prep.map((c) => q(c.name) + " (competes with " + listQ(c.conflictsWith, 2) + ")").join("; ") + ".";
+        if (a.tgPairs.some((p) => p.v > 0)) text += " Introduce complementary target practices together, because each raises the value of the other.";
+        out.push({ title: "Where should the change start?", lead, text });
+      }
+      // Location
+      if (tb === "none") out.push(Object.assign({ title: "Greenfield or brownfield?" }, notMapped));
+      else if (tb === "pos") out.push({ title: "Greenfield or brownfield?", lead: "Brownfield.", text: "The new system can grow inside the existing organisation and reuse its assets, as UPS did with e-Logistics." });
+      else if (tb === "mixed") out.push({ title: "Greenfield or brownfield?", lead: "Hybrid.", text: "Build the reinforcing practices in place, and pilot the competing ones in a protected unit, site or channel." });
+      else out.push({ title: "Greenfield or brownfield?", lead: "Greenfield.", text: "Consider a separate unit, site or channel where the new practices can start without the old ones. When a new system fundamentally conflicts with existing practices, more separation may be needed (Lizeo, 2018)." + (a.ex.balance != null && a.ex.balance >= 0.5 ? " The tight coherence of the current system strengthens this case." : "") });
+      // Pace
+      if (tb === "none") out.push(Object.assign({ title: "How fast, and how radical?" }, notMapped));
+      else if (tb === "pos") out.push({ title: "How fast, and how radical?", lead: "Incremental.", text: "A staged rollout is feasible because each step builds on what already exists." });
+      else if (tb === "mixed") out.push({ title: "How fast, and how radical?", lead: "Staged, in clusters.", text: "Move practices that are linked to each other at the same time, so old and new practices never sit side by side in conflict." });
+      else out.push({ title: "How fast, and how radical?", lead: "Radical and fast.", text: "Change the competing practices together, as one system. A slow, piece-by-piece shift would leave old and new practices undermining each other." });
+      // Stakeholders
+      if (state.showRatings) {
+        const anyRated = state.existing.concat(state.target).some((p) => p.rating != null);
+        if (!anyRated) out.push({ title: "Where will stakeholders push back?", lead: "No ratings yet.", text: "Rate the practices in step 02 to see where resistance is likely." });
+        else {
+          const resist = a.rows.filter((r) => r.rating != null && r.rating >= 1 && r.negW > 0);
+          const letGo = a.rows.filter((r) => r.rating != null && r.rating <= -1 && r.negW > 0);
+          const sceptic = a.cols.filter((c) => c.rating != null && c.rating <= -1);
+          const welcome = a.cols.filter((c) => c.rating != null && c.rating >= 1);
+          const withR = (arr) => listRaw(arr.slice(0, 3).map((x) => q(x.name) + " (" + fmtRating(x.rating) + ")"));
+          const parts = [];
+          if (resist.length) parts.push("Stakeholders value " + withR(resist) + ", but " + (resist.length > 1 ? "these compete" : "it competes") + " with the target system.");
+          if (letGo.length) parts.push("Easier to let go: " + withR(letGo) + ".");
+          if (sceptic.length) parts.push("Build support for " + withR(sceptic) + ".");
+          if (welcome.length) parts.push("Already welcomed: " + withR(welcome) + ".");
+          out.push({ title: "Where will stakeholders push back?", lead: resist.length ? "Expect resistance." : "Low resistance expected.", text: parts.join(" ") || "The ratings do not point to clear tensions." });
+        }
+      }
+      return out;
+    }
+
+    // ---------- Matrix drawing (SVG) ----------
+    const LIGHT = {
+      surface: "#ffffff", ink: "#121b26", muted: "#535f6e", grid: "#c5cdd8", gridStrong: "#8a96a6",
+      label: "#f3f5f8", group: "#e7ebf1", pos1: "#e1f2e7", pos2: "#c4e7d1", neg1: "#fbe5e2", neg2: "#f2c2bb",
+      posInk: "#17693f", negInk: "#ab2117", accent: "#1f5fbf", hl: "#e2eafa",
+    };
+    const VARS = Object.fromEntries(Object.keys(LIGHT).map((k) => [k, "var(--m-" + k + ")"]));
+    function svgCSS(P) {
+      const s = "svg.moc";
+      return [
+        `${s} text{font-family:${FONT};fill:${P.ink}}`,
+        `${s} .bg{fill:${P.surface}}`,
+        `${s} .frame{fill:${P.surface};stroke:${P.grid};stroke-width:1}`,
+        `${s} .c .f{fill:${P.surface};stroke:${P.grid};stroke-width:1}`,
+        `${s} .c[data-v="1"] .f{fill:${P.pos1}}`, `${s} .c[data-v="2"] .f{fill:${P.pos2}}`,
+        `${s} .c[data-v="-1"] .f{fill:${P.neg1}}`, `${s} .c[data-v="-2"] .f{fill:${P.neg2}}`,
+        `${s} .sym{font-weight:700;text-anchor:middle;dominant-baseline:central;pointer-events:none}`,
+        `${s} .c[data-v="1"] .sym,${s} .c[data-v="2"] .sym{fill:${P.posInk}}`,
+        `${s} .c[data-v="-1"] .sym,${s} .c[data-v="-2"] .sym{fill:${P.negInk}}`,
+        `${s} .lb{fill:${P.label};stroke:${P.grid}}`,
+        `${s} .lab text{dominant-baseline:central}`,
+        `${s} .ph text{fill:${P.muted};font-style:italic}`,
+        `${s} .gb{fill:${P.group};stroke:${P.grid}}`,
+        `${s} .gbt{font-weight:700;fill:${P.muted};text-anchor:middle;dominant-baseline:central}`,
+        `${s} .border{fill:none;stroke:${P.gridStrong};stroke-width:1.25}`,
+        `${s} .sep{stroke:${P.gridStrong};stroke-width:1.5}`,
+        `${s} .axis{font-weight:700;letter-spacing:.08em;fill:${P.muted}}`,
+        `${s} .tbox{fill:${P.label};stroke:${P.grid}}`,
+        `${s} .tlab{font-weight:700;letter-spacing:.1em;fill:${P.accent}}`,
+        `${s} .ttl{font-weight:700}`, `${s} .ttl.ph{fill:${P.muted}}`,
+        `${s} .tdesc{fill:${P.muted}}`,
+        `${s} .rt{fill:${P.label};stroke:${P.grid}}`,
+        `${s} .rv{text-anchor:middle;dominant-baseline:central;font-weight:700;fill:${P.muted}}`,
+        `${s} .rv.pos{fill:${P.posInk}}`, `${s} .rv.neg{fill:${P.negInk}}`,
+        `${s} .into{fill:none;stroke:${P.accent};stroke-width:2;stroke-dasharray:4 3;pointer-events:none}`,
+        `${s} .gly{dominant-baseline:central;font-weight:700}`,
+        `${s} .gly-keep{fill:${P.posInk}}`, `${s} .gly-transform{fill:${P.accent}}`, `${s} .gly-phaseout{fill:${P.negInk}}`,
+        `${s} .lab.hl .lb{fill:${P.hl}}`, `${s} .lab.hl text{fill:${P.accent}}`,
+        `${s} .cursor{fill:none;stroke:${P.accent};stroke-width:2.5;pointer-events:none}`,
+        `${s} .lg{dominant-baseline:central;fill:${P.muted}}`,
+        `${s} .c,${s} .lab{cursor:pointer}`, `${s} .c:focus{outline:none}`,
+      ].join("\n");
+    }
+    function layout(rem) {
+      const n = state.existing.length, m = state.target.length;
+      const s = Math.round(rem * 2.4);
+      const L = Math.round(rem * 12.5);
+      const H = Math.round(rem * 10.5);
+      // Group bands grow to two or three lines when a group name is long for the practices it spans.
+      const fsS = f1(rem * 0.64);
+      const linesFor = (list) => {
+        const runs = groupRuns(list).filter((ru) => ru.g);
+        if (!runs.length) return 0;
+        return Math.max.apply(null, runs.map((ru) => fitText(ru.g, (ru.end - ru.start + 1) * s - rem * 0.6, 3, fsS).k));
+      };
+      const kE = linesFor(state.existing), kT = linesFor(state.target);
+      const bandW = (k) => (k ? Math.round(Math.max(rem * 1.6, k * fsS * 1.2 + rem * 0.6)) : 0);
+      const gE = bandW(kE), gT = bandW(kT);
+      const r = state.showRatings ? Math.round(rem * 2.6) : 0;
+      const pad = Math.round(rem);
+      const xMat = pad + n * s / 2 + gE + L;
+      const yMat = pad + m * s / 2 + gT + H;
+      return { n, m, s, L, H, gE, gT, kE, kT, r, pad, xMat, yMat, X0: xMat - L - gE, YH: yMat - H - gT, W: xMat + m * s + r + pad, Hh: yMat + n * s + r + pad };
+    }
+    function groupRuns(list) {
+      const out = [];
+      list.forEach((p, i) => {
+        const g = p.group.trim();
+        const last = out[out.length - 1];
+        if (last && last.g === g) last.end = i; else out.push({ g, start: i, end: i });
+      });
+      return out;
+    }
+    function textBlock(lines, x, cy, lh, anchor, cls, fs) {
+      const off = (lines.length - 1) / 2;
+      return `<text class="${cls || ""}" font-size="${fs}" text-anchor="${anchor}">` +
+        lines.map((ln, k) => `<tspan x="${f1(x)}" y="${f1(cy + (k - off) * lh)}">${esc(ln)}</tspan>`).join("") + `</text>`;
+    }
+    function ariaFor(r, a, b, v) {
+      const A = r === "tg" ? nameById("target", a) : nameById("existing", a);
+      const B = r === "ex" ? nameById("existing", b) : nameById("target", b);
+      return REGION[r] + ": " + A + (r === "tr" ? " to " : " and ") + B + ", " + MEANING[v];
+    }
+    const planOf = (id) => state.plan[id] || { action: "", into: "", note: "" };
+
+    function buildSVG(exportMode) {
+      const rem = exportMode ? 16 : remPx();
+      const g = layout(rem);
+      const { n, m, s, L, H, gE, gT, kE, kT, r, pad, xMat, yMat, X0, YH } = g;
+      const E = state.existing, T = state.target;
+      const fsL = f1(rem * 0.76), fsS = f1(rem * 0.64), fsC = f1(rem * 0.9), fsT = f1(rem * 1.0);
+      const lh = f1(fsL * 1.2);
+      const fontL = fsL + "px " + FONT, fontT = "700 " + fsT + "px " + FONT;
+      const W = Math.ceil(g.W);
+      let HH = g.Hh;
+      const anyPlan = E.some((p) => planOf(p.id).action);
+      let leg = null;
+      if (exportMode) { leg = legendLayout(rem, W - 2 * pad, fsL, anyPlan); HH = g.Hh - pad + rem * 0.4 + leg.h + pad; }
+      HH = Math.ceil(HH);
+      const o = [];
+      const title = state.title.trim();
+      o.push(`<svg xmlns="http://www.w3.org/2000/svg" class="moc" width="${W}" height="${HH}" viewBox="0 0 ${W} ${HH}"${exportMode ? "" : ' role="group" aria-label="Matrix of Change grid"'}>`);
+      if (exportMode) o.push(`<title>${esc("Matrix of Change" + (title ? ": " + title : ""))}</title><style>${svgCSS(LIGHT)}</style>`);
+      o.push(`<rect class="bg" x="0" y="0" width="${W}" height="${HH}"/>`);
+
+      // Title box in the empty top-left corner, as in the original figures.
+      const bx = pad, by = pad, bw = xMat - pad - rem * 2.4, bh = yMat - pad - rem * 2.4;
+      if (bw > rem * 6 && bh > rem * 3.5) {
+        o.push(`<rect class="tbox" x="${f1(bx)}" y="${f1(by)}" width="${f1(bw)}" height="${f1(bh)}" rx="6"/>`);
+        const ix = bx + rem * 0.8, iw = bw - rem * 1.6, bottom = by + bh - rem * 0.6;
+        let ty = by + rem * 1.3;
+        o.push(`<text class="tlab" x="${f1(ix)}" y="${f1(ty)}" font-size="${fsS}">MATRIX OF CHANGE</text>`);
+        ty += rem * 0.35;
+        const tl = fsT * 1.25;
+        const tLines = wrapText(title || "Untitled", iw, Math.max(1, Math.min(3, Math.floor((bottom - ty) / tl))), fontT).lines;
+        tLines.forEach((ln) => { ty += tl; o.push(`<text class="ttl${title ? "" : " ph"}" x="${f1(ix)}" y="${f1(ty)}" font-size="${fsT}">${esc(ln)}</text>`); });
+        const dl = fsL * 1.35;
+        let space = Math.floor((bottom - ty - rem * 0.25) / dl);
+        const author = state.author.trim(), desc = state.description.trim();
+        if (author && space > 0) {
+          ty += dl + rem * 0.2;
+          o.push(`<text class="tdesc" x="${f1(ix)}" y="${f1(ty)}" font-size="${fsL}" font-weight="700">${esc(wrapText(author, iw, 1, "700 " + fontL).lines[0] || "")}</text>`);
+          space = Math.floor((bottom - ty) / dl);
+        }
+        if (desc && space > 0) {
+          if (!author) ty += rem * 0.2;
+          wrapText(desc, iw, space, fontL).lines.forEach((ln) => { ty += dl; o.push(`<text class="tdesc" x="${f1(ix)}" y="${f1(ty)}" font-size="${fsL}">${esc(ln)}</text>`); });
+        }
+      }
+
+      // Triangle frames: their uncovered edges form the half cells next to the labels.
+      o.push(`<polygon class="frame" points="${f1(X0)},${f1(yMat)} ${f1(X0 - n * s / 2)},${f1(yMat + n * s / 2)} ${f1(X0)},${f1(yMat + n * s)}"/>`);
+      o.push(`<polygon class="frame" points="${f1(xMat)},${f1(YH)} ${f1(xMat + m * s / 2)},${f1(YH - m * s / 2)} ${f1(xMat + m * s)},${f1(YH)}"/>`);
+
+      const cell = (rg, a, b, v, pts, cx, cy, i, j) => {
+        const body = `<polygon class="f" points="${pts}"/><text class="sym" x="${f1(cx)}" y="${f1(cy)}" font-size="${fsC}">${SYM[v] || ""}</text>`;
+        if (exportMode) return `<g class="c" data-v="${v}">${body}</g>`;
+        return `<g class="c" data-r="${rg}" data-a="${a}" data-b="${b}" data-i="${i}" data-j="${j}" data-v="${v}" data-pts="${pts}" tabindex="-1" role="button" aria-label="${esc(ariaFor(rg, a, b, v))}">${body}</g>`;
+      };
+      const diamond = (cx, cy, h) => `${f1(cx)},${f1(cy - h)} ${f1(cx + h)},${f1(cy)} ${f1(cx)},${f1(cy + h)} ${f1(cx - h)},${f1(cy)}`;
+      const rectPts = (x, y, w, h) => `${f1(x)},${f1(y)} ${f1(x + w)},${f1(y)} ${f1(x + w)},${f1(y + h)} ${f1(x)},${f1(y + h)}`;
+
+      for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+        const cx = X0 - (j - i) * s / 2, cy = yMat + (i + j + 1) * s / 2;
+        o.push(cell("ex", E[i].id, E[j].id, getV("ex", E[i].id, E[j].id), diamond(cx, cy, s / 2), cx, cy, i, j));
+      }
+      for (let i = 0; i < m; i++) for (let j = i + 1; j < m; j++) {
+        const cx = xMat + (i + j + 1) * s / 2, cy = YH - (j - i) * s / 2;
+        o.push(cell("tg", T[i].id, T[j].id, getV("tg", T[i].id, T[j].id), diamond(cx, cy, s / 2), cx, cy, i, j));
+      }
+      for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) {
+        const x = xMat + j * s, y = yMat + i * s;
+        o.push(cell("tr", E[i].id, T[j].id, getV("tr", E[i].id, T[j].id), rectPts(x, y, s, s), x + s / 2, y + s / 2, i, j));
+      }
+      o.push(`<rect class="border" x="${f1(xMat)}" y="${f1(yMat)}" width="${m * s}" height="${n * s}"/>`);
+
+      // Stakeholder ratings: a column to the right (existing) and a row below (target).
+      if (r) {
+        const rv = (val, cx, cy) => `<text class="rv${val > 0 ? " pos" : val < 0 ? " neg" : ""}" x="${f1(cx)}" y="${f1(cy)}" font-size="${fsL}">${fmtRating(val)}</text>`;
+        E.forEach((p, i) => { const x = xMat + m * s, y = yMat + i * s; o.push(`<rect class="rt" x="${f1(x)}" y="${f1(y)}" width="${r}" height="${s}"/>` + rv(p.rating, x + r / 2, y + s / 2)); });
+        T.forEach((p, j) => { const x = xMat + j * s, y = yMat + n * s; o.push(`<rect class="rt" x="${f1(x)}" y="${f1(y)}" width="${s}" height="${r}"/>` + rv(p.rating, x + s / 2, y + r / 2)); });
+        o.push(`<text class="axis" font-size="${fsS}" transform="translate(${f1(xMat + m * s + r / 2 + fsS * 0.35)} ${f1(yMat - rem * 0.6)}) rotate(-90)">STAKEHOLDER VIEW</text>`);
+        o.push(`<text class="axis" font-size="${fsS}" text-anchor="end" x="${f1(xMat - rem * 0.6)}" y="${f1(yMat + n * s + r / 2 + fsS * 0.35)}">STAKEHOLDER VIEW</text>`);
+      }
+
+      // Row labels (existing practices)
+      E.forEach((p, i) => {
+        const y = yMat + i * s, nm = p.name.trim(), txt = nm || "Existing practice " + (i + 1);
+        const pl = planOf(p.id), gl = GLYPH[pl.action];
+        const w = wrapText(txt, L - rem * 1.2 - (gl ? rem * 1.1 : 0), s >= lh * 2 + 4 ? 2 : 1, fontL);
+        const tip = txt + (pl.action ? " (" + (pl.action === "transform" && pl.into ? "transform into " + nameById("target", pl.into) : ACTION_SHORT[pl.action].toLowerCase()) + ")" : "");
+        o.push(`<g class="lab${nm ? "" : " ph"}" data-id="${p.id}"><title>${esc(tip)}</title><rect class="lb" x="${f1(xMat - L)}" y="${f1(y)}" width="${L}" height="${s}"/>` +
+          textBlock(w.lines, xMat - L + rem * 0.6, y + s / 2, lh, "start", "", fsL) +
+          (gl ? `<text class="gly gly-${pl.action}" x="${f1(xMat - rem * 0.55)}" y="${f1(y + s / 2)}" font-size="${fsC}" text-anchor="end">${gl}</text>` : "") + `</g>`);
+      });
+      // Column labels (target practices), rotated
+      T.forEach((p, j) => {
+        const x = xMat + j * s, nm = p.name.trim(), txt = nm || "Target practice " + (j + 1);
+        const w = wrapText(txt, H - rem * 1.2, s >= lh * 2 + 4 ? 2 : 1, fontL);
+        o.push(`<g class="lab${nm ? "" : " ph"}" data-id="${p.id}"><title>${esc(txt)}</title><rect class="lb" x="${f1(x)}" y="${f1(yMat - H)}" width="${s}" height="${H}"/>` +
+          `<g transform="translate(${f1(x + s / 2)} ${f1(yMat - rem * 0.6)}) rotate(-90)">` + textBlock(w.lines, 0, 0, lh, "start", "", fsL) + `</g></g>`);
+      });
+      // Group bands and separators between groups
+      const runsE = groupRuns(E), runsT = groupRuns(T);
+      if (gE) runsE.forEach((ru) => {
+        const y = yMat + ru.start * s, h = (ru.end - ru.start + 1) * s;
+        o.push(`<rect class="gb" x="${f1(X0)}" y="${f1(y)}" width="${gE}" height="${h}"/>`);
+        if (!ru.g) return;
+        const ft = fitText(ru.g, h - rem * 0.6, kE, fsS);
+        o.push(`<g transform="translate(${f1(X0 + gE / 2)} ${f1(y + h / 2)}) rotate(-90)"><title>${esc(ru.g)}</title>` + textBlock(ft.lines, 0, 0, f1(ft.fs * 1.2), "middle", "gbt", ft.fs) + `</g>`);
+      });
+      if (gT) runsT.forEach((ru) => {
+        const x = xMat + ru.start * s, w = (ru.end - ru.start + 1) * s;
+        o.push(`<rect class="gb" x="${f1(x)}" y="${f1(YH)}" width="${w}" height="${gT}"/>`);
+        if (!ru.g) return;
+        const ft = fitText(ru.g, w - rem * 0.6, kT, fsS);
+        o.push(`<g><title>${esc(ru.g)}</title>` + textBlock(ft.lines, x + w / 2, YH + gT / 2, f1(ft.fs * 1.2), "middle", "gbt", ft.fs) + `</g>`);
+      });
+      runsE.slice(1).forEach((ru) => { const y = f1(yMat + ru.start * s); o.push(`<line class="sep" x1="${f1(X0)}" y1="${y}" x2="${f1(xMat + m * s + r)}" y2="${y}"/>`); });
+      runsT.slice(1).forEach((ru) => { const x = f1(xMat + ru.start * s); o.push(`<line class="sep" x1="${x}" y1="${f1(YH)}" x2="${x}" y2="${f1(yMat + n * s + r)}"/>`); });
+
+      // Axis titles
+      o.push(`<text class="axis" font-size="${fsS}" text-anchor="middle" x="${f1(xMat - L / 2)}" y="${f1(yMat - rem * 0.7)}">EXISTING PRACTICES</text>`);
+      o.push(`<text class="axis" font-size="${fsS}" text-anchor="middle" transform="translate(${f1(xMat - rem * 0.7)} ${f1(yMat - H / 2)}) rotate(-90)">TARGET PRACTICES</text>`);
+
+      // "Transform into" markers
+      E.forEach((p, i) => {
+        const pl = planOf(p.id);
+        if (pl.action !== "transform" || !pl.into) return;
+        const j = idxOf("target", pl.into);
+        if (j < 0) return;
+        o.push(`<rect class="into" x="${f1(xMat + j * s + 3)}" y="${f1(yMat + i * s + 3)}" width="${s - 6}" height="${s - 6}" rx="3"/>`);
+      });
+
+      if (exportMode && leg) {
+        const top = g.Hh - pad + rem * 0.4;
+        leg.items.forEach((it) => {
+          const x = pad + it.x, y = top + it.y, cy = y + leg.sw / 2;
+          if (it.glyph) o.push(`<text class="gly gly-${it.glyph}" x="${f1(x + leg.sw / 2)}" y="${f1(cy)}" font-size="${fsC}" text-anchor="middle">${GLYPH[it.glyph]}</text>`);
+          else o.push(`<g class="c" data-v="${it.v}"><rect class="f" x="${f1(x)}" y="${f1(y)}" width="${leg.sw}" height="${leg.sw}" rx="3"/><text class="sym" x="${f1(x + leg.sw / 2)}" y="${f1(cy)}" font-size="${fsS}">${SYM[it.v] || ""}</text></g>`);
+          o.push(`<text class="lg" x="${f1(x + leg.sw + leg.gap)}" y="${f1(cy)}" font-size="${fsL}">${esc(it.label)}</text>`);
+        });
+      }
+      if (!exportMode) o.push(`<polygon class="cursor" id="mocCursor" points="" visibility="hidden"/>`);
+      o.push(`</svg>`);
+      return o.join("");
+    }
+    function legendLayout(rem, maxW, fs, withPlan) {
+      const items = [{ v: 2, label: "Strongly complementary" }, { v: 1, label: "Complementary" }, { v: -1, label: "Competing" }, { v: -2, label: "Strongly competing" }, { v: 0, label: "Blank: no clear interaction" }];
+      if (withPlan) items.push({ glyph: "keep", label: "Keep" }, { glyph: "transform", label: "Transform into (dashed cell)" }, { glyph: "phaseout", label: "Phase out" });
+      const sw = Math.round(rem * 1.3), gap = rem * 0.45, sep = rem * 1.2, rowH = rem * 1.9;
+      let x = 0, y = 0;
+      const out = items.map((it) => {
+        const w = sw + gap + textW(it.label, fs + "px " + FONT);
+        if (x > 0 && x + w > maxW) { x = 0; y += rowH; }
+        const res = Object.assign({ x, y }, it);
+        x += w + sep;
+        return res;
+      });
+      return { items: out, h: y + rowH, sw, gap };
+    }
+
+    // ---------- Rendering: matrix ----------
+    const wrapEl = $("#matrixWrap");
+    const inspectEl = $("#inspect");
+    const rovers = {};
+    const INSPECT_DEFAULT = "Point at a cell, or move to it with the keyboard, to see which two practices it links.";
+
+    function renderMatrix() {
+      const active = document.activeElement && document.activeElement.closest && document.activeElement.closest("#matrixWrap .c");
+      const activeKey = active ? active.dataset.r + "|" + active.dataset.a + "|" + active.dataset.b : null;
+      const scrollL = wrapEl.scrollLeft;
+      wrapEl.innerHTML = buildSVG(false);
+      wrapEl.scrollLeft = scrollL;
+      ["ex", "tg", "tr"].forEach((rg) => {
+        const cells = $$('.c[data-r="' + rg + '"]', wrapEl);
+        if (!cells.length) return;
+        const pick = cells.find((c) => c.dataset.a + "|" + c.dataset.b === rovers[rg]) || cells[0];
+        pick.tabIndex = 0;
+      });
+      if (activeKey) {
+        const [rg, a, b] = activeKey.split("|");
+        const c = $('.c[data-r="' + rg + '"][data-a="' + a + '"][data-b="' + b + '"]', wrapEl);
+        if (c) c.focus({ preventScroll: true });
+      }
+      inspectEl.textContent = INSPECT_DEFAULT;
+      $("#planLegend").hidden = !state.existing.some((p) => planOf(p.id).action);
+    }
+    function inspect(cell) {
+      const rg = cell.dataset.r, v = +cell.dataset.v;
+      const A = rg === "tg" ? nameById("target", cell.dataset.a) : nameById("existing", cell.dataset.a);
+      const B = rg === "ex" ? nameById("existing", cell.dataset.b) : nameById("target", cell.dataset.b);
+      const cls = v > 0 ? "pos" : v < 0 ? "neg" : "";
+      inspectEl.innerHTML = esc(REGION[rg]) + " · <b>" + esc(A) + "</b> " + (rg === "tr" ? "→" : "↔") + " <b>" + esc(B) + "</b>: " +
+        '<span class="' + cls + '">' + esc(MEANING[v].charAt(0).toUpperCase() + MEANING[v].slice(1)) + (v ? " (" + SYM[v] + ")" : "") + "</span>";
+    }
+    function hover(cell) {
+      $$(".lab.hl", wrapEl).forEach((l) => l.classList.remove("hl"));
+      [cell.dataset.a, cell.dataset.b].forEach((id) => { const l = $('.lab[data-id="' + id + '"]', wrapEl); if (l) l.classList.add("hl"); });
+      const cur = $("#mocCursor", wrapEl);
+      if (cur) { cur.setAttribute("points", cell.dataset.pts); cur.setAttribute("visibility", "visible"); }
+      inspect(cell);
+    }
+    function clearHover() {
+      if (wrapEl.contains(document.activeElement) && document.activeElement.classList.contains("c")) { hover(document.activeElement); return; }
+      $$(".lab.hl", wrapEl).forEach((l) => l.classList.remove("hl"));
+      const cur = $("#mocCursor", wrapEl);
+      if (cur) cur.setAttribute("visibility", "hidden");
+      inspectEl.textContent = INSPECT_DEFAULT;
+    }
+    function setCell(cell, v) {
+      const rg = cell.dataset.r, a = cell.dataset.a, b = cell.dataset.b;
+      v = clampV(v);
+      if (getV(rg, a, b) === v) return;
+      setV(rg, a, b, v);
+      cell.dataset.v = String(v);
+      $(".sym", cell).textContent = SYM[v] || "";
+      cell.setAttribute("aria-label", ariaFor(rg, a, b, v));
+      inspect(cell);
+      changed({ analysis: true });
+    }
+    function setRover(cell) {
+      const rg = cell.dataset.r;
+      $$('.c[data-r="' + rg + '"]', wrapEl).forEach((c) => { if (c !== cell) c.tabIndex = -1; });
+      cell.tabIndex = 0;
+      rovers[rg] = cell.dataset.a + "|" + cell.dataset.b;
+    }
+    function moveFocus(cell, key) {
+      const rg = cell.dataset.r;
+      let i = +cell.dataset.i, j = +cell.dataset.j;
+      if (key === "ArrowUp") i--; else if (key === "ArrowDown") i++; else if (key === "ArrowLeft") j--; else if (key === "ArrowRight") j++;
+      const next = $('.c[data-r="' + rg + '"][data-i="' + i + '"][data-j="' + j + '"]', wrapEl);
+      if (next) { setRover(next); next.focus(); }
+    }
+
+    let brush = [2, 1, 0, -1, -2].indexOf(store.get(KEYS.brush)) !== -1 ? store.get(KEYS.brush) : 1;
+    let painting = false, paintVal = 0, lastPointer = "mouse";
+    const brushTarget = (cell) => (brush !== 0 && +cell.dataset.v === brush ? 0 : brush);
+    function renderBrush() { $$(".brush").forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.brush === brush))); }
+
+    wrapEl.addEventListener("pointerdown", (e) => {
+      lastPointer = e.pointerType;
+      const cell = e.target.closest(".c");
+      if (!cell || e.pointerType !== "mouse" || e.button !== 0) return;
+      e.preventDefault();
+      paintVal = brushTarget(cell);
+      painting = true;
+      setRover(cell);
+      cell.focus({ preventScroll: true });
+      setCell(cell, paintVal);
+    });
+    wrapEl.addEventListener("pointerover", (e) => {
+      const cell = e.target.closest(".c");
+      if (!cell) return;
+      hover(cell);
+      if (painting && e.pointerType === "mouse") setCell(cell, paintVal);
+    });
+    wrapEl.addEventListener("pointerleave", clearHover);
+    window.addEventListener("pointerup", () => { painting = false; });
+    window.addEventListener("pointercancel", () => { painting = false; });
+    wrapEl.addEventListener("click", (e) => {
+      const cell = e.target.closest(".c");
+      if (cell) {
+        if (lastPointer !== "mouse") { setRover(cell); setCell(cell, brushTarget(cell)); }
+        return;
+      }
+      const lab = e.target.closest(".lab");
+      if (lab) {
+        const input = $('.pname[data-id="' + lab.dataset.id + '"]');
+        if (input) { input.scrollIntoView({ block: "center", behavior: "smooth" }); input.focus({ preventScroll: true }); }
+      }
+    });
+    wrapEl.addEventListener("focusin", (e) => { const cell = e.target.closest(".c"); if (cell) { setRover(cell); hover(cell); } });
+    wrapEl.addEventListener("focusout", () => setTimeout(() => { if (!wrapEl.contains(document.activeElement)) clearHover(); }, 0));
+    wrapEl.addEventListener("keydown", (e) => {
+      const cell = e.target.closest(".c");
+      if (!cell) return;
+      const v = +cell.dataset.v;
+      if (e.key.indexOf("Arrow") === 0) { e.preventDefault(); moveFocus(cell, e.key); }
+      else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setCell(cell, brushTarget(cell)); }
+      else if (e.key === "+" || e.key === "=") { e.preventDefault(); setCell(cell, v + 1); }
+      else if (e.key === "-" || e.key === "_") { e.preventDefault(); setCell(cell, v - 1); }
+      else if (e.key === "0" || e.key === "Delete" || e.key === "Backspace") { e.preventDefault(); setCell(cell, 0); }
+    });
+    $$(".brush").forEach((b) => b.addEventListener("click", () => { brush = +b.dataset.brush; store.set(KEYS.brush, brush); renderBrush(); }));
+    $("#btnClearSigns").addEventListener("click", () => {
+      const total = Object.keys(state.ex).length + Object.keys(state.tg).length + Object.keys(state.tr).length;
+      if (!total) { toast("There are no signs to clear."); return; }
+      if (!confirm("Clear all " + total + " signs from the matrix? Practice names are kept.")) return;
+      state.ex = {}; state.tg = {}; state.tr = {};
+      renderMatrix(); changed({ analysis: true });
+    });
+
+    // ---------- Rendering: practice lists ----------
+    const ICON = {
+      up: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      down: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+      x: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+    };
+    function ratingOptions(sel) {
+      const opts = [["", "Rate"], ["2", "+2"], ["1", "+1"], ["0", "0"], ["-1", MINUS + "1"], ["-2", MINUS + "2"]];
+      return opts.map(([v, t]) => `<option value="${v}"${String(sel == null ? "" : sel) === v ? " selected" : ""}>${t}</option>`).join("");
+    }
+    function renderList(kind) {
+      const list = state[kind], ul = kind === "existing" ? $("#listEx") : $("#listTg");
+      const noun = kind === "existing" ? "Existing" : "Target";
+      ul.innerHTML = list.map((p, i) => {
+        const code = codeOf(kind, i);
+        return `<li class="prac" data-id="${p.id}">
+          <span class="code">${code}</span>
+          <input class="in pname" type="text" data-kind="${kind}" data-id="${p.id}" data-f="name" value="${esc(p.name)}" maxlength="120" autocomplete="off" placeholder="${noun} practice ${i + 1}" aria-label="${code} name">
+          <input class="in pgroup" type="text" list="dl-${kind}" data-kind="${kind}" data-id="${p.id}" data-f="group" value="${esc(p.group)}" maxlength="60" autocomplete="off" placeholder="Group" aria-label="${code} group">
+          <select class="in prate" data-kind="${kind}" data-id="${p.id}" data-f="rating" aria-label="${code} stakeholder rating">${ratingOptions(p.rating)}</select>
+          <span class="pact">
+            <button type="button" class="ico" data-act="up" data-kind="${kind}" data-id="${p.id}" aria-label="Move ${code} up"${i === 0 ? " disabled" : ""}>${ICON.up}</button>
+            <button type="button" class="ico" data-act="down" data-kind="${kind}" data-id="${p.id}" aria-label="Move ${code} down"${i === list.length - 1 ? " disabled" : ""}>${ICON.down}</button>
+            <button type="button" class="ico del" data-act="del" data-kind="${kind}" data-id="${p.id}" aria-label="Remove ${code}"${list.length <= 1 ? " disabled" : ""}>${ICON.x}</button>
+          </span>
+        </li>`;
+      }).join("");
+      renderGroupsList(kind);
+    }
+    function renderGroupsList(kind) {
+      const groups = Array.from(new Set(state[kind].map((p) => p.group.trim()).filter(Boolean)));
+      $("#dl-" + kind).innerHTML = groups.map((g) => `<option value="${esc(g)}"></option>`).join("");
+    }
+    function renderCounts() {
+      [["existing", "#countEx"], ["target", "#countTg"]].forEach(([kind, sel]) => {
+        const k = state[kind].length;
+        $(sel).value = k;
+        $$('.stepper button[data-kind="' + kind + '"]').forEach((b) => { b.disabled = (+b.dataset.step < 0 && k <= 1) || (+b.dataset.step > 0 && k >= MAX); });
+        $('[data-add="' + kind + '"]').disabled = k >= MAX;
+      });
+    }
+    function renderSetup() {
+      $("#fTitle").value = state.title;
+      $("#fAuthor").value = state.author;
+      $("#fDesc").value = state.description;
+      $("#fNotes").value = state.notes;
+      $("#fRatings").checked = state.showRatings;
+      $("#lists").classList.toggle("no-ratings", !state.showRatings);
+      renderCounts();
+    }
+
+    function removePractice(kind, id) {
+      state[kind] = state[kind].filter((p) => p.id !== id);
+      ["ex", "tg", "tr"].forEach((rg) => Object.keys(state[rg]).forEach((k) => { if (k.split("|").indexOf(id) !== -1) delete state[rg][k]; }));
+      if (kind === "existing") delete state.plan[id];
+      else Object.values(state.plan).forEach((pl) => { if (pl.into === id) pl.into = ""; });
+    }
+    function resize(kind, k) {
+      k = Math.max(1, Math.min(MAX, Math.round(k) || 1));
+      const list = state[kind];
+      if (k > list.length) {
+        while (state[kind].length < k) state[kind].push(newPractice(kind === "existing" ? "e" : "t"));
+      } else if (k < list.length) {
+        const gone = list.slice(k);
+        const withContent = gone.filter(practiceHasContent);
+        if (withContent.length && !confirm("Remove " + plural(gone.length, "practice") + " from the end of the list? " + listQ(withContent.map((p) => nameOf(kind, idxOf(kind, p.id))), 3) + " will be deleted with " + (withContent.length > 1 ? "their" : "its") + " signs.")) {
+          renderCounts();
+          return;
+        }
+        gone.forEach((p) => removePractice(kind, p.id));
+      }
+      structureChanged(kind);
+    }
+    function structureChanged(kind) {
+      if (kind) renderList(kind); else { renderList("existing"); renderList("target"); }
+      renderCounts();
+      renderMatrix();
+      changed({ analysis: true });
+    }
+
+    $$(".stepper button").forEach((b) => b.addEventListener("click", () => resize(b.dataset.kind, state[b.dataset.kind].length + (+b.dataset.step))));
+    $$(".stepper input").forEach((inp) => inp.addEventListener("change", () => resize(inp.dataset.kind, +inp.value)));
+    $$("[data-add]").forEach((b) => b.addEventListener("click", () => {
+      const kind = b.dataset.add;
+      if (state[kind].length >= MAX) return;
+      resize(kind, state[kind].length + 1);
+      const last = state[kind][state[kind].length - 1];
+      const inp = $('.pname[data-id="' + last.id + '"]');
+      if (inp) inp.focus();
+    }));
+
+    let typingTimer = null;
+    $("#lists").addEventListener("input", (e) => {
+      const el = e.target;
+      if (!el.dataset.f || el.dataset.f === "rating") return;
+      const p = state[el.dataset.kind].find((x) => x.id === el.dataset.id);
+      if (!p) return;
+      p[el.dataset.f] = el.value;
+      if (el.dataset.f === "group") renderGroupsList(el.dataset.kind);
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(() => { renderMatrix(); changed({ analysis: true }); }, 180);
+    });
+    $("#lists").addEventListener("change", (e) => {
+      const el = e.target;
+      if (el.dataset.f !== "rating") return;
+      const p = state[el.dataset.kind].find((x) => x.id === el.dataset.id);
+      if (!p) return;
+      p.rating = el.value === "" ? null : +el.value;
+      renderMatrix();
+      changed({ analysis: true });
+    });
+    $("#lists").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-act]");
+      if (!b) return;
+      const kind = b.dataset.kind, list = state[kind], i = idxOf(kind, b.dataset.id);
+      if (i < 0) return;
+      if (b.dataset.act === "del") {
+        const p = list[i];
+        if (practiceHasContent(p) && !confirm("Remove " + q(nameOf(kind, i)) + " and its signs?")) return;
+        removePractice(kind, p.id);
+        structureChanged(kind);
+        return;
+      }
+      const j = b.dataset.act === "up" ? i - 1 : i + 1;
+      if (j < 0 || j >= list.length) return;
+      [list[i], list[j]] = [list[j], list[i]];
+      structureChanged(kind);
+      const again = $('button[data-act="' + b.dataset.act + '"][data-id="' + b.dataset.id + '"]');
+      if (again && !again.disabled) again.focus();
+      else { const inp = $('.pname[data-id="' + b.dataset.id + '"]'); if (inp) inp.focus(); }
+    });
+
+    // ---------- Rendering: analysis and plan ----------
+    function sumCard(title, sub, st, kind) {
+      const v = verdict(st.balance, kind);
+      const pct = (x) => (st.total ? (x / st.total * 100).toFixed(2) : 0);
+      const aria = st.total ? `${st.p2} strongly complementary, ${st.p1} complementary, ${st.blank} blank, ${st.n1} competing, ${st.n2} strongly competing, out of ${st.total}` : "No cells";
+      return `<div class="card sum-card">
+        <p class="eyebrow">${title}</p>
+        <p class="verdict ${v.tone}">${v.text}</p>
+        <div class="bar" role="img" aria-label="${aria}">
+          <span class="b-p2" style="width:${pct(st.p2)}%"></span><span class="b-p1" style="width:${pct(st.p1)}%"></span><span class="b-0" style="width:${pct(st.blank)}%"></span><span class="b-n1" style="width:${pct(st.n1)}%"></span><span class="b-n2" style="width:${pct(st.n2)}%"></span>
+        </div>
+        <p class="tally"><span class="pos">+ ${st.pos}</span> · <span class="neg">${MINUS} ${st.neg}</span> · blank ${st.blank} <span>of ${st.total}</span></p>
+        <p class="small muted">${sub}</p>
+      </div>`;
+    }
+    function renderAnalysis(a) {
+      $("#summary").innerHTML =
+        sumCard("Existing system", "Left triangle: how today's practices fit together.", a.ex, "ex") +
+        sumCard("Target system", "Top triangle: how the new practices fit together.", a.tg, "tg") +
+        sumCard("Transition", "Square matrix: how today's practices fit the new ones.", a.tr, "tr");
+      const g = guidance(a);
+      $("#guide").innerHTML = g.length
+        ? g.map((it) => `<li><h3>${esc(it.title)}</h3><p><strong>${esc(it.lead)}</strong> ${esc(it.text)}</p></li>`).join("")
+        : `<li><p class="muted">Mark some cells in the matrix to see the readings, or load an example in step 01.</p></li>`;
+    }
+    function fitHTML(r) {
+      return `<span class="${r.posW ? "pos" : "zero"}" title="Complementary weight">+${r.posW}</span><span class="${r.negW ? "neg" : "zero"}" title="Competing weight">${MINUS}${r.negW}</span>`;
+    }
+    function intoOptions(sel) {
+      return `<option value="">Choose a target practice</option>` + state.target.map((t, j) => `<option value="${t.id}"${sel === t.id ? " selected" : ""}>${esc(codeOf("target", j) + " · " + nameOf("target", j))}</option>`).join("");
+    }
+    function renderPlan(a) {
+      const box = $("#plan");
+      const sig = state.existing.map((p) => p.id).join(",") + "/" + state.target.map((p) => p.id).join(",");
+      if (box.dataset.sig === sig) {
+        // Same rows: update in place so a focused field keeps focus.
+        a.rows.forEach((r, i) => {
+          const row = $('.prow[data-id="' + r.id + '"]', box);
+          if (!row) return;
+          $(".nm", row).textContent = r.name;
+          $(".code", row).textContent = codeOf("existing", i);
+          $(".fit", row).innerHTML = fitHTML(r);
+          $(".c-sug", row).innerHTML = `<span class="cell-lbl">Suggestion</span><span class="tag ${r.sug.key}">${esc(r.sug.label)}</span><span class="why">${esc(r.sug.why)}</span>`;
+          const into = $('select[data-f="into"]', row);
+          if (document.activeElement !== into) into.innerHTML = intoOptions(planOf(r.id).into);
+        });
+      } else {
+        box.dataset.sig = sig;
+        box.innerHTML = `<div class="plan-head" aria-hidden="true"><span>Existing practice</span><span>Fit</span><span>Suggestion</span><span>Decision</span><span>Notes</span></div>` +
+          a.rows.map((r, i) => {
+            const pl = planOf(r.id);
+            return `<div class="prow" data-id="${r.id}">
+              <div class="c-name"><span class="code">${codeOf("existing", i)}</span><span class="nm">${esc(r.name)}</span></div>
+              <div class="c-fit"><span class="fit">${fitHTML(r)}</span></div>
+              <div class="c-sug"><span class="cell-lbl">Suggestion</span><span class="tag ${r.sug.key}">${esc(r.sug.label)}</span><span class="why">${esc(r.sug.why)}</span></div>
+              <div class="c-dec"><span class="cell-lbl">Decision</span><div class="dec">
+                <select class="in" data-f="action" data-id="${r.id}" aria-label="Decision for ${esc(codeOf("existing", i))}">
+                  <option value="">Decide…</option>${Object.keys(ACTIONS).map((k) => `<option value="${k}"${pl.action === k ? " selected" : ""}>${ACTIONS[k]}</option>`).join("")}
+                </select>
+                <select class="in" data-f="into" data-id="${r.id}" aria-label="Target practice that ${esc(codeOf("existing", i))} turns into"${pl.action === "transform" ? "" : " hidden"}>${intoOptions(pl.into)}</select>
+              </div></div>
+              <div class="c-note"><span class="cell-lbl">Notes</span><input class="in" type="text" data-f="note" data-id="${r.id}" value="${esc(pl.note)}" maxlength="500" placeholder="Why?" aria-label="Notes for ${esc(codeOf("existing", i))}"></div>
+            </div>`;
+          }).join("");
+      }
+      // Target practices table (no inputs, safe to rebuild)
+      $("#targets").innerHTML = `<table class="ttable">
+        <thead><tr><th>Target practice</th><th>From current system</th><th>Within target system</th><th>Reading</th></tr></thead>
+        <tbody>${a.cols.map((c, j) => `<tr>
+          <td><span class="code">${codeOf("target", j)}</span>${esc(c.name)}</td>
+          <td class="num"><span class="${c.posW ? "pos" : "zero"}" style="color:${c.posW ? "var(--good)" : "var(--muted)"}">+${c.posW}</span> <span style="color:${c.negW ? "var(--bad)" : "var(--muted)"}">${MINUS}${c.negW}</span></td>
+          <td class="num"><span style="color:${c.tgPos ? "var(--good)" : "var(--muted)"}">+${c.tgPos}</span> <span style="color:${c.tgNeg ? "var(--bad)" : "var(--muted)"}">${MINUS}${c.tgNeg}</span></td>
+          <td><span class="tag ${c.sug.key}">${esc(c.sug.label)}</span><span class="why">${esc(c.sug.why)}</span></td>
+        </tr>`).join("")}</tbody></table>`;
+    }
+    $("#plan").addEventListener("change", (e) => {
+      const el = e.target, id = el.dataset.id;
+      if (!id || (el.dataset.f !== "action" && el.dataset.f !== "into")) return;
+      const pl = state.plan[id] || (state.plan[id] = { action: "", into: "", note: "" });
+      pl[el.dataset.f] = el.value;
+      if (el.dataset.f === "action") {
+        const into = $('select[data-f="into"][data-id="' + id + '"]');
+        into.hidden = el.value !== "transform";
+        if (el.value !== "transform") { pl.into = ""; into.value = ""; }
+      }
+      renderMatrix();
+      changed({});
+    });
+    $("#plan").addEventListener("input", (e) => {
+      const el = e.target;
+      if (el.dataset.f !== "note") return;
+      const pl = state.plan[el.dataset.id] || (state.plan[el.dataset.id] = { action: "", into: "", note: "" });
+      pl.note = el.value;
+      changed({});
+    });
+
+    // ---------- Setup fields ----------
+    let titleTimer = null;
+    [["#fTitle", "title"], ["#fAuthor", "author"], ["#fDesc", "description"]].forEach(([sel, key]) => {
+      $(sel).addEventListener("input", (e) => {
+        state[key] = e.target.value;
+        clearTimeout(titleTimer);
+        titleTimer = setTimeout(renderMatrix, 200);
+        changed({});
+      });
+    });
+    $("#fNotes").addEventListener("input", (e) => { state.notes = e.target.value; changed({}); });
+    $("#fRatings").addEventListener("change", (e) => {
+      state.showRatings = e.target.checked;
+      $("#lists").classList.toggle("no-ratings", !state.showRatings);
+      renderMatrix();
+      changed({ analysis: true });
+    });
+    $$("[data-example]").forEach((b) => b.addEventListener("click", () => {
+      if (projectHasContent() && !confirm("Replace your current matrix with the example? Download a copy first if you want to keep it.")) return;
+      state = EXAMPLES[b.dataset.example]();
+      renderAll();
+      changed({});
+      toast("Example loaded: " + state.title + ".");
+    }));
+    $("#btnReset").addEventListener("click", () => {
+      if (projectHasContent() && !confirm("Start over with an empty matrix? Everything you entered will be deleted from this browser.")) return;
+      state = blankProject(4, 4);
+      renderAll();
+      changed({});
+      toast("Started a new matrix.");
+    });
+    $("#btnOpen").addEventListener("click", () => $("#fileOpen").click());
+    $("#fileOpen").addEventListener("change", async (e) => {
+      const file = e.target.files && e.target.files[0];
+      e.target.value = "";
+      if (!file) return;
+      try {
+        const text = await file.text();
+        let data;
+        if (/^\s*</.test(text)) {
+          const doc = new DOMParser().parseFromString(text, "text/html");
+          const node = doc.getElementById("moc-data");
+          if (!node) throw new Error("This report does not contain project data.");
+          data = JSON.parse(node.textContent);
+        } else data = JSON.parse(text);
+        const next = normalize(data);
+        if (projectHasContent() && !confirm("Replace your current matrix with " + q(file.name) + "?")) return;
+        state = next;
+        renderAll();
+        changed({});
+        toast("Opened " + file.name + ".");
+      } catch (err) {
+        toast(err instanceof SyntaxError ? "That file could not be read as a project." : err.message);
+      }
+    });
+
+    // ---------- Change pipeline and saving ----------
+    let analysisTimer = null, saveTimer = null;
+    function changed(opts) {
+      if (opts.analysis) {
+        clearTimeout(analysisTimer);
+        analysisTimer = setTimeout(() => { const a = analyse(); renderAnalysis(a); renderPlan(a); }, 60);
+      }
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(save, 400);
+    }
+    function save() {
+      state.updated = new Date().toISOString();
+      const ok = store.set(KEYS.project, state);
+      $("#savedAt").textContent = ok
+        ? "Saved in this browser at " + new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) + "."
+        : "This browser is not saving your work (private mode or storage blocked). Download a copy before you leave.";
+    }
+    function renderAll() {
+      renderSetup();
+      renderList("existing");
+      renderList("target");
+      renderMatrix();
+      const a = analyse();
+      renderAnalysis(a);
+      renderPlan(a);
+    }
+
+    let toastTimer = null;
+    function toast(msg) {
+      const t = $("#toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove("show"), 3200);
+    }
+
+    // ---------- Exports ----------
+    function baseName() {
+      const sl = state.title.trim().toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
+      return sl ? "matrix-of-change-" + sl : "matrix-of-change";
+    }
+    function download(blob, name) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url; a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+    }
+    const projectJSON = () => JSON.stringify(Object.assign({}, state, { updated: new Date().toISOString() }), null, 2);
+
+    function svgToPng(svg, scale) {
+      return new Promise((resolve, reject) => {
+        const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml;charset=utf-8" }));
+        const img = new Image();
+        img.onload = () => {
+          try {
+            const w = img.naturalWidth || img.width, h = img.naturalHeight || img.height;
+            const c = document.createElement("canvas");
+            c.width = Math.round(w * scale); c.height = Math.round(h * scale);
+            const ctx = c.getContext("2d");
+            ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, c.width, c.height);
+            ctx.drawImage(img, 0, 0, c.width, c.height);
+            c.toBlob((b) => { URL.revokeObjectURL(url); b ? resolve(b) : reject(new Error("PNG export failed.")); }, "image/png");
+          } catch (err) { URL.revokeObjectURL(url); reject(err); }
+        };
+        img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("PNG export failed.")); };
+        img.src = url;
+      });
+    }
+
+    function csvCell(x) {
+      let s = x == null ? "" : String(x);
+      if (/^[=+\-@\t\r]/.test(s) && isNaN(Number(s))) s = "'" + s;
+      return /[",\n\r;]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+    }
+    function buildCSV(a) {
+      const E = state.existing, T = state.target, rows = [];
+      const add = (...cols) => rows.push(cols.map(csvCell).join(","));
+      const eName = (i) => codeOf("existing", i) + " " + nameOf("existing", i);
+      const tName = (j) => codeOf("target", j) + " " + nameOf("target", j);
+      add("Matrix of Change", state.title);
+      add("Prepared by", state.author);
+      add("Context", state.description);
+      add("Exported", new Date().toLocaleString());
+      add("Scale", "2 = strongly complementary (++); 1 = complementary (+); blank = no clear interaction; -1 = competing (-); -2 = strongly competing (--)");
+      add();
+      add("EXISTING PRACTICES");
+      add("Code", "Practice", "Group", "Stakeholder rating", "Complementary weight", "Competing weight", "Suggestion", "Decision", "Transforms into", "Notes");
+      E.forEach((p, i) => {
+        const r = a.rows[i], pl = planOf(p.id);
+        add(codeOf("existing", i), nameOf("existing", i), p.group, p.rating == null ? "" : p.rating, r.posW, r.negW, r.sug.label,
+          pl.action ? ACTION_SHORT[pl.action] : "", pl.into ? nameById("target", pl.into) : "", pl.note);
+      });
+      add();
+      add("TARGET PRACTICES");
+      add("Code", "Practice", "Group", "Stakeholder rating", "Support from current", "Conflicts with current", "Links in target (+)", "Links in target (-)", "Reading");
+      T.forEach((p, j) => { const c = a.cols[j]; add(codeOf("target", j), nameOf("target", j), p.group, p.rating == null ? "" : p.rating, c.posW, c.negW, c.tgPos, c.tgNeg, c.sug.label); });
+      add();
+      add("TRANSITION MATRIX (rows: existing practices; columns: target practices)");
+      add("", ...T.map((_, j) => tName(j)));
+      E.forEach((p, i) => add(eName(i), ...T.map((t) => getV("tr", p.id, t.id) || "")));
+      add();
+      add("EXISTING SYSTEM (left triangle)");
+      add("", ...E.map((_, i) => eName(i)));
+      E.forEach((p, i) => add(eName(i), ...E.map((o, j) => (i === j ? "x" : getV("ex", p.id, o.id) || ""))));
+      add();
+      add("TARGET SYSTEM (top triangle)");
+      add("", ...T.map((_, j) => tName(j)));
+      T.forEach((p, i) => add(tName(i), ...T.map((o, j) => (i === j ? "x" : getV("tg", p.id, o.id) || ""))));
+      add();
+      add("SUMMARY", "Complementary", "Competing", "Blank", "Reading");
+      [["Existing system", a.ex, "ex"], ["Target system", a.tg, "tg"], ["Transition", a.tr, "tr"]].forEach(([nm, st, k]) => add(nm, st.pos, st.neg, st.blank, verdict(st.balance, k).text));
+      add();
+      add("NOTES", state.notes);
+      return "﻿" + rows.join("\r\n");
+    }
+
+    const REPORT_CSS = `
+      :root{color-scheme:light}
+      body{margin:0;background:#fff;color:#121b26;font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+      main{max-width:62rem;margin:0 auto;padding:2rem 1.25rem 3rem}
+      h1{font-size:1.9rem;line-height:1.15;margin:.25rem 0 .4rem}
+      h2{font-size:1.15rem;margin:2rem 0 .75rem;padding-top:1rem;border-top:1px solid #d3d9e1}
+      h3{font-size:.95rem;margin:1rem 0 .35rem}
+      p{margin:.3rem 0}
+      .eyebrow{font:600 .72rem/1.3 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.08em;text-transform:uppercase;color:#1f5fbf;margin:0}
+      .meta{color:#535f6e}
+      .fig{overflow-x:auto;border:1px solid #d3d9e1;border-radius:8px;padding:.5rem}
+      .fig svg{display:block;max-width:100%;height:auto;margin:0 auto}
+      table{border-collapse:collapse;width:100%;font-size:.88rem;margin:.25rem 0 1rem}
+      th,td{text-align:left;padding:.4rem .5rem;border-bottom:1px solid #e1e6ec;vertical-align:top}
+      th{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#535f6e;font-weight:600}
+      td.num{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+      .pos{color:#17693f;font-weight:700}.neg{color:#ab2117;font-weight:700}
+      .guide{list-style:none;padding:0;margin:0}
+      .guide li{padding:.55rem 0;border-bottom:1px solid #e1e6ec}
+      .guide b{display:block;font-size:.9rem}
+      .note{color:#535f6e;font-size:.85rem}
+      .notes{white-space:pre-wrap}
+      footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid #d3d9e1;color:#535f6e;font-size:.8rem}
+      @page{margin:14mm}
+      @media print{main{padding:0;max-width:none}h2{break-after:avoid}.fig{border:0;padding:0}tr,li{break-inside:avoid}}
+    `;
+    function buildReport(a, svg) {
+      const E = state.existing, T = state.target;
+      const title = state.title.trim() || "Untitled";
+      const now = new Date();
+      const sign = (v) => `<span class="${v > 0 ? "pos" : "neg"}">${SYM[v]}</span>`;
+      const pairsTable = (pairs, kind) => pairs.length
+        ? `<table><thead><tr><th>Practice</th><th>Practice</th><th>Sign</th><th>Meaning</th></tr></thead><tbody>${pairs.map((p) => `<tr><td>${esc(codeOf(kind, p.i) + " " + nameOf(kind, p.i))}</td><td>${esc(codeOf(kind, p.j) + " " + nameOf(kind, p.j))}</td><td>${sign(p.v)}</td><td>${MEANING[p.v]}</td></tr>`).join("")}</tbody></table>`
+        : `<p class="note">No interactions marked.</p>`;
+      const trPairs = [];
+      E.forEach((p, i) => T.forEach((t, j) => { const v = getV("tr", p.id, t.id); if (v) trPairs.push({ i, j, v }); }));
+      const pracTable = (list, kind, extra) => `<table><thead><tr><th>Code</th><th>Practice</th><th>Group</th>${state.showRatings ? "<th>Stakeholder view</th>" : ""}${extra ? "<th>Reading</th>" : ""}</tr></thead><tbody>${list.map((p, i) => `<tr><td>${codeOf(kind, i)}</td><td>${esc(nameOf(kind, i))}</td><td>${esc(p.group)}</td>${state.showRatings ? `<td class="num">${fmtRating(p.rating)}</td>` : ""}${extra ? `<td>${esc(extra[i].sug.label)}</td>` : ""}</tr>`).join("")}</tbody></table>`;
+      const g = guidance(a);
+      const data = JSON.stringify(Object.assign({}, state, { updated: now.toISOString() })).replace(/</g, "\\u003c");
+      return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(title)} · Matrix of Change</title>
+<style>${REPORT_CSS}</style>
+</head>
+<body>
+<main>
+<header>
+<p class="eyebrow">Matrix of Change</p>
+<h1>${esc(title)}</h1>
+<p class="meta">${state.author.trim() ? esc(state.author.trim()) + " · " : ""}${esc(now.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" }))}</p>
+${state.description.trim() ? `<p>${esc(state.description.trim())}</p>` : ""}
+</header>
+
+<h2>Matrix</h2>
+<div class="fig">${svg}</div>
+
+<h2>Summary</h2>
+<table><thead><tr><th>Part of the matrix</th><th>Complementary</th><th>Competing</th><th>Blank</th><th>Reading</th></tr></thead><tbody>
+${[["Existing system (left triangle)", a.ex, "ex"], ["Target system (top triangle)", a.tg, "tg"], ["Transition (square matrix)", a.tr, "tr"]].map(([nm, st, k]) => `<tr><td>${nm}</td><td class="num pos">${st.pos}</td><td class="num neg">${st.neg}</td><td class="num">${st.blank}</td><td>${verdict(st.balance, k).text}</td></tr>`).join("")}
+</tbody></table>
+
+<h2>Readings</h2>
+${g.length ? `<ul class="guide">${g.map((it) => `<li><b>${esc(it.title)}</b>${esc(it.lead)} ${esc(it.text)}</li>`).join("")}</ul>` : `<p class="note">No interactions marked yet.</p>`}
+<p class="note">Readings generated from simple rules of thumb applied to the signs in the matrix.</p>
+
+<h2>Transformation plan</h2>
+<table><thead><tr><th>Existing practice</th><th>Fit</th><th>Suggestion</th><th>Decision</th><th>Notes</th></tr></thead><tbody>
+${E.map((p, i) => { const r = a.rows[i], pl = planOf(p.id); const dec = pl.action === "transform" ? "Transform into " + (pl.into ? nameById("target", pl.into) : "(not chosen)") : pl.action ? ACTION_SHORT[pl.action] : "Undecided"; return `<tr><td>${esc(codeOf("existing", i) + " " + r.name)}</td><td class="num"><span class="pos">+${r.posW}</span> <span class="neg">${MINUS}${r.negW}</span></td><td>${esc(r.sug.label)}</td><td>${esc(dec)}</td><td>${esc(pl.note)}</td></tr>`; }).join("")}
+</tbody></table>
+
+<h2>Practices</h2>
+<h3>Existing practices</h3>
+${pracTable(E, "existing", null)}
+<h3>Target practices</h3>
+${pracTable(T, "target", a.cols)}
+
+<h2>Interactions</h2>
+<h3>Within the existing system</h3>
+${pairsTable(a.exPairs, "existing")}
+<h3>Within the target system</h3>
+${pairsTable(a.tgPairs, "target")}
+<h3>Transition: existing to target</h3>
+${trPairs.length ? `<table><thead><tr><th>Existing practice</th><th>Target practice</th><th>Sign</th><th>Meaning</th></tr></thead><tbody>${trPairs.map((p) => `<tr><td>${esc(codeOf("existing", p.i) + " " + nameOf("existing", p.i))}</td><td>${esc(codeOf("target", p.j) + " " + nameOf("target", p.j))}</td><td>${sign(p.v)}</td><td>${MEANING[p.v]}</td></tr>`).join("")}</tbody></table>` : `<p class="note">No interactions marked.</p>`}
+
+${state.notes.trim() ? `<h2>Notes and conclusions</h2><p class="notes">${esc(state.notes.trim())}</p>` : ""}
+
+<footer>
+<p>Made with the Matrix of Change study tool, a study aid for courses on digital transformation and change management at NOVA IMS. Not an official university resource.</p>
+<p>Method: Brynjolfsson, E., Renshaw, A. A. &amp; Van Alstyne, M. (1997). The Matrix of Change. <em>Sloan Management Review</em>, Winter 1997, 37–54.</p>
+<p>This file contains your project data. Open it with the tool again to keep editing.</p>
+</footer>
+</main>
+<script type="application/json" id="moc-data">${data}<\/script>
+</body>
+</html>`;
+    }
+
+    // Minimal ZIP writer (stored entries, no compression): enough for a handful of files, no library needed.
+    const CRC_TABLE = (() => {
+      const t = new Uint32Array(256);
+      for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; }
+      return t;
+    })();
+    function crc32(bytes) { let c = 0xffffffff; for (let i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; }
+    function makeZip(files) {
+      const enc = new TextEncoder(), parts = [], central = [];
+      const d = new Date();
+      const dosTime = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+      const dosDate = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+      let offset = 0;
+      files.forEach((f) => {
+        const name = enc.encode(f.name), data = f.data, crc = crc32(data);
+        const lh = new DataView(new ArrayBuffer(30));
+        lh.setUint32(0, 0x04034b50, true); lh.setUint16(4, 20, true); lh.setUint16(6, 0x0800, true); lh.setUint16(8, 0, true);
+        lh.setUint16(10, dosTime, true); lh.setUint16(12, dosDate, true); lh.setUint32(14, crc, true);
+        lh.setUint32(18, data.length, true); lh.setUint32(22, data.length, true); lh.setUint16(26, name.length, true); lh.setUint16(28, 0, true);
+        parts.push(new Uint8Array(lh.buffer), name, data);
+        const ch = new DataView(new ArrayBuffer(46));
+        ch.setUint32(0, 0x02014b50, true); ch.setUint16(4, 20, true); ch.setUint16(6, 20, true); ch.setUint16(8, 0x0800, true); ch.setUint16(10, 0, true);
+        ch.setUint16(12, dosTime, true); ch.setUint16(14, dosDate, true); ch.setUint32(16, crc, true);
+        ch.setUint32(20, data.length, true); ch.setUint32(24, data.length, true); ch.setUint16(28, name.length, true);
+        ch.setUint16(30, 0, true); ch.setUint16(32, 0, true); ch.setUint16(34, 0, true); ch.setUint16(36, 0, true);
+        ch.setUint32(38, 0, true); ch.setUint32(42, offset, true);
+        central.push(new Uint8Array(ch.buffer), name);
+        offset += 30 + name.length + data.length;
+      });
+      const size = central.reduce((s, p) => s + p.length, 0);
+      const end = new DataView(new ArrayBuffer(22));
+      end.setUint32(0, 0x06054b50, true); end.setUint16(4, 0, true); end.setUint16(6, 0, true);
+      end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+      end.setUint32(12, size, true); end.setUint32(16, offset, true); end.setUint16(20, 0, true);
+      return new Blob(parts.concat(central, [new Uint8Array(end.buffer)]), { type: "application/zip" });
+    }
+
+    let printFrame = null;
+    function printReport(html) {
+      if (printFrame) printFrame.remove();
+      printFrame = document.createElement("iframe");
+      printFrame.setAttribute("aria-hidden", "true");
+      printFrame.tabIndex = -1;
+      printFrame.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden";
+      printFrame.onload = () => { try { printFrame.contentWindow.focus(); printFrame.contentWindow.print(); } catch (e) { toast("Printing is blocked here. Download the report and print it instead."); } };
+      printFrame.srcdoc = html;
+      document.body.appendChild(printFrame);
+    }
+
+    async function runExport(kind, btn) {
+      if (btn) btn.disabled = true;
+      try {
+        const a = analyse(), base = baseName(), enc = new TextEncoder();
+        const svg = buildSVG(true);
+        if (kind === "png") download(await svgToPng(svg, 2), base + ".png");
+        else if (kind === "report") download(new Blob([buildReport(a, svg)], { type: "text/html;charset=utf-8" }), base + "-report.html");
+        else if (kind === "csv") download(new Blob([buildCSV(a)], { type: "text/csv;charset=utf-8" }), base + ".csv");
+        else if (kind === "json") download(new Blob([projectJSON()], { type: "application/json" }), base + ".json");
+        else if (kind === "print") printReport(buildReport(a, svg));
+        else if (kind === "zip") {
+          const png = new Uint8Array(await (await svgToPng(svg, 2)).arrayBuffer());
+          const files = [
+            { name: base + ".png", data: png },
+            { name: base + ".svg", data: enc.encode('<?xml version="1.0" encoding="UTF-8"?>\n' + svg) },
+            { name: base + "-report.html", data: enc.encode(buildReport(a, svg)) },
+            { name: base + ".csv", data: enc.encode(buildCSV(a)) },
+            { name: base + ".json", data: enc.encode(projectJSON()) },
+          ];
+          download(makeZip(files), base + ".zip");
+          toast("Downloaded " + base + ".zip");
+        }
+      } catch (err) {
+        toast(err && err.message ? err.message : "The download failed.");
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+    $("#btnZip").addEventListener("click", (e) => runExport("zip", e.currentTarget));
+    $$("[data-dl]").forEach((b) => b.addEventListener("click", () => runExport(b.dataset.dl, b)));
+
+    // ---------- Theme and text size ----------
+    function renderTheme() {
+      const choice = root.dataset.theme || "auto";
+      $$("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeChoice === choice)));
+    }
+    function setTheme(choice) {
+      if (choice === "light" || choice === "dark") { root.dataset.theme = choice; store.set(KEYS.theme, choice); }
+      else { delete root.dataset.theme; store.remove(KEYS.theme); }
+      renderTheme();
+    }
+    function renderFont() {
+      const size = root.dataset.font || "m";
+      $$(".font-size button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.font === size)));
+    }
+    function setFont(size) {
+      root.dataset.font = size;
+      store.set(KEYS.font, size);
+      renderFont();
+      renderMatrix(); // the matrix is drawn in pixels from the current text size
+    }
+    $$("[data-theme-choice]").forEach((b) => b.addEventListener("click", () => setTheme(b.dataset.themeChoice)));
+    $$(".font-size button").forEach((b) => b.addEventListener("click", () => setFont(b.dataset.font)));
+
+    // ---------- Start ----------
+    const styleEl = document.createElement("style");
+    styleEl.textContent = svgCSS(VARS);
+    document.head.appendChild(styleEl);
+    renderTheme();
+    renderFont();
+    renderBrush();
+    renderAll();
+    if (state.updated) $("#savedAt").textContent = "Restored your last session from this browser.";
+  })();
+  </script>
+</body>
+</html>
