@@ -410,7 +410,7 @@
           <h3>Four steps</h3>
           <ol>
             <li><strong>List the practices.</strong> Existing practices describe how the organisation works today. Target practices describe how it should work after the change. Group related ones, for example Information systems, Services, Organisation.</li>
-            <li><strong>Compare each system with itself.</strong> In the left triangle, mark how existing practices interact with each other. In the top triangle, do the same for target practices. Each diamond is where the diagonals of two practices meet.</li>
+            <li><strong>Compare each system with itself.</strong> In the left triangle, mark how existing practices interact with each other. In the triangle on the right, next to the target practices, do the same for those. Each diamond is where the diagonals of two practices meet.</li>
             <li><strong>Compare the two systems.</strong> In the square transition matrix, mark how each existing practice (row) interacts with each target practice (column).</li>
             <li><strong>Read the result.</strong> Check coherence, where to start, greenfield or brownfield, and the pace of change. Then decide what to keep, transform or phase out.</li>
           </ol>
@@ -535,7 +535,7 @@
       <div class="step-head">
         <span class="num">03</span>
         <h2 id="h-matrix">Mark the interactions</h2>
-        <p class="sub">Pick a sign, then click or tap cells. Click a cell again to clear it. The left triangle compares existing practices, the top triangle compares target practices, and the square compares the two.</p>
+        <p class="sub">Pick a sign, then click or tap cells. Click a cell again to clear it. The left triangle compares existing practices, the right triangle compares target practices, and the square compares the two. Each target practice is joined to its column by a line.</p>
       </div>
       <div class="toolbar">
         <div class="brushes" role="group" aria-label="Sign to apply">
@@ -906,7 +906,7 @@
         const conflicts = a.tgPairs.filter((p) => p.v < 0).map((p) => pairTxt(p, "target"));
         const b = band(a.tg.balance);
         let lead, text;
-        if (b === "none") { lead = "Not mapped yet."; text = "Fill in the top triangle to check whether the target practices support each other."; }
+        if (b === "none") { lead = "Not mapped yet."; text = "Fill in the right triangle to check whether the target practices support each other."; }
         else if (b === "pos" && !conflicts.length) { lead = "Yes."; text = "The target practices reinforce each other (" + plural(a.tg.pos, "complementary link") + ", no conflicts), so the new system should be stable once it is in place."; }
         else if (b === "pos") { lead = "Mostly."; text = "The target practices largely reinforce each other, but check " + listRaw(conflicts.slice(0, 3)) + ". Consider redesigning one practice in each competing pair."; }
         else { lead = b === "mixed" ? "Partly." : "Not yet."; text = "The target system has " + a.tg.pos + " complementary and " + a.tg.neg + " competing links. An incoherent target is unstable: rethink or drop one practice in each competing pair" + (conflicts.length ? ", starting with " + listRaw(conflicts.slice(0, 3)) : "") + "."; }
@@ -1018,6 +1018,8 @@
         `${s} .gly-keep{fill:${P.posInk}}`, `${s} .gly-transform{fill:${P.accent}}`, `${s} .gly-phaseout{fill:${P.negInk}}`,
         `${s} .lab.hl .lb{fill:${P.hl}}`, `${s} .lab.hl text{fill:${P.accent}}`,
         `${s} .cursor{fill:none;stroke:${P.accent};stroke-width:2.5;pointer-events:none}`,
+        `${s} .conn{fill:none;stroke:${P.gridStrong};stroke-width:1.25}`,
+        `${s} .conn.hl{stroke:${P.accent};stroke-width:2.25}`,
         `${s} .lg{dominant-baseline:central;fill:${P.muted}}`,
         `${s} .c,${s} .lab{cursor:pointer}`, `${s} .c:focus{outline:none}`,
       ].join("\n");
@@ -1026,7 +1028,6 @@
       const n = state.existing.length, m = state.target.length;
       const s = Math.round(rem * 2.4);
       const L = Math.round(rem * 12.5);
-      const H = Math.round(rem * 10.5);
       // Group bands grow to two or three lines when a group name is long for the practices it spans.
       const fsS = f1(rem * 0.64);
       const linesFor = (list) => {
@@ -1039,9 +1040,15 @@
       const gE = bandW(kE), gT = bandW(kT);
       const r = state.showRatings ? Math.round(rem * 2.6) : 0;
       const pad = Math.round(rem);
+      // Target practices are horizontal rows above and to the right of the matrix, each linked to its column by
+      // an elbow line, as in the course's workgroup template. Their triangle sits to the right of the rows.
+      const axisH = rem * 1.6, gapV = rem * 1.5, gapH = rem * 1.8;
       const xMat = pad + n * s / 2 + gE + L;
-      const yMat = pad + m * s / 2 + gT + H;
-      return { n, m, s, L, H, gE, gT, kE, kT, r, pad, xMat, yMat, X0: xMat - L - gE, YH: yMat - H - gT, W: xMat + m * s + r + pad, Hh: yMat + n * s + r + pad };
+      const yMat = Math.max(pad + axisH + m * s + gapV, pad + rem * 8);
+      const yT0 = yMat - gapV - m * s;
+      const xT = xMat + m * s + r + gapH;
+      const X0T = xT + L + gT;
+      return { n, m, s, L, gE, gT, kE, kT, r, pad, xMat, yMat, yT0, xT, X0T, X0: xMat - L - gE, W: X0T + m * s / 2 + pad, Hh: yMat + n * s + r + pad };
     }
     function groupRuns(list) {
       const out = [];
@@ -1067,7 +1074,7 @@
     function buildSVG(exportMode) {
       const rem = exportMode ? 16 : remPx();
       const g = layout(rem);
-      const { n, m, s, L, H, gE, gT, kE, kT, r, pad, xMat, yMat, X0, YH } = g;
+      const { n, m, s, L, gE, gT, kE, kT, r, pad, xMat, yMat, X0, yT0, xT, X0T } = g;
       const E = state.existing, T = state.target;
       const fsL = f1(rem * 0.76), fsS = f1(rem * 0.64), fsC = f1(rem * 0.9), fsT = f1(rem * 1.0);
       const lh = f1(fsL * 1.2);
@@ -1085,7 +1092,7 @@
       o.push(`<rect class="bg" x="0" y="0" width="${W}" height="${HH}"/>`);
 
       // Title box in the empty top-left corner, as in the original figures.
-      const bx = pad, by = pad, bw = xMat - pad - rem * 2.4, bh = yMat - pad - rem * 2.4;
+      const bx = pad, by = pad, bw = xMat - pad - rem * 1.2, bh = yMat - pad - rem * 2.4;
       if (bw > rem * 6 && bh > rem * 3.5) {
         o.push(`<rect class="tbox" x="${f1(bx)}" y="${f1(by)}" width="${f1(bw)}" height="${f1(bh)}" rx="6"/>`);
         const ix = bx + rem * 0.8, iw = bw - rem * 1.6, bottom = by + bh - rem * 0.6;
@@ -1111,7 +1118,7 @@
 
       // Triangle frames: their uncovered edges form the half cells next to the labels.
       o.push(`<polygon class="frame" points="${f1(X0)},${f1(yMat)} ${f1(X0 - n * s / 2)},${f1(yMat + n * s / 2)} ${f1(X0)},${f1(yMat + n * s)}"/>`);
-      o.push(`<polygon class="frame" points="${f1(xMat)},${f1(YH)} ${f1(xMat + m * s / 2)},${f1(YH - m * s / 2)} ${f1(xMat + m * s)},${f1(YH)}"/>`);
+      o.push(`<polygon class="frame" points="${f1(X0T)},${f1(yT0)} ${f1(X0T + m * s / 2)},${f1(yT0 + m * s / 2)} ${f1(X0T)},${f1(yT0 + m * s)}"/>`);
 
       const cell = (rg, a, b, v, pts, cx, cy, i, j) => {
         const body = `<polygon class="f" points="${pts}"/><text class="sym" x="${f1(cx)}" y="${f1(cy)}" font-size="${fsC}">${SYM[v] || ""}</text>`;
@@ -1126,7 +1133,7 @@
         o.push(cell("ex", E[i].id, E[j].id, getV("ex", E[i].id, E[j].id), diamond(cx, cy, s / 2), cx, cy, i, j));
       }
       for (let i = 0; i < m; i++) for (let j = i + 1; j < m; j++) {
-        const cx = xMat + (i + j + 1) * s / 2, cy = YH - (j - i) * s / 2;
+        const cx = X0T + (j - i) * s / 2, cy = yT0 + (i + j + 1) * s / 2;
         o.push(cell("tg", T[i].id, T[j].id, getV("tg", T[i].id, T[j].id), diamond(cx, cy, s / 2), cx, cy, i, j));
       }
       for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) {
@@ -1140,7 +1147,7 @@
         const rv = (val, cx, cy) => `<text class="rv${val > 0 ? " pos" : val < 0 ? " neg" : ""}" x="${f1(cx)}" y="${f1(cy)}" font-size="${fsL}">${fmtRating(val)}</text>`;
         E.forEach((p, i) => { const x = xMat + m * s, y = yMat + i * s; o.push(`<rect class="rt" x="${f1(x)}" y="${f1(y)}" width="${r}" height="${s}"/>` + rv(p.rating, x + r / 2, y + s / 2)); });
         T.forEach((p, j) => { const x = xMat + j * s, y = yMat + n * s; o.push(`<rect class="rt" x="${f1(x)}" y="${f1(y)}" width="${s}" height="${r}"/>` + rv(p.rating, x + s / 2, y + r / 2)); });
-        o.push(`<text class="axis" font-size="${fsS}" transform="translate(${f1(xMat + m * s + r / 2 + fsS * 0.35)} ${f1(yMat - rem * 0.6)}) rotate(-90)">STAKEHOLDER VIEW</text>`);
+        o.push(`<text class="axis" font-size="${fsS}" x="${f1(xMat + m * s + 2)}" y="${f1(yMat - rem * 0.45)}">STAKEHOLDER VIEW</text>`);
         o.push(`<text class="axis" font-size="${fsS}" text-anchor="end" x="${f1(xMat - rem * 0.6)}" y="${f1(yMat + n * s + r / 2 + fsS * 0.35)}">STAKEHOLDER VIEW</text>`);
       }
 
@@ -1154,12 +1161,18 @@
           textBlock(w.lines, xMat - L + rem * 0.6, y + s / 2, lh, "start", "", fsL) +
           (gl ? `<text class="gly gly-${pl.action}" x="${f1(xMat - rem * 0.55)}" y="${f1(y + s / 2)}" font-size="${fsC}" text-anchor="end">${gl}</text>` : "") + `</g>`);
       });
-      // Column labels (target practices), rotated
+      // Target practices: horizontal rows, each joined to its column by an elbow line.
+      // The leftmost column goes to the top row and the rightmost to the bottom row, so no lines cross.
+      const rr = Math.min(6, s / 4);
       T.forEach((p, j) => {
-        const x = xMat + j * s, nm = p.name.trim(), txt = nm || "Target practice " + (j + 1);
-        const w = wrapText(txt, H - rem * 1.2, s >= lh * 2 + 4 ? 2 : 1, fontL);
-        o.push(`<g class="lab${nm ? "" : " ph"}" data-id="${p.id}"><title>${esc(txt)}</title><rect class="lb" x="${f1(x)}" y="${f1(yMat - H)}" width="${s}" height="${H}"/>` +
-          `<g transform="translate(${f1(x + s / 2)} ${f1(yMat - rem * 0.6)}) rotate(-90)">` + textBlock(w.lines, 0, 0, lh, "start", "", fsL) + `</g></g>`);
+        const x = xMat + (j + 0.5) * s, y = yT0 + (j + 0.5) * s;
+        o.push(`<path class="conn" data-id="${p.id}" d="M${f1(x)} ${f1(yMat)}V${f1(y + rr)}Q${f1(x)} ${f1(y)} ${f1(x + rr)} ${f1(y)}H${f1(xT)}"/>`);
+      });
+      T.forEach((p, j) => {
+        const y = yT0 + j * s, nm = p.name.trim(), txt = nm || "Target practice " + (j + 1);
+        const w = wrapText(txt, L - rem * 1.2, s >= lh * 2 + 4 ? 2 : 1, fontL);
+        o.push(`<g class="lab${nm ? "" : " ph"}" data-id="${p.id}"><title>${esc(txt)}</title><rect class="lb" x="${f1(xT)}" y="${f1(y)}" width="${L}" height="${s}"/>` +
+          textBlock(w.lines, xT + rem * 0.6, y + s / 2, lh, "start", "", fsL) + `</g>`);
       });
       // Group bands and separators between groups
       const runsE = groupRuns(E), runsT = groupRuns(T);
@@ -1171,18 +1184,21 @@
         o.push(`<g transform="translate(${f1(X0 + gE / 2)} ${f1(y + h / 2)}) rotate(-90)"><title>${esc(ru.g)}</title>` + textBlock(ft.lines, 0, 0, f1(ft.fs * 1.2), "middle", "gbt", ft.fs) + `</g>`);
       });
       if (gT) runsT.forEach((ru) => {
-        const x = xMat + ru.start * s, w = (ru.end - ru.start + 1) * s;
-        o.push(`<rect class="gb" x="${f1(x)}" y="${f1(YH)}" width="${w}" height="${gT}"/>`);
+        const y = yT0 + ru.start * s, h = (ru.end - ru.start + 1) * s, x = xT + L;
+        o.push(`<rect class="gb" x="${f1(x)}" y="${f1(y)}" width="${gT}" height="${h}"/>`);
         if (!ru.g) return;
-        const ft = fitText(ru.g, w - rem * 0.6, kT, fsS);
-        o.push(`<g><title>${esc(ru.g)}</title>` + textBlock(ft.lines, x + w / 2, YH + gT / 2, f1(ft.fs * 1.2), "middle", "gbt", ft.fs) + `</g>`);
+        const ft = fitText(ru.g, h - rem * 0.6, kT, fsS);
+        o.push(`<g transform="translate(${f1(x + gT / 2)} ${f1(y + h / 2)}) rotate(-90)"><title>${esc(ru.g)}</title>` + textBlock(ft.lines, 0, 0, f1(ft.fs * 1.2), "middle", "gbt", ft.fs) + `</g>`);
       });
       runsE.slice(1).forEach((ru) => { const y = f1(yMat + ru.start * s); o.push(`<line class="sep" x1="${f1(X0)}" y1="${y}" x2="${f1(xMat + m * s + r)}" y2="${y}"/>`); });
-      runsT.slice(1).forEach((ru) => { const x = f1(xMat + ru.start * s); o.push(`<line class="sep" x1="${x}" y1="${f1(YH)}" x2="${x}" y2="${f1(yMat + n * s + r)}"/>`); });
+      runsT.slice(1).forEach((ru) => {
+        const x = f1(xMat + ru.start * s), y = f1(yT0 + ru.start * s);
+        o.push(`<line class="sep" x1="${x}" y1="${f1(yMat)}" x2="${x}" y2="${f1(yMat + n * s + r)}"/><line class="sep" x1="${f1(xT)}" y1="${y}" x2="${f1(X0T)}" y2="${y}"/>`);
+      });
 
       // Axis titles
       o.push(`<text class="axis" font-size="${fsS}" text-anchor="middle" x="${f1(xMat - L / 2)}" y="${f1(yMat - rem * 0.7)}">EXISTING PRACTICES</text>`);
-      o.push(`<text class="axis" font-size="${fsS}" text-anchor="middle" transform="translate(${f1(xMat - rem * 0.7)} ${f1(yMat - H / 2)}) rotate(-90)">TARGET PRACTICES</text>`);
+      o.push(`<text class="axis" font-size="${fsS}" text-anchor="middle" x="${f1(xT + L / 2)}" y="${f1(yT0 - rem * 0.6)}">TARGET PRACTICES</text>`);
 
       // "Transform into" markers
       E.forEach((p, i) => {
@@ -1256,15 +1272,15 @@
         '<span class="' + cls + '">' + esc(MEANING[v].charAt(0).toUpperCase() + MEANING[v].slice(1)) + (v ? " (" + SYM[v] + ")" : "") + "</span>";
     }
     function hover(cell) {
-      $$(".lab.hl", wrapEl).forEach((l) => l.classList.remove("hl"));
-      [cell.dataset.a, cell.dataset.b].forEach((id) => { const l = $('.lab[data-id="' + id + '"]', wrapEl); if (l) l.classList.add("hl"); });
+      $$(".hl", wrapEl).forEach((l) => l.classList.remove("hl"));
+      [cell.dataset.a, cell.dataset.b].forEach((id) => { $$('.lab[data-id="' + id + '"], .conn[data-id="' + id + '"]', wrapEl).forEach((l) => l.classList.add("hl")); });
       const cur = $("#mocCursor", wrapEl);
       if (cur) { cur.setAttribute("points", cell.dataset.pts); cur.setAttribute("visibility", "visible"); }
       inspect(cell);
     }
     function clearHover() {
       if (wrapEl.contains(document.activeElement) && document.activeElement.classList.contains("c")) { hover(document.activeElement); return; }
-      $$(".lab.hl", wrapEl).forEach((l) => l.classList.remove("hl"));
+      $$(".hl", wrapEl).forEach((l) => l.classList.remove("hl"));
       const cur = $("#mocCursor", wrapEl);
       if (cur) cur.setAttribute("visibility", "hidden");
       inspectEl.textContent = INSPECT_DEFAULT;
@@ -1502,7 +1518,7 @@
     function renderAnalysis(a) {
       $("#summary").innerHTML =
         sumCard("Existing system", "Left triangle: how today's practices fit together.", a.ex, "ex") +
-        sumCard("Target system", "Top triangle: how the new practices fit together.", a.tg, "tg") +
+        sumCard("Target system", "Right triangle: how the new practices fit together.", a.tg, "tg") +
         sumCard("Transition", "Square matrix: how today's practices fit the new ones.", a.tr, "tr");
       const g = guidance(a);
       $("#guide").innerHTML = g.length
@@ -1742,7 +1758,7 @@
       add("", ...E.map((_, i) => eName(i)));
       E.forEach((p, i) => add(eName(i), ...E.map((o, j) => (i === j ? "x" : getV("ex", p.id, o.id) || ""))));
       add();
-      add("TARGET SYSTEM (top triangle)");
+      add("TARGET SYSTEM (right triangle)");
       add("", ...T.map((_, j) => tName(j)));
       T.forEach((p, i) => add(tName(i), ...T.map((o, j) => (i === j ? "x" : getV("tg", p.id, o.id) || ""))));
       add();
@@ -1814,7 +1830,7 @@ ${state.description.trim() ? `<p>${esc(state.description.trim())}</p>` : ""}
 
 <h2>Summary</h2>
 <table><thead><tr><th>Part of the matrix</th><th>Complementary</th><th>Competing</th><th>Blank</th><th>Reading</th></tr></thead><tbody>
-${[["Existing system (left triangle)", a.ex, "ex"], ["Target system (top triangle)", a.tg, "tg"], ["Transition (square matrix)", a.tr, "tr"]].map(([nm, st, k]) => `<tr><td>${nm}</td><td class="num pos">${st.pos}</td><td class="num neg">${st.neg}</td><td class="num">${st.blank}</td><td>${verdict(st.balance, k).text}</td></tr>`).join("")}
+${[["Existing system (left triangle)", a.ex, "ex"], ["Target system (right triangle)", a.tg, "tg"], ["Transition (square matrix)", a.tr, "tr"]].map(([nm, st, k]) => `<tr><td>${nm}</td><td class="num pos">${st.pos}</td><td class="num neg">${st.neg}</td><td class="num">${st.blank}</td><td>${verdict(st.balance, k).text}</td></tr>`).join("")}
 </tbody></table>
 
 <h2>Readings</h2>
