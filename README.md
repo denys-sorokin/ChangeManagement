@@ -34,7 +34,7 @@ Everything runs in the browser. No account, no backend, and no external services
 
 - **Set up:** name the change initiative and choose how many existing and target practices to compare (1–20 each).
 - **Practices:** name and group each practice, reorder or remove them, and optionally rate how stakeholders see each one (−2 to +2).
-- **Matrix:** click or tap the diamonds of the two triangles and the squares of the transition matrix to mark `++`, `+`, `−` or `−−`. The layout follows the figures in Lizeo (2018).
+- **Matrix:** click or tap the diamonds of the two triangles and the squares of the transition matrix to mark `++`, `+`, `−` or `−−`. All labels are horizontal: target practices are listed as rows above and to the right of the matrix, each joined to its column by a line, with their triangle on the right, as in the course's workgroup template. The triangles follow the figures in Lizeo (2018).
 - **Results:** coherence of each system, transition difficulty, where to start, greenfield or brownfield, pace of change and stakeholder resistance.
 - **Plan:** decide for each existing practice whether to keep it, transform it into a target practice, or phase it out.
 - **Download:** one button saves a .zip with the matrix as PNG and SVG, a printable HTML report, a CSV spreadsheet and a JSON project file. A saved JSON file or report can be opened again to keep editing.
